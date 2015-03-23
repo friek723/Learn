@@ -1,0 +1,120 @@
+1. Login as a non-root user with sudo privileges  (Or use devstack/tools/create-stack-user.sh to create user 'stack')
+2. git clone https://git.openstack.org/openstack-dev/devstack    (download DevStack)
+3. cd DevStack
+4. copy devstack/samples/local.conf to devstack/
+5. Edit local.conf to set password: 
+		SERVICE_TOKEN=azertytoken
+		ADMIN_PASSWORD=newegg@123
+		MYSQL_PASSWORD=newegg@123
+		RABBIT_PASSWORD=newegg@123
+		SERVICE_PASSWORD=newegg@123
+		
+		FLOATING_RANGE=10.16.207.76/30
+    FIXED_RANGE=10.11.12.0/24
+    FIXED_NETWORK_SIZE=256
+    FLAT_INTERFACE=eth0
+    
+    # Swift
+    enable_service s-proxy s-object s-container s-account
+    
+    
+    # Ceilometer (What I did : install manually then install with below config)
+    #            (API Login as admin see good response)
+    # After ./stack.sh add following in /etc/nova/nova.conf (Remove default notification_driver) and reboot & rejoin-stack.sh
+    #          notification_driver = nova.openstack.common.notifier.rpc_notifier
+    #          notification_driver = ceilometer.compute.nova_notifier
+    #          compute_monitors = ComputeDriverCPUMonitor
+    CEILOMETER_BACKEND=mysql
+    enable_service ceilometer-acompute ceilometer-acentral ceilometer-collector ceilometer-api
+    enable_service ceilometer-alarm-notifier ceilometer-alarm-evaluator
+
+
+    # Heat(Enabled by default) (Adding this line will remove 'cirros-0.3.2-x86_64-uec' in Image)(http://docs.openstack.org/developer/heat/getting_started/on_devstack.html)
+    #IMAGE_URLS+=",http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2"
+    
+6.  
+    6-1. vi stackrc
+    6-2. Modify GIT_BASE=${GIT_BASE:-git://git.openstack.org}   
+           -->  GIT_BASE=${GIT_BASE:-https://git.openstack.org}         
+7. ./stack.sh
+8. Wait for hours...done
+9. Dashboard : http://localhost
+
+---------------------------------------------------------------------------------------------------
+[Uninstall & Cleaning Up]   (Refer to http://docs.openstack.org/developer/devstack/guides/multinode-lab.html)
+1. ./unstack.sh
+2. ./clean.sh
+3. Sometimes running instances are not cleaned up. DevStack attempts to do this when it runs but there are times it needs to still be done by hand:
+   3-1 sudo rm -rf /etc/libvirt/qemu/inst*
+   3-2 sudo virsh list | grep inst | awk '{print $1}' | xargs -n1 virsh destroy
+       --> error: command 'destroy' requires <domain> option
+       
+------------------------------------------------------------------------------------------------
+
+Fix mysql issue : http://serverfault.com/questions/254629/unable-to-install-mysql-server-in-ubuntu
+
+The mysql-server-5.1 package tries to start MySQL after the package is installed, which fails. The first thing you need to do is finish the installation process cleanly. There are several ways to do this:
+either fix your MySQL configuration, check that /etc/init.d/mysql-server works, and launch dpkg --configure -a to finish the installation process ; or edit /var/lib/dpkg/info/mysql-server-5.1.postinst and remove the part where it starts the server (probably calling /etc/init.d/mysql-server start or so), then launch dpkg --configure -a to finish the installation process and then fix your configuration.
+------------------------------------------------------------------------------------------------------------------------
+[Git clone fail]
+Problem : git clone git//git.openstack.org/openstack/requirements.git/opt/stack/reqiurements Cloning into '/opt/stack/requirements'... fatal:unable to connect to git.openstack.org: git.openstack.org
+
+
+Refer to : http://stackoverflow.com/questions/20390267/installing-openstack-errors
+
+Solution : 1. vi stackrc
+           2. Modify GIT_BASE=${GIT_BASE:-git://git.openstack.org}   
+                -->  GIT_BASE=${GIT_BASE:-https://git.openstack.org}
+                
+----------------------------------------------------------------------------------------------------------------------
+
+
+要安裝Git，要先安裝它需要的程式庫：curl、zlib、openssl、expat及libiconv。 
+
+apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \  libz-dev libssl-dev
+
+
+安裝Git
+
+apt-get install git
+
+----------------------------------------------------------------------------------------------------------------------
+
+解決Ubuntu下無法更新套件清單或安裝套件的問題 
+
+
+
+1. 備份 sources.list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+2. 打開 sources.list 
+sudo vi /etc/apt/sources.list
+
+增加下列來源~
+deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+----------------------------------------------------------------------------------------------------------------------
+
+Fail to login after reboot : https://ask.openstack.org/en/question/16898/failed-to-login-openstack-dashboard-after-restart-the-system/
+
+solution : After reboot, do devstack/rejoin-stack.sh
+
+
+------------------------------------------------------------------------------------------------------------------------
+windows image creation :  
+
+1. qemu-img create -f qcow2 ws2012.qcow2 10G
+2. virt-install --connect qemu:///system --name ws2012-4 --ram 2048 --vcpus 2 --network network=default,model=virtio --disk path=ws2012.qcow2,device=disk,bus=virtio --cdrom en_windows_server_2012_x64_dvd.iso --disk path=virtio-win-0.1-94.iso,device=cdrom --os-type windows --os-variant win2k8 --graphics vnc,listen=0.0.0.0 --noautoconsole
+   virt-install --connect qemu:///system --name ws2012-5 --ram 2048 --vcpus 2 --network network=default,model=virtio --disk path=ws2012.qcow2,device=disk,bus=virtio --cdrom en_windows_server_2012_x64_dvd.iso --disk path=virtio-win-0.1-94.iso,device=cdrom --os-type windows --os-variant win2k8 --graphics vnc,listen=0.0.0.0 --noautoconsole --cpu qemu64,+lahf_lm,+cx16
+    
+[Error] Your PC needs to restart : http://superuser.com/questions/787396/install-windows-server-2012-r2-in-qemu-vm
+
+list with supported values can be queried by : qemu-system-x86_64 -cpu "?"
+
+Create a image from qcow2 :   glance --os-username admin --os-password newegg@123 --os-project-id a33b13ecabe14656a19c52b7b41e1b58 --os-auth-url http://127.0.0.1:5000/v2.0/ image-create --name WS2012-test --disk-format qcow2 --container-format bare --is-public true --file windows-server-2012-r2.qcow2
+
+------------------------------------------------------------------------------------------------------------------------

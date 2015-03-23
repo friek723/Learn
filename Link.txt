@@ -1,0 +1,813 @@
+CSS 
+    - css frameworks : http://devzum.com/2014/11/20/best-html-css-frameworks/
+    - HTML Responsive Web Design : To create web sites that look good on all devices.
+                                   A must for mobile devices.
+               - http://www.w3schools.com/css/css_responsive_intro.asp
+               - http://www.w3schools.com/html/html_responsive.asp
+               - Bootstrap (http://getbootstrap.com/) : Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+
+
+Javascript
+    - http://www.w3schools.com/js/default.asp
+    - (jQuery v.s. AngularJS) https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough
+                                 http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background
+                                 http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
+    - Closures in JavaScript : http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
+                               http://www.w3schools.com/js/js_function_closures.asp
+                                 
+    [jQuery] jQuery is a lightweight, "write less, do more", JavaScript library.
+             The jQuery library contains the following features:
+								HTML/DOM manipulation
+								CSS manipulation
+								HTML event methods
+								Effects and animations
+								AJAX
+								Utilities
+             The jQuery library is a single JavaScript file : <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+             
+        - http://www.w3schools.com/jquery/default.asp
+        
+    [AngularJS] AngularJS is a JavaScript framework.  It is a library written in JavaScript.
+                AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions.
+                AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
+                   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+        - http://www.w3schools.com/angular/default.asp
+        
+    [AJAX] 
+        - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+        - jQuery provides several methods for AJAX functionality. 
+            With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post. 
+                And you can load the external data directly into the selected HTML elements of your web page.
+            Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. 
+                the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.                
+        - http://www.w3schools.com/ajax/default.asp
+        - API doc : http://api.jquery.com/jquery.ajax/
+        - Cross-Origin resource sharing : http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
+                                          (See ASP.NET solution below, search "Cross-Origin")
+        
+    [Node.js] server-side and networking applications, written in JavaScript
+          
+          http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
+          http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
+          
+          Framework : 
+                  'Meteor' web framework (https://www.meteor.com/about)
+                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications : http://expressjs.com/
+          Tutorial :
+                  API DOCS : https://nodejs.org/api/
+                  https://nodejs.org/documentation/
+                  http://nodeschool.io/
+				          http://www.nodebeginner.org/index-zh-tw.html        
+				          Real Time Chat With NodeJS : http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socket-io-and-expressjs--net-31708
+				          http://nodeguide.com/beginner.html
+				          https://www.codeschool.com/courses/real-time-web-with-node-js
+          
+          
+
+HTTP & WEB tool 
+ - (Press F12 on Chrome) http://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome
+ - Chrome plugin [Live HTTP Headers] https://chrome.google.com/webstore/detail/live-http-headers/iaiioopjkcekapmldfgbebdclcnpgnlo
+ - How Web Browsers work : http://taligarsiel.com/Projects/howbrowserswork1.htm
+ - (!!Readme) A Software Developer's Guide to HTTP : http://odetocode.com/Articles/List
+ 
+Web Framework
+ - http://hotframeworks.com/
+   http://www.hurricanesoftwares.com/most-popular-web-application-frameworks/
+   http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks
+   http://en.wikipedia.org/wiki/Web_application_framework
+   
+Web server & App server 
+ - http://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server
+ [Reverse Proxy Server] http://www.arthurtoday.com/2010/01/reverse-proxy-server.html
+                        http://en.wikipedia.org/wiki/Reverse_proxy
+                        [NGINX Reverse Proxy] http://nginx.com/resources/admin-guide/reverse-proxy/
+                                              http://en.wikipedia.org/wiki/Nginx
+ - Nginx v.s. Apache
+                    http://stackoverflow.com/questions/11171992/nginx-v-apache-for-high-traffic-sites
+                    http://stackoverflow.com/questions/4540669/nginx-and-apache
+                    http://readystate4.com/2012/07/08/nginx-the-non-blocking-model-and-why-apache-sucks/
+                    http://blog.martinfjordvald.com/2011/02/nginx-primer-2-from-apache-to-nginx/
+                
+                
+OAuth & OpenID 
+    
+    Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
+    
+    OAuth 
+        http://en.wikipedia.org/wiki/OAuth
+        http://oauth.net/2/     (http://oauth.net/)
+        http://blog.yorkxin.org/posts/2013/09/30/oauth2-1-introduction/
+    
+    OpenID 
+        http://briian.com/5328/openid.html    
+        
+        
+Regular Expression 
+ - http://www.codeproject.com/Articles/9099/The-Minute-Regex-Tutorial
+ - http://www.w3schools.com/js/js_regexp.asp
+ 
+
+Coding online (all languages) :  http://www.tutorialspoint.com/codingground.htm
+
+Cloud Computing  : http://www.tutorialspoint.com/cloud_computing/index.htm
+
+
+Java         
+      Spring Framework : http://www.tutorialspoint.com/spring/index.htm
+                                                              
+			Java EE 
+			- http://docs.oracle.com/javaee/7/tutorial/doc/home.htm
+
+			Dependency Injection : 
+			                        http://stackoverflow.com/questions/130794/what-is-dependency-injection
+			                        http://www.tutorialspoint.com/spring/spring_dependency_injection.htm
+
+			Rest API for Java (JAX-RS 2.0 API Specification) 
+			    - https://jax-rs-spec.java.net/nonav/2.0/apidocs/index.html
+     			Example Applications for JAX-RS - http://docs.oracle.com/javaee/6/tutorial/doc/gipzz.html
+			
+			EJB
+			- http://openhome.cc/Gossip/EJB3Gossip/
+			- http://www.javaworld.com/article/2072892/java-web-development/ejb-3-0-in-a-nutshell.html
+			
+			JSF 
+			- http://www.tutorialspoint.com/jsf/jsf_first_application.htm
+			- http://openhome.cc/Gossip/JSF/
+
+
+			jBoss & jBPM
+			- http://mswiderski.blogspot.tw/2013/11/jbpm-6-first-steps.html
+			- http://www.mastertheboss.com/
+			- http://blog.csdn.net/kylinsoong/article/details/17262605
+			- http://blog.csdn.net/kylinsoong/article/details/17677187
+			ldap - http://www.mastertheboss.com/jboss-security/configure-jboss-with-ldap
+			     - http://docs.jboss.org/teiid/7.3.0.Final/developer-guide/en-US/html/custom_login_modules.html
+			
+			JBPM 
+			- Get jbpm process image : 
+			      https://issues.jboss.org/browse/JBPM-4144
+			      http://docs.jboss.org/jbpm/v5.2/userguide/ch10.html#d0e3327
+			      http://javaintelligence.blogspot.tw/2010/08/jboss-jbpm-generating-image-at-runtime.html 
+      
+      
+
+JSON 
+       - http://j796160836.pixnet.net/blog/post/30530326-%E7%9E%AD%E8%A7%A3json%E6%A0%BC%E5%BC%8F
+       JSON convert tool  :  http://www.jsoneditoronline.org/
+       
+       [Java]Convert JSONObject to mongo DBObject :  See [note2] below
+                                                     http://stackoverflow.com/questions/5699323/using-json-with-mongodb
+       [Java]Convert JSONObject to Map : !!! http://stackoverflow.com/questions/21720759/convert-jsonobject-to-map
+                                       http://stackoverflow.com/questions/6323205/convert-json-string-to-java-mapjsonlib
+       
+RESTful
+ - http://rest.elkstein.org/
+
+Sessions & Cookies
+   ! http://www.tangowithdjango.com/book/chapters/cookie.html
+   http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
+   
+
+
+SQL 
+    - http://www.1keydata.com/tw/sql/sql.html
+    - (SubQuery): http://www.1keydata.com/tw/sql/sql-subquery.html 
+    - IN : http://www.1keydata.com/tw/sql/sqlin.html
+           SELECT * FROM Store_Information WHERE Store_Name IN ('Los Angeles', 'San Diego');
+           SELECT SUM(Sales) FROM Store_Information WHERE Store_Name IN (SELECT Store_Name FROM Geography WHERE Region_Name = 'West');
+    - HAVING : http://www.mysql.tw/2014/06/sqlwherehaving.html
+    - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
+    - Connection String Reference : http://www.connectionstrings.com/
+
+GIT
+- http://blog.gogojimmy.net/2012/02/29/git-scenario/
+- https://www.atlassian.com/git/tutorials/setting-up-a-repository
+- create a new repo locally and push to remote : 
+                                                 git init
+                                                 git add .
+                                                 git commit -m "comment"
+                                                 git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
+                                                 git push appharbor master
+                                                 
+Linux Inter-Process Communication
+- http://www.comptechdoc.org/os/linux/programming/linux_pgcomm.html
+  http://www.tldp.org/LDP/lpg/node7.html
+
+Linux scripts language (Bash, Python, Perl, Ruby...): 
+                         http://www.quora.com/Whats-the-best-language-to-learn-for-UNIX-Linux-system-administration
+                         http://stackoverflow.com/questions/70453/which-scripting-language-is-best
+                         
+  
+
+
+                 
+
+
+OpenStack 
+	- http://www.ithome.com.tw/node/81091
+	- http://developer.openstack.org/
+	- https://wiki.openstack.org/wiki/SDKs#Known_SDKs    (SDKs treat OpenStack as a blackbox and only interact with the REST/HTTP API.)
+	- Free API try out
+	      - TryStack
+	          http://trystack.org/ 
+	          https://www.youtube.com/watch?v=EPZPzXSypl4&feature=youtu.be     (Video demo)
+	          https://openstack.redhat.com/TryStackFAQ     (FAQ) 
+	              (Your api password is: facebook691003934 / Z7zus3UGE5cWyP4x)
+	              (With the Facebook Login link now enabled on the Dashboard, you must request membership in the TryStack group, and once approved, you can login with your Facebook ID. A Username and Password is created when you click the Go to App button, and you can use those credentials for the Dashboard and for API access. Be sure to make a note of your Username and Password if you want to use those credentials for the Compute API!)  
+	      - HP
+	          http://www.hpcloud.com/cloud-credit  (account  : jimmy_huang / Jimmyhuang1104)    
+	          
+	- Install 
+	      *** http://www.openfoundry.org/foss-news/9249 
+	      http://www.openstack.org/software/start/
+	      http://docs.openstack.org/developer/devstack/
+	      http://docs.openstack.org/
+	      !! (Installation Guide for Ubuntu 14.04) http://docs.openstack.org/juno/install-guide/install/apt/content/
+	      Quick setup : http://sayalilunkad.github.io/posts/Devstack/
+	                    http://www.giantflyingsaucer.com/blog/?p=4859
+	      (Machine  centos-quentus : root/newegg@123)
+	- Learn    
+	      !! wiki : https://wiki.openstack.org/wiki/Main_Page
+	      (快速認識OpenStack技術架構) http://www.ithome.com.tw/node/81095
+	      http://www.openstack.org/software/
+	      !! http://docs.openstack.org/
+	      https://www.openstack.org/summit/openstack-paris-summit-2014/session-videos/
+	      (preface) http://docs.openstack.org/openstack-ops/content/openstack-ops_preface.html
+	      !! (Training Guides : Conceptual Architecture) http://docs.openstack.org/training-guides/content/
+	      (Dashboard) http://docs.openstack.org/user-guide-admin/content/ch_dashboard.html  
+	      !! (Developer documentation ) http://docs.openstack.org/developer/openstack-projects.html
+	      
+	- API doc
+	      http://developer.openstack.org/api-ref.html    
+	      http://docs.openstack.org/api/quick-start/content/
+	      (API教學)chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html
+	      jclouds - http://jclouds.apache.org/
+	      
+	- java sdk
+	      http://jclouds.apache.org/guides/openstack/
+        
+	- Floating IP 
+	      !!!(auto_assign_floating_ip = True)  http://www.jansipke.nl/installing-openstack-with-devstack/
+	      https://openstack.redhat.com/Floating_IP_range
+	      https://www.stackops.com/understanding-stackops-openstack-nova-networking-configuration/
+	      http://www.stackgeek.com/blog/kordless/post/taking-openstack-for-a-spin
+	- Networking 
+	      https://wiki.openstack.org/wiki/UnderstandingFlatNetworking      
+	      https://fosskb.wordpress.com/2014/06/10/managing-openstack-internaldataexternal-network-in-one-interface/
+	      https://fosskb.wordpress.com/2014/09/15/l3-connectivity-using-neutron-l3-agent/
+	- Orchestration (Heat)
+	      http://docs.openstack.org/developer/heat/
+	      http://docs.openstack.org/havana/install-guide/install/apt/content/orchestration-service.html
+	      (HOT) Guide : http://docs.openstack.org/developer/heat/template_guide/hot_guide.html
+	      !!!!! How to enable :     http://docs.openstack.org/developer/heat/getting_started/on_devstack.html	
+	            Example Templates : http://docs.openstack.org/developer/heat/getting_started/on_ubuntu.html#example-templates  
+	      https://wiki.openstack.org/wiki/Heat
+	      !!! Try it : http://blog.scottlowe.org/2014/05/01/an-introduction-to-openstack-heat/
+	      ApplicationDeployment - https://wiki.openstack.org/wiki/Heat/ApplicationDeployment
+	      
+	- Horizon 
+	      http://www.slideshare.net/delapsley1/openstack-horizon-controlling-the-cloud-using-django
+	      
+  - Ceilometer
+        Configure DevStack to enable Ceilometer : http://docs.openstack.org/developer/heat/getting_started/on_devstack.html
+                                                  http://docs.openstack.org/developer/ceilometer/install/development.html
+  	                                              (Manually) http://docs.openstack.org/developer/ceilometer/install/manual.html
+  - Swift & Cinder
+        http://docs.openstack.org/developer/devstack/guides/multinode-lab.html
+        http://www.computerweekly.com/feature/OpenStack-storage-Cinder-and-Swift-explained
+        https://www.swiftstack.com/openstack-swift/architecture/
+        swift API - http://jclouds.apache.org/guides/openstack/
+                  - http://docs.openstack.org/developer/swift/
+                  - http://docs.openstack.org/api/openstack-object-storage/1.0/content/ch_object-storage-dev-general-api.html
+                  - http://joss.javaswift.org/
+        Direct url access to object : http://docs.openstack.org/juno/config-reference/content/object-storage-tempurl.html
+                                      http://luisbg.blogalia.com/historias/74348
+  - log 
+        http://docs.openstack.org/openstack-ops/content/logging_monitoring.html
+                                             
+                  
+  - Image Creation
+        http://www.ibm.com/developerworks/cloud/library/cl-openstack-images/   
+        (Image already created) http://docs.openstack.org/image-guide/content/ch_obtaining_images.html
+                                !! https://openstack.redhat.com/Image_resources
+                                !!! (Windows Server 2012 R2)http://www.cloudbase.it/ws2012r2/
+                                                            http://www.cloudbase.it/openstack-windows-server-2012-r2-evalution-images/  
+                                                            http://www.cloudbase.it/create-windows-openstack-images/                
+		            
+		            http://poolsidemenace.wordpress.com/2011/06/16/porting-windows-to-openstack/	      	      
+                http://cloud-ninja.org/2014/05/14/running-windows-7-guests-on-openstack-icehouse/
+                   
+        windows image creation :  
+                http://www.2cto.com/os/201212/175627.html
+                https://aptira.com/blog/108-creating-a-windows-server-2012-qcow2-image-openstack-kvm 
+                http://www.florentflament.com/blog/windows-images-for-openstack.html 
+                http://docs.openstack.org/image-guide/content/windows-image.html
+                 
+  - Open source project 
+      !!![Billing] https://github.com/search?utf8=%E2%9C%93&q=openstack+billing&type=Repositories&ref=searchresults
+                   [StackTach]   https://github.com/stackforge/stacktach
+                   [cloudkitty]  https://github.com/stackforge/cloudkitty  
+                                 https://wiki.openstack.org/wiki/CloudKitty
+                                 http://cloudkitty.readthedocs.org/en/latest/
+                                 
+                                                      
+      https://github.com/stackforge
+      https://github.com/stackforge/puppet-ceilometer  (http://www.gossamer-threads.com/lists/openstack/dev/35174)
+     《OpenStack?源云王者??》 https://github.com/JiYou/openstack 
+
+         
+	-	Billing system for Cloud : 
+		                   
+		    [OpenStack] 
+						  - http://opensource.com/resources/what-is-openstack (Ceilometer provides telemetry services, which allow the cloud to provide billing services to individual users of the cloud.)
+						  - http://www.billingstack.org/#/
+						  - https://www.mirantis.com/blog/tracking-billing-can-make-openstack-cloud-better/
+						  - https://www.stackops.com/en/openstack-billing/
+						  - (OpenBook ) https://www.redhat.com/en/about/events/managing-billing-and-customer-life-cycle-openstack-red-hat-and-talligent
+						                http://talligent.com/
+						  - !!(SlapOS Billing)  http://www.nexedi.com/news-SlapOS.Billing        
+						                        !! https://www.slapos.org/
+						                        https://www.youtube.com/watch?v=9pEgWmtk32o
+						                        
+						  - http://www.amysta.com/
+						                        
+						  - !!videos 
+						            https://www.openstack.org/summit/openstack-paris-summit-2014/session-videos/presentation/billing-integration-enablement-for-ceilometer
+						            https://www.openstack.org/summit/san-diego-2012/openstack-summit-sessions/presentation/what-about-billing-an-introduction-to-ceilometer
+						 - !!!!!! https://wiki.openstack.org/wiki/EfficientMetering
+		                   http://docs.openstack.org/developer/ceilometer/measurements.html
+		                   https://github.com/trystack/dash_billing
+		                   https://github.com/griddynamics/nova-billing
+		         - !Ceilometer
+		                   https://wiki.openstack.org/wiki/Ceilometer
+		                   http://docs.openstack.org/developer/ceilometer/
+		                   !! http://docs.openstack.org/developer/ceilometer/architecture.html
+		                   http://www.openstack.cn/p1817.html
+		                   http://www.openstack.cn/ptag/ceilometer
+		                   https://www.ustack.com/blog/ceilometer/
+		                   
+		    [CloudStack]                                                
+		          - (not free) http://hostbillapp.com/features/apps/cloudstack.html
+		          - (not free) (Zuora) http://blog.zuora.com/zblog/2012/04/zuora-in-good-company-with-citrixs-cloudstack-apache-software-foundation.html 
+		          -  ??? http://www.getcloudservices.com/hosting-providers/cloudstack-whmcs-module.html      
+		          - Info  :  http://comments.gmane.org/gmane.comp.apache.cloudstack.user/1301
+          
+
+
+Python
+        Good tuturial : http://www.diveintopython3.net/
+                        http://www.tutorialspoint.com/python/
+        http://docs.openstack.org/user-guide/content/
+        Install from sources: : python setup.py install
+        Building a Python 3 REST application : http://www.giantflyingsaucer.com/blog/?p=5192
+        Bundling Python files into a stand-alone executable :  http://blog.ablepear.com/2012/10/bundling-python-files-into-stand-alone.html
+        make a py file executable :  http://stackoverflow.com/questions/304883/what-do-i-use-on-linux-to-make-a-python-program-executable
+        
+        pip freeze (Output installed packages in requirements format.) - http://reader.roodo.com/thinkingmore/archives/18853358.html
+                                                                         https://devcenter.heroku.com/articles/getting-started-with-python#declare-app-dependencies
+        
+        Install package : https://packaging.python.org/en/latest/pip_easy_install.html
+                          http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
+        
+        [Django] 
+                    Official tutorial : https://www.djangoproject.com/start/
+                    http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
+                    Django 虛擬環境 activate : VENV\Scripts\activate
+                    Run server : python manage.py runserver 0.0.0.0:8000
+                                 Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                                                        http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
+                                                         
+						        [Deploy & Server]
+						                    https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
+						                    !! https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+						                    [Apache and mod_wsgi]
+						                              [Install]
+						                                      https://code.google.com/p/modwsgi/wiki/QuickInstallationGuide
+						                                         Missing Python Header Files : https://code.google.com/p/modwsgi/wiki/InstallationIssues
+						                                      https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/modwsgi/
+						                                      See 'Install Apache and mod_wsgi' : https://docs.djangoproject.com/en/1.7/topics/install/ 
+						                                      !!! Check [note1] on the bottom of this doc
+						                              [Config]  https://code.google.com/p/modwsgi/wiki/ConfigurationDirectives
+						                              [Apache log] print  : /var/log/apache2/error.log   
+					                                             access : /var/log/apache2/access.log
+					                                             (https://www.a2hosting.com/kb/developer-corner/apache-web-server/viewing-apache-log-files)
+						                                           (
+						                                             No need to enable WSGIRestrictStdout? : 
+						                                                                  http://stackoverflow.com/questions/3543572/in-django-how-do-i-allow-print-statements-to-work-with-apache-wsgi
+						                                                                  http://blog.dscpl.com.au/2009/04/wsgi-and-printing-to-standard-output.html
+						                                            )
+						                                           
+						                    [gunicorn] : http://gunicorn-docs.readthedocs.org/en/latest/install.html#ubuntu
+						                                [Run server] : 1. Switch dir to manage.py
+						                                               2. gunicorn myproject.wsgi -b 0.0.0.0:22222
+						                                                  (nohup gunicorn tutorial.wsgi -b 0.0.0.0:22222  &>myout.txt &)   
+						                                                  SSL(https) (gunicorn tutorial.wsgi -b 0.0.0.0:22222 --certfile=server.crt --keyfile=server.key)
+						                                               http://gunicorn-docs.readthedocs.org/en/latest/run.html
+						                                               Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+						                                 SSL : http://stackoverflow.com/questions/7406805/running-gunicorn-on-https
+						                                       http://serverfault.com/questions/224122/what-is-crt-and-key-and-how-can-i-generate-them
+						                                       http://www.akadia.com/services/ssh_test_certificate.html
+						                                 [Nginx + gunicorn] http://docs.gunicorn.org/en/latest/deploy.html
+						                                                    https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx
+						                                                    http://www.quora.com/What-are-the-differences-between-nginx-and-gunicorn
+						                                                    http://blog.etianen.com/blog/2014/01/19/gunicorn-heroku-django/
+						                                                    Also see [Reverse Proxy Server] above
+						                                       
+						                    [uWSGI] :  https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+						                             https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/
+						                             ![Nginx + uWSGI] https://uwsgi.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
+						                             
+						        [REST]
+						                http://www.django-rest-framework.org/
+						                http://www.ngenworks.com/blog/how-django-rest-framework-changed-my-life
+						        [Sessions & Cookies]
+						                https://docs.djangoproject.com/en/1.7/topics/http/sessions/
+						                http://www.tangowithdjango.com/book/chapters/cookie.html
+						                
+						        [AJAX, Cross Site Request Forgery  & Cross-Origin Resource Sharing] http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+						        
+						        
+				Timer :  http://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
+				
+				Scheduler :  1. http://apscheduler.readthedocs.org/en/latest/
+				                http://stackoverflow.com/questions/11523918/python-start-a-function-at-given-time
+				             2. https://github.com/dbader/schedule
+				                http://stackoverflow.com/questions/2398661/schedule-a-repeating-event-in-python-3   (Search dbader)
+				
+				HTTP :  http://docs.python-requests.org/en/latest/index.html
+					
+				LDAP :  http://www.python-ldap.org/docs.shtml
+						    http://www.python-ldap.org/doc/html/index.html
+						    http://stackoverflow.com/questions/4784775/ldap-query-in-python
+				json : http://xahlee.info/perl-python/python_json_tutorial.html
+						       import json
+						       json.dumps() returns type string
+						       json.loads() returns type dict
+				
+				import name conflicts : http://stackoverflow.com/questions/1900189/how-to-access-a-standard-library-module-in-python-when-there-is-a-local-module-w
+						                    http://stackoverflow.com/questions/6031584/python-importing-from-builtin-library-when-module-with-same-name-exists
+						                    http://programmers.stackexchange.com/questions/187403/import-module-vs-from-module-import-function
+						                    
+				Compare dictionary : http://stackoverflow.com/questions/4527942/comparing-two-dictionaries-in-python
+				                     (dict1 == dict2)
+				                     (shared_items = set(A.items()) & set(B.items()))
+				                     (diff_items = set(A.items()) ^ set(B.items()))
+				
+				Finding what methods an object has : http://stackoverflow.com/questions/34439/finding-what-methods-an-object-has                     
+		    Object method & attribute:
+		                    All attributes for a object: print dir(objectName) 
+		                    All callable methods for a object: print [method for method in dir(objectName) if callable(getattr(objectName, method))]
+
+        SSH (pxssh):  http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
+				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
+				        
+				run background as a daemon :    http://code.activestate.com/recipes/278731/
+				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
+				                                
+						                    
+Complex Event Processing
+ 
+     http://quant.stackexchange.com/questions/550/drawbacks-caveats-of-using-nesper-for-esp-cep-in-trading-systems
+     http://www.manning.com/etzion/Etzion_MEAPch01_free.pdf
+     http://www.cnblogs.com/shanyou/archive/2010/09/16/cep.html
+     
+     [StreamInsight]
+         http://www.dotblogs.com.tw/skychang/archive/2013/04/18/101775.aspx     
+         http://blogs.msdn.com/b/streaminsight/
+         http://blogs.msdn.com/b/streaminsight/archive/2014/06/16/microsoft-streaminsight-2-3-for-sql-server-2014.aspx
+         Developer Guide - http://technet.microsoft.com/en-us/library/hh995352(v=sql.111).aspx 
+         StreamInsight Concepts - http://technet.microsoft.com/en-us/library/jj136801(v=sql.111).aspx
+               
+     [Esper]
+         http://esper.codehaus.org/tutorials/tutorials.html
+         Sample code : https://coffeeonesugar.wordpress.com/2009/07/21/getting-started-with-esper-in-5-minutes/
+         !Document : http://esper.codehaus.org/esper-5.0.0/doc/reference/en-US/html/index.html
+                   
+     [Fluentd + Norikra] 
+                              
+         Mongo DB : http://inspire.twgg.org/internet/host-setting/item/459-fluentd-mongodb.html
+         How to add plugin :   sudo /usr/sbin/td-agent-gem install fluent-plugin-norikra
+                               http://docs.fluentd.org/articles/faq#i-installed-td-agent-and-want-to-add-custom-plugins-how-do-i-do-it
+         How to check plugin : sudo /usr/sbin/td-agent-gem list
+         
+         [Fluentd + python]
+                        http://docs.fluentd.org/articles/python 
+                        http://blog.vars.me/blog/2014/03/09/fluentdchu-tan-3-shi-zhan-python-plus-mongodb/
+         
+         [Norikra] Norikra is a open source server software provides "Stream Processing" with SQL, written in JRuby. 
+                   Based on Esper by EsperTech. 
+                   Input/Output event streams as JSON objects.
+                   Norikra's query is SQL with window specifier support (It's actually Esper's EPL).
+                                      
+             !! http://docs.fluentd.org/articles/cep-norikra
+             start Fluentd : sudo /etc/init.d/td-agent start
+             start Norikra : export PATH=$PATH:/home/stack/JRuby/jruby-1.7.18/bin
+                             norikra start
+             Query Syntax : http://norikra.github.io/query.html
+             Query Examples : http://norikra.github.io/examples.html
+             !! Esper's EPL :  http://esper.codehaus.org/esper-5.0.0/doc/reference/en-US/html/epl_clauses.html
+                               Ex -  (1) average price for IBM stock ticks in the last 30 seconds.
+                                         select avg(price) from StockTick.win:time(30 sec) where symbol='IBM'
+                                     (2) counts the number of events per 10 second interval
+                                         SELECT action, count(*) AS c FROM access.win:time_batch(10 sec) WHERE user != 0 GROUP BY action
+                                     (3) 5.3.9. Select Distinct : outputs all distinct events either when 100 events arrive or when 10 seconds passed, whichever occurs first
+                                         select distinct sensorId from TemperatureSensorEvent.win:time_length_batch(10, 100)
+                                     (4) 5.6.4 posts the total price per symbol for the last 30 seconds of stock tick events for only those symbols in which the total price exceeds 1000.
+                                         select symbol, sum(price) from StockTickEvent.win:time(30 sec) group by symbol having sum(price) > 1000
+                                     (5) 5.6.5 only events with symbol IBM enter the length window over the last 10 events
+                                         select tickDataFeed, stddev(price) from StockTickEvent(symbol='IBM').win:length(10) where volume > 1000 group by tickDataFeed having stddev(price) > 0.8
+
+Mongo DB
+          - Quick trial : http://try.mongodb.org/
+          - !Introduction : http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/
+                            http://www.tutorialspoint.com/mongodb/
+          - Config : /etc/mongodb.conf
+          - Bind to all ip : Add "bind_ip = 0.0.0.0" to /etc/mongodb.conf
+                             http://stackoverflow.com/questions/4961177/how-to-listen-only-to-localhost-on-mongodb
+          - GUI tool :   http://docs.mongodb.org/ecosystem/tools/administration-interfaces/
+                         http://blog.mongodirector.com/which-is-the-best-mongodb-gui/
+                         (tried this) http://robomongo.org/
+                         http://www.mongovue.com/
+          - Find the latest three records (for command line):  db.collection_test.find().sort({time: -1}).limit(3)
+                                      (for python code) : collection.find().sort("time", -1).limit(3):
+                                  
+                                  
+
+Paas
+    Comparison And Guide : http://www.tomsitpro.com/articles/paas-providers,1-1517.html
+    A complete Open Source cloud: Storage, Virt, IaaS, PaaS : http://www.slideshare.net/nearyd/virt-iaa-spaascloudcompleteopencloud
+    
+
+PHP 
+    e-Commerce
+        wordpress
+            https://www.webhostinghero.com/host-wordpress-on-a-paas-service/
+            ! http://steveperkins.com/hosting-a-wordpress-site-on-appfog-without-persistent-file-storage/
+            https://make.wordpress.org/support/user-manual/setting-up-wordpress/finding-a-host/
+            http://yapeshu.invenio.us/2011/10/web-heroku-wordpress.html
+            http://stackoverflow.com/questions/22599081/how-to-set-up-wordpress-on-heroku
+            http://www.hongkiat.com/blog/setup-wordpress-openshift/
+            [DigitalOcean]
+                http://wptavern.com/digitalocean-is-now-the-third-largest-hosting-provider-wordpress-droplets-account-for-23
+                !https://www.digitalocean.com/community/tutorials/one-click-install-wordpress-on-ubuntu-14-04-with-digitalocean
+                http://publishingwithwordpress.com/installing-wordpress-digital-ocean/
+                https://www.youtube.com/watch?v=nDy3XyBGBwM
+                
+        Magento
+            https://chrisgrice.com/magento-on-heroku-part-1/
+            http://markshust.com/2012/10/29/deploying-magento-heroku-amazon-rds
+        joomla
+
+
+ASP.NET & C# 
+    online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
+                       http://csharppad.com/
+
+    C # 
+        http://www.tutorialspoint.com/csharp/
+        ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
+        Nullable Types (int? i = 10;) -->   Nullable types can represent all the values of an underlying type, and an additional null value.
+                                            The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
+                                            https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
+        
+        
+    ASP.NET 
+        
+        http://www.w3schools.com/aspnet/
+        http://www.tutorialspoint.com/asp.net/index.htm
+        wiki : http://www.codeproject.com/KB/wiki-aspnet/
+        
+        Session :  https://msdn.microsoft.com/en-us/library/ms178581(v=vs.100).aspx
+                        - By default, SessionID values are stored in a cookie. However, you can also configure the application to store SessionID values in the URL for a "cookieless" session.
+                   http://www.codeproject.com/Articles/32545/Exploring-Session-in-ASP-Net
+                   Example : http://www.asp.net/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
+                   Use Session State with Azure : http://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-session-state-caching/
+        
+        
+        Cookies : https://msdn.microsoft.com/en-us/library/ms178194(v=vs.140).aspx          
+        
+        URL Routing : http://www.asp.net/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
+                      https://msdn.microsoft.com/en-us/library/cc668201(v=vs.140).aspx
+                      https://www.simple-talk.com/dotnet/asp.net/mixing-web-forms-and-asp.net-mvc/
+                      
+        Webforms vs MVC : http://www.codeproject.com/Articles/821275/Webforms-vs-MVC-and-Why-MVC-is-better
+                          http://programmers.stackexchange.com/questions/95212/when-to-favor-asp-net-webforms-over-mvc
+                          https://www.youtube.com/watch?v=bGpBgDDDVlM
+                
+        Learn Data Development : https://msdn.microsoft.com/en-us/data/aa937721
+        
+        Paas for .NET : (account : friek723) https://appharbor.com:443/applications/test1-179/builds?authorization=BNF9MR%2f0a0%2bIzDfobo896JAts9TZTkhGpG9zt0MNtHc%3d  
+                        http://readwrite.com/2012/06/12/the-6-best-ways-to-run-microsofts-net-in-the-cloud
+                        http://www.businesscloudnews.com/2014/03/06/paas-wars-heat-up-as-openshift-announces-net-support/
+        
+        Think twice about using session state : http://brockallen.com/2012/04/07/think-twice-about-using-session-state/
+        
+        Database.Open in 'Web Page': See [note3] for sample code
+                                     (See the page bottom 'Connecting to a Database') http://www.asp.net/web-pages/overview/data/5-working-with-data
+                                       
+			                                 - 'Database' does not exist in the current context : http://stackoverflow.com/questions/9547158/the-name-database-does-not-exist-in-the-current-context
+			                                    Solution : 1. Copy C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\WebMatrix.Data.dll  to  site's /bin folder  
+			                                                  (Or use NuGet : https://www.nuget.org/packages/WebMatrix.WebData/)
+			                                               2. Add @using WebMatrix.Data;
+			                                 -  connection string keyword not supported : http://stackoverflow.com/questions/8150737/asp-net-mvc3-connection-string-keyword-not-supported-initial-catalog              
+			                                    Solution : specify the provider name as second parameter,   var providerName = "System.Data.SqlClient";
+			                                                                                                Database.OpenConnectionString(connectionString, providerName);
+                                 
+                                 
+        SQL Connection Strings  : https://msdn.microsoft.com/en-us/library/jj653752.aspx
+                                  http://www.connectionstrings.com/
+                                  Ex :  <add name="MovieDBContext" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
+                             - Data Source : ServerName\Instancename, you can use an IP address instead of the server name.
+                             - Initial Catalog : the name of the database in the SQL Server instance catalog
+                             - AttachDbFileName : This setting is typically used for database files that you keep in the App_Data folder.  
+                                                  This setting specifies the path and name of the database file for SQL Server Express or LocalDB databases that are not defined in the local SQL Server Express instance. 
+                                                  Ex : |DataDirectory|\Movies.mdf
+                             - Integrated Security : This setting specifies whether the connection should use the user ID and password in the connection string 
+                                                     to log on to the SQL Server instance, or the current Windows account credentials should be used for authentication. 
+                                                     True means use Windows integrated security to log in to SQL Server.                                 
+                                                     False means use SQL Server security to log in by using the User ID and Password values in the connection string.
+                                                     
+        [Web API] Enabling Cross-Origin Requests : http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
+                                                   --> use [EnableCors(origins: "*", headers: "*", methods: "*")] for all
+        
+        [LINQ]
+              https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
+              (tool) http://www.linqpad.net/ 
+        
+        [Web Forms]  page life cycle 
+        
+                              
+        [MVC]
+            !! http://www.asp.net/mvc
+            !! Video  (Building Applications with ASP.NET MVC 4) http://pluralsight.com/training/Player?author=scott-allen&name=mvc4-building-m6-ajax&mode=live&clip=0&course=mvc4-building
+            !!! http://odetocode.com/videos
+            
+            (old )Learn MVC (Model View Controller) step by step in 7 days :  http://www.codeproject.com/Articles/207797/Learn-MVC-Model-View-Controller-step-by-step-in 
+            Learn MVC 5 step by step in 7 days :  http://www.codeproject.com/Articles/866143/Learn-MVC-step-by-step-in-days-Day            
+            http://www.codeproject.com/Articles/556995/Model-view-controller-MVC-Interview-questions-and  
+            
+            DbContext not found :  (VS 2013 -> Tools -> Library Package Manager -> Console -> type "Install-Package EntityFramework")
+                                   http://stackoverflow.com/questions/16314715/dbcontext-not-found-in-mvc-4
+                                   http://stackoverflow.com/questions/5741109/the-type-or-namespace-name-dbcontext-could-not-be-found
+                                   
+            MVC 5 Internationalization : http://afana.me/post/aspnet-mvc-internationalization.aspx
+            
+            Don’t use Delete Links because they create Security Holes : http://stephenwalther.com/archive/2009/01/21/asp-net-mvc-tip-46-ndash-donrsquot-use-delete-links-because
+            
+            Difference Between ViewResult() and ActionResult() : http://stackoverflow.com/questions/4743741/difference-between-viewresult-and-actionresult
+
+           
+	          Entity Framework : 
+                 3 approaches : https://msdn.microsoft.com/en-us/library/ms178359.aspx#dbfmfcf
+                 
+                             
+            RenderPartial vs RenderAction vs Partial vs Action : http://www.dotnet-tricks.com/Tutorial/mvc/Q8V2130113-RenderPartial-vs-RenderAction-vs-Partial-vs-Action-in-MVC-Razor.html
+                                                                 http://stackoverflow.com/questions/5248183/html-partial-vs-html-renderpartial-html-action-vs-html-renderaction
+                                                                 (第二點不完全對, 第一點: Partial()本來參數就是給view)http://kelp.phate.org/2011/07/renderpartialpartialrenderaction.html
+            
+                                                                 
+            Passing Data From Controller to View :  
+            Multiple models in a view :
+                                         http://stackoverflow.com/questions/4764011/multiple-models-in-a-view
+                                         http://www.codeproject.com/Articles/687061/Multiple-Models-in-a-View-in-ASP-NET-MVC-MVC
+            
+            Passing Data From View to Controller : http://www.codeproject.com/Articles/639709/Getting-Data-From-View-to-Controller-in-MVC
+            
+            
+            MVC and ViewState : (MVC doesn't have viewstate but WebForm does.)
+                                http://stackoverflow.com/questions/1473483/asp-net-mvc-and-viewstate
+                                http://stackoverflow.com/questions/2230519/asp-net-c-sharp-mvc-how-do-i-live-without-viewstate
+            
+            Caching : http://www.dotnet-tricks.com/Tutorial/mvc/4R5c050113-Understanding-Caching-in-Asp.Net-MVC-with-example.html
+                      http://www.codeproject.com/Articles/757201/A-Beginners-Tutorial-for-Understanding-and-Imple
+                      
+                              
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[note1] Apache + mod_wsgi install steps 
+					 1156  apt-cache search apache | less
+					 1157  sudo apt-get install apache2
+					 1158  sudo apt-get install apache2-dev
+					 
+					 1169  wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.4.5.tar.gz
+					 1171  tar xvfz 4.4.5.tar.gz
+					 1173  cd mod_wsgi-4.4.5/
+					 1175  ./configure
+					 
+					 1179  python
+					 1182  apt-cache search python2.7 | less
+					 1186  apt-cache search python2.7-dev | less
+					 1187  sudo apt-get install python2.7-dev
+					 1189  make
+					 1192  sudo make install
+					 1195  apache2 -v
+					 
+					       cd /etc/apache2/sites-available
+					 1202  sudo vi 000-default.conf 
+					 Add :
+									  WSGIScriptAlias / /home/stack/django_prj/tutorial/tutorial/wsgi.py
+										WSGIPythonPath /home/stack/django_prj/tutorial
+										
+										<Directory /home/stack/django_prj/tutorial/tutorial>
+										<Files wsgi.py>
+										Require all granted
+										</Files>
+										</Directory>
+					
+					       cd /etc/apache2
+					 1207  sudo vi apache2.conf
+					 Add :  LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+					       
+					 1228  sudo apachectl restart
+					 1071  sudo apachectl stop
+					 1072  sudo apachectl start
+					 
+					 [Apache log] print  : /var/log/apache2/error.log   
+					              access : /var/log/apache2/access.log
+					              
+
+
+[note2]  [Java]Convert JSONObject to mongo DBObject
+							1.
+							Object jsonObj = ...; //any of your org.json objects
+							Object o = com.mongodb.util.JSON.parse(jsonObj.toString());
+							DBObject dbObj = (DBObject) o;
+							
+							
+							2.
+							public class Util {
+							    public static DBObject encode(JSONArray a) {
+							        BasicDBList result = new BasicDBList();
+							        try {
+							            for (int i = 0; i < a.length(); ++i) {
+							                Object o = a.get(i);
+							                if (o instanceof JSONObject) {
+							                    result.add(encode((JSONObject)o));
+							                } else if (o instanceof JSONArray) {
+							                    result.add(encode((JSONArray)o));
+							                } else {
+							                    result.add(o);
+							                }
+							            }
+							            return result;
+							        } catch (JSONException je) {
+							            return null;
+							        }
+							    }
+							
+							    public static DBObject encode(JSONObject o) {
+							        BasicDBObject result = new BasicDBObject();
+							        try {
+							            Iterator i = o.keys();
+							            while (i.hasNext()) {
+							                String k = (String)i.next();
+							                Object v = o.get(k);
+							                if (v instanceof JSONArray) {
+							                    result.put(k, encode((JSONArray)v));
+							                } else if (v instanceof JSONObject) {
+							                    result.put(k, encode((JSONObject)v));
+							                } else {
+							                    result.put(k, v);
+							                }
+							            }
+							            return result;
+							        } catch (JSONException je) {
+							            return null;
+							        }
+							    }
+							}
+
+[note3]
+
+							@using WebMatrix.Data;
+							@{
+							    var providerName = "System.Data.SqlClient";
+							    var db = Database.OpenConnectionString("Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123", providerName);
+							    var selectQueryString = "SELECT * FROM Movies";
+							}
+							
+							@foreach (var row in db.Query(selectQueryString))
+							{
+							    <tr>
+							        <td>@row.Title</td>
+							        <td>@row.Price</td>
+							        <td>@row.ID</td>
+							    </tr>
+							}
+
+
+
+
+
+
+
+
+
+

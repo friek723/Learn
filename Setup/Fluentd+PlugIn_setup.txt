@@ -1,0 +1,217 @@
+1. sudo vi /etc/security/limits.conf 
+   add : 
+       root soft nofile 65536
+       root hard nofile 65536
+			 * soft nofile 65536
+			 * hard nofile 65536
+2. sudo vi /etc/sysctl.conf
+   add : 
+       net.ipv4.tcp_tw_recycle = 1
+       net.ipv4.tcp_tw_reuse = 1
+       net.ipv4.ip_local_port_range = 10240    65535
+3. sudo reboot
+
+4. [Install Fluentd] For Ubuntu Trusty : 
+      curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
+      
+5. sudo /etc/init.d/td-agent restart  (or /etc/init.d/td-agent start)
+   sudo /etc/init.d/td-agent status
+   Make sure "/etc/td-agent/td-agent.conf" exists.
+   Test : 
+       curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
+       Check : /var/log/td-agent/td-agent.log
+       
+6. Install fluent-plugin-norikra :  sudo /usr/sbin/td-agent-gem install fluent-plugin-norikra
+
+7. [Install Norikra]
+   wget https://s3.amazonaws.com/jruby.org/downloads/1.7.18/jruby-bin-1.7.18.tar.gz
+   tar zxvf jruby-bin-1.7.18.tar.gz
+   sudo apt-get install openjdk-7-jre-headless
+   export PATH=$PATH:/home/stack/flunetd/jruby-1.7.18/bin
+   jgem install norikra
+   
+8. export PATH=$PATH:/home/stack/flunetd/jruby-1.7.18/bin
+   norikra start
+   Check : http://localhost:26578/
+   
+9. Check following exist in /etc/td-agent/td-agent.conf
+   (Default exist) :
+								    <source>
+								  		type http
+								  		port 8888
+										</source>
+
+                    or
+                    
+                    <source>
+										  type http
+										  port 8888
+										  bind 0.0.0.0
+										  body_size_limit 32m
+										  keepalive_timeout 10s
+										</source>
+
+   Add to /etc/td-agent/td-agent.conf:
+					   <match data.*>
+							  type    norikra
+							  norikra localhost:26571
+							  target_map_tag    true
+							  remove_tag_prefix data
+							
+							  <default>
+							    include *
+							    exclude time
+							  </default>
+						  </match>
+
+   sudo /etc/init.d/td-agent restart
+   
+10. [Test]
+    curl -X POST -d 'json={"action":"login","user":2}' http://localhost:8888/data.access
+    export PATH=$PATH:/home/stack/flunetd/jruby-1.7.18/bin
+    norikra-client target list
+    norikra-client field list access
+    norikra-client query add test_query "SELECT action, count(*) AS c FROM access.win:time_batch(10 sec) WHERE user != 0 GROUP BY action"
+            -->  time_batch(10 sec) : counts the number of events per 10 second interval
+    (
+    norikra-client query add test_query "SELECT action, count(*) AS c FROM access.win:time(20 sec) WHERE user != 0 GROUP BY action HAVING count(action) > 3"
+            -->  time(20 sec) : the last 20 seconds.
+    )
+    (
+    norikra-client query add test_query "SELECT distinct action FROM access.win:time_batch(20 sec) WHERE user != 0"
+            --> outputs all distinct events when 20 seconds passed.
+    )
+    Esper's EPL :  http://esper.codehaus.org/esper-5.0.0/doc/reference/en-US/html/epl_clauses.html
+    norikra-client query list
+    
+    
+    curl -X POST -d 'json={"action":"login","user":2}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"login","user":0}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"write","user":2}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"save","user":2}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"logout","user":2}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"logout","user":0}' http://localhost:8888/data.access
+    curl -X POST -d 'json={"action":"login","user":2}' http://localhost:8888/data.access
+    norikra-client event fetch test_query   (or curl -X POST -H "Content-Type: application/json" --data '{"query_name":"test_query"}' http://localhost:26578/api/event)
+                                            (or python :  from norikraclient.client import Client
+                                                          norikra = Client()
+                                                          norikra.event('test_query')
+                                                          See https://github.com/norikra/norikra-client-python/blob/master/norikraclient/client.py)
+                                                          
+11. [Mongo DB Output] 
+    Install : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/?_ga=1.66976750.1178864262.1420794747
+    Bind to all ip : 
+                     vi /etc/mongodb.conf
+                     Modify : bind_ip = 0.0.0.0
+                     
+    Add to /etc/td-agent/td-agent.conf:
+						<match mongo.*.*>
+						  # plugin type
+						  type mongo
+						
+						  # mongodb db + collection
+						  database apache
+						  collection access
+						
+						  # mongodb host + port
+						  host localhost
+						  port 27017
+						
+						  # interval
+						  flush_interval 10s
+						
+						  # make sure to include the time key
+						  include_time_key true
+						</match>
+
+    sudo /etc/init.d/td-agent restart
+    
+    start mongo server :
+            (for non-installed version)
+            export PATH=$PATH:/home/stack/mongo/mongodb-linux-x86_64-2.6.6/bin
+            mongod
+        OR
+            sudo service mongod restart
+            
+    curl -X POST -d 'json={"action":"login","user":2}' http://localhost:8888/mongo.apache.access
+    
+    Check mongo DB : 
+        export PATH=$PATH:/home/stack/mongo/mongodb-linux-x86_64-2.6.6/bin
+        mongo
+        use apache
+        db.access.find()  
+        
+12. [Multiple outputs]
+     Copy events to multiple outputs. 
+     copy Output Plugin : http://docs.fluentd.org/articles/out_copy
+     
+     Add to /etc/td-agent/td-agent.conf : 
+				    <match mongo.*.*>
+						  type copy
+						  <store>
+									type    norikra
+								  norikra localhost:26571
+								  target_map_tag    true
+								  remove_tag_prefix data
+								
+								  <default>
+								    include *
+								    exclude time
+								  </default>
+						  </store>
+						  <store>
+								  # plugin type
+								  type mongo
+								
+								  # mongodb db + collection
+								  database apache
+								  collection access
+								
+								  # mongodb host + port
+								  host localhost
+								  port 27017
+								
+								  # interval
+								  flush_interval 10s
+								
+								  # make sure to include the time key
+								  include_time_key true
+						  </store>
+						</match>
+
+     sudo /etc/init.d/td-agent restart
+     sudo service mongod restart
+     
+     Check norikra : 
+        norikra-client query add test_query "SELECT action, count(*) AS c FROM mongo_apache_access.win:time(60 sec) GROUP BY action"
+        norikra-client event fetch test_query
+     
+     Check mongo DB : 
+        export PATH=$PATH:/home/stack/mongo/mongodb-linux-x86_64-2.6.6/bin
+        mongo
+        use apache
+        db.access.find()  
+     
+     Send data to fluentd :    
+        curl -X POST -d 'json={"action":"login","user":2}' http://localhost:8888/mongo.apache.access
+        
+13. [python Input] [fluent-logger-python] 
+
+    sudo vi /etc/td-agent/td-agent.conf:
+      <source>
+			  type forward
+			  port 24224
+			</source>    
+   
+   sudo /etc/init.d/td-agent restart
+   sudo pip install fluent-logger
+
+14. [stdout]
+     sudo vi /etc/td-agent/td-agent.conf:
+						<match fluentd.test.**>
+						  type stdout
+						</match>
+
+    sudo /etc/init.d/td-agent restart
+
+    Check : /var/log/td-agent/td-agent.log

@@ -1,0 +1,66 @@
+http://trystack.org/ 
+https://x86.trystack.org/dashboard : facebook691003934 / Z7zus3UGE5cWyP4x    (or my fb account)
+
+
+Dashboard: 
+		1. Create a privatwe network  (Name : internal)(192.168.37.0/24) (DNS : 8.8.8.8)
+		2. Launch an instance (Name : Fedora test) (Networking : select 'internal')
+		   Launch an instance (Name : Fedora test2) (Networking : select 'internal')
+		3. Create a router (Name : rounter 1)
+		   Set gateway (External Network select 'external')
+		   Add interface to the router (Subnet select 'internal')
+		4. Associate a floating IP for instances
+		5. Add ICMP rule
+		   Add SSH port rule
+   
+REST API:
+    1. Authentication
+    2. Create server  
+    3. List server
+
+ 
+----------------------------------------------------------------
+VM   10.16.207.72
+     10.16.207.73 (from Daniel)
+SSH 22222 / 22
+jh7b/Newegg@123
+stack/newegg@123
+
+mysql root pass : Newegg@123 or empty
+
+
+Horizon is now available at http://10.16.207.72/
+Keystone is serving at http://10.16.207.72:5000/v2.0/
+Examples on using novaclient command line is in exercise.sh
+The default users are: admin and demo
+The password: newegg@123
+This is your host ip: 10.16.207.72
+
+
+Horizon is now available at http://10.16.207.73/
+Keystone is serving at http://10.16.207.73:5000/v2.0/
+Examples on using novaclient command line is in exercise.sh
+The default users are: admin and demo
+The password: newegg@123
+This is your host ip: 10.16.207.73
+
+
+
+
+free IP : 10.16.207.74~80  (10.16.207.76/30)
+
+
+login to instance (cirros-0.3.2-x86_64-uec)  cirros / cubswin:)
+---------------------------------------------------------------- 
+ 
+VM  centos-quentus(10.16.90.173) : root/newegg@123
+
+
+Horizon is now available at http://10.16.90.173/
+Keystone is serving at http://10.16.90.173:5000/v2.0/
+Examples on using novaclient command line is in exercise.sh
+The default users are: admin and demo
+The password: newegg@123
+This is your host ip: 10.16.90.173
+
+------------------------------------------------------------------
