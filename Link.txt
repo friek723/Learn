@@ -603,6 +603,10 @@ ASP.NET & C#
         
         Think twice about using session state : http://brockallen.com/2012/04/07/think-twice-about-using-session-state/
         
+        comment : http://stackoverflow.com/questions/12171576/how-to-write-a-comment-in-a-razor-view
+                  .cshtml -->  @*Comment goes here*@
+                  .aspx   -->  <%-- Comment goes here --%>
+        
         Database.Open in 'Web Page': See [note3] for sample code
                                      (See the page bottom 'Connecting to a Database') http://www.asp.net/web-pages/overview/data/5-working-with-data
                                        
