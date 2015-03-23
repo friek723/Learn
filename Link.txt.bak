@@ -605,7 +605,7 @@ ASP.NET & C#
         
         comment : http://stackoverflow.com/questions/12171576/how-to-write-a-comment-in-a-razor-view
                   .cshtml -->  @*Comment goes here*@
-                  .aspx   -->  
+                  .aspx   -->  <%-- Comment goes here --%>
         
         Database.Open in 'Web Page': See [note3] for sample code
                                      (See the page bottom 'Connecting to a Database') http://www.asp.net/web-pages/overview/data/5-working-with-data
@@ -641,6 +641,11 @@ ASP.NET & C#
         
         [Web Forms]  page life cycle 
         
+                     [Server Data Controls] http://www.asp.net/web-forms/overview/aspnet-data-controls
+                         Data-Bound Server Controls : https://msdn.microsoft.com/en-us/library/ms228214.aspx
+                         Data Source Controls : https://msdn.microsoft.com/en-us/library/ms227679.aspx
+                         
+                     
                               
         [MVC]
             !! http://www.asp.net/mvc
