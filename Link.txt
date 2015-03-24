@@ -583,6 +583,8 @@ ASP.NET & C#
         http://www.tutorialspoint.com/asp.net/index.htm
         wiki : http://www.codeproject.com/KB/wiki-aspnet/
         
+        Request Object (Cookie, QueryString, Form param): (Search the 4th of "The Request Object") http://www.asp.net/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
+        
         Session :  https://msdn.microsoft.com/en-us/library/ms178581(v=vs.100).aspx
                         - By default, SessionID values are stored in a cookie. However, you can also configure the application to store SessionID values in the URL for a "cookieless" session.
                    http://www.codeproject.com/Articles/32545/Exploring-Session-in-ASP-Net
