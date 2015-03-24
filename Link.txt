@@ -45,6 +45,11 @@ Javascript
         - API doc : http://api.jquery.com/jquery.ajax/
         - Cross-Origin resource sharing : http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
                                           (See ASP.NET solution below, search "Cross-Origin")
+        - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
+                                                  (Gmail-send-the-real-time-notification)
+                  http://en.wikipedia.org/wiki/Comet_(programming)
+                  http://stackoverflow.com/questions/732705/how-is-gmail-chat-able-to-make-ajax-requests-without-client-interaction
+                  http://stackoverflow.com/questions/1086380/how-does-facebook-gmail-send-the-real-time-notification
         
     [Node.js] server-side and networking applications, written in JavaScript
           
