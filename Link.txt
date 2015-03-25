@@ -35,7 +35,9 @@ Javascript
                    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
         - http://www.w3schools.com/angular/default.asp
-        
+        - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
+                                                               (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
+                                                               
     [AJAX] 
         - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
         - jQuery provides several methods for AJAX functionality. 
@@ -45,8 +47,10 @@ Javascript
                 the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.                
         - http://www.w3schools.com/ajax/default.asp
         - API doc : http://api.jquery.com/jquery.ajax/
-        - Cross-Origin resource sharing : http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
-                                          (See ASP.NET solution below, search "Cross-Origin")
+        - Cross-Origin resource sharing (Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
+                                                                 (See ASP.NET solution below, search "Cross-Origin")
+                                                                 (Chrome extension : 'Allow-Control-Allow-Origin')
+                                                                 
         - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
                                                   (Gmail-send-the-real-time-notification)
                   http://en.wikipedia.org/wiki/Comet_(programming)
