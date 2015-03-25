@@ -34,6 +34,11 @@ Javascript
                 AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
                    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
+        - Tutorial : 
+                   http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
+                   http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
+                   http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
+
         - http://www.w3schools.com/angular/default.asp
         - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
                                                                (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
@@ -49,7 +54,7 @@ Javascript
         - API doc : http://api.jquery.com/jquery.ajax/
         - Cross-Origin resource sharing (Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
                                                                  (See ASP.NET solution below, search "Cross-Origin")
-                                                                 
+                                                                 (Chrome extension : 'Allow-Control-Allow-Origin')
                                                                  
         - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
                                                   (Gmail-send-the-real-time-notification)
