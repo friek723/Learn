@@ -35,11 +35,16 @@ Javascript
                    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
         - Tutorial : 
+                   https://docs.angularjs.org/tutorial
+                   https://docs.angularjs.org/guide
+                   ! https://www.youtube.com/watch?v=i9MHigUZKEM
                    http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
                    http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
                    http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
-
-        - http://www.w3schools.com/angular/default.asp
+                   http://www.w3schools.com/angular/default.asp
+                   Example App code : https://github.com/angular-app/angular-app
+                                      http://www.codeproject.com/Articles/637430/Angular-js-example-application
+                                      
         - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
                                                                (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
                                                                
@@ -476,8 +481,12 @@ Python
 		                    All callable methods for a object: print [method for method in dir(objectName) if callable(getattr(objectName, method))]
 
         SSH (pxssh):  http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
+                      could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
+                      
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
-				        
+				
+				Console command (Pexpect) 
+				         
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
 				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
 				                                
