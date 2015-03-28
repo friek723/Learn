@@ -81,6 +81,7 @@ Javascript
           Tutorial :
                   API DOCS : https://nodejs.org/api/
                   https://nodejs.org/documentation/
+                  Introduction to Node.js - https://www.youtube.com/watch?v=jo_B4LTHi3I
                   http://nodeschool.io/
 				          http://www.nodebeginner.org/index-zh-tw.html        
 				          Real Time Chat With NodeJS : http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socket-io-and-expressjs--net-31708
