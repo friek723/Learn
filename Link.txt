@@ -71,6 +71,8 @@ Javascript
               (2)Node.js shines in real-time web applications employing push technology over websockets. 
               (3)The main idea of Node.js: use non-blocking, event-driven I/O to remain lightweight and efficient, 
                        in the face of data-intensive real-time applications that run across distributed devices.
+              (4)Node.js operates on a single thread, using non-blocking I/O calls.
+                 The design goal of a Node.js application is that any function performing I/O must use a callback.
               
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
