@@ -67,8 +67,11 @@ Javascript
                   http://stackoverflow.com/questions/732705/how-is-gmail-chat-able-to-make-ajax-requests-without-client-interaction
                   http://stackoverflow.com/questions/1086380/how-does-facebook-gmail-send-the-real-time-notification
         
-    [Node.js] server-side and networking applications, written in JavaScript
-          
+    [Node.js] (1)server-side and networking applications, written in JavaScript
+              (2)Node.js shines in real-time web applications employing push technology over websockets. 
+              (3)The main idea of Node.js: use non-blocking, event-driven I/O to remain lightweight and efficient, 
+                       in the face of data-intensive real-time applications that run across distributed devices.
+              
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
           
