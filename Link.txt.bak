@@ -67,8 +67,13 @@ Javascript
                   http://stackoverflow.com/questions/732705/how-is-gmail-chat-able-to-make-ajax-requests-without-client-interaction
                   http://stackoverflow.com/questions/1086380/how-does-facebook-gmail-send-the-real-time-notification
         
-    [Node.js] server-side and networking applications, written in JavaScript
-          
+    [Node.js] (1)server-side and networking applications, written in JavaScript
+              (2)Node.js shines in real-time web applications employing push technology over websockets. 
+              (3)The main idea of Node.js: use non-blocking, event-driven I/O to remain lightweight and efficient, 
+                       in the face of data-intensive real-time applications that run across distributed devices.
+              (4)Node.js operates on a single thread, using non-blocking I/O calls.
+                 The design goal of a Node.js application is that any function performing I/O must use a callback.
+              
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
           
@@ -78,6 +83,7 @@ Javascript
           Tutorial :
                   API DOCS : https://nodejs.org/api/
                   https://nodejs.org/documentation/
+                  Introduction to Node.js - https://www.youtube.com/watch?v=jo_B4LTHi3I
                   http://nodeschool.io/
 				          http://www.nodebeginner.org/index-zh-tw.html        
 				          Real Time Chat With NodeJS : http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socket-io-and-expressjs--net-31708
@@ -210,6 +216,9 @@ GIT
                                                  git commit -m "comment"
                                                  git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
                                                  git push appharbor master
+- Revert to a previous Git commit
+ 
+                                                
                                                  
 Linux Inter-Process Communication
 - http://www.comptechdoc.org/os/linux/programming/linux_pgcomm.html
@@ -485,7 +494,7 @@ Python
                       
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
 				
-				Console command (Pexpect) 
+				Console command (Pexpect) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 				         
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
 				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1

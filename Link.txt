@@ -216,6 +216,9 @@ GIT
                                                  git commit -m "comment"
                                                  git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
                                                  git push appharbor master
+- Revert to a previous Git commit : http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
+ 
+                                                
                                                  
 Linux Inter-Process Communication
 - http://www.comptechdoc.org/os/linux/programming/linux_pgcomm.html
