@@ -79,7 +79,9 @@ Javascript
           
           Framework : 
                   'Meteor' web framework (https://www.meteor.com/about)
-                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications : http://expressjs.com/
+                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications.
+                      http://expressjs.com/
+                      template : http://jade-lang.com/
           Tutorial :
                   API DOCS : https://nodejs.org/api/
                   https://nodejs.org/documentation/
