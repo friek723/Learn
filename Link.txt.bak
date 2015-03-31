@@ -79,7 +79,9 @@ Javascript
           
           Framework : 
                   'Meteor' web framework (https://www.meteor.com/about)
-                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications : http://expressjs.com/
+                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications.
+                      http://expressjs.com/
+                      template : http://jade-lang.com/
           Tutorial :
                   API DOCS : https://nodejs.org/api/
                   https://nodejs.org/documentation/
@@ -216,8 +218,9 @@ GIT
                                                  git commit -m "comment"
                                                  git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
                                                  git push appharbor master
-- Revert to a previous Git commit
- 
+- Revert to a previous Git commit : http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
+- git add -A :  This adds, modifies, and removes index entries to match the working tree.
+                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
                                                 
                                                  
 Linux Inter-Process Communication

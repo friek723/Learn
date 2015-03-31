@@ -219,7 +219,9 @@ GIT
                                                  git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
                                                  git push appharbor master
 - Revert to a previous Git commit : http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
- 
+- git add -A :  This adds, modifies, and removes index entries to match the working tree.
+                If no <pathspec> is given, the current version of Git defaults to ".";
+                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
                                                 
                                                  
 Linux Inter-Process Communication
