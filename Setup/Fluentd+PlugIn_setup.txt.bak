@@ -100,7 +100,6 @@
                                                           
 11. [Mongo DB Output] 
     Install : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/?_ga=1.66976750.1178864262.1420794747
-    Install on Ubuntu : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
     Bind to all ip : 
                      vi /etc/mongodb.conf
                      Modify : bind_ip = 0.0.0.0

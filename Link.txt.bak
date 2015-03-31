@@ -37,7 +37,7 @@ Javascript
         - Tutorial : 
                    https://docs.angularjs.org/tutorial
                    https://docs.angularjs.org/guide
-                   ! https://www.youtube.com/watch?v=i9MHigUZKEM
+                   ! AngularJS Fundamentals In 60-ish Minutes  : https://www.youtube.com/watch?v=i9MHigUZKEM
                    http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
                    http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
                    http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
@@ -76,6 +76,8 @@ Javascript
               
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
+          
+          Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
           Framework : 
                   'Meteor' web framework (https://www.meteor.com/about)
@@ -220,6 +222,7 @@ GIT
                                                  git push appharbor master
 - Revert to a previous Git commit : http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
 - git add -A :  This adds, modifies, and removes index entries to match the working tree.
+                If no <pathspec> is given, the current version of Git defaults to ".";
                 http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
                                                 
                                                  
@@ -487,6 +490,9 @@ Python
 				                     (shared_items = set(A.items()) & set(B.items()))
 				                     (diff_items = set(A.items()) ^ set(B.items()))
 				
+				String difference : http://stackoverflow.com/questions/10775029/finding-differences-between-strings
+				                    difflib --> https://docs.python.org/2/library/difflib.html
+				 
 				Finding what methods an object has : http://stackoverflow.com/questions/34439/finding-what-methods-an-object-has                     
 		    Object method & attribute:
 		                    All attributes for a object: print dir(objectName) 
