@@ -682,7 +682,11 @@ ASP.NET & C#
                                                      
         [Web API] Enabling Cross-Origin Requests : http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
                                                    --> use [EnableCors(origins: "*", headers: "*", methods: "*")] for all
-        
+
+                  WCF v.s. ASP.NET Web API : https://msdn.microsoft.com/en-us/library/jj823172%28v=vs.110%29.aspx
+                  
+        [WCF] (Windows_Communication_Foundation) : Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.
+                  
         [LINQ]
               https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
               (tool) http://www.linqpad.net/ 
