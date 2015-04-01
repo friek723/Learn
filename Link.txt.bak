@@ -466,6 +466,9 @@ Python
 						        
 				Timer :  http://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
 				
+				Time :  from time import gmtime, strftime, localtime
+				        strftime("%Y-%m-%d %H:%M:%S", gmtime())
+				
 				Scheduler :  1. http://apscheduler.readthedocs.org/en/latest/
 				                http://stackoverflow.com/questions/11523918/python-start-a-function-at-given-time
 				             2. https://github.com/dbader/schedule
@@ -562,6 +565,7 @@ Complex Event Processing
                                          select tickDataFeed, stddev(price) from StockTickEvent(symbol='IBM').win:length(10) where volume > 1000 group by tickDataFeed having stddev(price) > 0.8
 
 Mongo DB
+          - Install on Ubuntu : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
           - Quick trial : http://try.mongodb.org/
           - !Introduction : http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/
                             http://www.tutorialspoint.com/mongodb/

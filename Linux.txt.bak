@@ -1,9 +1,22 @@
+- log : /var/log/syslog
+
 - Start service on Boot : http://linux.vbird.org/linux_basic/0560daemons.php#starting_daemon
                           http://superuser.com/questions/612162/how-to-start-a-service-at-boot-time-in-ubuntu-12-04-run-as-a-different-user
-                          (Put sh to )
+                          (Put sh to /etc/init.d/)
                          
 - 例行性工作排程 : crontab  (http://linux.vbird.org/linux_basic/0430cron.php#whatiscron_type)
-                  
+                [USER]
+                    crontab -e (!!最後一行記得加 NewLine) ：編輯 crontab 的工作內容
+                    crontab -l  ：查閱 crontab 的工作內容
+                    crontab -r  ：移除所有的 crontab 的工作內容，若僅要移除一項，請用 -e 去編輯。
+                [ROOT]
+                    vi /etc/crontab
+                After change : service cron restart
+                !! Use full path for writing files, otherswise you'll see "(CRON) info (No MTA installed, discarding output)" in log 
+                Security :  /etc/cron.allow or /etc/cron.deny
+                log : /var/log/syslog
+                
+                
 - Find String in files - http://www.liamdelahunty.com/tips/linux_find_string_files.php
   (find . | xargs grep 'string' -sl)
 - Find a file : find . -name 'program.c' 2>/dev/null
@@ -28,21 +41,28 @@
        (Ping a port :  nmap -p 8000 10.16.207.73)
        ipTables list :  iptables -nvL
        
-- show all services 
-       (service --status-all) http://linux.vbird.org/linux_basic/0560daemons.php
-- show all running processes 
-       (ps aux | less)  http://www.cyberciti.biz/faq/show-all-running-processes-in-linux/
-- kill process : kill -15 PID  (normal stop)
-                 kill -9 PID   (force stop)
-                 Use with jobs :  1. jobs  2. kill -9 %job_num
-                 http://linux.vbird.org/linux_basic/0440processcontrol.php#killjobs
+
+                 
 - unzip
        http://note.drx.tw/2008/04/command.html
+       
 - version    cat /etc/*-release              
                      
 - login records : "last"     http://www.cyberciti.biz/faq/linux-unix-last-command-examples/   
 
-- process & command 
+- process & command
+			- show all services 
+			       (service --status-all) http://linux.vbird.org/linux_basic/0560daemons.php
+			       
+			- show all running processes 
+			       (ps aux | less)  http://www.cyberciti.biz/faq/show-all-running-processes-in-linux/
+			       
+			- kill process : kill -15 PID  (normal stop)
+			                 kill -9 PID   (force stop)
+			                 Use with jobs :  1. jobs  2. kill -9 %job_num
+			                 http://linux.vbird.org/linux_basic/0440processcontrol.php#killjobs
+			                 [kill by name] pkill processName : http://stackoverflow.com/questions/7959977/how-to-stop-gunicorn-django-in-virtualenv
+                  
       - Find a process :  ps aux | grep 'part of process name'
       
 			- Stop process :  Ctrl+C aborts the application almost immediately 

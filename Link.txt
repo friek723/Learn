@@ -466,6 +466,9 @@ Python
 						        
 				Timer :  http://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
 				
+				Time :  from time import gmtime, strftime, localtime
+				        strftime("%Y-%m-%d %H:%M:%S", localtime())
+				
 				Scheduler :  1. http://apscheduler.readthedocs.org/en/latest/
 				                http://stackoverflow.com/questions/11523918/python-start-a-function-at-given-time
 				             2. https://github.com/dbader/schedule
