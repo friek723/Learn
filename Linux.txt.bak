@@ -19,9 +19,11 @@
                 
 - Find String in files - http://www.liamdelahunty.com/tips/linux_find_string_files.php
   (find . | xargs grep 'string' -sl)
+  
 - Find a file : find . -name 'program.c' 2>/dev/null
                 find / -name 'program.c' 2>/dev/null
                 sudo find / -name 'program.c'
+                
 - Install remote desktop (Fail): 1.  sudo apt-get install ubuntu-desktop
                                  2.  sudo apt-get install xrdp (http://pangomi.blogspot.tw/2012/11/xrdp-win7-ubuntu-1204lts.html)
                           (working on Ubuntu) : http://c-nergy.be/blog/?p=5305    (xdrp + xfce4)
@@ -74,6 +76,8 @@
 			                              
 			                                  Basic      :  nohup your_command &
 			                                  Output log :  nohup your_command &>myout.txt &
+			                                                http://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out
+			                                                
 			                                  Check running cmd : jobs
 			                             
 			                              http://huenlil.pixnet.net/blog/post/24350611-%5B%E8%BD%89%5Dlinux-%E4%BB%BB%E5%8B%99%E6%8E%A7%E5%88%B6%E7%9A%84%E5%B9%BE%E5%80%8B%E6%8A%80%E5%B7%A7(-%26,-%5Bctrl%5D-z,-jobs,-f

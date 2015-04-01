@@ -76,6 +76,9 @@
 			                              
 			                                  Basic      :  nohup your_command &
 			                                  Output log :  nohup your_command &>myout.txt &
+			                                                http://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out
+			                                                http://stackoverflow.com/questions/4549489/can-i-change-the-name-of-nohup-out
+			                                                
 			                                  Check running cmd : jobs
 			                             
 			                              http://huenlil.pixnet.net/blog/post/24350611-%5B%E8%BD%89%5Dlinux-%E4%BB%BB%E5%8B%99%E6%8E%A7%E5%88%B6%E7%9A%84%E5%B9%BE%E5%80%8B%E6%8A%80%E5%B7%A7(-%26,-%5Bctrl%5D-z,-jobs,-f
