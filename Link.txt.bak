@@ -80,7 +80,8 @@ Javascript
           Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
           Framework : 
-                  AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : 
+                  AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : http://www.quora.com/JavaScript-Frameworks/AngularJS-Meteor-Backbone-Express-or-plain-NodeJs-When-to-use-each-one
+                  
                   'Meteor' web framework (https://www.meteor.com/about)
                       How Meteor Uses NodeJS - https://meteorhacks.com/how-meteor-uses-node.html
                       7 Reasons to Develop Your Next Web App with Meteor : http://www.sitepoint.com/7-reasons-develop-next-web-app-meteor/
