@@ -24,10 +24,10 @@
                 find / -name 'program.c' 2>/dev/null
                 sudo find / -name 'program.c'
                 
-- Install remote desktop (Fail): 1.  sudo apt-get install ubuntu-desktop
+- Install remote desktop : You'd be able to login using "Remote Desktop Connection Client" on Windows OS.
+                          (Fail): 1.  sudo apt-get install ubuntu-desktop
                                  2.  sudo apt-get install xrdp (http://pangomi.blogspot.tw/2012/11/xrdp-win7-ubuntu-1204lts.html)
                           (working on Ubuntu) : http://c-nergy.be/blog/?p=5305    (xdrp + xfce4)
-                                                (Use windows Remote Desktop Client)
                           (Fail) https://www.youtube.com/watch?v=sDZ6zmuYsho   (see [note1])
 
 - port/firewall
