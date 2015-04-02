@@ -7,7 +7,7 @@ CSS
                - Bootstrap (http://getbootstrap.com/) : Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
     - online formatter : http://www.codebeautifier.com/
                          http://www.lonniebest.com/formatcss/
-    
+    - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
 
 Javascript
     - http://www.w3schools.com/js/default.asp
@@ -514,7 +514,9 @@ Python
                       could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
                       
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
-				
+				                 Code : http://garage4hackers.com/showthread.php?t=3234
+				                 sftp : Google "paramiko file transfer"
+				                 
 				Console command (Pexpect) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 				         
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
