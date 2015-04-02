@@ -16,7 +16,10 @@ Javascript
                                  http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
     - Closures in JavaScript : http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
                                http://www.w3schools.com/js/js_function_closures.asp
-                                 
+                            
+    - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
+      (Related to 'Cross Site Request Forgery(CSRF)')
+                                   
     [jQuery] jQuery is a lightweight, "write less, do more", JavaScript library.
              The jQuery library contains the following features:
 								HTML/DOM manipulation
@@ -694,7 +697,10 @@ ASP.NET & C#
                                                      to log on to the SQL Server instance, or the current Windows account credentials should be used for authentication. 
                                                      True means use Windows integrated security to log in to SQL Server.                                 
                                                      False means use SQL Server security to log in by using the User ID and Password values in the connection string.
-                                                     
+        
+        Cross Site Request Forgery (CSRF): http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
+                                           http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
+                                                  
         [Web API] Enabling Cross-Origin Requests : http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
                                                    --> use [EnableCors(origins: "*", headers: "*", methods: "*")] for all
 
