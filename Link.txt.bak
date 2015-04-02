@@ -57,9 +57,10 @@ Javascript
                 the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.                
         - http://www.w3schools.com/ajax/default.asp
         - API doc : http://api.jquery.com/jquery.ajax/
-        - Cross-Origin resource sharing (Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
+        - Cross-Origin resource sharing(CORS)(Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
                                                                  (See ASP.NET solution below, search "Cross-Origin")
                                                                  (Chrome extension : 'Allow-Control-Allow-Origin')
+                                                               !! Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
                                                                  
         - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
                                                   (Gmail-send-the-real-time-notification)
@@ -514,7 +515,7 @@ Python
                       could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
                       
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
-				                 Code : http://garage4hackers.com/showthread.php?t=3234
+				                 Code (Execute commands and copy files over SSH): http://garage4hackers.com/showthread.php?t=3234
 				                 sftp : Google "paramiko file transfer"
 				                 
 				Console command (Pexpect) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.

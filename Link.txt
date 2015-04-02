@@ -16,6 +16,8 @@ Javascript
                                  http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
     - Closures in JavaScript : http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
                                http://www.w3schools.com/js/js_function_closures.asp
+                            
+    - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
                                  
     [jQuery] jQuery is a lightweight, "write less, do more", JavaScript library.
              The jQuery library contains the following features:
@@ -57,9 +59,10 @@ Javascript
                 the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.                
         - http://www.w3schools.com/ajax/default.asp
         - API doc : http://api.jquery.com/jquery.ajax/
-        - Cross-Origin resource sharing (Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
+        - Cross-Origin resource sharing(CORS)(Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
                                                                  (See ASP.NET solution below, search "Cross-Origin")
                                                                  (Chrome extension : 'Allow-Control-Allow-Origin')
+                                                               !! Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
                                                                  
         - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
                                                   (Gmail-send-the-real-time-notification)
