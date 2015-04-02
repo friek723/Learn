@@ -27,6 +27,7 @@
 - Install remote desktop (Fail): 1.  sudo apt-get install ubuntu-desktop
                                  2.  sudo apt-get install xrdp (http://pangomi.blogspot.tw/2012/11/xrdp-win7-ubuntu-1204lts.html)
                           (working on Ubuntu) : http://c-nergy.be/blog/?p=5305    (xdrp + xfce4)
+                                                (Use windows Remote Desktop Client)
                           (Fail) https://www.youtube.com/watch?v=sDZ6zmuYsho   (see [note1])
 
 - port/firewall

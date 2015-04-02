@@ -27,6 +27,7 @@
 - Install remote desktop (Fail): 1.  sudo apt-get install ubuntu-desktop
                                  2.  sudo apt-get install xrdp (http://pangomi.blogspot.tw/2012/11/xrdp-win7-ubuntu-1204lts.html)
                           (working on Ubuntu) : http://c-nergy.be/blog/?p=5305    (xdrp + xfce4)
+                                                (Use windows remote desktop client)
                           (Fail) https://www.youtube.com/watch?v=sDZ6zmuYsho   (see [note1])
 
 - port/firewall
@@ -77,6 +78,7 @@
 			                                  Basic      :  nohup your_command &
 			                                  Output log :  nohup your_command &>myout.txt &
 			                                                http://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out
+			                                                http://stackoverflow.com/questions/4549489/can-i-change-the-name-of-nohup-out
 			                                                
 			                                  Check running cmd : jobs
 			                             
