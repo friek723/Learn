@@ -80,7 +80,15 @@ Javascript
           Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
           Framework : 
+                  AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : 
                   'Meteor' web framework (https://www.meteor.com/about)
+                      How Meteor Uses NodeJS - https://meteorhacks.com/how-meteor-uses-node.html
+                      7 Reasons to Develop Your Next Web App with Meteor : http://www.sitepoint.com/7-reasons-develop-next-web-app-meteor/
+                      http://stackoverflow.com/questions/11461411/node-js-vs-meteor-js-whats-the-difference
+                      Examples : http://www.icoding.co/2013/02/meteor-%E5%88%9D%E9%AB%94%E9%A9%97%EF%BC%88%E4%B8%8A%EF%BC%89
+                                 http://www.icoding.co/2013/02/meteor-%E5%88%9D%E9%AB%94%E9%A9%97%EF%BC%88%E4%B8%8B%EF%BC%89
+                                 https://www.andrewmunsell.com/blog/introduction-to-realtime-web-meteor-and-nodejs
+                                 
                   'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications.
                       http://expressjs.com/
                       template : http://jade-lang.com/
@@ -467,7 +475,7 @@ Python
 				Timer :  http://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
 				
 				Time :  from time import gmtime, strftime, localtime
-				        strftime("%Y-%m-%d %H:%M:%S", gmtime())
+				        strftime("%Y-%m-%d %H:%M:%S", localtime())
 				
 				Scheduler :  1. http://apscheduler.readthedocs.org/en/latest/
 				                http://stackoverflow.com/questions/11523918/python-start-a-function-at-given-time
@@ -685,7 +693,11 @@ ASP.NET & C#
                                                      
         [Web API] Enabling Cross-Origin Requests : http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
                                                    --> use [EnableCors(origins: "*", headers: "*", methods: "*")] for all
-        
+
+                  WCF v.s. ASP.NET Web API : https://msdn.microsoft.com/en-us/library/jj823172%28v=vs.110%29.aspx
+                  
+        [WCF] (Windows_Communication_Foundation) : Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.
+                  
         [LINQ]
               https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
               (tool) http://www.linqpad.net/ 
