@@ -61,10 +61,18 @@ Javascript
                    Example App code : https://github.com/angular-app/angular-app
                                       http://www.codeproject.com/Articles/637430/Angular-js-example-application
                    $q : http://blog.begin.com.tw/?p=30
-                                      
-                                      
+                        https://docs.angularjs.org/api/ng/service/$q   
+                        
+                   Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
+                                            http://stackoverflow.com/questions/24698620/dirty-checking-on-angular
+                                            
+                                                   
         - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
                                                                (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
+               
+        - What I would recommend instead of Angular.js? :   https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99
+                                                            https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
+               
                                                                
     [AJAX] 
         - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
@@ -122,7 +130,8 @@ Javascript
 				          http://nodeguide.com/beginner.html
 				          https://www.codeschool.com/courses/real-time-web-with-node-js
           
-          
+
+Module Counts : http://www.modulecounts.com/          
 
 HTTP & WEB tool 
  - (Press F12 on Chrome) http://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome
