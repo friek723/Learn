@@ -1,4 +1,17 @@
+HTML
+    - <div> & <span> : http://www.w3schools.com/html/html_blocks.asp
+                       (use with 'class') http://www.w3schools.com/html/html_classes.asp 
+                       http://www.twisu.com.tw/4/CSS_class_list/CSS_0202.html
+                      <div>	  -->  Defines a section in a document (block-level)
+                      <span>  -->	 Defines a section in a document (inline)
+
+
+
 CSS 
+    - selector (element, id, class): http://www.w3schools.com/css/css_selectors.asp
+                                     http://www.1keydata.com/css-tutorial/tw/class-id.php
+    - style : http://www.w3schools.com/html/html_css.asp
+    
     - css frameworks : http://devzum.com/2014/11/20/best-html-css-frameworks/
     - HTML Responsive Web Design : To create web sites that look good on all devices.
                                    A must for mobile devices.
@@ -47,6 +60,8 @@ Javascript
                    http://www.w3schools.com/angular/default.asp
                    Example App code : https://github.com/angular-app/angular-app
                                       http://www.codeproject.com/Articles/637430/Angular-js-example-application
+                   $q : http://blog.begin.com.tw/?p=30
+                                      
                                       
         - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
                                                                (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
