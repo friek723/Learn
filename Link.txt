@@ -23,6 +23,9 @@ CSS
     - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
 
 Javascript
+    - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
+                                                                        https://www.airpair.com/js/javascript-framework-comparison
+                                                                        
     - http://www.w3schools.com/js/default.asp
     - (jQuery v.s. AngularJS) https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough
                                  http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background
@@ -62,7 +65,12 @@ Javascript
                                       http://www.codeproject.com/Articles/637430/Angular-js-example-application
                    $q : http://blog.begin.com.tw/?p=30
                         https://docs.angularjs.org/api/ng/service/$q   
-                        
+                   
+                   Data Binding : https://docs.angularjs.org/guide/databinding
+                                  (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
+                                                         http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
+                                  What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
+                                       
                    Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
                                             http://stackoverflow.com/questions/24698620/dirty-checking-on-angular
                                             
@@ -664,6 +672,8 @@ ASP.NET & C#
         http://www.w3schools.com/aspnet/
         http://www.tutorialspoint.com/asp.net/index.htm
         wiki : http://www.codeproject.com/KB/wiki-aspnet/
+        
+        Blog with various topics about ASP.NET : http://www.mikesdotnetting.com/ArticleType/1
         
         Request Object (Cookie, QueryString, Form param, Redirect): 
                                       https://msdn.microsoft.com/en-us/library/system.web.httprequest(v=vs.110).aspx
