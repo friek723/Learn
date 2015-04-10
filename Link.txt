@@ -543,6 +543,7 @@ Python
                       
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
 				                 Code (Execute commands and copy files over SSH): http://garage4hackers.com/showthread.php?t=3234
+				                 Code : http://sebastiandahlgren.se/2012/10/11/using-paramiko-to-send-ssh-commands/     
 				                 sftp : Google "paramiko file transfer"
 				                 
 				Console command (Pexpect) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
@@ -709,7 +710,8 @@ ASP.NET & C#
 			                                                                                                Database.OpenConnectionString(connectionString, providerName);
                                  
                                  
-        SQL Connection Strings  : https://msdn.microsoft.com/en-us/library/jj653752.aspx
+        SQL Connection Strings  : see [note4] for example
+                                  https://msdn.microsoft.com/en-us/library/jj653752.aspx
                                   http://www.connectionstrings.com/
                                   Ex :  <add name="MovieDBContext" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
                              - Data Source : ServerName\Instancename, you can use an IP address instead of the server name.
@@ -891,6 +893,7 @@ ASP.NET & C#
 							}
 
 [note3]
+   Test with MS SQL Server 2014 : 
 
 							@using WebMatrix.Data;
 							@{
@@ -908,7 +911,16 @@ ASP.NET & C#
 							    </tr>
 							}
 
+[note4]  File : Web.config  (MVC & WebForms)
 
+	  <connectionStrings>
+		    <!-- Local DB file :  App_Data/Movies.mdf -->
+		    <add name="MovieDBContext1" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Movies.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+		  
+		    <!--  Test with MS SQL Server 2014--> 
+		    <add name="MovieDBContext2" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />  
+	  </connectionStrings>
+  
 
 
 

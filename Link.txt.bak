@@ -70,7 +70,8 @@ Javascript
         - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
                                                                (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
                
-        - What I would recommend instead of Angular.js? :   https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
+        - What I would recommend instead of Angular.js? :   https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99
+                                                            https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
                
                                                                
     [AJAX] 
@@ -708,7 +709,8 @@ ASP.NET & C#
 			                                                                                                Database.OpenConnectionString(connectionString, providerName);
                                  
                                  
-        SQL Connection Strings  : https://msdn.microsoft.com/en-us/library/jj653752.aspx
+        SQL Connection Strings  : see [note4] for example
+                                  https://msdn.microsoft.com/en-us/library/jj653752.aspx
                                   http://www.connectionstrings.com/
                                   Ex :  <add name="MovieDBContext" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
                              - Data Source : ServerName\Instancename, you can use an IP address instead of the server name.
@@ -890,6 +892,7 @@ ASP.NET & C#
 							}
 
 [note3]
+   Test with MS SQL Server 2014 : 
 
 							@using WebMatrix.Data;
 							@{
@@ -907,7 +910,16 @@ ASP.NET & C#
 							    </tr>
 							}
 
+[note4]  File : Web.config  (MVC & WebForms)
 
+	  <connectionStrings>
+		    <!-- Local DB file :  App_Data/Movies.mdf -->
+		    <add name="MovieDBContext1" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Movies.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+		  
+		    <!--  Test with MS SQL Server 2014--> 
+		    <add name="MovieDBContext2" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />  
+	  </connectionStrings>
+  
 
 
 
