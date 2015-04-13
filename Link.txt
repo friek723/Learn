@@ -748,7 +748,8 @@ ASP.NET & C#
               https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
               (tool) http://www.linqpad.net/ 
         
-        [Web Forms]  page life cycle 
+        [Web Forms]  (1. *.aspx       2. CodeBehind :  *.aspx.cs    3. Model : *.cs)
+                     page life cycle 
         
                      [Server Data Controls] http://www.asp.net/web-forms/overview/aspnet-data-controls
                           [Data-Bound Server Controls]  https://msdn.microsoft.com/en-us/library/ms228214.aspx
@@ -762,7 +763,7 @@ ASP.NET & C#
                               
                      
                               
-        [MVC]
+        [MVC]  (1. View : *.csthml      2. Model, Controller : *.cs)
             !! http://www.asp.net/mvc
             !! Video  (Building Applications with ASP.NET MVC 4) http://pluralsight.com/training/Player?author=scott-allen&name=mvc4-building-m6-ajax&mode=live&clip=0&course=mvc4-building
             !!! http://odetocode.com/videos
