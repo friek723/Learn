@@ -763,7 +763,7 @@ ASP.NET & C#
                               
                      
                               
-        [MVC]  (View : *.csthml       Model, Controller : *.cs)
+        [MVC]  (1. View : *.csthml      2. Model, Controller : *.cs)
             !! http://www.asp.net/mvc
             !! Video  (Building Applications with ASP.NET MVC 4) http://pluralsight.com/training/Player?author=scott-allen&name=mvc4-building-m6-ajax&mode=live&clip=0&course=mvc4-building
             !!! http://odetocode.com/videos
