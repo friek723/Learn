@@ -1,3 +1,12 @@
+- vi/vim : 
+     undo (ctrl+z) : u
+     search word :
+                   forward   : / + word
+                   backwards : ? + word
+                   next occurrence : n
+                   previous occurrence : shift-n
+     go to line : ": + line_number"
+     
 - log : /var/log/syslog
 
 - Start service on Boot : http://linux.vbird.org/linux_basic/0560daemons.php#starting_daemon
@@ -24,7 +33,7 @@
                 find / -name 'program.c' 2>/dev/null
                 sudo find / -name 'program.c'
                 
-- Install remote desktop : You'd be able to login using "windows Remote Desktop Client".
+- Install remote desktop : You'd be able to login using "Remote Desktop Connection Client" on Windows OS.
                           (Fail): 1.  sudo apt-get install ubuntu-desktop
                                  2.  sudo apt-get install xrdp (http://pangomi.blogspot.tw/2012/11/xrdp-win7-ubuntu-1204lts.html)
                           (working on Ubuntu) : http://c-nergy.be/blog/?p=5305    (xdrp + xfce4)

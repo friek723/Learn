@@ -1,3 +1,13 @@
+- vi/vim : 
+     undo : u
+     redo : ctrl+r
+     search word :
+                   forward   : / + word
+                   backwards : ? + word
+                   next occurrence : n
+                   previous occurrence : shift-n
+     go to line : ": + line_number"
+     
 - log : /var/log/syslog
 
 - Start service on Boot : http://linux.vbird.org/linux_basic/0560daemons.php#starting_daemon
