@@ -1,5 +1,6 @@
 - vi/vim : 
-     undo (ctrl+z) : u
+     undo : u
+     redo : ctrl+r
      search word :
                    forward   : / + word
                    backwards : ? + word

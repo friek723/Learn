@@ -7,6 +7,7 @@
                    next occurrence : n
                    previous occurrence : shift-n
      go to line : ": + line_number"
+     go to end : G
      
 - log : /var/log/syslog
 
