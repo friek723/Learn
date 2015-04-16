@@ -550,7 +550,9 @@ Python
 		                    All attributes for a object: print dir(objectName) 
 		                    All callable methods for a object: print [method for method in dir(objectName) if callable(getattr(objectName, method))]
 
-        SSH (pxssh):  http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
+        SSH (pxssh)(extends pexpect.spawn):  
+                      http://pexpect.readthedocs.org/en/latest/api/pxssh.html
+                      http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
                       could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
                       
 				SSH2 (paramiko): http://www.rummandba.com/2012/04/python-script-for-remote-server.html
@@ -558,8 +560,11 @@ Python
 				                 Code : http://sebastiandahlgren.se/2012/10/11/using-paramiko-to-send-ssh-commands/     
 				                 sftp : Google "paramiko file transfer"
 				                 
-				Console command (Pexpect) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
-				         
+				Console command (Pexpect, extended by pxssh) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
+				                                               https://github.com/pexpect/pexpect/blob/master/doc/overview.rst
+				                                               http://pexpect.readthedocs.org/en/latest/api/pexpect.html
+				                                               !http://linux.byexamples.com/archives/346/python-how-to-access-ssh-with-pexpect/
+				                                               
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
 				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
 				                                
