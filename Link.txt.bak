@@ -256,24 +256,38 @@ SQL
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
     - Connection String Reference : http://www.connectionstrings.com/
 
+
 GIT
-- http://blog.gogojimmy.net/2012/02/29/git-scenario/
-- https://www.atlassian.com/git/tutorials/setting-up-a-repository
-- create a new repo locally and push to remote : 
-                                                 git init
-                                                 git add .
-                                                 git commit -m "comment"
-                                                 git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
-                                                 git push appharbor master
-- Revert to a previous Git commit : http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
-                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
-- git reset file/dir  : "undo" the git add (unstage)   (http://stackoverflow.com/questions/1505948/how-do-i-remove-a-single-file-from-the-staging-area-of-git-but-not-remove-it-fro)
-- git checkout : to discard changes in working directory
-- git add/rm : to update(stage) what will be committed                                                   
-- git add -A :  This adds, modifies, and removes index entries to match the working tree.
-                If no <pathspec> is given, the current version of Git defaults to ".";
-                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
-                                                
+		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
+		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
+		[command] 
+				- create a new repo locally and push to remote : 
+				                                                 git init
+				                                                 git add .
+				                                                 git commit -m "comment"
+				                                                 git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
+				                                                 git push appharbor master
+				- Revert to a previous Git commit : !http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
+				                                    !https://ihower.tw/blog/archives/2622
+				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
+
+				- git checkout file: to discard changes in working directory
+				[Add/Rm]
+						- git add/rm file: to update(stage) what will be committed                                                   
+						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
+						                If no <pathspec> is given, the current version of Git defaults to ".";
+						                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
+				[Reset]	
+				    - !!! Difference between git reset soft, mixed and hard : !http://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+                                                                      http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
+                   
+                   	                
+				- git reset file/dir  : "undo" the git add (unstage)   (http://stackoverflow.com/questions/1505948/how-do-i-remove-a-single-file-from-the-staging-area-of-git-but-not-remove-it-fro)	                
+				- git reset --hard HEAD :   revert all uncommitted changes                                               
+        - git reset --hard HEAD~1 : delete the latest commit(only locally, do not use it if pushed!!)
+                                    http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git
+                                    https://ihower.tw/blog/archives/2622
+                                           
                                                  
 Linux Inter-Process Communication
 - http://www.comptechdoc.org/os/linux/programming/linux_pgcomm.html
@@ -562,7 +576,8 @@ Python
 				                 
 				Console command (Pexpect, extended by pxssh) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 				                                               https://github.com/pexpect/pexpect/blob/master/doc/overview.rst
-				                                               http://linux.byexamples.com/archives/346/python-how-to-access-ssh-with-pexpect/
+				                                               http://pexpect.readthedocs.org/en/latest/api/pexpect.html
+				                                               !http://linux.byexamples.com/archives/346/python-how-to-access-ssh-with-pexpect/
 				                                               
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
 				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
