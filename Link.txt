@@ -555,6 +555,7 @@ Python
 				                     (diff_items = set(A.items()) ^ set(B.items()))
 				
 				String difference : http://stackoverflow.com/questions/10775029/finding-differences-between-strings
+				                        --> note that the input of Differ().compare(s1,s2) can be string or list, that produce different output.
 				                    difflib --> https://docs.python.org/2/library/difflib.html
 				 
 				Finding what methods an object has : http://stackoverflow.com/questions/34439/finding-what-methods-an-object-has                     
