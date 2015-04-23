@@ -678,6 +678,11 @@ PHP
 
 
 ASP.NET & C# 
+
+    Team Foundation Server 
+             Administering : https://msdn.microsoft.com/en-us/library/vstudio/ms181758(v=vs.110).aspx
+             Application Lifecycle Management : https://msdn.microsoft.com/en-us/library/vstudio/fda2bad5(v=vs.110).aspx
+             
     online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
                        http://csharppad.com/
 
