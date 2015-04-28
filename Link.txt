@@ -686,6 +686,9 @@ ASP.NET & C#
     online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
                        http://csharppad.com/
 
+    VS 2013 slow : http://stackoverflow.com/questions/19617670/why-vs-2013-is-very-slow
+                   http://blog.geocortex.com/2007/12/07/slow-visual-studio-performance-solved/
+                   
     C # 
         http://www.tutorialspoint.com/csharp/
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx

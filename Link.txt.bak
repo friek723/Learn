@@ -681,11 +681,13 @@ ASP.NET & C#
 
     Team Foundation Server 
              Administering : https://msdn.microsoft.com/en-us/library/vstudio/ms181758(v=vs.110).aspx
-             Application Lifecycle Management : 
+             Application Lifecycle Management : https://msdn.microsoft.com/en-us/library/vstudio/fda2bad5(v=vs.110).aspx
              
     online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
                        http://csharppad.com/
 
+    VS 2013 slow : http://stackoverflow.com/questions/19617670/why-vs-2013-is-very-slow
+    
     C # 
         http://www.tutorialspoint.com/csharp/
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
