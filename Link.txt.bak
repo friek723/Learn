@@ -686,8 +686,14 @@ ASP.NET & C#
     online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
                        http://csharppad.com/
 
-    VS 2013 slow : http://stackoverflow.com/questions/19617670/why-vs-2013-is-very-slow
+    Find all classes, methods and namespace of dll :   
+                        http://www.mathworks.com/matlabcentral/answers/95965-how-can-i-find-all-the-classes-methods-and-namespace-of-my-dll-generated-from-the-net-builder
+                        http://stackoverflow.com/questions/23006728/could-not-find-ildasm-exe-at-location-c-program-files-x86-microsoft-visual-st
+                        
     
+    VS 2013 slow : http://stackoverflow.com/questions/19617670/why-vs-2013-is-very-slow
+                   http://blog.geocortex.com/2007/12/07/slow-visual-studio-performance-solved/
+                   
     C # 
         http://www.tutorialspoint.com/csharp/
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
