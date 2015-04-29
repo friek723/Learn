@@ -111,7 +111,7 @@ Javascript
               
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
-          
+          When to use & When not to use ： nodeguide.com/convincing_the_boss.html
           Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
           Framework : 
@@ -137,7 +137,8 @@ Javascript
 				          Real Time Chat With NodeJS : http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socket-io-and-expressjs--net-31708
 				          http://nodeguide.com/beginner.html
 				          https://www.codeschool.com/courses/real-time-web-with-node-js
-          
+				          For Beginners. Deploy Your Blog to Heroku : http://howtonode.org/deploy-blog-to-heroku
+                  ! Seven Awesome Things You Can Build with Node.js : http://blog.teamtreehouse.com/7-awesome-things-can-build-node-js
 
 Module Counts : http://www.modulecounts.com/          
 
@@ -686,7 +687,7 @@ ASP.NET & C#
     online editor :  !!http://www.tutorialspoint.com/compile_csharp_online.php
                        http://csharppad.com/
 
-    Find all classes, methods and namespace of dll :   
+    Find all classes, methods and namespace of dll : use ildasm.exe in c:\Program Files (x86)\Microsoft SDKs\  
                         http://www.mathworks.com/matlabcentral/answers/95965-how-can-i-find-all-the-classes-methods-and-namespace-of-my-dll-generated-from-the-net-builder
                         http://stackoverflow.com/questions/23006728/could-not-find-ildasm-exe-at-location-c-program-files-x86-microsoft-visual-st
                         
