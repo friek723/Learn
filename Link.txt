@@ -114,6 +114,9 @@ Javascript
           When to use & When not to use ： http://nodeguide.com/convincing_the_boss.html
           Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
+          Lib : 
+              formidable  (receiving file uploads) : http://debuggable.com/posts/parsing-file-uploads-at-500-mb-s-with-node-js:4c03862e-351c-4faa-bb67-4365cbdd56cb
+              
           Framework : 
                   AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : http://www.quora.com/JavaScript-Frameworks/AngularJS-Meteor-Backbone-Express-or-plain-NodeJs-When-to-use-each-one
                   
