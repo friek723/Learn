@@ -115,7 +115,7 @@ Javascript
           Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
           
           Lib : 
-              formidable  (receiving file uploads ) : http://debuggable.com/posts/parsing-file-uploads-at-500-mb-s-with-node-js:4c03862e-351c-4faa-bb67-4365cbdd56cb
+              formidable  (receiving file uploads) : http://debuggable.com/posts/parsing-file-uploads-at-500-mb-s-with-node-js:4c03862e-351c-4faa-bb67-4365cbdd56cb
               
           Framework : 
                   AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : http://www.quora.com/JavaScript-Frameworks/AngularJS-Meteor-Backbone-Express-or-plain-NodeJs-When-to-use-each-one
@@ -683,6 +683,10 @@ PHP
 
 ASP.NET & C# 
 
+    IIS 
+        (aspnet_regiis –i) How to register .NET framework in IIS : http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
+                                                http://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server
+                                                
     Team Foundation Server 
              Administering : https://msdn.microsoft.com/en-us/library/vstudio/ms181758(v=vs.110).aspx
              Application Lifecycle Management : https://msdn.microsoft.com/en-us/library/vstudio/fda2bad5(v=vs.110).aspx
