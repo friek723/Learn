@@ -683,6 +683,12 @@ PHP
 
 ASP.NET & C# 
 
+		[windows service]
+				http://www.c-sharpcorner.com/UploadFile/naresh.avari/develop-and-install-a-windows-service-in-C-Sharp/
+				https://msdn.microsoft.com/en-us/library/zt39148a(v=vs.110).aspx
+				http://blogs.msdn.com/b/bclteam/archive/2005/03/15/396428.aspx
+				http://www.csharp-examples.net/install-net-service/
+
     IIS 
         (aspnet_regiis –i) How to register .NET framework in IIS : 
                                                 http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
@@ -781,6 +787,10 @@ ASP.NET & C#
                                                      True means use Windows integrated security to log in to SQL Server.                                 
                                                      False means use SQL Server security to log in by using the User ID and Password values in the connection string.
         
+											       - [Encrypt ConnectionString in Web.Config]
+																	http://www.codeproject.com/Tips/795135/Encrypt-ConnectionString-in-Web-Config
+																	https://msdn.microsoft.com/zh-tw/library/dx0f3cf2(v=vs.85).aspx
+
         Cross Site Request Forgery (CSRF): http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
                                            http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
                                                   
