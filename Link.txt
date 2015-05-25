@@ -689,8 +689,8 @@ ASP.NET & C#
 				http://blogs.msdn.com/b/bclteam/archive/2005/03/15/396428.aspx
 				http://www.csharp-examples.net/install-net-service/
 
-    IIS 
-        (aspnet_regiis –i) How to register .NET framework in IIS : 
+    IIS  
+        !!! Must do !!! (aspnet_regiis –i) How to register .NET framework in IIS :  "C:\windows\Microsoft.NET\Framework\v4.0.30319->aspnet_regiis -ir" 
                                                 http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
                                                 http://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server
                                                 
