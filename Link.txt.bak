@@ -681,10 +681,26 @@ PHP
         joomla
 
 
+MS SQL 
+    How to search all columns of all tables in a database for a keyword? 
+        http://vyaskn.tripod.com/search_all_columns_in_all_tables.htm
+           1. Execute "CREATE PROC SearchAllTables ...", No need to modify command
+           2. Execute EXEC SearchAllTables 'wordToFind'
+                      GO  --> replace 'wordToFind'
+        http://stackoverflow.com/questions/709120/how-to-search-for-one-value-in-any-column-of-any-table-inside-one-ms-sql-databas
+        
+
 ASP.NET & C# 
 
-    IIS 
-        (aspnet_regiis –i) How to register .NET framework in IIS : http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
+		[windows service]
+				http://www.c-sharpcorner.com/UploadFile/naresh.avari/develop-and-install-a-windows-service-in-C-Sharp/
+				https://msdn.microsoft.com/en-us/library/zt39148a(v=vs.110).aspx
+				http://blogs.msdn.com/b/bclteam/archive/2005/03/15/396428.aspx
+				http://www.csharp-examples.net/install-net-service/
+
+    IIS  
+        !!! Must do !!! (aspnet_regiis –i) How to register .NET framework in IIS :  "C:\windows\Microsoft.NET\Framework\v4.0.30319->aspnet_regiis -ir" 
+                                                http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
                                                 http://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server
                                                 
     Team Foundation Server 
@@ -780,6 +796,10 @@ ASP.NET & C#
                                                      True means use Windows integrated security to log in to SQL Server.                                 
                                                      False means use SQL Server security to log in by using the User ID and Password values in the connection string.
         
+											       - [Encrypt ConnectionString in Web.Config]
+																	http://www.codeproject.com/Tips/795135/Encrypt-ConnectionString-in-Web-Config
+																	https://msdn.microsoft.com/zh-tw/library/dx0f3cf2(v=vs.85).aspx
+
         Cross Site Request Forgery (CSRF): http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
                                            http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
                                                   

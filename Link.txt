@@ -681,6 +681,15 @@ PHP
         joomla
 
 
+MS SQL 
+    How to search all columns of all tables in a database for a keyword? 
+        http://vyaskn.tripod.com/search_all_columns_in_all_tables.htm
+           1. Execute "CREATE PROC SearchAllTables ..." --> No need to modify command
+           2. Execute EXEC SearchAllTables 'wordToFind'
+                      GO  --> replace 'wordToFind'
+        http://stackoverflow.com/questions/709120/how-to-search-for-one-value-in-any-column-of-any-table-inside-one-ms-sql-databas
+        
+
 ASP.NET & C# 
 
 		[windows service]
