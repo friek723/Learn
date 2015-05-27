@@ -692,7 +692,11 @@ MS SQL
 		    2. Use tool ApexSQL
 		           http://www.apexsql.com/  --> download free tool "ApexSQL Search", it appears on MS SQL Server tool bar as a plugin after install 
 		           http://solutioncenter.apexsql.com/quickly-search-for-sql-database-data-and-objects/
-		            
+		
+		View : http://www.codeproject.com/Articles/38560/Overview-of-View-in-SQL-Server
+		       http://www.w3schools.com/sql/sql_view.asp
+		       http://en.wikipedia.org/wiki/View_(SQL)      
+		       https://technet.microsoft.com/en-us/library/aa214068(v=sql.80).aspx
 		         
 
 ASP.NET & C# 
