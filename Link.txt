@@ -683,12 +683,17 @@ PHP
 
 MS SQL 
     How to search all columns of all tables in a database for a keyword? 
-        http://vyaskn.tripod.com/search_all_columns_in_all_tables.htm
-           1. Execute "CREATE PROC SearchAllTables ..." --> No need to modify command
-           2. Execute EXEC SearchAllTables 'wordToFind'
-                      GO  --> replace 'wordToFind'
-        http://stackoverflow.com/questions/709120/how-to-search-for-one-value-in-any-column-of-any-table-inside-one-ms-sql-databas
-        
+        1. Use command
+		        http://vyaskn.tripod.com/search_all_columns_in_all_tables.htm
+		           1. Execute "CREATE PROC SearchAllTables ..." --> No need to modify command
+		           2. Execute EXEC SearchAllTables 'wordToFind'
+		                      GO  --> replace 'wordToFind'
+		        http://stackoverflow.com/questions/709120/how-to-search-for-one-value-in-any-column-of-any-table-inside-one-ms-sql-databas
+		    2. Use tool ApexSQL
+		           http://www.apexsql.com/
+		           http://solutioncenter.apexsql.com/quickly-search-for-sql-database-data-and-objects/
+		            
+		         
 
 ASP.NET & C# 
 
