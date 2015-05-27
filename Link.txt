@@ -690,7 +690,7 @@ MS SQL
 		                      GO  --> replace 'wordToFind'
 		        http://stackoverflow.com/questions/709120/how-to-search-for-one-value-in-any-column-of-any-table-inside-one-ms-sql-databas
 		    2. Use tool ApexSQL
-		           http://www.apexsql.com/
+		           http://www.apexsql.com/  --> download free tool "ApexSQL Search", it appears on MS SQL tool bar as a plugin after install 
 		           http://solutioncenter.apexsql.com/quickly-search-for-sql-database-data-and-objects/
 		            
 		         
