@@ -30,8 +30,11 @@
                 log : /var/log/syslog
                 
                 
-- Find String in files - http://www.liamdelahunty.com/tips/linux_find_string_files.php
-  (find . | xargs grep 'string' -sl)
+- Find String in files - 
+     1. http://stackoverflow.com/questions/16956810/finding-all-files-containing-a-text-string-on-linux
+        (grep -Ril "text-to-find-here" .)
+     2. http://www.liamdelahunty.com/tips/linux_find_string_files.php
+        (find . | xargs grep 'string' -sl)
   
 - Find a file : find . -name 'program.c' 2>/dev/null
                 find / -name 'program.c' 2>/dev/null
