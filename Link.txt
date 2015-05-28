@@ -881,7 +881,14 @@ ASP.NET & C#
             
             Caching : http://www.dotnet-tricks.com/Tutorial/mvc/4R5c050113-Understanding-Caching-in-Asp.Net-MVC-with-example.html
                       http://www.codeproject.com/Articles/757201/A-Beginners-Tutorial-for-Understanding-and-Imple
+
+
                       
+Tools 
+       Search for Text Inside Files on Windows  
+          http://www.wingrep.com/
+          http://www.howtogeek.com/99406/how-to-search-for-text-inside-of-any-file-using-windows-search/
+          http://stackoverflow.com/questions/317944/tools-to-search-for-strings-inside-files-without-indexing   
                               
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
