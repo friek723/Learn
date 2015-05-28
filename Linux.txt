@@ -11,6 +11,8 @@
      
 - log : /var/log/syslog
 
+- Check free disk space : df -h    (http://www.cyberciti.biz/faq/check-free-space/)
+
 - Start service on Boot : http://linux.vbird.org/linux_basic/0560daemons.php#starting_daemon
                           http://superuser.com/questions/612162/how-to-start-a-service-at-boot-time-in-ubuntu-12-04-run-as-a-different-user
                           (Put sh to /etc/init.d/)
