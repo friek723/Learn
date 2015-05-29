@@ -707,7 +707,7 @@ ASP.NET & C#
 				http://blogs.msdn.com/b/bclteam/archive/2005/03/15/396428.aspx
 				http://www.csharp-examples.net/install-net-service/
 
-    IIS  
+    [IIS]  
         !!! Must do !!! (aspnet_regiis –i) How to register .NET framework in IIS :  "C:\windows\Microsoft.NET\Framework\v4.0.30319->aspnet_regiis -ir" 
                                                 http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
                                                 http://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server
@@ -734,8 +734,13 @@ ASP.NET & C#
                                             The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
                                             https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
         
+    [Silverlight]
+        How to debug :   "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
+                         http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
+                         http://www.codeproject.com/Articles/304582/Silverlight-debugging-Beginners-Guide
         
-    ASP.NET 
+        
+    [ASP.NET] 
         
         http://www.w3schools.com/aspnet/
         http://www.tutorialspoint.com/asp.net/index.htm
