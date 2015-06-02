@@ -258,6 +258,8 @@ SQL
            SELECT SUM(Sales) FROM Store_Information WHERE Store_Name IN (SELECT Store_Name FROM Geography WHERE Region_Name = 'West');
     - HAVING : http://www.mysql.tw/2014/06/sqlwherehaving.html
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
+    - JOIN : http://www.tutorialspoint.com/sql/sql-using-joins.htm
+             http://www.w3schools.com/sql/sql_join_inner.asp
     - Connection String Reference : http://www.connectionstrings.com/
 
 
