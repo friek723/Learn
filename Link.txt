@@ -260,6 +260,12 @@ SQL
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
     - JOIN : http://www.tutorialspoint.com/sql/sql-using-joins.htm
              http://www.w3schools.com/sql/sql_join_inner.asp
+    - WITH (NOLOCK) : http://blog.xuite.net/linriva/blog/39534686-%5BT-SQL%5D+WITH+(NOLOCK)%3A+%E6%8F%90%E5%8D%87%E6%9F%A5%E8%A9%A2%E6%95%88%E7%8E%87%E5%92%8C%E9%81%BF%E5%85%8DLOCK%E7%99%BC%E7%94%9F+(%E9%98%B2%E6%AD%A2%E8%B3%87%E6%96%99%E9%81%B8%E5%8F%96%E6%99%82%E8%A2%AB%E9%8E%96%E6%AD%BB)--%E8%BD%89%E8%B2%BC
+                      http://www.codeproject.com/Tips/590560/wi                      
+    - Dirty Reads : The read is officially “dirty” when it reads data that is uncommitted. This can become problematic if the uncommitted transaction fails or for some other reason is rolled back.
+                    http://logicalread.solarwinds.com/sql-server-concurrency-dirty-reads-w01/#.VW5bK8-qobg
+                    http://sqlwithmanoj.com/2011/07/20/dirty-reads-and-phantom-reads/
+    - Locking in SQL Server : http://www.sqlteam.com/article/introduction-to-locking-in-sql-server    
     - Connection String Reference : http://www.connectionstrings.com/
 
 
@@ -736,7 +742,7 @@ ASP.NET & C#
                                             The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
                                             https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
         
-    [Silverlight]
+    [Silverlight] (*.xaml   *.xaml.cs)
         How to debug :   "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
                          http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
                          http://www.codeproject.com/Articles/304582/Silverlight-debugging-Beginners-Guide
