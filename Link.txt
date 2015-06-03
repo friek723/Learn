@@ -4,6 +4,9 @@ HTML
                        http://www.twisu.com.tw/4/CSS_class_list/CSS_0202.html
                       <div>	  -->  Defines a section in a document (block-level)
                       <span>  -->	 Defines a section in a document (inline)
+                      
+    - form action="#" : The form will submit to itself (current URL),  http://stackoverflow.com/questions/8862035/what-does-it-mean-when-the-form-action-attribute-is-number-pound-symbol-sig
+    
 
 
 
