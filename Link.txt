@@ -747,9 +747,15 @@ ASP.NET & C#
                                             https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
         
     [Silverlight] (*.xaml   *.xaml.cs)
-        How to debug :   "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
-                         http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
-                         http://www.codeproject.com/Articles/304582/Silverlight-debugging-Beginners-Guide
+        How to debug :  1. "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
+                           http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
+                        2. [1] F5 (start debugging)
+                           [2] Attach to process :
+                                                 [2-1] to debug server, attach to process called WebDev.WebServer40.EXE
+                                                 [2-2] to debug client, attach to process of your browser (!!!!!!! make sure to choose the process of Type Silverlight). 
+                                                       for firefox, attach to "plugin-container.exe" of type Silverlight  
+                           [3] Set break point in *.xaml.cs                                                
+                           http://www.codeproject.com/Articles/304582/Silverlight-debugging-Beginners-Guide
         
         
     [ASP.NET] 
