@@ -709,6 +709,13 @@ MS SQL
 		       http://www.w3schools.com/sql/sql_view.asp
 		       http://en.wikipedia.org/wiki/View_(SQL)      
 		       https://technet.microsoft.com/en-us/library/aa214068(v=sql.80).aspx
+		
+		Reverse Engineer Database using Visio (export ER(Entity–Relationship) diagram):
+		    https://www.youtube.com/watch?v=EWT8IavmqcI
+		    Use "Generic OLE DB Driver" : http://dba.stackexchange.com/questions/25445/visio-2010-and-sql-2012-reverse-enginnering
+		                                  1. Select "Reverse Engineering"
+		                                  2. Provider Tab : Select "Generic OLE DB Provider" --> Mircosoft OLE DB Provider for SQL Server
+		                                  3. Connection Tab : enter server name --> fill in id/pass --> select the database on the server
 		         
 
 ASP.NET & C# 
