@@ -4,6 +4,9 @@ HTML
                        http://www.twisu.com.tw/4/CSS_class_list/CSS_0202.html
                       <div>	  -->  Defines a section in a document (block-level)
                       <span>  -->	 Defines a section in a document (inline)
+                      
+    - form action="#" : The form will submit to itself (current URL),  http://stackoverflow.com/questions/8862035/what-does-it-mean-when-the-form-action-attribute-is-number-pound-symbol-sig
+    
 
 
 
@@ -47,6 +50,7 @@ Javascript
              The jQuery library is a single JavaScript file : <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
              
         - http://www.w3schools.com/jquery/default.asp
+        - DataTable (generate html <table...> dynamically)  https://datatables.net/
         
     [AngularJS] AngularJS is a JavaScript framework.  It is a library written in JavaScript.
                 AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions.
@@ -252,12 +256,21 @@ Sessions & Cookies
 
 SQL 
     - http://www.1keydata.com/tw/sql/sql.html
+    - SQL injection : http://www.w3schools.com/sql/sql_injection.asp
     - (SubQuery): http://www.1keydata.com/tw/sql/sql-subquery.html 
     - IN : http://www.1keydata.com/tw/sql/sqlin.html
            SELECT * FROM Store_Information WHERE Store_Name IN ('Los Angeles', 'San Diego');
            SELECT SUM(Sales) FROM Store_Information WHERE Store_Name IN (SELECT Store_Name FROM Geography WHERE Region_Name = 'West');
     - HAVING : http://www.mysql.tw/2014/06/sqlwherehaving.html
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
+    - JOIN : http://www.tutorialspoint.com/sql/sql-using-joins.htm
+             http://www.w3schools.com/sql/sql_join_inner.asp
+    - WITH (NOLOCK) : http://blog.xuite.net/linriva/blog/39534686-%5BT-SQL%5D+WITH+(NOLOCK)%3A+%E6%8F%90%E5%8D%87%E6%9F%A5%E8%A9%A2%E6%95%88%E7%8E%87%E5%92%8C%E9%81%BF%E5%85%8DLOCK%E7%99%BC%E7%94%9F+(%E9%98%B2%E6%AD%A2%E8%B3%87%E6%96%99%E9%81%B8%E5%8F%96%E6%99%82%E8%A2%AB%E9%8E%96%E6%AD%BB)--%E8%BD%89%E8%B2%BC
+                      http://www.codeproject.com/Tips/590560/wi                      
+    - Dirty Reads : The read is officially “dirty” when it reads data that is uncommitted. This can become problematic if the uncommitted transaction fails or for some other reason is rolled back.
+                    http://logicalread.solarwinds.com/sql-server-concurrency-dirty-reads-w01/#.VW5bK8-qobg
+                    http://sqlwithmanoj.com/2011/07/20/dirty-reads-and-phantom-reads/
+    - Locking in SQL Server : http://www.sqlteam.com/article/introduction-to-locking-in-sql-server    
     - Connection String Reference : http://www.connectionstrings.com/
 
 
@@ -696,6 +709,14 @@ MS SQL
 		View : http://www.codeproject.com/Articles/38560/Overview-of-View-in-SQL-Server
 		       http://www.w3schools.com/sql/sql_view.asp
 		       http://en.wikipedia.org/wiki/View_(SQL)      
+		       https://technet.microsoft.com/en-us/library/aa214068(v=sql.80).aspx
+		
+		Reverse Engineer Database using Visio (export ER(Entity–Relationship) diagram):
+		    https://www.youtube.com/watch?v=EWT8IavmqcI
+		    Use "Generic OLE DB Driver" : http://dba.stackexchange.com/questions/25445/visio-2010-and-sql-2012-reverse-enginnering
+		                                  1. Select "Reverse Engineering"
+		                                  2. Provider Tab : Select "Generic OLE DB Provider" --> Mircosoft OLE DB Provider for SQL Server
+		                                  3. Connection Tab : enter server name --> fill in id/pass --> select the database on the server
 		         
 
 ASP.NET & C# 
@@ -706,10 +727,13 @@ ASP.NET & C#
 				http://blogs.msdn.com/b/bclteam/archive/2005/03/15/396428.aspx
 				http://www.csharp-examples.net/install-net-service/
 
-    IIS  
+    [IIS]  
         !!! Must do !!! (aspnet_regiis –i) How to register .NET framework in IIS :  "C:\windows\Microsoft.NET\Framework\v4.0.30319->aspnet_regiis -ir" 
                                                 http://mahedee.blogspot.tw/2013/11/how-to-register-net-framework-in-iis.html
                                                 http://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server
+                                                
+        hosts (domain name <--> IP mapping) : C:\Windows\System32\drivers\etc\hosts    (no port allowed)
+        
                                                 
     Team Foundation Server 
              Administering : https://msdn.microsoft.com/en-us/library/vstudio/ms181758(v=vs.110).aspx
@@ -733,8 +757,19 @@ ASP.NET & C#
                                             The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
                                             https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
         
+    [Silverlight] (*.xaml   *.xaml.cs)
+        How to debug :  1. "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
+                           http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
+                        2. [1] F5 (start debugging)
+                           [2] Attach to process :
+                                                 [2-1] to debug server, attach to process called WebDev.WebServer40.EXE
+                                                 [2-2] to debug client, attach to process of your browser (!!!!!!! make sure to choose the process of Type Silverlight). 
+                                                       for firefox, attach to "plugin-container.exe" of type Silverlight  
+                           [3] Set break point in *.xaml.cs                                                
+                           http://www.codeproject.com/Articles/304582/Silverlight-debugging-Beginners-Guide
         
-    ASP.NET 
+        
+    [ASP.NET] 
         
         http://www.w3schools.com/aspnet/
         http://www.tutorialspoint.com/asp.net/index.htm
@@ -880,7 +915,14 @@ ASP.NET & C#
             
             Caching : http://www.dotnet-tricks.com/Tutorial/mvc/4R5c050113-Understanding-Caching-in-Asp.Net-MVC-with-example.html
                       http://www.codeproject.com/Articles/757201/A-Beginners-Tutorial-for-Understanding-and-Imple
+
+
                       
+Tools 
+       Search for Text Inside Files on Windows  
+          http://www.wingrep.com/
+          http://www.howtogeek.com/99406/how-to-search-for-text-inside-of-any-file-using-windows-search/
+          http://stackoverflow.com/questions/317944/tools-to-search-for-strings-inside-files-without-indexing   
                               
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
