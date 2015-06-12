@@ -751,6 +751,9 @@ ASP.NET & C#
                    http://blog.geocortex.com/2007/12/07/slow-visual-studio-performance-solved/
     
     [Transactions]
+             !!! Tutorial : http://www.codeproject.com/Articles/522039/A-Beginners-Tutorial-for-Understanding-Transaction
+                            https://msdn.microsoft.com/en-us/library/system.transactions.transactionscope.aspx
+                            
              Using Transactions in ADO.NET : 
                         https://msdn.microsoft.com/zh-tw/library/86773566(v=vs.110).aspx
                         http://www.codeproject.com/Articles/10223/Using-Transactions-in-ADO-NET
