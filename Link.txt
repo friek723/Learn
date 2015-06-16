@@ -515,7 +515,7 @@ Python
 						                    [gunicorn] : http://gunicorn-docs.readthedocs.org/en/latest/install.html#ubuntu
 						                                [Run server] : 1. Switch dir to manage.py
 						                                               2. gunicorn myproject.wsgi -b 0.0.0.0:22222
-						                                                  (nohup gunicorn tutorial.wsgi -b 0.0.0.0:22222  &>myout.txt &)   
+						                                                  background : (nohup gunicorn tutorial.wsgi -b 0.0.0.0:22222  &>myout.txt &)  --> log : nohup.out or myout.txt 
 						                                                  SSL(https) (gunicorn tutorial.wsgi -b 0.0.0.0:22222 --certfile=server.crt --keyfile=server.key)
 						                                               http://gunicorn-docs.readthedocs.org/en/latest/run.html
 						                                               Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
