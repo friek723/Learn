@@ -869,7 +869,11 @@ ASP.NET & C#
 
                   WCF v.s. ASP.NET Web API : https://msdn.microsoft.com/en-us/library/jj823172%28v=vs.110%29.aspx
                   
-        [WCF] (Windows_Communication_Foundation) : Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.
+        [WCF] (*.svc) (Windows_Communication_Foundation) : Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.
+                Simple Sample : http://www.codeproject.com/Articles/123067/A-Simple-Sample-WCF-Service
+                Difference between WCF and Web Services : http://www.codeproject.com/Articles/139787/What-s-the-Difference-between-WCF-and-Web-Services
+                WebService.asmx v.s WCF_Service.svc : http://forums.asp.net/t/1763584.aspx?WebService+asmx+versus+WCF_Service+svc
+              
                   
         [LINQ]
               https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
