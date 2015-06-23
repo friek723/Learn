@@ -709,10 +709,19 @@ MS SQL
 		           http://www.apexsql.com/  --> download free tool "ApexSQL Search", it appears on MS SQL Server tool bar as a plugin after install 
 		           http://solutioncenter.apexsql.com/quickly-search-for-sql-database-data-and-objects/
 		
-		View : http://www.codeproject.com/Articles/38560/Overview-of-View-in-SQL-Server
-		       http://www.w3schools.com/sql/sql_view.asp
-		       http://en.wikipedia.org/wiki/View_(SQL)      
-		       https://technet.microsoft.com/en-us/library/aa214068(v=sql.80).aspx
+		Database -> Views : http://www.codeproject.com/Articles/38560/Overview-of-View-in-SQL-Server
+									       http://www.w3schools.com/sql/sql_view.asp
+									       http://en.wikipedia.org/wiki/View_(SQL)      
+									       https://technet.microsoft.com/en-us/library/aa214068(v=sql.80).aspx
+		       
+		Database -> Programmability -> Stored Procedures : TODO
+		
+		Replication : TODO
+		
+		SQL Server Agent -> Jobs : (TODO) This refers to command in the 'Replication'(Selected Type : Replication Distributor) or 'Stored Procedures'(Selected Type : T-SQL) 
+		                                  How to select type : job properties -> steps -> double-click step
+		                                   
+		Profiler (transaction log) : TODO 
 		
 		Reverse Engineer Database using Visio (export ER(Entity–Relationship) diagram):
 		    https://www.youtube.com/watch?v=EWT8IavmqcI
