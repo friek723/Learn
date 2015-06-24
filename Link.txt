@@ -783,6 +783,10 @@ ASP.NET & C#
     C # 
         Parameter passing in C# (ref, out): http://jonskeet.uk/csharp/parameters.html
                                             https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx
+                                            
+        'using' : http://stackoverflow.com/questions/212198/what-is-the-c-sharp-using-block-and-why-should-i-use-it
+                  http://www.codeproject.com/Articles/6564/Understanding-the-using-statement-in-C
+                  
         http://www.tutorialspoint.com/csharp/
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
         Nullable Types (int? i = 10;) -->   Nullable types can represent all the values of an underlying type, and an additional null value.
