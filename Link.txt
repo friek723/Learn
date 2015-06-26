@@ -51,8 +51,7 @@ Javascript
              
         - http://www.w3schools.com/jquery/default.asp
         - DataTable (generate html <table...> dynamically)  https://datatables.net/
-                                                            http://www.sitepoint.com/working-jquery-datatables/
-                                                            http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl
+                                                            https://datatables.net/examples/index
         
     [AngularJS] AngularJS is a JavaScript framework.  It is a library written in JavaScript.
                 AngularJS is a MVC based framework.
