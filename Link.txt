@@ -89,6 +89,11 @@ Javascript
                    Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
                                             http://stackoverflow.com/questions/24698620/dirty-checking-on-angular
                                             
+                                          The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
+                                          Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
+                                          Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+                                  
+                                            
         - AngularJS + ASP.NET MVC : http://www.codeproject.com/Articles/806029/Getting-started-with-AngularJS-and-ASP-NET-MVC-Par
                                     http://www.codeproject.com/Articles/806500/Getting-started-with-AngularJS-and-ASP-NET-MVC-P
                                     http://www.codeproject.com/Articles/843044/Getting-started-with-AngularJS-and-ASP-NET-MVC-The                                           
