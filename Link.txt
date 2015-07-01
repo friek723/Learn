@@ -71,6 +71,7 @@ Javascript
         - Tutorial : 
                    https://docs.angularjs.org/tutorial
                    https://docs.angularjs.org/guide
+                   中文: http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/index.html
                    ! AngularJS Fundamentals In 60-ish Minutes  : https://www.youtube.com/watch?v=i9MHigUZKEM
                    http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
                    http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
