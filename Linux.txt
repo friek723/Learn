@@ -1,3 +1,6 @@
+- ssh install on Ubuntu : apt-get install openssh-server
+                          /etc/init.d/ssh restart
+
 - File/Dir 
      copy : "cp -a src dest"  (http://linux.vbird.org/linux_basic/0220filemanager.php#cp) 
 									      -a  ：相當於 -pdr 的意思，至於 pdr 請參考下列說明；(常用)
