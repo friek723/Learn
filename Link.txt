@@ -1,4 +1,4 @@
-HTML
+﻿HTML
     - <div> & <span> : http://www.w3schools.com/html/html_blocks.asp
                        (use with css 'class' selector) http://www.w3schools.com/html/html_classes.asp 
                        http://www.twisu.com.tw/4/CSS_class_list/CSS_0202.html
@@ -297,6 +297,11 @@ GIT
 		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
 		[command] 
+		    - Set up server : step 1. https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server
+		                      step 2. https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
+		                      step 3. https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server 
+		                      (Simplified ver : http://blog.gtwang.org/linux/linux-git-server-using-ssh/)
+		                      
 				- create a new repo locally and push to remote : 
 				                                                 git init
 				                                                 git add .
