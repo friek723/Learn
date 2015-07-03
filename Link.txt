@@ -308,8 +308,13 @@ GIT
 				                                                 git init
 				                                                 git add .
 				                                                 git commit -m "comment"
-				                                                 git remote add appharbor MY_REPOSITORY_URL   (Add the remote repository)
+				                                                 git remote add origin git@gitserver:/opt/git/project.git	  (Add the remote repository)                                              
+				                                                 git push origin master				                                                 
+				                                               (OR: 
+				                                                 git remote add appharbor MY_REPOSITORY_URL)   
 				                                                 git push appharbor master
+				                                               )
+				                                                 
 				- Revert to a previous Git commit : !http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
 				                                    !https://ihower.tw/blog/archives/2622
 				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
