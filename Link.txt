@@ -175,6 +175,7 @@ HTTP & WEB tool
  - Chrome plugin [Live HTTP Headers] https://chrome.google.com/webstore/detail/live-http-headers/iaiioopjkcekapmldfgbebdclcnpgnlo
  - How Web Browsers work : http://taligarsiel.com/Projects/howbrowserswork1.htm
  - (!!Readme) A Software Developer's Guide to HTTP : http://odetocode.com/Articles/List
+ - POST v.s. GET : http://blog.toright.com/posts/1203/%E6%B7%BA%E8%AB%87-http-method%EF%BC%9A%E8%A1%A8%E5%96%AE%E4%B8%AD%E7%9A%84-get-%E8%88%87-post-%E6%9C%89%E4%BB%80%E9%BA%BC%E5%B7%AE%E5%88%A5%EF%BC%9F.html
  
 Web Framework
  - http://hotframeworks.com/
@@ -299,6 +300,9 @@ GIT
 		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
 		[command] 
+		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
+		              git clone https://
+		              git clone git://
 		    - Set up server : step 1. https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server
 		                      step 2. https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 		                      step 3. https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server 
