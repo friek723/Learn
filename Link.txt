@@ -94,6 +94,8 @@ Javascript
                                           Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
                                           Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
                                   
+        - UI Bootstrap : http://angular-ui.github.io/bootstrap/
+        - UI Grid : http://ui-grid.info
                                             
         - AngularJS + ASP.NET MVC : http://www.codeproject.com/Articles/806029/Getting-started-with-AngularJS-and-ASP-NET-MVC-Par
                                     http://www.codeproject.com/Articles/806500/Getting-started-with-AngularJS-and-ASP-NET-MVC-P
