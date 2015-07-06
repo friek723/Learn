@@ -703,7 +703,16 @@ Mongo DB
                          http://www.mongovue.com/
           - Find the latest three records (for command line):  db.collection_test.find().sort({time: -1}).limit(3)
                                       (for python code) : collection.find().sort("time", -1).limit(3):
-                                  
+
+          - php : define('connectionString', 'mongodb://domain:abc123@10.1.37.154:27017');  
+          - mongo console (type 'mongo' on linux):    
+                           mongo  (remote -->  mongo 10.1.37.154:27017/admin -u user -p pass) 
+                           use db_test
+	                         db.collection_test.find()
+	        -	[convert all fields to string] http://stackoverflow.com/questions/4973095/mongodb-how-to-change-the-type-of-a-field                 
+	                                         db.getCollection('collection_tmp').find({qty : {$exists : true}}).forEach( function(obj) { obj.qty = ""+obj.qty; db.collection_tmp.save(obj); } )
+	        - Fast paging : http://blog.mongodirector.com/fast-paging-with-mongodb/
+	                                                    
                                   
 
 Paas
