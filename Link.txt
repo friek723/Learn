@@ -297,6 +297,9 @@ SQL
 
 
 GIT
+    - http://www.slideshare.net/littlebtc/git-5528339
+      http://backlogtool.com/git-guide/tw/reference/git-svn.html
+      https://ihower.tw/git/files/ihower-git.pdf
 		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
 		[command] 
@@ -305,7 +308,7 @@ GIT
 		              git clone git://
 		    - Set up server : step 1. https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server
 		                      step 2. https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
-		                      step 3. https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server 
+		                      step 3. https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server  (!!this step alone is enough)
 		                      (Simplified ver : http://blog.gtwang.org/linux/linux-git-server-using-ssh/)
 		                      
 				- create a new repo locally and push to remote : 
