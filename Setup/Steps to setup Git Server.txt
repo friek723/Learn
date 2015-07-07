@@ -4,7 +4,7 @@ $ cd project.git
 $ git init --bare
 
 
-# Client computer : 
+# Client computer : Upload code to server
 $ cd myproject  (with project code inside)
 $ git init
 $ git add .
@@ -13,7 +13,7 @@ $ git remote add origin ssh://root@10.16.90.215/(path)/project.git
 $ git push origin master
 
 
-# The other client computer (jh7b):
+# The other client computer (jh7b): Test download & push
 $ git clone ssh://jh7b@10.16.90.215/(path)/project.git
 $ cd project.git
 $ vim README
@@ -21,12 +21,6 @@ $ git add .
 $ git commit -m 'fix for the README file'
 $ git push origin master
 
-
-# Server : How to hook 
-1. Create file on server:  project.git/hooks/post-receive   (make it executable)
-2. Add command in post-receive  (what will do after push)
-	 Ex : ssh root@127.0.0.1 -t "cd /GitCloneFolder/project.git;git pull origin master"  --> auto git pull after push
-		                   
 		                   
 # Server : Disable password prompts when doing git pull 
 1. ssh-keygen -t rsa   (this generates key at "~/.ssh/id_rsa.pub")
@@ -40,6 +34,12 @@ $ git push origin master
 4. git pull  (you should NOT be asked a password)	      
 
 
+# Server : How to hook 
+1. Create file on server:  project.git/hooks/post-receive   (make it executable)
+2. Add command in post-receive  (what will do after push)
+	 Ex : ssh root@127.0.0.1 -t "cd /GitCloneFolder/project.git;git pull origin master"  --> auto git pull after push
+	 
+	 
 # Client's computer : Test push
 1. cd project.git
 2. vim README
