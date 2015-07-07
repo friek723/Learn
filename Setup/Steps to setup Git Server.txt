@@ -48,3 +48,6 @@ $ git push origin master
 4. git commit -m 'test push'
 5. git push origin master
 6. Check server's "GitCloneFolder/project.git" to see if this commit synced.
+
+# Client : config user name for commit
+git config --global user.name "John Doe"
