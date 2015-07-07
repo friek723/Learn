@@ -6,7 +6,7 @@ $ git init --bare
 
 # Client computer : Upload code to server
 $ cd myproject  (with project code inside)
-$ (Add .gitignore to the folders git should ignore)
+$ (Add/Remove .gitignore to the folders git should ignore)
 $ git init
 $ git add .
 $ git commit -m 'initial commit'
