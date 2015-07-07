@@ -1,3 +1,8 @@
+[Setup]  https://git-scm.com/download/win
+         https://code.google.com/p/tortoisegit/wiki/Download?tm=2
+         git config --global user.name "John Doe"
+
+
 # Server : Initialized empty Git repository in project.git/
 $ mkdir project.git
 $ cd project.git
