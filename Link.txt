@@ -304,7 +304,7 @@ GIT
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
 		- How do I disable password prompts when doing git push/pull? http://superuser.com/questions/338511/how-do-i-disable-password-prompts-when-doing-git-push-pull
 		      1. ssh-keygen -t rsa   (this generates key at "~/.ssh/id_rsa.pub")
-		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append the contents of your public key (that's id_rsa.pub) to the Git repository's ~/.ssh/authorized_keys file.)
+		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append the contents of your public key (that's id_rsa.pub) to the Git server's ~/.ssh/authorized_keys file.)
 		- How to hook (automation after push): 
 		                1. Create file : git_server/hooks/post-receive   (make it executable)
 		                2. Add command in post-receive  (will do command after push)
