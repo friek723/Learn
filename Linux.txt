@@ -2,7 +2,7 @@
                           /etc/init.d/ssh restart
 
 - File/Dir 
-     copy : "cp -a src dest"  (http://linux.vbird.org/linux_basic/0220filemanager.php#cp) 
+     copy ALL : "cp -a src dest"  (http://linux.vbird.org/linux_basic/0220filemanager.php#cp) 
 									      -a  ：相當於 -pdr 的意思，至於 pdr 請參考下列說明；(常用)
 												-d  ：若來源檔為連結檔的屬性(link file)，則複製連結檔屬性而非檔案本身；
 												-p  ：連同檔案的屬性一起複製過去，而非使用預設屬性(備份常用)；
