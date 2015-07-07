@@ -9,7 +9,7 @@
 												-r  ：遞迴持續複製，用於目錄的複製行為；(常用)
 
 - User 
-      Create root user : 1. useradd -u 0 -g 0 username    (useradd -u UID -g 初始群組 username)
+      Create root user : 1. useradd -o -u 0 -g 0 username    (useradd -u UID -g 初始群組 username)
                          2. passwd username
 
 - vi/vim : 
