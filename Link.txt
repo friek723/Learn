@@ -310,7 +310,10 @@ GIT
 		                2. Add command in post-receive  (will do command after push)
 		                   Ex : ssh root@127.0.0.1 -t "cd /root/tmp/test/git;git pull origin master"  --> auto git pull after push
 		- git pull while not in a git directory : http://stackoverflow.com/questions/5083224/git-pull-while-not-in-a-git-directory    (The solution "ssh username@atyourserver.com..." works)  
-		                                          
+		          
+		- Conflict (Merge & Rebase) : https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
+		                              https://ihower.tw/blog/archives/3843
+		                                           
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
 		              git clone https://
