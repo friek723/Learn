@@ -79,20 +79,26 @@ Javascript
                    http://www.w3schools.com/angular/default.asp
                    Example App code : https://github.com/angular-app/angular-app
                                       http://www.codeproject.com/Articles/637430/Angular-js-example-application
-                   $q : http://blog.begin.com.tw/?p=30
-                        https://docs.angularjs.org/api/ng/service/$q   
-                   
-                   Data Binding : https://docs.angularjs.org/guide/databinding
-                                  (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
-                                                         http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
-                                  What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
-                                       
-                   Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
-                                            http://stackoverflow.com/questions/24698620/dirty-checking-on-angular
-                                            
-                                          The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
-                                          Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
-                                          Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+	      - $q : http://blog.begin.com.tw/?p=30
+	             https://docs.angularjs.org/api/ng/service/$q   
+	         
+	      - Data Binding : https://docs.angularjs.org/guide/databinding
+	                        (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
+	                                               http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
+	                        What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
+	                             
+	      - Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
+	                                 http://stackoverflow.com/questions/24698620/dirty-checking-on-angular                                            
+	                      The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
+	                      Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
+	                      Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+
+        - Service v.s. Factory v.s. Provider :
+              service : https://docs.angularjs.org/guide/services 
+              !http://roxannera.blogspot.tw/2014/01/angularjs-service-factory-provider.html
+              !http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory
+              https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make#5-service-vs-factory
+              http://hamisme.blogspot.tw/2013/07/service-factoryprovider-angularjs.html
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
