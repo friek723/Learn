@@ -349,6 +349,9 @@ GIT
 				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
 
 				- git checkout file: to discard changes in working directory
+				
+				- remote url : "git remote show origin"   (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
+				
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
