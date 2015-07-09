@@ -102,6 +102,7 @@ Javascript
         
         - ng-model v.s. ng-bind : http://stackoverflow.com/questions/12419619/whats-the-difference-between-ng-model-and-ng-bind
                                ng-bind  : one-way data binding ($scope --> view)
+                                          ng-bind and the double-curly notation "{{ ... }}" are interchangeable
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
