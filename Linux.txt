@@ -7,6 +7,9 @@
 												-d  ：若來源檔為連結檔的屬性(link file)，則複製連結檔屬性而非檔案本身；
 												-p  ：連同檔案的屬性一起複製過去，而非使用預設屬性(備份常用)；
 												-r  ：遞迴持續複製，用於目錄的複製行為；(常用)
+		
+		 Delete multiple files  : http://stackoverflow.com/questions/10516384/linux-how-to-delete-multiple-files-at-once
+		                          http://www.cyberciti.biz/faq/linux-unix-how-to-find-and-remove-files/
 
 - User 
       Create root user : 1. useradd -o -u 0 -g 0 username    (useradd -u UID -g 初始群組 username)
