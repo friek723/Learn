@@ -99,6 +99,10 @@ Javascript
               !http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory
               https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make#5-service-vs-factory
               http://hamisme.blogspot.tw/2013/07/service-factoryprovider-angularjs.html
+        
+        - ng-model v.s. ng-bind : http://stackoverflow.com/questions/12419619/whats-the-difference-between-ng-model-and-ng-bind
+                               ng-bind  : one-way data binding ($scope --> view)
+                               ng-model : two-way data binding ($scope --> view and view --> $scope)
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
