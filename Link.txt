@@ -357,6 +357,8 @@ GIT
 				
 				- remote url : "git remote show origin"   (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
 				
+				- list untracked files : git status -u
+				
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
@@ -805,7 +807,7 @@ MS SQL
 		                                  3. Connection Tab : enter server name --> fill in id/pass --> select the database on the server
 		         
 
-ASP.NET & C# 
+.NET & C# 
 
 		[windows service]
 				http://www.c-sharpcorner.com/UploadFile/naresh.avari/develop-and-install-a-windows-service-in-C-Sharp/
@@ -865,8 +867,14 @@ ASP.NET & C#
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
         Nullable Types (int? i = 10;) -->   Nullable types can represent all the values of an underlying type, and an additional null value.
                                             The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
-                                            https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
-        
+                                            https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx         
+                                                  
+    [WPF] https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
+            Windows Presentation Foundation (or WPF) is a graphical subsystem for rendering user interfaces in Windows-based applications by Microsoft.
+            WPF employs XAML, an XML-based language, to define and link various interface elements.
+            Microsoft Silverlight provides functionality that is mostly a subset of WPF to provide embedded web controls comparable to Adobe Flash.
+            Silverlight (codenamed WPF/E) is a cross-browser browser plugin which contains WPF-based technology (including XAML)[25] that provides features such as video, vector graphics, and animations to multiple operating systems.
+          
     [Silverlight] (*.xaml   *.xaml.cs)
         How to debug :  1. "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
                            http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
