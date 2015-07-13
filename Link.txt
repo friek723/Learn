@@ -328,6 +328,9 @@ GIT
 		          
 		- Conflict (Merge & Rebase) : https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
 		                              https://ihower.tw/blog/archives/3843
+		- Add-an-empty-directory : (create a .gitignore file inside that directory)
+		                           (Directories are added automatically when adding files inside them. That is, directories never have to be added to the repository, and are not tracked on their own.)
+		                            http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository
 		                                           
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
