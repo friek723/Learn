@@ -235,6 +235,8 @@ Cloud Computing  : http://www.tutorialspoint.com/cloud_computing/index.htm
 
 Java         
       Spring Framework : http://www.tutorialspoint.com/spring/index.htm
+          
+      POJO (plain old Java object) : https://en.wikipedia.org/wiki/Plain_Old_Java_Object 
                                                               
 			Java EE 
 			- http://docs.oracle.com/javaee/7/tutorial/doc/home.htm
