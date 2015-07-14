@@ -358,8 +358,8 @@ GIT
 
 				- git checkout file: to discard changes in working directory
 				
-				- remote url : "git remote show origin"   (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
-				
+				- remote url : "git remote show origin" or "git remote -v"  (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
+				               
 				- list untracked files : git status -u
 				
 				[Add/Rm]
