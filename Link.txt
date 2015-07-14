@@ -102,7 +102,10 @@ Javascript
         
         - ng-model v.s. ng-bind : http://stackoverflow.com/questions/12419619/whats-the-difference-between-ng-model-and-ng-bind
                                ng-bind  : one-way data binding ($scope --> view)
-                                          ng-bind and the double-curly notation "{{ ... }}" are interchangeable
+		                                          ng-bind and the double-curly notation "{{ ... }}" are interchangeable.
+		                                          The advantage ng-bind has over the double-curly notation is that it takes AngularJS time to bootstrap and execute before it can find and replace all the double curly braces from the HTML. 
+		                                          That means, for a portion of a second while the browser starts, you might see flashing double curly braces in the UI before AngularJS has the chance to kick in and replace them. 
+		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
