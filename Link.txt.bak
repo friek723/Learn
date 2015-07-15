@@ -21,6 +21,7 @@ CSS
                - http://www.w3schools.com/css/css_responsive_intro.asp
                - http://www.w3schools.com/html/html_responsive.asp
                - Bootstrap (http://getbootstrap.com/) : Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+                                                        AngularJS Bootstrap : http://angular-ui.github.io/bootstrap/
     - online formatter : http://www.codebeautifier.com/
                          http://www.lonniebest.com/formatcss/
     - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
@@ -79,20 +80,34 @@ Javascript
                    http://www.w3schools.com/angular/default.asp
                    Example App code : https://github.com/angular-app/angular-app
                                       http://www.codeproject.com/Articles/637430/Angular-js-example-application
-                   $q : http://blog.begin.com.tw/?p=30
-                        https://docs.angularjs.org/api/ng/service/$q   
-                   
-                   Data Binding : https://docs.angularjs.org/guide/databinding
-                                  (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
-                                                         http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
-                                  What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
-                                       
-                   Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
-                                            http://stackoverflow.com/questions/24698620/dirty-checking-on-angular
-                                            
-                                          The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
-                                          Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
-                                          Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+	      - $q : http://blog.begin.com.tw/?p=30
+	             https://docs.angularjs.org/api/ng/service/$q   
+	         
+	      - Data Binding : https://docs.angularjs.org/guide/databinding
+	                        (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
+	                                               http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
+	                        What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
+	                             
+	      - Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
+	                                 http://stackoverflow.com/questions/24698620/dirty-checking-on-angular                                            
+	                      The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
+	                      Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
+	                      Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+
+        - Service v.s. Factory v.s. Provider :
+              service : https://docs.angularjs.org/guide/services 
+              !http://roxannera.blogspot.tw/2014/01/angularjs-service-factory-provider.html
+              !http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory
+              https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make#5-service-vs-factory
+              http://hamisme.blogspot.tw/2013/07/service-factoryprovider-angularjs.html
+        
+        - ng-model v.s. ng-bind : http://stackoverflow.com/questions/12419619/whats-the-difference-between-ng-model-and-ng-bind
+                               ng-bind  : one-way data binding ($scope --> view)
+		                                          ng-bind and the double-curly notation "{{ ... }}" are interchangeable.
+		                                          The advantage ng-bind has over the double-curly notation is that it takes AngularJS time to bootstrap and execute before it can find and replace all the double curly braces from the HTML. 
+		                                          That means, for a portion of a second while the browser starts, you might see flashing double curly braces in the UI before AngularJS has the chance to kick in and replace them. 
+		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
+                               ng-model : two-way data binding ($scope --> view and view --> $scope)
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
@@ -221,6 +236,10 @@ Cloud Computing  : http://www.tutorialspoint.com/cloud_computing/index.htm
 
 Java         
       Spring Framework : http://www.tutorialspoint.com/spring/index.htm
+          
+      Java Application Servers : https://en.wikipedia.org/wiki/Application_server#Java_application_servers
+          
+      POJO (plain old Java object) : https://en.wikipedia.org/wiki/Plain_Old_Java_Object 
                                                               
 			Java EE 
 			- http://docs.oracle.com/javaee/7/tutorial/doc/home.htm
@@ -258,7 +277,31 @@ Java
       
       
 
-JSON 
+JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/js/js_json.asp
+        Data is in name:value pairs (name and value separated by a colon). 
+        The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only.(while the "name" of Javascript is non text)
+        The JSON format is syntactically identical to the code for creating JavaScript objects.
+        Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.                            
+        [Syntax Rules] :
+						#Data is in name/value pairs
+						#Data is separated by commas
+						#Curly braces hold objects
+						#Square brackets hold arrays
+						#
+								JSON Data - A Name and a Value
+										JSON data is written as name/value pairs, just like JavaScript object properties.
+										A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:	"firstName":"John"
+										!Note	: JSON names require double quotes. JavaScript names don't.
+								
+								JSON Objects
+										JSON objects are written inside curly braces.
+										Just like in JavaScript, objects can contain multiple name/value pairs:
+										{"firstName":"John", "lastName":"Doe"}
+								
+								JSON Arrays
+										JSON arrays are written inside square brackets.
+										Just like in JavaScript, an array can contain objects
+
        - http://j796160836.pixnet.net/blog/post/30530326-%E7%9E%AD%E8%A7%A3json%E6%A0%BC%E5%BC%8F
        JSON convert tool  :  http://www.jsoneditoronline.org/
        
@@ -302,10 +345,29 @@ GIT
       https://ihower.tw/git/files/ihower-git.pdf
 		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
+		
+		- Config : https://git-scm.com/book/zh-tw/v1/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9AGit
+		      User name for commit : git config --global user.name "John Doe"
+
 		- How do I disable password prompts when doing git push/pull? http://superuser.com/questions/338511/how-do-i-disable-password-prompts-when-doing-git-push-pull
 		      1. ssh-keygen -t rsa   (this generates key at "~/.ssh/id_rsa.pub")
-		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append to Git repository's  dir)
-		      
+		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append the contents of your public key (that's id_rsa.pub) to the Git server's ~/.ssh/authorized_keys file.)
+		- How to hook (automation after push): 
+		                1. Create file : git_server/hooks/post-receive   (make it executable)
+		                2. Add command in post-receive  (will do command after push)
+		                   Ex : ssh root@127.0.0.1 -t "cd /root/tmp/test/git;git pull origin master"  --> auto git pull after push
+		- git pull while not in a git directory : http://stackoverflow.com/questions/5083224/git-pull-while-not-in-a-git-directory    (The solution "ssh username@atyourserver.com..." works)  
+		          
+		- Conflict (Merge & Rebase) : https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
+		                              https://ihower.tw/blog/archives/3843
+		- Add-an-empty-directory : (create a .gitignore file inside that directory)
+		                           (Directories are added automatically when adding files inside them. That is, directories never have to be added to the repository, and are not tracked on their own.)
+		                            http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository
+		                            
+		- How to solve conflicts (with IDE IntelliJ): 
+		                (1)git pull -> (2)Failed [not latest version] -> (3)git commit (don't push) -> (4)git pull -> (5)auto merge -> (6)git push -> (7)Done
+                                -> (2)success -> (3)git commit & push -> (4)Done                               -> (5)manually merge (if conflicts) -> (6)git commit & push -> (7)Done
+         
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
 		              git clone https://
@@ -331,6 +393,11 @@ GIT
 				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
 
 				- git checkout file: to discard changes in working directory
+				
+				- remote url : "git remote show origin" or "git remote -v"  (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
+				               
+				- list untracked files : git status -u
+				
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
@@ -779,7 +846,7 @@ MS SQL
 		                                  3. Connection Tab : enter server name --> fill in id/pass --> select the database on the server
 		         
 
-ASP.NET & C# 
+.NET & C# 
 
 		[windows service]
 				http://www.c-sharpcorner.com/UploadFile/naresh.avari/develop-and-install-a-windows-service-in-C-Sharp/
@@ -839,8 +906,14 @@ ASP.NET & C#
         ?? Operator (return total ?? decimal.Zero;)--> https://msdn.microsoft.com/zh-tw/library/ms173224.aspx
         Nullable Types (int? i = 10;) -->   Nullable types can represent all the values of an underlying type, and an additional null value.
                                             The nullable type modifier enables C# to create value-type variables that indicate an undefined value.
-                                            https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx               
-        
+                                            https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx         
+                                                  
+    [WPF] https://en.wikipedia.org/wiki/Windows_Presentation_Foundation
+            Windows Presentation Foundation (or WPF) is a graphical subsystem for rendering user interfaces in Windows-based applications by Microsoft.
+            WPF employs XAML, an XML-based language, to define and link various interface elements.
+            Microsoft Silverlight provides functionality that is mostly a subset of WPF to provide embedded web controls comparable to Adobe Flash.
+            Silverlight (codenamed WPF/E) is a cross-browser browser plugin which contains WPF-based technology (including XAML)[25] that provides features such as video, vector graphics, and animations to multiple operating systems.
+          
     [Silverlight] (*.xaml   *.xaml.cs)
         How to debug :  1. "Web project » Web tab » Check 'Silverlight' in the Debugger section at the bottom" 
                            http://stackoverflow.com/questions/2709525/the-breakpoint-will-not-currently-be-hit-no-symbols-have-been-loaded-for-this-d
