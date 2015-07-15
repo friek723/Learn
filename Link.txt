@@ -362,7 +362,11 @@ GIT
 		- Add-an-empty-directory : (create a .gitignore file inside that directory)
 		                           (Directories are added automatically when adding files inside them. That is, directories never have to be added to the repository, and are not tracked on their own.)
 		                            http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository
-		                                           
+		                            
+		- How to solve conflicts (with IDE IntelliJ): 
+		                git pull -> Failed (not latest version) -> git commit (don't push) -> git pull -> auto merge -> git push -> Done
+                             -> success -> git commit & push -> Done                               -> manually merge -> git commit & push -> Done
+         
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
 		              git clone https://
