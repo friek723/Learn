@@ -21,12 +21,14 @@ CSS
                - http://www.w3schools.com/css/css_responsive_intro.asp
                - http://www.w3schools.com/html/html_responsive.asp
                - Bootstrap (http://getbootstrap.com/) : Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
-                                                        AngularJS Bootstrap : http://angular-ui.github.io/bootstrap/
+                                                        [AngularJS Bootstrap] http://angular-ui.github.io/bootstrap/
     - online formatter : http://www.codebeautifier.com/
                          http://www.lonniebest.com/formatcss/
     - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
 
 Javascript
+    - !online editor for JS + HTML + CSS : http://plnkr.co/edit/     (examples : http://plnkr.co/)
+    
     - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
                                                                         https://www.airpair.com/js/javascript-framework-comparison
                                                                         
@@ -108,6 +110,8 @@ Javascript
 		                                          That means, for a portion of a second while the browser starts, you might see flashing double curly braces in the UI before AngularJS has the chance to kick in and replace them. 
 		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
+        
+        - ng-if v.s. ng-show/ng-hide : http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
