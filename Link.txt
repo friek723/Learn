@@ -115,6 +115,8 @@ Javascript
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
+        - Angular Google Pie Chart : http://plnkr.co/edit/mMT8r8?p=info 
+        - Animation : http://plnkr.co/edit/uW4v9T
                                             
         - AngularJS + ASP.NET MVC : http://www.codeproject.com/Articles/806029/Getting-started-with-AngularJS-and-ASP-NET-MVC-Par
                                     http://www.codeproject.com/Articles/806500/Getting-started-with-AngularJS-and-ASP-NET-MVC-P
