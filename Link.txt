@@ -108,6 +108,8 @@ Javascript
 		                                          That means, for a portion of a second while the browser starts, you might see flashing double curly braces in the UI before AngularJS has the chance to kick in and replace them. 
 		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
+        
+        - ng-if v.s. ng-show/ng-hide : http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
