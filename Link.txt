@@ -410,9 +410,14 @@ GIT
 						                If no <pathspec> is given, the current version of Git defaults to ".";
 						                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
 				[Reset]	
-				    - !!! Difference between git reset soft, mixed and hard : !http://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
-                                                                      http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard                   
-						- git reset file/dir  : "undo" the git add (unstage)   (http://stackoverflow.com/questions/1505948/how-do-i-remove-a-single-file-from-the-staging-area-of-git-but-not-remove-it-fro)	                
+				    - !!! Difference between git reset soft, mixed and hard : 
+				                   !!http://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+                           http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard    
+                           [Summary] --soft : reset HEAD
+                                     --mixed (default): reset HEAD & staging area 
+                                     --hard : reset HEAD & staging area & working copy               
+						- git reset file/dir  : "undo" the git add (unstage),  (default : --mixed)   
+						                        (http://stackoverflow.com/questions/1505948/how-do-i-remove-a-single-file-from-the-staging-area-of-git-but-not-remove-it-fro)	                
 						- git reset --hard HEAD :   revert all uncommitted changes                                               
 		        - git reset --hard HEAD~1 : delete the latest commit(only locally, do not use it if pushed!!)
 		                                    http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git
