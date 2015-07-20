@@ -43,7 +43,7 @@ $ git push origin master
 # Server : How to hook 
 1. Create file on server:  project.git/hooks/post-receive   (make it executable)
 2. Add command in post-receive  (what will do after push)
-	 Ex : ssh root@127.0.0.1 -t "cd /GitCloneFolder/project.git;git pull origin master"  --> auto git pull after push
+	 Ex : ssh root@127.0.0.1 -t "cd /GitCloneFolder/project.git;git pull"  --> auto git pull after push
 	 
 	 
 # Client's computer : Test push
