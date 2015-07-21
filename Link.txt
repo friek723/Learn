@@ -373,7 +373,9 @@ GIT
 		- How to solve conflicts (with IDE IntelliJ): 
 		                (1)git pull -> (2)Failed [not latest version] -> (3)git commit (don't push) -> (4)git pull -> (5)auto merge -> (6)git push -> (7)Done
                                 -> (2)success -> (3)git commit & push -> (4)Done                               -> (5)manually merge (if conflicts) -> (6)git commit & push -> (7)Done
-         
+    
+    - Change case(大小寫) of a file on Windows : http://stackoverflow.com/questions/1793735/change-case-of-a-file-on-windows
+                                                 http://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
 		              git clone https://
