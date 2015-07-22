@@ -358,10 +358,21 @@ GIT
 		- How do I disable password prompts when doing git push/pull? http://superuser.com/questions/338511/how-do-i-disable-password-prompts-when-doing-git-push-pull
 		      1. ssh-keygen -t rsa   (this generates key at "~/.ssh/id_rsa.pub")
 		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append the contents of your public key (that's id_rsa.pub) to the Git server's ~/.ssh/authorized_keys file.)
+          3. If not work, check /etc/ssh/sshd_config  (Default config should work[No need keys : RSAAuthentication/PubkeyAuthentication/AuthorizedKeysFile], restart service if modified)
+                check file permissions on the ~/.ssh/
+                    !!!The most common cause for SSH public key authentication mysteriously not working is incorrect file permissions on the ~/.ssh/ files. As a general rule, your file permissions (on both machines) should be at least as restrictive as:
+										~/.ssh/                      rwx------ (700)
+										~/.ssh/authorized_keys       rw-r--r-- (644)
+										~/.ssh/id_rsa                rw------- (600)
+										~/.ssh/id_rsa.pub            rw-r--r-- (644)
+																	
 		- How to hook (automation after push): 
 		                1. Create file : git_server/hooks/post-receive   (make it executable)
 		                2. Add command in post-receive  (will do command after push)
 		                   Ex : ssh root@127.0.0.1 -t "cd /root/tmp/test/git;git pull origin master"  --> auto git pull after push
+		                3. Need to disable ssh password as above 'How do I disable password...'
+		                4. (Option) If need 'sudo' doing git pull, must make files under target hook folder chmod 777
+		                
 		- git pull while not in a git directory : http://stackoverflow.com/questions/5083224/git-pull-while-not-in-a-git-directory    (The solution "ssh username@atyourserver.com..." works)  
 		          
 		- Conflict (Merge & Rebase) : https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
