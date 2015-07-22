@@ -371,7 +371,7 @@ GIT
 		                2. Add command in post-receive  (will do command after push)
 		                   Ex : ssh root@127.0.0.1 -t "cd /root/tmp/test/git;git pull origin master"  --> auto git pull after push
 		                3. Need to disable ssh password as above 'How do I disable password...'
-		                4. (Option) If need 'sudo' doing git pull, must make files under target hook folder chmod 777
+		                4. (Option) If need 'sudo' doing git pull, must make files under target hook folder chmod 777 + 'git reset --hard HEAD'(files modified somehow)
 		                
 		- git pull while not in a git directory : http://stackoverflow.com/questions/5083224/git-pull-while-not-in-a-git-directory    (The solution "ssh username@atyourserver.com..." works)  
 		          
