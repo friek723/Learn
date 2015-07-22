@@ -44,7 +44,7 @@ $ git push origin master
 1. cd GitCloneFolder
 2. git clone ssh://root@10.16.90.215/(path)/project.git
 3. cd project.git
-4. git pull  (you should NOT be asked a password)	      
+4. git pull  (you should NOT be asked a password, if asked, it's either a sudo or ssh password)	      
 5. (Option) If need 'sudo' doing git pull, must make files under target hook folder 'chmod' 
 
 # Server : How to hook 
