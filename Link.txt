@@ -800,6 +800,9 @@ Mongo DB
                                       (for python code) : collection.find().sort("time", -1).limit(3):
 
           - php : define('connectionString', 'mongodb://domain:abc123@10.1.37.154:27017');  
+                  !! http://php.net/manual/en/book.mongo.php   (See 'Core Classes')
+                  http://php.net/manual/en/mongo.sqltomongo.php  (SQL to Mongo Mapping Chart)
+                  
           - mongo console (type 'mongo' on linux):    
                            mongo  (remote -->  mongo 10.1.37.154:27017/admin -u user -p pass) 
                            use db_test
@@ -809,6 +812,7 @@ Mongo DB
 	        - Fast paging : http://blog.mongodirector.com/fast-paging-with-mongodb/
 	        
 	        - Convert MySQL Queries to MongoDB Syntax : http://www.querymongo.com
+	                                                    http://docs.mongodb.org/manual/reference/sql-comparison/  (SQL to Mongo Mapping Chart)
 	                                                    http://blog.serverdensity.com/wp-content/uploads/2010/06/sql-to-mongodb.pdf
                                   
 
