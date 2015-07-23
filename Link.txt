@@ -809,7 +809,7 @@ Mongo DB
 	        - Fast paging : http://blog.mongodirector.com/fast-paging-with-mongodb/
 	        
 	        - Convert MySQL Queries to MongoDB Syntax : http://www.querymongo.com
-	                                                    
+	                                                    http://blog.serverdensity.com/wp-content/uploads/2010/06/sql-to-mongodb.pdf
                                   
 
 Paas
