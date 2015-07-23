@@ -326,6 +326,8 @@ Sessions & Cookies
 
 
 SQL 
+    - Online test : http://sqlfiddle.com/#viewSample
+    
     - http://www.1keydata.com/tw/sql/sql.html
     - SQL injection : http://www.w3schools.com/sql/sql_injection.asp
     - (SubQuery): http://www.1keydata.com/tw/sql/sql-subquery.html 
