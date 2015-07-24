@@ -27,7 +27,7 @@ CSS
     - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
 
 Javascript
-    - !online editor for JS + HTML + CSS : http://plnkr.co/edit/     (Examples : http://plnkr.co/)
+    - !!online editor for JS + HTML + CSS : http://plnkr.co/edit/     (Examples : http://plnkr.co/)
     
     - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
                                                                         https://www.airpair.com/js/javascript-framework-comparison
@@ -326,7 +326,7 @@ Sessions & Cookies
 
 
 SQL 
-    - Online test : http://sqlfiddle.com/#viewSample
+    - !!!Online Syntax Editor : http://sqlfiddle.com/#viewSample
     
     - http://www.1keydata.com/tw/sql/sql.html
     - SQL injection : http://www.w3schools.com/sql/sql_injection.asp
@@ -334,10 +334,19 @@ SQL
     - IN : http://www.1keydata.com/tw/sql/sqlin.html
            SELECT * FROM Store_Information WHERE Store_Name IN ('Los Angeles', 'San Diego');
            SELECT SUM(Sales) FROM Store_Information WHERE Store_Name IN (SELECT Store_Name FROM Geography WHERE Region_Name = 'West');
-    - HAVING : http://www.mysql.tw/2014/06/sqlwherehaving.html
+    - HAVING v.s. WHERE : http://www.mysql.tw/2014/06/sqlwherehaving.html
+												  [Syntax] SELECT SUM(mamount) as s FROM mymoney WHERE SUBSTR(mdate,1,6)='201401' GROUP BY mperson HAVING s>200;
+												  順序 : WHERE + GROUP BY + HAVING
+												  沒有GROUP BY的時候，只使用WHERE而不使用HAVING。  使用HAVING的時候，只用在跟GROUP BY相關函數有關的條件上。
+                          HAVING只能用在aggregate (合計) 情況下 ，也就是有GROUP BY的時候，並且HAVING要過濾的條件，要跟GROUP BY的合計函數有關。
+                          See [note5] below
+    
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
     - JOIN : http://www.tutorialspoint.com/sql/sql-using-joins.htm
              http://www.w3schools.com/sql/sql_join_inner.asp
+             [Syntax] SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name=table2.column_name;
+             Join 的 WHERE 條件式位置 - see [note6]:  https://tlcheng.wordpress.com/2011/07/08/sql-join-的-where-條件式位置/ 
+             
     - WITH (NOLOCK) : http://blog.xuite.net/linriva/blog/39534686-%5BT-SQL%5D+WITH+(NOLOCK)%3A+%E6%8F%90%E5%8D%87%E6%9F%A5%E8%A9%A2%E6%95%88%E7%8E%87%E5%92%8C%E9%81%BF%E5%85%8DLOCK%E7%99%BC%E7%94%9F+(%E9%98%B2%E6%AD%A2%E8%B3%87%E6%96%99%E9%81%B8%E5%8F%96%E6%99%82%E8%A2%AB%E9%8E%96%E6%AD%BB)--%E8%BD%89%E8%B2%BC
                       http://www.codeproject.com/Tips/590560/wi                      
     - Dirty Reads : The read is officially “dirty” when it reads data that is uncommitted. This can become problematic if the uncommitted transaction fails or for some other reason is rolled back.
@@ -1241,6 +1250,7 @@ Tools
 							    </tr>
 							}
 
+
 [note4]  File : Web.config  (MVC & WebForms)
 
 	  <connectionStrings>
@@ -1251,9 +1261,51 @@ Tools
 		    <add name="MovieDBContext2" connectionString="Data Source=localhost;Initial Catalog=Test;Integrated Security=False;User Id=jimmy;Password=newegg@123;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />  
 	  </connectionStrings>
   
-
-
-
+  
+  
+[note5]
+				SELECT SUM(mamount) as s FROM mymoney WHERE SUBSTR(mdate,1,6)='201401' GROUP BY mperson HAVING s>200;
+				以mperson為群組，列出符合201401條件的金額加總，並且只列出總金額大於200的資料。
+				所以如果你使用WHERE來進行總金額條件的過濾，或是使用HAVING在普通欄位的條件過濾，就不太適合，或是會出現語法錯誤。
+				因此WHERE與HAVING有何差異呢?
+						(1) 沒有GROUP BY的時候，只使用WHERE而不使用HAVING。
+						例如:
+						SELECT * FROM mymoney WHERE mperson='0'; (O 正確)
+						SELECT * FROM mymoney HAVING mperson='0'; (X 雖然也正確，但不建議使用)
+						
+						(2) 有GROUP BY的時候，WHERE在GROUP BY前面，HAVING在GROUP BY後面。
+						也就是WHERE條件跟GROUP BY沒有關係，而HAVING是跟GROUP BY有關係的，例如:
+						SELECT SUM(mamount) as s FROM mymoney WHERE SUBSTR(mdate,1,6)='201401' GROUP BY mperson HAVING s>200;
+						
+						(3) 使用HAVING的時候，只用在跟GROUP BY相關函數有關的條件上。
+						如上例，HAVING指定SUM(mamount) >200。
+						如果你使用WHERE SUM(mamount) >200就會出現錯誤啦。
+						
+[note6]
+		假設有三個表，表1、表2、表3，用下列方式 Join 起來：
+				SELECT * FROM 表1
+				INNER JOIN 表2 ON 表1.K1=表2.K2
+				LEFT JOIN 表3 ON 表1.K1=表3.K3
+				在此例中有三種放 WHERE 條件式的位置：
+				1.
+				SELECT * FROM 表1
+				INNER JOIN 表2 ON 表1.K1=表2.K2
+				LEFT JOIN 表3 ON 表1.K1=表3.K3
+				WHERE 所有條件
+				2.
+				SELECT * FROM 表1
+				INNER JOIN 表2 ON (表1.K1=表2.K2 AND 表1及表2條件)
+				LEFT JOIN 表3 ON (表1.K1=表3.K3 AND 表1及表3條件)
+				3.
+				SELECT * FROM (SELECT * FROM 表1 WHERE 表1條件) AS 表1
+				INNER JOIN (SELECT * FROM 表2 WHERE 表2條件) AS 表2 ON 表1.K1=表2.K2
+				LEFT JOIN (SELECT * FROM 表3 WHERE 表3條件) AS 表3 ON 表1.K1=表3.K3
+				法1 是相容度最高的用法，也是效能最差的方法，非簡單表格或必要下，不要使用，否則會嚴重造成資料庫查詢負擔，間接造成系統負擔。法1的作法是將所有內容先查詢出來，再逐步依條件過濾出要的內容。
+				法2 可提高一定的效能，但是可加在紅色的條件就要看資料庫支援的能力，有些允許Key放在後方，有些不允許，甚至有些 WHERE 條件必須放在法1的位置，條件與 WHERE 條件相同，過濾資料多的放前面，過濾資料少的條件放後面。查詢時，一般是先做表1表2連結，過濾完條件後，再做表3連結，再過濾條件。
+				法3 有點類似 View 的作法，每個查詢都建立類似 View 的概念，每個表僅查詢出需要連結的部分進行連結。
+				法2 適用在重複資料少的情形下，或是查詢基本上都是整張表，法3因為會建立子查詢，所以適用在大量重複資料的擷取，或是從巨型資料表中抽出少部分資料做 JOIN，比如說查詢的若是屬性表這類，大部分是1對1，法2會比較快，若是查詢類似事件紀錄這類1對多，或是事件紀錄太多只抽出最近的紀錄，可能法3會比較快。
+				
+				
 
 
 
