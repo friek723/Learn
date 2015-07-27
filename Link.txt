@@ -430,6 +430,8 @@ GIT
 				               
 				- list untracked files : git status -u
 				
+				- pull v.s. fetch : git pull does a git fetch followed by a git merge (http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch)
+				
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
