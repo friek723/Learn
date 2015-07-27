@@ -827,6 +827,20 @@ Mongo DB
 	        - Convert MySQL Queries to MongoDB Syntax : http://www.querymongo.com
 	                                                    http://docs.mongodb.org/manual/reference/sql-comparison/  (SQL to Mongo Mapping Chart)
 	                                                    http://blog.serverdensity.com/wp-content/uploads/2010/06/sql-to-mongodb.pdf
+	                                                    
+	        - aggregate & group by : Select manufacturer, model, createDate, count(poNumber) From list Where location='US' Group By poNumber
+																	 -->    db.list.aggregate( 
+																					    { 
+																					        $match : {location : "US"} 
+																					    }, 
+																					    { 
+																					        $group : {_id : "$poNumber", 
+																					         manufacturer: {$push: "$manufacturer"}, 
+																					         model: {$push: "$model"}, 
+																					         createDate:{$push: "$createDate"}, 
+																					         total : { $sum : 1 }} 
+																					    } 
+																					)
                                   
 
 Paas
