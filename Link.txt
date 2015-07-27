@@ -41,6 +41,8 @@ Javascript
                             
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
+    
+    - Check-for-null-undefined-or-blank-variables :　if(value){} 　http://stackoverflow.com/questions/5515310/is-there-a-standard-function-to-check-for-null-undefined-or-blank-variables-in
                                    
     [jQuery] jQuery is a lightweight, "write less, do more", JavaScript library.
              The jQuery library contains the following features:
