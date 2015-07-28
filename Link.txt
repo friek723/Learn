@@ -854,6 +854,7 @@ PHP
     PHP debug : error_log() -> http://php.net/manual/en/function.error-log.php
                                Write to a file (!make it writable): error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
                 var_dump()  -> http://php.net/manual/en/function.var-dump.php
+                log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
             
     e-Commerce
         wordpress
