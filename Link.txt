@@ -401,7 +401,7 @@ GIT
     - Change case(大小寫) of a file on Windows : http://stackoverflow.com/questions/1793735/change-case-of-a-file-on-windows
                                                  http://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
 		[command] 
-		    - clone : git clone ssh://jh7b@10.16.90.215/var/www/html/jh7b/testsite/assets
+		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
 		              git clone https://
 		              git clone git://
 		    - Set up server : step 1. https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server
