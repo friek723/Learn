@@ -733,7 +733,7 @@ Python
                       http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
                       could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
                       
-				SSH2 (paramiko)(Good compatibility, I've used it more.): 
+				SSH2 (paramiko)(Good compatibility, I've used it more, see [note7]): 
 				                 http://www.rummandba.com/2012/04/python-script-for-remote-server.html
 				                 Code (Execute commands and copy files over SSH): http://garage4hackers.com/showthread.php?t=3234
 				                 Code : http://sebastiandahlgren.se/2012/10/11/using-paramiko-to-send-ssh-commands/     
@@ -1325,6 +1325,43 @@ Tools
 				法3 有點類似 View 的作法，每個查詢都建立類似 View 的概念，每個表僅查詢出需要連結的部分進行連結。
 				法2 適用在重複資料少的情形下，或是查詢基本上都是整張表，法3因為會建立子查詢，所以適用在大量重複資料的擷取，或是從巨型資料表中抽出少部分資料做 JOIN，比如說查詢的若是屬性表這類，大部分是1對1，法2會比較快，若是查詢類似事件紀錄這類1對多，或是事件紀錄太多只抽出最近的紀錄，可能法3會比較快。
 				
+[note7]
+def get_paramiko(host, user, passwd, cmdList):
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    print "Connecting..."
+    ssh.connect(hostname=host, username=user, password=passwd)
+    print "Host " + host + " connected"
+
+
+    stdin = None
+    stdout = None
+    stderr = None
+    try:
+        count = 0
+        for cmd in cmdList:
+            count+=1
+            stdin, stdout, stderr = ssh.exec_command(cmd)
+            print "Command : " + cmd
+            #print type(stdout)
+            cmd_out = stdout.readlines()
+            if count != len(cmdList): # not last one
+                print "cmd out : " + str(cmd_out)
+    except Exception ,e:
+        print "Exception!!"
+        print e
+        print stderr.readlines()
+
+    str_result = ''.join(str(e) for e in cmd_out)
+
+    text_file = open("paramiko_out_"+host, "w")
+    text_file.write(str_result)
+    text_file.close()
+
+    ssh.close()
+    print 'OK'
+
 				
 
 
