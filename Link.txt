@@ -749,6 +749,8 @@ Python
 				                                               http://pexpect.readthedocs.org/en/latest/api/pexpect.html
 				                                               !http://linux.byexamples.com/archives/346/python-how-to-access-ssh-with-pexpect/
 				                                               
+				Execute Shell Command in Python : http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+				                                               
 				run background as a daemon :    http://code.activestate.com/recipes/278731/
 				                                http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
 				                                
