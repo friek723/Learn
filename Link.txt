@@ -865,7 +865,7 @@ PHP
                 log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
     
     [Excel]  
-        import/export : !https://blog.mayflower.de/561-Import-and-export-data-using-PHPExcel.html
+        import/export : !https://blog.mayflower.de/561-Import-and-export-data-using-PHPExcel.html  --> !!Correct Error : $objPHPExcel->getActiveSheet()->setCellValue()
                         http://stackoverflow.com/questions/12611148/how-to-export-data-to-an-excel-file-using-phpexcel
                         http://phpwolf.blogspot.tw/2012/03/phpexcel-phpexcel.html
                  
