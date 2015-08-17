@@ -863,6 +863,8 @@ PHP
     PHP debug : error_log() -> http://php.net/manual/en/function.error-log.php
                                Write to a file (!make it writable): error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
                 var_dump()  -> http://php.net/manual/en/function.var-dump.php
+                print_r($array,1) -> http://stackoverflow.com/questions/11884891/how-to-output-to-a-log-a-multi-level-array-in-a-format-that-is-human-readable
+                
                 log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
     
     [Excel]  
