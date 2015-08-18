@@ -52,6 +52,10 @@
 
 - Disk
 		Check free disk space : df -h    (http://www.cyberciti.biz/faq/check-free-space/)
+		Check used space : du --max-depth=1 -h 'dir or file name'
+		                   http://stackoverflow.com/questions/11316664/how-do-i-clear-space-on-my-main-system-drive-on-a-linux-centos-system
+		Look for big files : find / -type f -size +100M   [search for files only (-type f) with a size > 100MB (-size +100M)]
+		                   
 		inode : http://www.ruanyifeng.com/blog/2011/12/inode.html  (hard link, soft link)
 		        查看每個硬盤分區的inode總數和已經使用的數量 : df -i
 		        查看某個文件的inode信息： stat filename
