@@ -401,6 +401,13 @@ GIT
     
     - Change case(大小寫) of a file on Windows : http://stackoverflow.com/questions/1793735/change-case-of-a-file-on-windows
                                                  http://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
+                                                 
+    - Branching and Merging : https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+                              https://git-scm.com/book/en/v2/Git-Branching-Branch-Management
+                              https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+                              https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
+                              (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+                              
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
 		              git clone https://
