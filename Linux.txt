@@ -159,6 +159,10 @@
 																				kill -signal %jobnumber 管理後台的任務
 																	
 																	
+- mail 
+      send emails from command line : http://www.binarytides.com/linux-mailx-command/
+      Does the mail command require a mail server? : http://unix.stackexchange.com/questions/93488/does-the-mail-command-require-a-mail-server
+      Does mailx send mail using an SMTP relay or does it directly connect to the target SMTP server? : http://superuser.com/questions/137461/does-mailx-send-mail-using-an-smtp-relay-or-does-it-directly-connect-to-the-targ
 																	
 																	
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
