@@ -221,6 +221,19 @@ Web server & App server
                     http://readystate4.com/2012/07/08/nginx-the-non-blocking-model-and-why-apache-sucks/
                     http://blog.martinfjordvald.com/2011/02/nginx-primer-2-from-apache-to-nginx/
                 
+ - Apache 
+       config : http://linux.vbird.org/linux_server/0360apache.php#www_basic_pkg
+                https://help.ubuntu.com/lts/serverguide/httpd.html#http-configuration
+                http://stackoverflow.com/questions/22519159/how-does-apache-know-which-file-to-use-in-etc-httpd-conf-d
+                http://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
+                http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
+                /etc/apache/apache2.conf
+                /etc/httpd/conf/httpd.conf 
+                /etc/httpd/conf.d/*.conf
+                
+       log : /var/log/httpd/error_log 
+             /var/log/apache2/error.log    
+                
                 
 OAuth & OpenID 
     
