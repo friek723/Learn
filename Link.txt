@@ -227,10 +227,13 @@ Web server & App server
                 http://stackoverflow.com/questions/22519159/how-does-apache-know-which-file-to-use-in-etc-httpd-conf-d
                 http://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
                 http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
-                /etc/apache/apache2.conf
-                /etc/httpd/conf/httpd.conf 
-                /etc/httpd/conf.d/*.conf
+                [Path]
+	                /etc/apache/apache2.conf
+	                /etc/httpd/conf/httpd.conf 
+	                /etc/httpd/conf.d/*.conf
                 
+                [content] : see [note9] for example
+                         
        log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 
@@ -1473,7 +1476,48 @@ function exportArrayToXlsx ($exportArray, $exportParam) {
 
 }
 
+[note9]
+NameVirtualHost *:80
+<VirtualHost *:80>
+        #  General setup for the virtual host
+        ServerName elsa
+        Redirect permanent / https://10.1.38.81/
+</VirtualHost>
 
+<VirtualHost *:443>
+        #  General setup for the virtual host
+        ServerName elsa
+        SSLEngine on
+        SSLCertificateFile      /etc/httpd/elsatest.pem
+        SSLCertificateKeyFile   /etc/httpd/elsatest.key
+        SSLCACertificateFile    /etc/httpd/root.pem
+        SSLCertificateChainFile /etc/httpd/intranet.pem
+        SSLCipherSuite RC4-SHA:AES128-SHA:HIGH:!aNULL:!MD5
+        SSLHonorCipherOrder on
+        DocumentRoot /usr/local/elsa/web/lib
+        SetEnv ELSA_CONF /etc/elsa_web.conf
+        <Location "/">
+                Order Allow,Deny
+                Allow from all
+                SetHandler perl-script
+                PerlResponseHandler Plack::Handler::Apache2
+                PerlSetVar psgi_app /usr/local/elsa/web/lib/Web.psgi
+        </Location>
+        # Cleanup proxied HTTP auth
+        RewriteEngine on
+        RewriteCond %{HTTP:Authorization} ^(.*)
+        RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+</VirtualHost>
+
+NameVirtualHost *:8080
+<VirtualHost *:8080>
+        ServerName phpMyAdmin
+        DocumentRoot /var/www/html
+        <Location "/">
+                Order Allow,Deny
+                Allow from all
+        </Location>
+</VirtualHost>
 
 
 
