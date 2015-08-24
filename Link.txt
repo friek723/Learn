@@ -841,7 +841,7 @@ Mongo DB
                            use db_test
 	                         db.collection_test.find()
 	        -	[convert all fields to string] http://stackoverflow.com/questions/4973095/mongodb-how-to-change-the-type-of-a-field                 
-	                                         db.getCollection('collection_tmp').find({qty : {$exists : true}}).forEach( function(obj) { obj.qty = ""+obj.qty; db.collection_tmp.save(obj); } )
+	                                         db.getCollection('collection_tmp').find({field_name : {$exists : true}}).forEach( function(obj) { obj.field_name = ""+obj.field_name; db.collection_tmp.save(obj); } )
 	        - Fast paging : http://blog.mongodirector.com/fast-paging-with-mongodb/
 	        
 	        - Convert MySQL Queries to MongoDB Syntax : http://www.querymongo.com
