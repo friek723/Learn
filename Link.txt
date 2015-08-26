@@ -894,6 +894,8 @@ PHP
                 
                 log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
     
+    [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
+    
     [Excel]  
         import/export : sample code see [note8]
                         !https://blog.mayflower.de/561-Import-and-export-data-using-PHPExcel.html  --> !!Correct Error : $objPHPExcel->getActiveSheet()->setCellValue()
