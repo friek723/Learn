@@ -1524,7 +1524,7 @@ NameVirtualHost *:8080
 
 [note10]
 from difflib import Differ # str compare
-def str_diff(s1, s2):
+def str_diff(s1, s2):  # !! s1 and s2 are both String
     ret = ""
 
     # 1. The two inputs of Differ().compare() can be string or list, that would produce different output.
@@ -1533,7 +1533,8 @@ def str_diff(s1, s2):
     #           where ^ stands for the position of different char for the line before.
     # 4. !!! So another easier way to compare is to split s1 and s2 into lines as type list, each item in the list represents a line, then compare two lists.
     #        The output would be more accurate according to test. 
-    dif = list(Differ().compare(s2, s1))
+    
+    dif = list(Differ().compare(s2, s1))  # !! s1 and s2 are both String
 
     # Debug : 
     #write_file("qwert" , ''.join(str(e) for e in dif))
