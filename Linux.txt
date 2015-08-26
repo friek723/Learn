@@ -87,6 +87,7 @@
 - Find a file : find . -name 'program.c' 2>/dev/null
                 find / -name 'program.c' 2>/dev/null
                 sudo find / -name 'program.c'
+                (!! If search folder, path must end with "/")
                 
 - Install remote desktop : You'd be able to login using "Remote Desktop Connection Client" on Windows OS.
                           (Fail): 1.  sudo apt-get install ubuntu-desktop
