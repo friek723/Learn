@@ -420,11 +420,13 @@ GIT
     - Change case(大小寫) of a file on Windows : http://stackoverflow.com/questions/1793735/change-case-of-a-file-on-windows
                                                  http://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
                                                  
-    - Branching and Merging : https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+    - Branching and Merging : merge then push
+                              https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
                               https://git-scm.com/book/en/v2/Git-Branching-Branch-Management
                               https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
                               https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
                               (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+                              git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
                               
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
@@ -449,7 +451,8 @@ GIT
 				- Revert to a previous Git commit : !http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
 				                                    !https://ihower.tw/blog/archives/2622
 				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
-    
+                                            git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
+                                            
         - Jump to any previous version temporarily : git checkout SHA_number
                                                      git checkout master (Going back to lastest ver, otherwise git doesn't know which branch it is when doing pull)
                                                      
