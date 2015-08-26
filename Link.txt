@@ -448,11 +448,6 @@ GIT
 				                                                 git push appharbor master
 				                                               )
 				                                                 
-				- Revert to a previous Git commit : !http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
-				                                    !https://ihower.tw/blog/archives/2622
-				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
-                                            git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
-                                            
         - Jump to any previous version temporarily : git checkout SHA_number
                                                      git checkout master (Going back to lastest ver, otherwise git doesn't know which branch it is when doing pull)
                                                      
@@ -471,7 +466,16 @@ GIT
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
 						                If no <pathspec> is given, the current version of Git defaults to ".";
 						                http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk
-				[Reset]	
+
+				[Revert] Used if pushed already (compare with Reset & Rebase)
+								- Revert to a previous Git commit : 
+								                            !!!http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
+				                                    !https://ihower.tw/blog/archives/2622
+				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
+                                            git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
+                                            
+				[Reset and Rebase] ONLY used if NOT push yet					
+				    - !https://ihower.tw/blog/archives/2622
 				    - !!! Difference between git reset soft, mixed and hard : 
 				                   !!http://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
                            http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard    
