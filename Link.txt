@@ -408,7 +408,8 @@ GIT
 		- git pull while not in a git directory : http://stackoverflow.com/questions/5083224/git-pull-while-not-in-a-git-directory    (The solution "ssh username@atyourserver.com..." works)  
 		          
 		- Conflict (Merge & Rebase) : https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
-		                              https://ihower.tw/blog/archives/3843
+		                              !https://ihower.tw/blog/archives/3843   --> 你修改比較多，預期會有較多的 conflict，建議用 merge。如果修改範圍較小，不太預期有 conflict，則建議可以加上 rebase 參數
+		                              
 		- Add-an-empty-directory : (create a .gitignore file inside that directory)
 		                           (Directories are added automatically when adding files inside them. That is, directories never have to be added to the repository, and are not tracked on their own.)
 		                            http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository
@@ -474,8 +475,9 @@ GIT
 				                                    http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes
                                             git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
                                             
-				[Reset and Rebase] ONLY used if NOT push yet					
-				    - !https://ihower.tw/blog/archives/2622
+				[Reset and Rebase] ONLY used if NOT push yet	
+				    - Rebase v.s. Merge : !https://ihower.tw/blog/archives/3843   --> 你修改比較多，預期會有較多的 conflict，建議用 merge。如果修改範圍較小，不太預期有 conflict，則建議可以加上 rebase 參數				
+				    - Rebase v.s. Reset : !https://ihower.tw/blog/archives/2622
 				    - !!! Difference between git reset soft, mixed and hard : 
 				                   !!http://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
                            http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard    
