@@ -752,7 +752,8 @@ Python
 				
 				String difference : http://stackoverflow.com/questions/10775029/finding-differences-between-strings
 				                        --> note that the input of Differ().compare(s1,s2) can be string or list, that produce different output.
-				                    difflib --> https://docs.python.org/2/library/difflib.html
+				                    difflib (see [note10]) --> https://docs.python.org/2/library/difflib.html
+				                    
 				 
 				Finding what methods an object has : http://stackoverflow.com/questions/34439/finding-what-methods-an-object-has                     
 		    Object method & attribute:
@@ -1521,6 +1522,58 @@ NameVirtualHost *:8080
         </Location>
 </VirtualHost>
 
+[note10]
+from difflib import Differ # str compare
+def str_diff(s1, s2):
+    ret = ""
 
+    # 1. The two inputs of Differ().compare() can be string or list, that would produce different output.
+    # 2. For string, output dif looks like : ['  a', '  a', '  a', '- b', '- b', '- b', '+ k', '+ k', '+ k', '  c', '  c', '  c']   
+    # 3. For list, output dif looks like : ['This is line not change\r\n', '- This is line removed\r\n', '?      ^^\n', '+ This is line added\r\n', '?     ^^\n']
+    #           where ^ stands for the position of different char for the line before.
+    # 4. !!! So another easier way to compare is to split s1 and s2 into lines as type list, each item in the list represents a line, then compare two lists.
+    #        The output would be more accurate according to test. 
+    dif = list(Differ().compare(s2, s1))
+
+    # Debug : 
+    #write_file("qwert" , ''.join(str(e) for e in dif))
+ 
+
+    keys = ['-','+']    
+    for key in keys: 
+        tmp = ""
+        currentLine = ""
+        isChange = False
+        for i, d in enumerate(dif):
+            if i == len(dif)-1 or d[2] == '\n': # find a new line or last line
+                if isChange == True:
+                    if currentLine.isspace() == False:  # and isIgnoredConfig(currentLine) == False --> it's done in get_ssh() already
+                        tmp = tmp + currentLine + "\r\n" + "<br>"
+                        print "str_diff : add currentLine : " + currentLine
+                    else:
+                        #if isIgnoredConfig(currentLine) == True:
+                        #    print "str_diff : ignore config change -->" + currentLine
+                        if currentLine.isspace() == True:
+                            print "str_diff : current line contains space or newline only : " + currentLine    
+                    if i == len(dif)-1:
+                        print "the last line"
+                currentLine = ""
+                isChange = False
+            elif d[0] == key: # find diff char in this line
+                isChange = True
+                currentLine += d[2]
+            elif d[0] in keys:
+                pass
+            else:
+                currentLine += d[2]
+        if tmp != "" and tmp.isspace() == False:
+            if key == '-':
+                ret = ret + " Remove : <br>" + tmp
+            else:
+                ret = ret + " Add : <br>" + tmp
+
+
+    return ret
+    
 
 
