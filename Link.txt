@@ -427,6 +427,7 @@ GIT
                               https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
                               https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
                               (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+                                         !https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
                               git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
                               
 		[command] 
