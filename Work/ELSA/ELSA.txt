@@ -46,6 +46,25 @@
 								 /etc/sysconfig/iptables.conf
 								 /etc/elsa/patterns.d/*.xml								 
                  
+                  "peers" : {
+						      "172.16.73.47" : {
+						         "apikey" : "1",
+						         "url" : "http://172.16.73.47/",
+						         "username" : "elsa"
+						      },
+						      "172.16.73.46" : {
+						         "apikey" : "1",
+						         "url" : "http://172.16.73.46/",
+						         "username" : "elsa"
+						      },
+						      "127.0.0.1" : {
+						         "apikey" : "1",
+						         "url" : "http://127.0.0.1/",
+						         "username" : "elsa"
+						      }
+							    }
+
+
                  
    elsa web root :  /var/www/html/    --> Li's extension
                     /usr/local/elsa/web/lib
