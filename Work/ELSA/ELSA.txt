@@ -41,11 +41,11 @@
                  
                  /etc/hosts
 								 /etc/elsa_node.conf     -->  Collector
+								 /etc/elsa/elsa_node.conf  -->  Collector
+								 /etc/elsa_web.conf       --> Search Portal Server & Archive Server
 								 /etc/elsa_syslog-ng.conf
 								 /etc/sysconfig/iptables.conf
 								 /etc/elsa/patterns.d/*.xml								 
-                 /etc/elsa_web.conf       --> Search Portal Server & Archive Server
-                 /etc/elsa/elsa_node.conf  -->  Collector
                  
                  
    elsa web root :  /var/www/html/    --> Li's extension
