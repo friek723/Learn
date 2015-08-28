@@ -40,8 +40,7 @@
                  /usr/local/syslog-ng/etc/syslog-ng.conf
                  
                  /etc/hosts
-								 /etc/elsa_node.conf     -->  Collector
-								 /etc/elsa/elsa_node.conf  -->  Collector
+								 /etc/elsa_node.conf OR /etc/elsa/elsa_node.conf    -->  Collector
 								 /etc/elsa_web.conf       --> Search Portal Server & Archive Server
 								 /etc/elsa_syslog-ng.conf
 								 /etc/sysconfig/iptables.conf
