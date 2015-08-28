@@ -429,7 +429,12 @@ GIT
                               (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
                                          !https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
                               git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
-                              
+    
+    - Remove uncommitted & untracked files on pull : http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull
+         	git reset --hard HEAD  --> revert uncommitted changes
+					git clean -f -d    --> remove untracked files
+					git pull           --> update latest version from server
+                          
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
 		              git clone https://
@@ -462,6 +467,8 @@ GIT
 				- list untracked files : git status -u
 				
 				- pull v.s. fetch : git pull does a git fetch followed by a git merge (http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch)
+				
+				- Deletes all Untracked files/directories : git clean -f -d
 				
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
