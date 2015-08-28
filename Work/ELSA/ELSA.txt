@@ -1,0 +1,66 @@
+[ELSA]
+		source code : Z:\Project\ELSA
+		yui (elsa's UI) Yahoo User Interface 
+		10.1.38.81  root/11aaAA@@
+
+		µwºÐº¡¤F : 
+		            df -i
+		            df -h
+		            du --max-depth=1 -h 'dir or file name'
+									            
+									           
+   Restart : 
+		   rm -rf /data/elsa/tmp/buffers
+		   mkdir buffers
+		   chmod 777 buffers
+		   sudo apachectl restart
+		   service httpd restart
+		   service syslog-ng restart
+		   service searchd restart
+   
+   
+   ????? unauthorized : https://10.1.38.81/API/query?q=%7B%22query_string%22%3A%22host%3D%5C%2210.1.39.248%5C%22%20groupby%3A565654%22%2C%22query_meta_params%22%3A%7B%22limit%22%3A999%2C%22timezone_offset%22%3A480%2C%22start%22%3A%222015-7-20%2000%3A00%3A00%22%7D%7D&permissions=%7B%22class_id%22%3A%7B%220%22%3A1%7D%2C%22program_id%22%3A%7B%220%22%3A1%7D%2C%22node_id%22%3A%7B%220%22%3A1%7D%2C%22host_id%22%3A%7B%220%22%3A1%7D%7D
+   
+   
+   Link :
+   	   http://10.1.38.81:8080/phpMyAdmin/   (root / NO pass)
+		   http://10.1.38.81:8080/view/
+		   http://10.1.38.81:8080/view/getScheduledQuery.html?uid=1
+       http://10.1.38.81:8080/view/showReport.html?uid=1 (set Date)  OR  qid=671037  (TABLE query_log)
+       https://10.1.38.81/      -->  AD account
+       https://elsa/    (10.1.38.83) (AD account)
+       
+   http config :/etc/httpd/conf/httpd.conf 
+                /etc/httpd/conf.d/ZZelsa.conf
+   
+   elsa config : /usr/local/elsa
+                 /usr/local/elsa/web/conf/elsa.conf
+                 /usr/local/elsa/node/conf/elsa.conf
+                 /usr/local/elsa/node/conf/syslog-ng.conf
+                 /usr/local/syslog-ng/etc/syslog-ng.conf
+                 
+                 /etc/hosts
+								 /etc/elsa_node.conf     -->  Collector
+								 /etc/elsa_syslog-ng.conf
+								 /etc/sysconfig/iptables.conf
+								 /etc/elsa/patterns.d/*.xml								 
+                 /etc/elsa_web.conf       --> Search Portal Server & Archive Server
+                 /etc/elsa/elsa_node.conf  -->  Collector
+                 
+                 
+   elsa web root :  /var/www/html/    --> Li's extension
+                    /usr/local/elsa/web/lib
+                    
+   Cron table :  daemon/scheduleQuery.php
+                 daemon/createReport.php 
+                 
+   Radium : 
+            [DOC] \\s7fps03\share$\Dept Folder\IT\Share\Logsystem
+                     !!READ : build_log_server.doc
+                              g_Administrator_guide.doc
+                              g_User_guide.doc
+                              
+                     NO permission : g_User_guide - Li.doc
+                                     ELSA\Program
+                            
+            Cacti server : www.taiwan-motors.com.tw/cacti/     (Jimmy/123456)

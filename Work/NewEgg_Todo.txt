@@ -1,0 +1,153 @@
+#
+study JSF2 & JavaServer Faces (JSF) : http://www.tutorialspoint.com/jsf/jsf_first_application.htm
+study maven 
+
+#svn pass? 問成都
+
+# AngularJS
+http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
+http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
+http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
+	
+# Dep Training material 
+\\stfps01\it_materials$ 
+
+
+-----------------------------------------------------------------------------
+請假系統~
+http://sthr01/twhrms/common/MainWin.aspx
+
+EIP線上系統
+http://eip.newegg.org/
+
+
+部門影印掃描傳真密碼 : 6112406    (I:\IT\Scan)
+
+出差報帳 : 1. 給財務(Trista.F.Lin or Nicole.Y.Tu): 出差申請單 + 出差報告書 + 電子機票 + 登機證 + 收據貼在紙上 + 主管核准信(帳務明細)
+           2. 收據跟登機證先scan, 以免遺失
+           3. 差旅費申請，需先有費用申請，並上傳EIP差旅申請單核准之郵件為附件，費用核准後，產生單號，再以此單號報銷差旅費。
+         
+         
+----------------------------------------------------------------------------
+
+Todo:  
+             [Private Cloud]               
+                     Try to solve 102 deploy issue                               
+                     
+                     7c053495-a2aa-4a09-b021-ce2e88e56e11
+
+											<Zone>
+											<Id>f83ebfde-6fb2-4591-a54d-e8dbef9fbd0f</Id>
+											<Name>Zone1</Name>
+											</Zone>
+											
+											machine ID : 865d1cb6-4414-4982-897d-e6fe2f2733f9
+
+             [Henry:JbpmRest lib]
+                    https://github.com/fallicemoon/jBPM6/tree/master/src/core
+                    Update Henry's lib 
+                     
+             [CloudStack & UI Issue]
+                  [CloudStack] 
+                       1. 'Vm Add Nic' Issue : No callback from CloudStack
+                       2. load balance rule create : conncetion timed out
+                  [UI]
+                       1. Create vm - zone hard code. 
+                                    - Operating System hard code.
+                                    - check size needed ?  
+                                    
+             EJB           
+             Write auto deploy script
+             
+             [Test all private cloud functions]
+                   - add/ restore/delete snapshot  , set default nic,remove nic
+                   - Vm 
+                       - Create : OK (Need to select 100GB disk)
+                       - Del  :   OK
+                       - Change resource : OK
+                       - Change domain : OK 
+                       - Add Nic : No callback
+                   - Disk 
+                       - Create : OK
+                   - Load Balance 
+                       - Create : No response ?  lack 'LbRuleItem'?
+                       - Delete : Can not test 
+                     
+              [Jbpm user & owner]
+                 - integrate with AD ?? 
+                 - Try to implement both process level & jboss level user.
+                 - password change to real one?
+                                                     
+Daily Todo:   
+                    
+              [Private Cloud]
+                  [sync CloudStack DB] 
+                       TODO : Call http://10.16.140.102:8080/rest/cs/clone/clearall to sync 'domain' table  -->  refer to getVmDomainList() in RequestRestApi.java
+                  
+                  Snapshot creation fail sometimes
+                  
+                   
+              [JBPM]
+                  Add API : start process 
+                        get process instance list (getProcessInstanceByVarValue)
+                        Add param 'taskId' to getTaskList()   (use [GET] /task/query?taskId=...)
+ 
+                      
+              [OpenStack] 
+                  OpenStack API research : 
+                                            \\stfps01\Dept_Folder\IT\GSDT\GIT_JH
+                                            \\stfps01\Dept_Folder\IT\GSDT\GIT_JH\Training                                       
+                  List OpenStack API and test result
+                  Swift's capability
+                  Exchange data with other Cloud?  , Orchestration,  backup & restore
+                  kvm study 
+                  Cloud Billing  
+                  Win image
+
+             
+             [Change management]                      
+                 [Hower] 
+                         how to dump server data as a file.
+                         4/15 Test remaining hosts
+                 !Problem 10.16.193.6  (show running-config)
+                         10.16.193.16                  
+                 Add IDC (ask Hower???)
+                 移交給NOC?? 要找誰???  與Hower討論, 目前流程已經做出, 須等大陸那邊帳號問題處理好, 並多測試, 再移交. 
+                 大陸需求?  Kathy to send list to me 
+                                  
+             [跨境通 http://www.kjt.com/]        
+                   Table Schema E-R Model    
+                   
+             [固定資產]
+                git
+                mongo db update double --> string
+                Meeting with suntek
+                
+             [ELSA]
+									source code : Z:\Project\ELSA
+									yui (elsa's UI) Yahoo User Interface 
+									10.1.38.81  root/11aaAA@@
+									硬碟滿了 : 
+									            df -i
+									            df -h
+					
+					   [機房]
+                zoi設定門禁
+                Zoi.T.Tsai (nesc.twtp02.Newegg) 61133 下午 01:42
+										沒有~就先確認你可以出入那些門禁就可以了
+										怕有緊急狀況~沒人可以進去
+
+                
+					   [Henry交接JBPM] End of Sep. leave 
+                 ... when?
+
+
+[Job Running]
+TW : "timer started for each 18000 seconds, email list : ['gpsnmpcms@newegg.com'], mail timer started for each 86400 seconds"
+CN : "timer started for each 18000 seconds, email list : ['Jimmy.T.Huang@newegg.com', 'John.Z.Chen@newegg.com', 'Kathy.L.Niu@newegg.com'], mail timer started for each 86400 seconds"
+
+
+     
+     
+------------------------------------------------------------------------------------------------------------------
+
