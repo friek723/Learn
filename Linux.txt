@@ -1,3 +1,10 @@
+- BASH 
+       #!/bin/sh   (已經被 /bin/bash 所取代)
+       OR
+       #!/bin/bash (就是 Linux 預設的 shell)
+        
+       Difference between #!/bin/sh and #!/bin/bash? : http://askubuntu.com/questions/141928/what-is-difference-between-bin-sh-and-bin-bash
+       
 - ssh 
       install ssh on Ubuntu : apt-get install openssh-server
                               Ubuntu/Debian  :  sudo service ssh restart  OR  /etc/init.d/ssh restart
@@ -162,6 +169,9 @@
 																	
 - mail 
       send emails from command line : http://www.binarytides.com/linux-mailx-command/
+                                      [command]
+                                      	  yum instlall mailx
+                                      	  echo "FYI" | mail -s "Box Weekly Usage Report" -a report.zip tim.h.huang@newegg.com
       Does the mail command require a mail server? : http://unix.stackexchange.com/questions/93488/does-the-mail-command-require-a-mail-server
       Does mailx send mail using an SMTP relay or does it directly connect to the target SMTP server? : http://superuser.com/questions/137461/does-mailx-send-mail-using-an-smtp-relay-or-does-it-directly-connect-to-the-targ
 																	
