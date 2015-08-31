@@ -932,6 +932,9 @@ PHP
                         http://phpwolf.blogspot.tw/2012/03/phpexcel-phpexcel.html
                         Export to Browser Download : http://stackoverflow.com/questions/8566196/phpexcel-to-download
                  
+    [http]
+          Install & usage : http://php.net/manual/en/http.install.php
+                            http://stackoverflow.com/questions/20228088/pecl-http-not-recognised-php-ubuntu
             
     e-Commerce
         wordpress
