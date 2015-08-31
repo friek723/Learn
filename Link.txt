@@ -910,6 +910,12 @@ Paas
 PHP 
     Extension Management Tools - Pecl and Pear : http://www.openfoundry.org/tw/tech-column/8531-php-extension-management-tools-pecl-and-pear
     
+    run from command line: http://stackoverflow.com/questions/8737898/is-usr-bin-env-required-to-run-php-from-command-line                      
+                       1. [Add to *.php file start]
+                      	   #!/usr/bin/php -q   OR   #!/usr/bin/env php
+                      	   <?php
+                       2. php xxx.php
+                      
     PHP debug : error_log() -> http://php.net/manual/en/function.error-log.php
                                Write to a file (!make it writable): error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
                 var_dump()  -> http://php.net/manual/en/function.var-dump.php
