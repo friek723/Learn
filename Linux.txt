@@ -179,7 +179,10 @@
       Does the mail command require a mail server? : http://unix.stackexchange.com/questions/93488/does-the-mail-command-require-a-mail-server
       Does mailx send mail using an SMTP relay or does it directly connect to the target SMTP server? : http://superuser.com/questions/137461/does-mailx-send-mail-using-an-smtp-relay-or-does-it-directly-connect-to-the-targ
 																	
-																	
+			prevent from receiving fake mail (SPF): https://en.wikipedia.org/wiki/Sender_Policy_Framework
+			                                        http://www.microsoft.com/mscorp/safety/content/technologies/senderid/wizard/
+																	            http://blog.xuite.net/tolarku/blog/233356505-DNS+%E8%A8%AD%E5%AE%9A+spf+%E8%A8%98%E9%8C%84+-+Sender+Policy+Framework
+																	            
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
