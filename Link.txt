@@ -933,14 +933,19 @@ PHP
                         Export to Browser Download : http://stackoverflow.com/questions/8566196/phpexcel-to-download
                  
     [http]
-          Install & usage : http://php.net/manual/en/http.install.php
-                            http://stackoverflow.com/questions/20228088/pecl-http-not-recognised-php-ubuntu
-                            
-          Error "new http\Client" --> PHP Fatal error:  Uncaught exception 'http\Exception\UnexpectedValueException' with message 'Failed to locate "(null)" client request handler'
-                            [solution] http://stackoverflow.com/questions/20939095/the-new-pecl-http-extension-for-php-version-2
-                                       1. sudo yum install curl-devel
-                                       2. pecl uninstall pecl_http
-                                       3. pecl install pecl_http  (when asked 'libcurl' path : /usr/lib64/libcurl.so.4)
+          1. libcurl (Client URL Library) :  curl_init(), curl_setopt(), curl_exec(), curl_close()
+             http://php.net/manual/en/book.curl.php
+             https://support.ladesk.com/061754-How-to-make-REST-calls-in-PHP
+          
+          2. http\Client\Request()
+		          Install & usage : http://php.net/manual/en/http.install.php
+		                            http://stackoverflow.com/questions/20228088/pecl-http-not-recognised-php-ubuntu
+		                            
+		          Error "new http\Client" --> PHP Fatal error:  Uncaught exception 'http\Exception\UnexpectedValueException' with message 'Failed to locate "(null)" client request handler'
+		                            [solution] http://stackoverflow.com/questions/20939095/the-new-pecl-http-extension-for-php-version-2
+		                                       1. sudo yum install curl-devel
+		                                       2. pecl uninstall pecl_http
+		                                       3. pecl install pecl_http  (when asked 'libcurl' path : /usr/lib64/libcurl.so.4)
             
     e-Commerce
         wordpress
