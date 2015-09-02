@@ -25,6 +25,8 @@
    Link :
    	   http://10.1.38.81:8080/phpMyAdmin/   (root / NO pass)
 		   http://10.1.38.81:8080/view/
+		   http://10.1.38.81:8080/view/stat.html     (POST)
+		   http://10.1.38.81:8080/view/getStat.html  (GET) 
 		   http://10.1.38.81:8080/view/getScheduledQuery.html?uid=1
        http://10.1.38.81:8080/view/showReport.html?uid=1 (set Date)  OR  qid=671037  (TABLE query_log)
        https://10.1.38.81/      -->  AD account
