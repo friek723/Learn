@@ -936,6 +936,9 @@ PHP
           1. libcurl (Client URL Library) :  curl_init(), curl_setopt(), curl_exec(), curl_close()
              http://php.net/manual/en/book.curl.php
              https://support.ladesk.com/061754-How-to-make-REST-calls-in-PHP
+             
+             [https] : Set curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                       http://dominiquedecooman.com/blog/solution-curl-webservice-curlesslcacert-60-peer-certificate-cannot-be-authenticated-known-ca-ce
           
           2. http\Client\Request()
 		          Install & usage : http://php.net/manual/en/http.install.php
