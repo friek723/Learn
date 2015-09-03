@@ -924,6 +924,8 @@ PHP
                 
                 log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
     
+    Cron Jobs Lock (to avoid overlaps): http://abhinavsingh.com/how-to-use-locks-in-php-cron-jobs-to-avoid-cron-overlaps/
+    
     [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
     
     [Excel]  
