@@ -124,12 +124,9 @@ Daily Todo:
                 Meeting with suntek
                 
              [ELSA]
-									source code : Z:\Project\ELSA
-									yui (elsa's UI) Yahoo User Interface 
-									10.1.38.81  root/11aaAA@@
-									硬碟滿了 : 
-									            df -i
-									            df -h
+								  1. Setup Cacti (Daniel)
+								  2. Study Cacti
+								  3. Generate Authorization on php 
 					
 					   [機房]
                 zoi設定門禁
