@@ -126,7 +126,7 @@ Daily Todo:
              [ELSA]
 								  1. Setup Cacti (Daniel)
 								  2. Study Cacti
-								  3. Generate Authorization on php 
+								  3. Generate Authorization on php - Done
 					
 					   [機房]
                 zoi設定門禁
