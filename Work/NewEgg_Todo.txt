@@ -124,7 +124,7 @@ Daily Todo:
                 Meeting with suntek
                 
              [ELSA]
-								  1. Setup Cacti (Daniel)
+								  1. Setup Cacti (Daniel) - Done
 								  2. Study Cacti
 								  3. Generate Authorization on php - Done
 					
