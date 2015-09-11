@@ -378,9 +378,14 @@ SQL
 
 
 GIT
+    - Tools : [Git for windows] https://git-scm.com/downloads
+              [SourceTree] https://www.sourcetreeapp.com/
+              [tortoiseGit]
+              
     - http://www.slideshare.net/littlebtc/git-5528339
       http://backlogtool.com/git-guide/tw/reference/git-svn.html
       https://ihower.tw/git/files/ihower-git.pdf
+      http://kingofamani.gitbooks.io/git-teach/content/index.html
 		- http://blog.gogojimmy.net/2012/02/29/git-scenario/
 		- https://www.atlassian.com/git/tutorials/setting-up-a-repository
 		
