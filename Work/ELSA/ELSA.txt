@@ -92,4 +92,9 @@
                                    ssh  port 22222 :  jh7b  / Newegg@123
                                    mysql --host=localhost --user=cactiuser --password=CJs9H5iH
                                    $database_port = "3306";
+                   [Web Config]  Graph Templates --> Upper Limit (--upper-limit) --> 10000000000
+                                 Configuration --> Settings --> General --> Poller Logging Level --> LOW or DEBUG                
+                                                                Poller --> Script and Script Server Timeout Value --> 240
+                                 Data Input Methods --> Input Type --> Script/Command 
+                                                        Input String --> /usr/bin/php /home/jh7b/ELSA_stat.php 
                                    
