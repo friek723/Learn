@@ -228,7 +228,7 @@ Web server & App server
                 http://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
                 http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
                 [Path]
-                        /etc/apache2/apache2.conf
+                  /etc/apache2/apache2.conf
 	                /etc/apache/apache2.conf
 	                /etc/httpd/conf/httpd.conf 
 	                /etc/httpd/conf.d/*.conf
