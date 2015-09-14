@@ -932,6 +932,13 @@ PHP
     
     Cron Jobs Lock (to avoid overlaps): http://abhinavsingh.com/how-to-use-locks-in-php-cron-jobs-to-avoid-cron-overlaps/
     
+    [Framework] http://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results/   
+        [Laravel]
+            - Install Laravel with an Nginx Web Server on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04
+    
+        [Symfony2]
+            ...
+            
     [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
     
     [Excel]  
