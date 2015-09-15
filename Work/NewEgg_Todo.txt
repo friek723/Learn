@@ -127,6 +127,7 @@ Daily Todo:
 								  1. Setup Cacti (Daniel) - Done
 								  2. Study Cacti
 								  3. Generate Authorization on php - Done
+								  !! 9/15 promise Andrew 10 days to complete request.
 					
 					   [機房]
                 zoi設定門禁
