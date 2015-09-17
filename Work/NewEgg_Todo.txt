@@ -128,6 +128,7 @@ Daily Todo:
 								  2. Study Cacti
 								  3. Generate Authorization on php - Done
 								  !! 9/15 promise Andrew 10 days to complete request.
+								  !! Email to Radium to show him Cacti
 					
 					   [機房]
                 zoi設定門禁
