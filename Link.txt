@@ -404,7 +404,8 @@ GIT
 										~/.ssh/id_rsa                rw------- (600)
 										~/.ssh/id_rsa.pub            rw-r--r-- (644)
 																	
-		- How to hook (automation after push): 
+		- How to hook (automation after push):  
+		                http://githooks.com/
 		                1. Create file : git_server/hooks/post-receive   (make it executable)
 		                2. Add command in post-receive  (will do command after push)
 		                   Ex : ssh root@127.0.0.1 -t "cd /root/tmp/test/git;git pull origin master"  --> auto git pull after push
