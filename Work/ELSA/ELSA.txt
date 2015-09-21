@@ -1,7 +1,7 @@
 [ELSA]
 		source code : Z:\Project\ELSA
 		yui (elsa's UI) Yahoo User Interface 
-		10.1.38.81  root/11aaAA@@
+		10.1.38.81  ssh login : root/11aaAA@@
 
 		µwºÐº¡¤F : 
 		            df -i
@@ -24,7 +24,7 @@
    
    Link :
    	   http://10.1.38.81:8080/phpMyAdmin/   (root / NO pass)
-		   http://10.1.38.81:8080/view/
+		   http://10.1.38.81:8080/view/         (jh7b / jh7b)
 		   http://10.1.38.81:8080/view/stat.html     (POST)
 		   http://10.1.38.81:8080/view/getStat.html  (GET) 
 		   http://10.1.38.81:8080/view/getScheduledQuery.html?uid=1
