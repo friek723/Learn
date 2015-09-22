@@ -1,0 +1,10 @@
+[VM]
+		ST02jbpm        10.16.133.110
+		                port 22222
+		                jh7b/newegg@123
+		                
+		ST02PrivateCloud    10.16.133.111
+		                    port 22222
+                        jh7b/newegg@123
+                        
+                        
