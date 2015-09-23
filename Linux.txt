@@ -111,9 +111,8 @@
     
 		- port/firewall
 		        Ubuntu :   https://help.ubuntu.com/community/IptablesHowTo
-		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 
-		       (iptables -A INPUT -p tcp --dport 8333 -j ACCEPT) http://ubuntuforums.org/showthread.php?t=2193763
-		       (Restart network on Ubuntu : sudo /etc/init.d/networking restart) http://theos.in/desktop-linux/tip-that-matters/how-do-i-restart-linux-network-service/ 
+		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 		       
+		       
 		       (list open port :  nmap -sT -O localhost ) https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/s1-server-ports.html		       
 		       !! list open port  : netstat -tlpn  OR   netstat -tln                  
 		       !!(list open port : sudo lsof -i)  http://ithelp.ithome.com.tw/question/10056376
@@ -123,9 +122,14 @@
 				          Unable to access server from outside : http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
 				                                                  http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
 		       (Ping a port :  nmap -p 8000 10.16.207.73)
-		       ipTables list :  iptables -nvL
-       
-
+		       
+		       [iptables] !!Note : rules have priority, be sure to insert higher priority rules above lower ones.
+		           (iptables -A INPUT -p tcp --dport 8333 -j ACCEPT) http://ubuntuforums.org/showthread.php?t=2193763
+		           (Restart network on Ubuntu : sudo /etc/init.d/networking restart) http://theos.in/desktop-linux/tip-that-matters/how-do-i-restart-linux-network-service/ 
+		           ipTables list :  iptables -nvL
+               - CentOS : http://stackoverflow.com/questions/19034542/how-to-open-port-in-centos
+                          http://serverfault.com/questions/341804/opening-up-port-8080-in-centos
+                          
                  
 - unzip
        http://note.drx.tw/2008/04/command.html
