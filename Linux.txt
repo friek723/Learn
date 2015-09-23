@@ -114,8 +114,8 @@
 		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 		       
 		       
 		       (list open port :  nmap -sT -O localhost ) https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/s1-server-ports.html		       
-		       !! list open port  : netstat -tlpn  OR   netstat -tln                  
-		       !!(list open port : sudo lsof -i)  http://ithelp.ithome.com.tw/question/10056376
+		       !!! list open port  : netstat -tlpn  OR   netstat -tln                  
+		       (list open port : sudo lsof -i)  http://ithelp.ithome.com.tw/question/10056376
 				       !! If you see "localhost:port (LISTEN)", it means only listen to loop-back interface
 				          If you see "*:port (LISTEN)", it means listening to all ip
 				          Difference between 0.0.0.0 and 127.0.0.1 : http://serverfault.com/questions/78048/whats-the-difference-between-ip-address-0-0-0-0-and-127-0-0-1
