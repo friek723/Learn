@@ -11,3 +11,7 @@
     
     http://10.16.133.110:8080/jbpm-console
                     
+
+    How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
+		                                                                      (!!Need to change this otherwise not able to connect console from outside) 
+                                                                          (Change build.xml to <property name="jboss.bind.address" value="0.0.0.0" />)

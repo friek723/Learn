@@ -302,6 +302,11 @@ Java
 			      https://issues.jboss.org/browse/JBPM-4144
 			      http://docs.jboss.org/jbpm/v5.2/userguide/ch10.html#d0e3327
 			      http://javaintelligence.blogspot.tw/2010/08/jboss-jbpm-generating-image-at-runtime.html 
+			      
+		  - [Install] How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
+		                                                                      (!!Need to change this otherwise not able to connect console from outside) 
+                                                                          (Change build.xml to <property name="jboss.bind.address" value="0.0.0.0" />)
+                                                             
       
       
 
