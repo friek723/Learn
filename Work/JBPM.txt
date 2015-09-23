@@ -24,3 +24,10 @@
         - How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
 		                                                                      (!!Need to change this otherwise not able to connect console from outside) 
                                                                           (Change build.xml to <property name="jboss.bind.address" value="0.0.0.0" />)
+                                                                          
+        - mysql
+             1. sudo yum install mysql-server
+             2. sudo /sbin/service mysqld start
+             3. sudo /usr/bin/mysql_secure_installation
+             login : mysql --host=localhost --user=root --password=
+             
