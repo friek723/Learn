@@ -114,13 +114,13 @@
 		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 
 		       (iptables -A INPUT -p tcp --dport 8333 -j ACCEPT) http://ubuntuforums.org/showthread.php?t=2193763
 		       (Restart network on Ubuntu : sudo /etc/init.d/networking restart) http://theos.in/desktop-linux/tip-that-matters/how-do-i-restart-linux-network-service/ 
-		       (list open port :  nmap -sT -O localhost ) https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/s1-server-ports.html
-		       !!(list open port : sudo lsof -i)  http://ithelp.ithome.com.tw/question/10056376
+		       (list open port :  nmap -sT -O localhost ) https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/s1-server-ports.html		       
 		       !! list open port  : netstat -tlpn  OR   netstat -tln                  
-		       !! If you see "localhost:port (LISTEN)", it means only listen to loop-back interface
-		          If you see "*:port (LISTEN)", it means listening to all ip
-		           Unable to access server from outside : http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
-		                                                  http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+		       !!(list open port : sudo lsof -i)  http://ithelp.ithome.com.tw/question/10056376
+				       !! If you see "localhost:port (LISTEN)", it means only listen to loop-back interface
+				          If you see "*:port (LISTEN)", it means listening to all ip
+				           Unable to access server from outside : http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
+				                                                  http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
 		       (Ping a port :  nmap -p 8000 10.16.207.73)
 		       ipTables list :  iptables -nvL
        
