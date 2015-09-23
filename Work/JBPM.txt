@@ -13,7 +13,13 @@
                     
 
     [Install] 
-        - !!! Need sudo ?? --> sudo ant start.demo    
+        - !!! Need sudo ?? --> sudo ant start.demo  --> wait for 30 secs 
+        - [iptables] http://serverfault.com/questions/341804/opening-up-port-8080-in-centos
+                1. iptables -L INPUT --line-numbers
+                   (insert your rule before the REJECT line, below <?line num?> is the reject line number)
+                2. iptables -I INPUT <?line num?> -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT -m comment --comment "jboss Server port"
+                3. sudo service iptables save
+                
         - How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
 		                                                                      (!!Need to change this otherwise not able to connect console from outside) 
                                                                           (Change build.xml to <property name="jboss.bind.address" value="0.0.0.0" />)

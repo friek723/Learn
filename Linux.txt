@@ -127,8 +127,9 @@
 		           (iptables -A INPUT -p tcp --dport 8333 -j ACCEPT) http://ubuntuforums.org/showthread.php?t=2193763
 		           (Restart network on Ubuntu : sudo /etc/init.d/networking restart) http://theos.in/desktop-linux/tip-that-matters/how-do-i-restart-linux-network-service/ 
 		           ipTables list :  iptables -nvL
-               - CentOS : http://stackoverflow.com/questions/19034542/how-to-open-port-in-centos
-                          http://serverfault.com/questions/341804/opening-up-port-8080-in-centos
+               - CentOS : (This works) http://serverfault.com/questions/341804/opening-up-port-8080-in-centos
+                          http://stackoverflow.com/questions/19034542/how-to-open-port-in-centos                          
+               - iptables remove specific rules : http://stackoverflow.com/questions/10197405/iptables-remove-specific-rules
                           
                  
 - unzip
