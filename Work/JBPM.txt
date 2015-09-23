@@ -7,4 +7,7 @@
 		                    port 22222
                         jh7b/newegg@123
                         
-    !!! Need sudo ?? --> sudo ant start.demo                    
+    !!! Need sudo ?? --> sudo ant start.demo    
+    
+    http://10.16.133.110:8080/jbpm-console
+                    
