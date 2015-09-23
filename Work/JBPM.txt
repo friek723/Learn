@@ -7,11 +7,13 @@
 		                    port 22222
                         jh7b/newegg@123
                         
-    !!! Need sudo ?? --> sudo ant start.demo    
     
-    http://10.16.133.110:8080/jbpm-console
+    
+    [Console] http://10.16.133.110:8080/jbpm-console    (admin/admin)
                     
 
-    How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
+    [Install] 
+        - !!! Need sudo ?? --> sudo ant start.demo    
+        - How to change default ports/listening address in jBPM5 : http://bpmgeek.com/blog/how-change-default-portslistening-address-jbpm5
 		                                                                      (!!Need to change this otherwise not able to connect console from outside) 
                                                                           (Change build.xml to <property name="jboss.bind.address" value="0.0.0.0" />)
