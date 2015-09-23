@@ -31,3 +31,30 @@
              3. sudo /usr/bin/mysql_secure_installation
              login : mysql --host=localhost --user=root --password=
              
+             
+             [How to import bpmn]
+                    The bpmn2 files in this folder are used in 'jbpmservice' moudle.
+
+										steps to import in jbpm : 
+										    1. Login jbpm console
+										    2. Authoring -> Administration -> Repositories -> New repository
+										    3. Authoring -> Project authoring  (Select the repository created in 2.)
+										    4. New Item -> Project (Select the project created here)
+										    5. New Item -> Business process 
+										    6. Click the Business process created in 5. and move mouse to diagram on the right side
+										    7. Click icon "IMPORT FROM BPMN2" -> Click SAVE  (repeat 5. 6. 7. to import two bpmn2 files)
+										    8. Tools -> Project Editor (On the right side click "Build & Deploy")
+										    9. Check Process Management -> Process Definitions -> Details (Success?)
+										   10. Modify source code to use the Deployment Id in 9.
+										
+										
+										[Request_process.bpmn2] For requests that require both department and IT approval.
+										    - Deployment Id : com.newegg.privatecloud:privateCloudProject:1.0  (!! This will be based on the project name you create in jbpm.)
+										    - Definition Id : approve_proj.approve_process
+										
+										
+										[Request_process_Dep.bpmn2] For requests that require only department approval.
+										    - Deployment Id : com.newegg.privatecloud:privateCloudProject:1.0  (!! This will be based on the project name you create in jbpm.)
+										    - Definition Id : approve_proj.approve_process_dep
+    
+             
