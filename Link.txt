@@ -441,7 +441,11 @@ GIT
                               (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
                                          !https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
                               git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
-    
+
+    - cherry-pick vs merge : http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git
+                             http://stackoverflow.com/questions/881092/how-to-merge-a-specific-commit-in-git
+                             http://stackoverflow.com/questions/1241720/git-cherry-pick-vs-merge-workflow
+                             
     - Remove uncommitted & untracked files on pull : http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull
          	git reset --hard HEAD  --> revert uncommitted changes
 					git clean -f -d    --> remove untracked files
