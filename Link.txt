@@ -960,7 +960,7 @@ PHP
                         Export to Browser Download : http://stackoverflow.com/questions/8566196/phpexcel-to-download
                  
     [http]
-          1. libcurl (Client URL Library) :  curl_init(), curl_setopt(), curl_exec(), curl_close()
+          1. libcurl (Client URL Library) see[note11]:  curl_init(), curl_setopt(), curl_exec(), curl_close()
              http://php.net/manual/en/book.curl.php
              https://support.ladesk.com/061754-How-to-make-REST-calls-in-PHP
              
@@ -1648,5 +1648,49 @@ def str_diff(s1, s2):  # !! s1 and s2 are both String
 
     return ret
     
+[note11] php
+function Call_HTTP_API($method, $url, $header = null, $data = false) {
+    $curl = curl_init();
+
+    switch ($method) {
+        case "POST":
+            curl_setopt($curl, CURLOPT_POST, 1);
+
+            if ($data){
+                curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+            }
+            break;
+        case "PUT":
+            curl_setopt($curl, CURLOPT_PUT, 1);
+            break;
+        default:
+            if ($data){
+                $url = sprintf("%s?%s", $url, http_build_query($data));
+            }
+    }
+
+    /*Custom Header*/
+    if (!empty($header)) {
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+    }
+
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);  // !! for https 
+
+    $result = curl_exec($curl);
+
+    $response_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    //echo "response code : " . $response_code . "\n";
+    //echo "error code : " . $err . "\n";
+    //echo $result;
+    return json_decode($result, true);
+}
+
+
 
 
