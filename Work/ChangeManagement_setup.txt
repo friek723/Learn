@@ -1,0 +1,15 @@
+
+
+1.
+Fluentd + MongoDB + [fluent-logger-python] :  Fluentd+PlugIn_setup.txt - Shortcut
+
+2.
+Python + Django + Django REST framework : https://docs.djangoproject.com/en/1.7/intro/install/
+                                          http://www.django-rest-framework.org/
+                                          (Follow this only if source code doesn't work : https://docs.djangoproject.com/en/1.7/intro/tutorial01/           
+                                                                                         http://www.django-rest-framework.org/#quickstart)
+                                          PySNMP : http://pysnmp.sourceforge.net/download.html
+                                          Pymongo : http://api.mongodb.org/python/current/installation.html                                               
+
+3.                                                                                          
+gunicorn or (Apache and mod_wsgi) : for Django web server
