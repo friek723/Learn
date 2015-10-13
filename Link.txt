@@ -443,7 +443,9 @@ GIT
                               (Rebasing) https://git-scm.com/book/en/v2/Git-Branching-Rebasing
                                          !https://blog.yorkxin.org/posts/2011/07/29/git-rebase/
                               git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
-
+                              !! https://www.atlassian.com/git/tutorials/using-branches/git-checkout
+                              實際操作,合併與他人做的專案 : http://italwaysrainonme.blogspot.tw/2012/12/gitmerge_20.html
+                              
     - cherry-pick vs merge : http://stackoverflow.com/questions/6372044/how-do-i-merge-a-specific-commit-from-one-branch-into-another-in-git
                              http://stackoverflow.com/questions/881092/how-to-merge-a-specific-commit-in-git
                              http://stackoverflow.com/questions/1241720/git-cherry-pick-vs-merge-workflow
