@@ -98,6 +98,8 @@
                                                                 Poller --> Script and Script Server Timeout Value --> 240
                                  Data Input Methods --> Input Type --> Script/Command 
                                                         Input String --> /usr/bin/php /home/jh7b/ELSA_stat.php 
+                                                                                                 ELSA_stat_more.php
+                                                                                                 ELSA_earliest.php
                                  See log : System Utilities --> View Cacti Log File
                                            /var/www/html/log/
                                  Debug : http://docs.cacti.net/manual:088:4_help.2_debugging#debugging   
