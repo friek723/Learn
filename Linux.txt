@@ -1,3 +1,7 @@
+- version 
+          - check version    cat /etc/*-release    
+          - Difference Between Fedora, Redhat, and CentOS (yum): https://danielmiessler.com/study/fedora_redhat_centos/
+
 - BASH 
        #!/bin/sh   (已經被 /bin/bash 所取代)
        OR
@@ -138,9 +142,7 @@
                  
 - unzip
        http://note.drx.tw/2008/04/command.html
-       
-- version    cat /etc/*-release              
-                     
+                            
 - login records : "last"     http://www.cyberciti.biz/faq/linux-unix-last-command-examples/   
 
 - process & command
