@@ -382,6 +382,13 @@ SQL
     - Locking in SQL Server : http://www.sqlteam.com/article/introduction-to-locking-in-sql-server    
     - Connection String Reference : http://www.connectionstrings.com/
 
+    - [mysql]
+             Install:
+                1. sudo yum install mysql-server
+                2. sudo /sbin/service mysqld start
+                3. sudo /usr/bin/mysql_secure_installation
+             login : mysql --host=localhost --user=root --password=
+             
 
 GIT
     - Tools : [Git for windows] https://git-scm.com/downloads
