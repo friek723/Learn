@@ -954,7 +954,9 @@ PHP
             - Install Laravel 4.2 with Apache on Ubuntu Server 14.04 : http://ulyssesonline.com/2014/07/24/install-laravel-4-2-on-ubuntu-server-14-04-lts/
             - Install Laravel with an Nginx Web Server on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04
             - CSRF Protection(cross-site request forgeries) : http://laravel.com/docs/5.1/routing#csrf-protection
-    
+            - Video course : https://laracasts.com/series/laravel-5-fundamentals
+            - Example : http://laravelbook.com/laravel-introduction/
+            
         [Symfony2]
             ...
             
