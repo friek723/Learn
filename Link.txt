@@ -928,6 +928,8 @@ Paas
     
 
 PHP 
+    How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
+    
     Extension Management Tools - Pecl and Pear : http://www.openfoundry.org/tw/tech-column/8531-php-extension-management-tools-pecl-and-pear
     
     run from command line: http://stackoverflow.com/questions/8737898/is-usr-bin-env-required-to-run-php-from-command-line                      
@@ -946,7 +948,8 @@ PHP
     
     Cron Jobs Lock (to avoid overlaps): http://abhinavsingh.com/how-to-use-locks-in-php-cron-jobs-to-avoid-cron-overlaps/
     
-    [Framework] http://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results/   
+    [Framework] http://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results/ 
+                Install LAMP : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04  
         [Laravel] Most popular in 2015
             - Install Laravel with an Nginx Web Server on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04
             - CSRF Protection(cross-site request forgeries) : http://laravel.com/docs/5.1/routing#csrf-protection
