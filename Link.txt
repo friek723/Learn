@@ -392,6 +392,7 @@ SQL
                      CREATE DATABASE test;
                      USE test;
                      SHOW TABLES;
+                     DROP TABLE items;
                               
 
 GIT
