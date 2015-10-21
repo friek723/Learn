@@ -388,7 +388,11 @@ SQL
                 2. sudo /sbin/service mysqld start
                 3. sudo /usr/bin/mysql_secure_installation
              login : mysql --host=localhost --user=root --password=
-             
+                     SHOW DATABASES;
+                     CREATE DATABASE test;
+                     USE test;
+                     SHOW TABLES;
+                              
 
 GIT
     - Tools : [Git for windows] https://git-scm.com/downloads
@@ -964,6 +968,7 @@ PHP
             - !! Examples (with AngularJs) : http://learninglaravel.net/topics/angularjs
             - Video course : https://laracasts.com/series/laravel-5-fundamentals
             - Example : http://laravelbook.com/laravel-introduction/
+            - config: ".env" file at project root
             
         [Symfony2]
             ...
