@@ -112,7 +112,8 @@
 
 - Network
     check ip address : ifconfig eth0 | grep inet | awk '{ print $2 }'
-    
+                       ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+                       
 		- port/firewall
 		        Ubuntu :   https://help.ubuntu.com/community/IptablesHowTo
 		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 		       
