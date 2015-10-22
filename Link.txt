@@ -196,7 +196,10 @@ Javascript
 
 Module Counts : http://www.modulecounts.com/          
 
-HTTP & WEB tool 
+HTTP & WEB tool
+ - [Fiddler] web debugging proxy  : http://www.telerik.com/fiddler 
+             1. captures HTTP and HTTPS traffic and logs it 
+             2. can also be used to modify ("fiddle with") HTTP traffic for troubleshooting purposes as it is being sent or received.
  - (Press F12 on Chrome) http://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome
  - Chrome plugin [Live HTTP Headers] https://chrome.google.com/webstore/detail/live-http-headers/iaiioopjkcekapmldfgbebdclcnpgnlo
  - How Web Browsers work : http://taligarsiel.com/Projects/howbrowserswork1.htm
