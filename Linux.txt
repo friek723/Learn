@@ -1,5 +1,7 @@
 - version 
           - check version    cat /etc/*-release    
+          - Compare distributions : http://www.dedicatedservershosting.com/linux-distro-guide.html
+                                    http://mitblog.pixnet.net/blog/post/41037058-10-%E5%A5%97-linux-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%9A%84%E6%AF%94%E8%BC%83%E3%80%81ubuntu-vs-fedora-vs-cen
           - Difference Between Fedora, Redhat, and CentOS (yum): https://danielmiessler.com/study/fedora_redhat_centos/
 
 - BASH 
