@@ -104,6 +104,7 @@
 				                find . -name 'program.c' 2>/dev/null
 				                find / -name 'program.c' 2>/dev/null
 				                sudo find / -name 'program.c'
+				                !sudo find . -name 'filename*'       (use *) 
 				                (!! If search folder, path must end with "/")
                 
 - Install remote desktop : You'd be able to login using "Remote Desktop Connection Client" on Windows OS.
