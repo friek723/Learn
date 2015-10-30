@@ -23,7 +23,7 @@
            https://10.1.38.81/API/stats
    
    
-   Link :
+   ELSA Link :
    	   http://10.1.38.81:8080/phpMyAdmin/   (root / NO pass)
 		   http://10.1.38.81:8080/view/         (jh7b / jh7b)
 		   http://10.1.38.81:8080/view/stat.html     (POST)
@@ -83,8 +83,19 @@
                               
                      NO permission : g_User_guide - Li.doc
                                      ELSA\Program
+            [Production]
+               Cacti :  
+                       1. ssh  s7itm03     (jim/Newegg@123) 
+                       2. http://s7itm03    (id ????)
+               ELSA : 
+                         172.16.24.70 (Log collector)
+                         172.16.45.70 (Log collector)
+                         10.1.50.70   (Log collector)
+                         10.1.50.69   (log archiveing)  (ssh id ???)  
+                                       http://10.1.50.69/
+               
                             
-   Cacti server : 
+   My Test Cacti server : 
                    1. [From Li] www.taiwan-motors.com.tw/cacti/     (Jimmy/123456)
                    2. ST02CactiTest(10.16.133.43) 
                                    web : admin/Newegg@123  
