@@ -20,7 +20,7 @@
    
    ELSA REST API :
            ????? unauthorized : https://10.1.38.81/API/query?q=%7B%22query_string%22%3A%22host%3D%5C%2210.1.39.248%5C%22%20groupby%3A565654%22%2C%22query_meta_params%22%3A%7B%22limit%22%3A999%2C%22timezone_offset%22%3A480%2C%22start%22%3A%222015-7-20%2000%3A00%3A00%22%7D%7D&permissions=%7B%22class_id%22%3A%7B%220%22%3A1%7D%2C%22program_id%22%3A%7B%220%22%3A1%7D%2C%22node_id%22%3A%7B%220%22%3A1%7D%2C%22host_id%22%3A%7B%220%22%3A1%7D%7D
-           https://10.1.38.81/API/stats
+           https://10.1.38.81/API/stats  OR http://
    
    
    ELSA Link :
@@ -86,13 +86,18 @@
             [Production]
                Cacti :  
                        1. ssh  s7itm03     (jim/Newegg@123) 
-                       2. http://s7itm03    (id ????)
+                       2. http://s7itm03    (Zoi's AD account ok, mine fail)
                ELSA : 
-                         172.16.24.70 (Log collector)
-                         172.16.45.70 (Log collector)
-                         10.1.50.70   (Log collector)
-                         10.1.50.69   (log archiveing)  (ssh id ???)  
-                                       http://10.1.50.69/
+                         #(Log collector) 172.16.24.70 
+                         #(Log collector) 172.16.45.70 
+                         #(Log collector) 10.1.50.70  
+                         #(log archiveing)    REST API http://ip/API/stats       
+                          http://10.1.50.69/      
+                                 10.1.50.69 (virtual address)   
+                          http://172.16.73.48
+                                 172.16.73.48 (real address) (ssh root/11aaAA@@)       
+                          http://172.16.73.49
+                                 172.16.73.49 (real address) (ssh root/11aaAA@@)      
                
                             
    My Test Cacti server : 
