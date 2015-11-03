@@ -86,7 +86,7 @@
             [Production]
                Cacti :  
                        1. ssh  s7itm03     (jim/Newegg@123) 
-                       2. http://s7itm03    (Zoi's AD account ok, mine fail)
+                       2. http://s7itm03    (zoi : zt96/11qq@@WW , mine fail)
                ELSA : 
                          #(Log collector) 172.16.24.70 
                          #(Log collector) 172.16.45.70 
