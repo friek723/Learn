@@ -91,10 +91,10 @@
                          #(Log collector) 172.16.24.70 
                          #(Log collector) 172.16.45.70 
                          #(Log collector) 10.1.50.70  
-                         #(log archiveing)    REST API http://ip/API/stats       
-                          http://10.1.50.69/      
+                         #(log archiveing)      
+                          http://10.1.50.69/     (REST API http://10.1.50.69/API/stats) 
                                  10.1.50.69 (virtual address)   
-                          http://172.16.73.48
+                          http://172.16.73.48    (REST API http://172.16.73.48/API/stats)
                                  172.16.73.48 (real address) (ssh root/11aaAA@@)       
                           http://172.16.73.49
                                  172.16.73.49 (real address) (ssh root/11aaAA@@)      
