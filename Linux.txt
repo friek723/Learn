@@ -146,7 +146,14 @@
                  
 - unzip
        http://note.drx.tw/2008/04/command.html
-                            
+           tar zxvf FileName.tar.gz
+           tar xvf FileName.tar
+           gzip -d FileName.gz
+           tar zxvf FileName.tgz
+           7z x FileName.7z
+           unzip FileName.zip
+           
+                     
 - login records : "last"     http://www.cyberciti.biz/faq/linux-unix-last-command-examples/   
 
 - process & command
