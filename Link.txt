@@ -395,6 +395,8 @@ SQL
                      CREATE DATABASE test;
                      USE test;
                      SHOW TABLES;
+                     SHOW COLUMNS FROM TableName;
+                     SELECT * FROM TableName;
                      DROP TABLE items;
                               
 
