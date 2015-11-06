@@ -987,6 +987,10 @@ PHP
             
     [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
     
+                 1. Download from official site 
+                 2. mv config.sample.inc.php config.inc.php 
+                 3. set AllowNoPassword to true
+    
     [Excel]  
         import/export : sample code see [note8]
                         !https://blog.mayflower.de/561-Import-and-export-data-using-PHPExcel.html  --> !!Correct Error : $objPHPExcel->getActiveSheet()->setCellValue()
