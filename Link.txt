@@ -987,9 +987,10 @@ PHP
             
     [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
     
-                 1. Download from official site 
+                 1. Download from official site & place it under /var/www
                  2. mv config.sample.inc.php config.inc.php 
                  3. set AllowNoPassword to true
+                 4. login & change password in General settings
     
     [Excel]  
         import/export : sample code see [note8]
