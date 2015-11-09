@@ -989,7 +989,7 @@ PHP
     
                  1. Download from official site & place it under /var/www
                  2. mv config.sample.inc.php config.inc.php 
-                 3. set AllowNoPassword to true
+                 3. set AllowNoPassword to true  (default : root/no pass)
                  4. login & change password in General settings
     
     [Excel]  
