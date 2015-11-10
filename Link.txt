@@ -991,6 +991,7 @@ PHP
                   DB:     database/migrations/2014_10_12_000000_create_XXX_table.php
                   Root for routes.php & index.html & AngularJS : public/
                   Sql config  : .env
+                  Middleware : app\Http\Middleware
                   
         [Symfony2]
             ...
