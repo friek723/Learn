@@ -196,6 +196,33 @@ Javascript
 
 Module Counts : http://www.modulecounts.com/          
 
+Web Technology : 
+    - Token Based Authentication
+          https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+          http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+          https://stormpath.com/blog/token-auth-spa/
+          http://www.django-rest-framework.org/api-guide/authentication/
+         
+    - OAuth & OpenID     
+			    Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
+			    
+			    OAuth 
+			        http://en.wikipedia.org/wiki/OAuth
+			        http://oauth.net/2/     (http://oauth.net/)
+			        http://blog.yorkxin.org/posts/2013/09/30/oauth2-1-introduction/
+			    
+			    OpenID 
+			        http://briian.com/5328/openid.html    
+         
+    - RESTful : http://rest.elkstein.org/
+
+    - Sessions & Cookies
+        ! http://www.tangowithdjango.com/book/chapters/cookie.html
+        http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
+   
+          
+          
+          
 HTTP & WEB tool
  - [Fiddler] web debugging proxy  : http://www.telerik.com/fiddler 
              1. captures HTTP and HTTPS traffic and logs it 
@@ -241,20 +268,8 @@ Web server & App server
        log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 
+               
                 
-OAuth & OpenID 
-    
-    Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
-    
-    OAuth 
-        http://en.wikipedia.org/wiki/OAuth
-        http://oauth.net/2/     (http://oauth.net/)
-        http://blog.yorkxin.org/posts/2013/09/30/oauth2-1-introduction/
-    
-    OpenID 
-        http://briian.com/5328/openid.html    
-        
-        
 Regular Expression 
  - http://www.codeproject.com/Articles/9099/The-Minute-Regex-Tutorial
  - http://www.w3schools.com/js/js_regexp.asp
@@ -346,15 +361,7 @@ JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/
        [Java]Convert JSONObject to Map : !!! http://stackoverflow.com/questions/21720759/convert-jsonobject-to-map
                                        http://stackoverflow.com/questions/6323205/convert-json-string-to-java-mapjsonlib
        
-RESTful
- - http://rest.elkstein.org/
-
-Sessions & Cookies
-   ! http://www.tangowithdjango.com/book/chapters/cookie.html
-   http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
-   
-
-
+       
 SQL 
     - !!!Online Syntax Editor : http://sqlfiddle.com/#viewSample
     
