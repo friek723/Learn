@@ -211,7 +211,7 @@ Web Technology :
           http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
                     
     - Token Based Authentication
-          https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+          !https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
           http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
           https://stormpath.com/blog/token-auth-spa/
           http://www.django-rest-framework.org/api-guide/authentication/
