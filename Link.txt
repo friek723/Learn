@@ -213,7 +213,7 @@ Web Technology :
     - Token Based Authentication
           !https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
           http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
-          https://stormpath.com/blog/token-auth-spa/
+          !https://stormpath.com/blog/token-auth-spa/
           http://www.django-rest-framework.org/api-guide/authentication/
          
     - OAuth & OpenID     
