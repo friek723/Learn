@@ -197,6 +197,19 @@ Javascript
 Module Counts : http://www.modulecounts.com/          
 
 Web Technology : 
+    - Cross-origin resource sharing (CORS)
+          https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  (header : Access-Control-Allow-Origin: *)
+          http://enable-cors.org/index.html
+          http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+   
+    - Cross-site request forgery (CSRF)
+          https://en.wikipedia.org/wiki/Cross-site_request_forgery
+          https://github.com/pillarjs/understanding-csrf)
+          http://laravel.com/docs/5.1/routing#csrf-protection
+          http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+          http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
+          http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
+                    
     - Token Based Authentication
           https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
           http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
