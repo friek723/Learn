@@ -205,6 +205,7 @@ Web Technology :
     - Cross-site request forgery (CSRF)
           https://en.wikipedia.org/wiki/Cross-site_request_forgery
           https://github.com/pillarjs/understanding-csrf)
+          https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
           http://laravel.com/docs/5.1/routing#csrf-protection
           http://www.django-rest-framework.org/topics/ajax-csrf-cors/
           http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
