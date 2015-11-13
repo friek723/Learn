@@ -498,6 +498,16 @@ GIT
          	git reset --hard HEAD  --> revert uncommitted changes
 					git clean -f -d    --> remove untracked files
 					git pull           --> update latest version from server
+    
+    - master : The default branch name in Git is master.
+               The “master” branch in Git is not a special branch. It is exactly like any other branch. 
+               The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
+    
+    - origin : origin is not the remote repository name. It is an alias given to the URL pointing to the default remote repository.
+               This alias is set by default when cloning from/to a remote for the first time.        
+        "git remote" or "git remote -v" : lists the shortnames of each remote handle you’ve specified.
+                                          If you’ve cloned your repository, you should at least see origin – that is the default name Git gives to the server you cloned from.
+    
                           
 		[command] 
 		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
@@ -527,13 +537,18 @@ GIT
 				- git checkout file: to discard changes in working directory
 				
 				- remote url : "git remote show origin" or "git remote -v"  (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
-				               
+				
+				- Branch
+				     show current branch : git branch
+				     show all local and remote branches : git branch -a
+				     show only remote branches : git branch -r
+				                 
 				- list untracked files : git status -u
 				
 				- pull v.s. fetch : git pull does a git fetch followed by a git merge (http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch)
 				
 				- Deletes all Untracked files/directories : git clean -f -d
-				
+								  
 				[Add/Rm]
 						- git add/rm file: to update(stage) what will be committed                                                   
 						- git add -A :  This adds, modifies, and removes index entries to match the working tree.
