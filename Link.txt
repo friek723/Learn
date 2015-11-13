@@ -117,6 +117,8 @@ Javascript
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
         
         - ng-if v.s. ng-show/ng-hide : http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
+        
+        - ng-focus & ng-blur (event when mouse on & leave input box): http://jsfiddle.net/deathhell/UTn5y/2/
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
         - UI Grid : http://ui-grid.info
@@ -1025,6 +1027,9 @@ PHP
             - Example : http://laravelbook.com/laravel-introduction/
             - config: ".env" file at project root  (if mysql connection fail)
             - list the routes enabled for an app (under project root): php artisan route:list 
+            - jwt-auth : https://github.com/tymondesigns/jwt-auth/wiki
+                         ! Unable to get "Authorization " header : http://stackoverflow.com/questions/20853604/laravel-get-request-headers
+                         
             - Directory Structure
                   View :  resources/views/XXX.blade.php
                           resources/views/YYY/XXX.blade.php
