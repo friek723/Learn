@@ -567,8 +567,9 @@ GIT
                                             git 如何把 merge 而且已經 push 的 branch 給回復 : http://dev.sopili.net/2014/08/git-revert-pushed-no-ff-merge.html
                 - git revert HEAD~3 : Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes.
                 - git revert HEAD : Revert the commit we just created
-
-                                            
+                - git revert a867b4af 25eee4ca 0766c053 : This will create three separate revert commits 
+                - git revert HEAD~2..HEAD : It also takes ranges. This will revert the last two commits
+                                                            
 				[Reset and Rebase] ONLY used if NOT push yet	
 				    - Rebase v.s. Merge : !https://ihower.tw/blog/archives/3843   --> 你修改比較多，預期會有較多的 conflict，建議用 merge。如果修改範圍較小，不太預期有 conflict，則建議可以加上 rebase 參數				
 				    - Rebase v.s. Reset : !https://ihower.tw/blog/archives/2622
