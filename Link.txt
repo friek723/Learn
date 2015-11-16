@@ -67,7 +67,7 @@ Javascript
                                                     ! http://datatables.net/examples/server_side/
                                                     ! http://datatables.net/manual/server-side
                                                     
-        - Redirect with post data : http://stackoverflow.com/questions/19036684/jquery-redirect-with-post-data
+        - Redirect with post data [note12]: http://stackoverflow.com/questions/19036684/jquery-redirect-with-post-data
         
         
     [AngularJS] AngularJS is a JavaScript framework.  It is a library written in JavaScript.
@@ -1587,7 +1587,8 @@ def get_paramiko(host, user, passwd, cmdList):
 // - Each row is a php Associative Array :  array("key"=>"value")
 // - The first row is used to generate column names in excel, so it must has all possible keys.
 //   (You may insert a dummy first row with all possible keys.)
-// - Check function test_getDataFromDB() above for how to generate $exportArray.
+// - usage : exportArrayToXlsx($pushedArray, array("filename"=>"php://output", "title"=>"Fixed Asset Report") );
+// - frontend : refer to [note12]
 function exportArrayToXlsx ($exportArray, $exportParam) {
 
     $objPHPExcel = new PHPExcel();
@@ -1790,6 +1791,35 @@ function Call_HTTP_API($method, $url, $header = null, $data = false) {
     return json_decode($result, true);
 }
 
+[note12] jQuery - Redirect with post data (to let browser save file automatically)
+         http://stackoverflow.com/questions/19036684/jquery-redirect-with-post-data
+         Backend : refer to [note8]
+    // jquery extend function
+    $.extend(
+    {
+        redirectPost: function(location, args)
+        {
+            var form = '';
+            $.each( args, function( key, value ) {
+                form += '<input type="hidden" name="'+key+'" value="'+value+'">';
+            });
+            $('<form action="'+location+'" method="POST">'+form+'</form>').appendTo('body').submit();
+        }
+    });
+    
+    usage 1: var redirect = 'http://www.website.com/page?id=23231';
+            $.redirectPost(redirect, {x: 'example', y: 'abc'});
+    usage 2: Compare (A) and (B)    
+             //(A) use redirect in order to let browser save excel file automatically.
+             var redirect = urlBase + 'exportReport' + '?page=' + page + '&rowsPerPage=' + rowsPerPage + '&reportType=' + reportType + assetTypeQueryString;
+             $.redirectPost(redirect, searchObj);
+
+             //(B) calling http API
+             return $http({
+                 method: 'POST',
+                 url: urlBase + 'exportReport' + '?page=' + page + '&rowsPerPage=' + rowsPerPage + '&reportType=' + reportType + assetTypeQueryString,
+                 data: searchObj
+             });    
 
 
 
