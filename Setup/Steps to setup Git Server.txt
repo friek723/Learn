@@ -31,7 +31,7 @@ $ git push origin master
 # Server : Disable password prompts when doing git pull 
 0. id_rsa.pub : ssh client 
    authorized_keys : ssh server
-   !!! If client/server on different host, we need to generate id_rsa.pub at both and append to each other's authorized_keys
+   !!! If client/server on different host, we need to generate id_rsa.pub at both side and append to each other's authorized_keys
        Because for hook command in gitServer/hooks/post-receive : ssh root@Client_IP -t "cd /GitCloneFolder/project.git;git pull"
                                                                   "ssh root" needs client password, and "git pull" needs server password
 1. ssh-keygen -t rsa   (this generates key at "~/.ssh/id_rsa.pub")
