@@ -454,6 +454,7 @@ GIT
 		      2. cat id_rsa.pub >> ~/.ssh/authorized_keys  (Append the contents of your public key (that's id_rsa.pub) to the Git server's ~/.ssh/authorized_keys file.)
           3. If not work, check /etc/ssh/sshd_config  (Default config should work[No need keys : RSAAuthentication/PubkeyAuthentication/AuthorizedKeysFile], restart service if modified)
                 check file permissions on the ~/.ssh/
+                    http://vikastestingmind.blogspot.tw/2014_11_01_archive.html
                     !!!The most common cause for SSH public key authentication mysteriously not working is incorrect file permissions on the ~/.ssh/ files. As a general rule, your file permissions (on both machines) should be at least as restrictive as:
 										~/.ssh/                      rwx------ (700)
 										~/.ssh/authorized_keys       rw-r--r-- (644)
