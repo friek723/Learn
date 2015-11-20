@@ -161,6 +161,10 @@ Javascript
                        in the face of data-intensive real-time applications that run across distributed devices.
               (4)Node.js operates on a single thread, using non-blocking I/O calls.
                  The design goal of a Node.js application is that any function performing I/O must use a callback.
+          
+          General Introduction : https://www.quora.com/What-is-Node-js-for
+                                 http://www.talentbuddy.co/blog/on-building-with-node-js-at-medium-and-growing-as-a-developer/
+                                 http://www.talentbuddy.co/blog/building-with-node-js/
               
           http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
           http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
