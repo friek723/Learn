@@ -1088,6 +1088,8 @@ PHP
 		                                       3. pecl install pecl_http  (when asked 'libcurl' path : /usr/lib64/libcurl.so.4)
             
     e-Commerce
+        [Ecommerce Platforms Popularity] 
+            http://blog.aheadworks.com/2015/05/ecommerce-platforms-popularity-may-2015-two-platforms-take-half/
         wordpress
             https://www.webhostinghero.com/host-wordpress-on-a-paas-service/
             ! http://steveperkins.com/hosting-a-wordpress-site-on-appfog-without-persistent-file-storage/
