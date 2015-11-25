@@ -130,6 +130,10 @@ Daily Todo:
 								  !! 9/15 promise Andrew 10 days to complete request.
 								  !! Email to Radium to show him Cacti
 					
+					   [EGG-protect]
+					       https://msdn.microsoft.com/en-us/sync/bb736753.aspx  (先看其中的File Synchronization的部分)
+					       利用這個Framework來implement對WinPC端的Folder-based的Backup/Recovery機制
+
 					   [機房]
                 zoi設定門禁
                 Zoi.T.Tsai (nesc.twtp02.Newegg) 61133 下午 01:42
