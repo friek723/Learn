@@ -1051,7 +1051,7 @@ PHP
                   Root for routes.php & index.html & AngularJS : public/
                   Sql config  : .env
                   Middleware : app\Http\Middleware
-                  composer(use other lib) : composer.json
+                  composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
 
         [Symfony2]
             ...
