@@ -1050,6 +1050,7 @@ PHP
                   DB:     database/migrations/2014_10_12_000000_create_XXX_table.php
                   Root for routes.php & index.html & AngularJS : public/
                   Sql config  : .env
+                  config      : config/app.php
                   Middleware : app\Http\Middleware
                   composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
 
