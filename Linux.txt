@@ -118,6 +118,9 @@
                        ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
                        
 		- port/firewall
+		        !Check remote port open :  "telnet ip port"  
+		                                   http://blogger.gtwang.org/2013/10/troubleshooting-telnet.html
+		        
 		        Ubuntu :   https://help.ubuntu.com/community/IptablesHowTo
 		                   http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/ 		       
 		       
