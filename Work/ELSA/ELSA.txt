@@ -106,7 +106,7 @@
                                    web : admin/Newegg@123  
                                          (default after new install : admin/admin)   
                                          (Radium said : CactiEZ is the password)
-                                   ssh  port 22222 :  jh7b  / Newegg@123
+                                   ssh  port 22222 :  jh7b  / EggNew@456
                                    mysql --host=localhost --user=cactiuser --password=CJs9H5iH
                                    $database_port = "3306";
                    [Web Config]  Graph Templates --> Upper Limit (--upper-limit) --> 10000000000
