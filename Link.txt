@@ -289,6 +289,7 @@ Web server & App server
        log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 
+       restart : service httpd restart
                
                 
 Regular Expression 
