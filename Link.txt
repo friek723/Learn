@@ -1007,6 +1007,11 @@ Paas
     
 
 PHP 
+    - php info : <?php
+                 // Show all information, defaults to INFO_ALL
+                 phpinfo();
+                 ?>
+
     How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
     
     Extension Management Tools - Pecl and Pear : http://www.openfoundry.org/tw/tech-column/8531-php-extension-management-tools-pecl-and-pear
