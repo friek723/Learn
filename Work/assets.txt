@@ -1,0 +1,105 @@
+Li.L.Liu (nesc.twtp01.Newegg) 61134 ¤W¤È 10:50
+
+intellij
+commercial
+10.16.90.215 --> developer server (¦ýReyna¤w¸g®³¨Ó·íproduction)
+root
+abc123
+/var/www/html/assets 
+
+Li.L.Liu (nesc.twtp01.Newegg) 61134 ¤W¤È 10:57
+Z:\Project\asset\doc
+
+Li.L.Liu (nesc.twtp01.Newegg) 61134 ¤W¤È 11:01
+10.16.90.104  --> Liªºproduction server
+
+Li.L.Liu (nesc.twtp01.Newegg) 61134 ¤W¤È 11:06
+http://10.16.90.215/assets/view/
+---------------------------------------------------------
+
+intelliJ pass : abc123
+
+Web : http://10.16.90.215/assets/view/    (login with ad)
+
+
+       
+10.16.90.215 account : root / abc123 
+                     (root)jh7b / K****1234
+
+Mongo DB : define('connectionString', 'mongodb://domain:abc123@10.1.37.154:27017');   
+           Console : 
+                    mongo 10.1.37.154:27017/admin -u domain -p abc123
+                    use db_test
+	                  db.collection_test.find()
+	        [convert all fields to string] http://stackoverflow.com/questions/4973095/mongodb-how-to-change-the-type-of-a-field                 
+	                                       db.getCollection('collection_tmp').find({qty : {$exists : true}}).forEach( function(obj) { obj.qty = ""+obj.qty; db.collection_tmp.save(obj); } )
+	                                       
+	                         
+-------------------------------------------------------------------
+Excel import sample : I:\IT\TW-IT\TW_Data
+
+
+PHP debug : http://php.net/manual/en/function.error-log.php
+            http://php.net/manual/en/function.var-dump.php
+            log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
+            error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
+            
+-------------------------GIT----------------------------------------------------
+
+git :  ssh://gituser@10.16.90.215/root/git_server/assets.git      (gituser password : abc123)
+       On push, auto deploy to : 10.16.90.215/var/www/html/deploy/assets  (by git pull)
+       
+       # To sync from non-git src : 1. /bin/cp -af /var/www/html/assets/* /root/tmp/test/assets/      (copy all & overwrite) 
+                                    2. git status and manually add files 
+                                    3. git status and manually remove .gitignore files   (DO NOT use "find . -name ".gitignore" -exec rm -rf {} \;" , it will remove some .gitignore wanted)
+                                    4. git status and make sure there are NO files need to be added.
+                                    
+                                    
+[Setup on windows]  
+            °ò¥»¦w¸Ë : 
+                    https://git-scm.com/download/win
+            ¦n¥ÎªºUI¤u¨ãTortoiseGit (Optional) :     
+                    https://code.google.com/p/tortoisegit/wiki/Download?tm=2
+            ¶}µoIDE (»Pgitµ²¦X±o«Ü¦n,  Â²³æ©ö¥Î) :
+                    IntelliJ IDEA
+            ³]©w¤W¶ÇªºÅã¥Ü¦WºÙ : 
+                    git config --global user.name "John Doe"
+            Download code with git console :  
+                    git clone ssh://gituser@10.16.90.215/root/git_server/assets.git      (gituser password : abc123)
+
+[Work with IntelliJ]
+            Create a new repository :
+										1.	Select ¡§Checkout From Version Control¡¨ --> Git
+										2.	URL -  ssh://gituser@10.16.90.215/root/git_server/assets.git    (gituser password : abc123)
+            Push code : 
+										IntelliJ --> VCS --> Git -->„³Commit File --> (Write commit message) --> Commit and Push
+										( When push done, files are automatically deployed to :  http://10.16.90.215/deploy/assets/view/)
+
+---------------------------------------------------------------------------------
+
+[ª¬ºA¾ã²z]
+    assetStatus :  inStock (ªì©lª¬ºA),
+                   requisited(»â¥Î/¥i¯à»PinStock¨Ã¦s), 
+                   allocated(­É¥Î/¥i¯à»PinStock¨Ã¦s),
+                   repair (ºû­×/¥i¯à»P¨ä¥Lª¬ºA¨Ã¦s), 
+                   transOut(½Õ¼·¥X®w/¥²¤£»P¨ä¥Lª¬ºA¨Ã¦s/only for©T©w¸ê²£)
+                   transIn (½Õ¼·¤J®w/¥²»PinStock¨Ã¦s)
+                   outStock ??? (Not in CN)
+                   sale ???
+                   disposal ???
+    
+                   TW : inStock, outStock
+                   US : inStock
+                   
+                   @¸ê²£¤@Äý : not in array('disposal', 'sale'); [inStock¤~¥X²{"½Õ¼·¥X®w"button]
+                   @½Õ¼·¤J®w¤@Äý : array('$in' => array('transOut')
+                   @¥i°t¸m¤@Äý : array('$in' => array('inStock', null)),
+                   @¥iÂkÁÙ¤@Äý : array('$in' => array('requisited', 'allocated'))
+                   
+                   #¦pªG¬O§C¯Ó«~¡AÁÙ»Ý­n¶ñ¼gÂkÁÙ¼Æ¶q(»â¥ÎÂkÁÙ®É¡AÂkÁÙ¼Æ¶q¥i¯à§C©ó»â¥Î¼Æ¶q¡F­É¥ÎÂkÁÙ®É¡AÂkÁÙ¼Æ¶q¶·µ¥©ó­É¥Î¼Æ¶q)¡C
+                   #IT¤À¬°BU¤º½Õ¼·©M¸óBU½Õ¼·¡A³B©ó»â¥Î/­É¥Î/ºû­×/³ø¼oª¬ºAªº¸ê²£¤£¯à½Õ¼·¡A½Õ¼·¤§«áª¬ºA¬°ªÅ¶¢¡A»Ý­n·sªº¨Ï¥ÎªÌ¶ñ¼g»â¥Î³æ¤§«á¤~¯à§ïÅÜª¬ºA©M¨Ï¥Î¤H¡C
+									 #½Õ¼·¥u¯A¤Î©T©w¸ê²£¡A§C¯Ó«~¤£¦s¦b½Õ¼·
+
+    
+[°ÝÃD]
+  # ­É¥Î¸ò»â¥Î¦³¦ó¤£¦P?  Ans : ²q´ú¬O§C¯Ó¸ò©T©w¤À§O¨Ï¥Î   
