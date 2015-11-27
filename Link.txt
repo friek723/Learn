@@ -1012,6 +1012,8 @@ PHP
                  phpinfo();
                  ?>
 
+    - php.ini : where is it?   php -i | grep 'php.ini'
+    
     How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
     
     Extension Management Tools - Pecl and Pear : http://www.openfoundry.org/tw/tech-column/8531-php-extension-management-tools-pecl-and-pear
@@ -1022,7 +1024,8 @@ PHP
                       	   <?php
                        2. php xxx.php
                       
-    PHP debug : error_log() -> http://php.net/manual/en/function.error-log.php
+    PHP log & debug : 
+                error_log() -> http://php.net/manual/en/function.error-log.php
                                Write to a file (!make it writable): error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
                 [print array]
                     void var_dump($var)  -> http://php.net/manual/en/function.var-dump.php
