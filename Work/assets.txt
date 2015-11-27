@@ -26,6 +26,8 @@ Web : http://10.16.90.215/assets/view/    (login with ad)
 10.16.90.215 account : root / abc123 
                      (root)jh7b / K****1234
 
+[Reyna's US mirror] 10.1.37.173    rc89/Newegg@123
+
 Mongo DB : define('connectionString', 'mongodb://domain:abc123@10.1.37.154:27017');   
            Console : 
                     mongo 10.1.37.154:27017/admin -u domain -p abc123
