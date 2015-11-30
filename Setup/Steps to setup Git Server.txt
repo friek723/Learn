@@ -44,7 +44,8 @@ $ git push origin master
 					~/.ssh/authorized_keys       rw-r--r-- (644)
 					~/.ssh/id_rsa                rw------- (600)
 					~/.ssh/id_rsa.pub            rw-r--r-- (644)
-										
+4. If not work, make sure client's cloned folder(where we do git pull) belongs to ssh key(id_rsa.pub) user										
+
 
 # Server : Test pull without a password
 1. cd GitCloneFolder
