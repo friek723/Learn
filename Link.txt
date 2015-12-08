@@ -572,6 +572,7 @@ GIT
 				[Revert] Used if pushed already (compare with Reset & Rebase)
 								- Revert to a previous Git commit : 
 								                            !!!http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit
+								                            !!! Good example : http://serebrov.github.io/html/2014-01-04-git-revert-multiple-recent-comments.html
 								                            https://www.atlassian.com/git/tutorials/undoing-changes/git-revert
 				                                    !https://ihower.tw/blog/archives/2622
 				                                    http://gitbook.liuhui998.com/4_9.html
