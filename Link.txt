@@ -1056,7 +1056,9 @@ PHP
                               http://culttt.com/2013/05/13/setting-up-your-first-laravel-4-model/
                               
             - config: ".env" file at project root  (if mysql connection fail)
-            - list the routes enabled for an app (under project root): php artisan route:list 
+            - list the routes enabled for an app (under project root): php artisan route:list
+            - quickly test your Laravel application without a web server :  "php artisan serve" 
+                  http://laravel-recipes.com/recipes/282/running-phps-built-in-web-server 
             - jwt-auth : https://github.com/tymondesigns/jwt-auth/wiki
                          ! Unable to get "Authorization " header : http://stackoverflow.com/questions/20853604/laravel-get-request-headers
                          
