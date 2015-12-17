@@ -1047,6 +1047,14 @@ PHP
                                              https://www.codetutorial.io/tutorial/laravel-5/
             - Video course : https://laracasts.com/series/laravel-5-fundamentals
             - Example : http://laravelbook.com/laravel-introduction/
+            - version : run "php artisan --version" in project root
+            - Model & Table : Laravel follows the convention of configuration mantra. 
+                              This basically means, if you call your model "User", then Laravel will assume that your table name is "users". 
+                              Setting the $table property(in Model) is useful when you want to give a table a name that does not follow this convention.
+                              
+                              http://laravel.com/docs/5.1/eloquent
+                              http://culttt.com/2013/05/13/setting-up-your-first-laravel-4-model/
+                              
             - config: ".env" file at project root  (if mysql connection fail)
             - list the routes enabled for an app (under project root): php artisan route:list 
             - jwt-auth : https://github.com/tymondesigns/jwt-auth/wiki
