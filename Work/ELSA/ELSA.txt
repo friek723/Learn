@@ -121,4 +121,7 @@
                                  Debug : http://docs.cacti.net/manual:088:4_help.2_debugging#debugging   
                                          http://docs.cacti.net/manual:088:4_help.2_debugging#check_rrd_file_numbers   (debug rrd file)
                                          !! If unable to change rrd file setting, manually delete rrd file.
-                                   
+                                         
+    [Mike]  
+         [New Cacti]  ssh root@10.1.37.11  (root newegg@123)   (with firewall, must login from 10.16.133.43)
+                      web http://10.1.37.11/   (my AD account, use firefox )          
