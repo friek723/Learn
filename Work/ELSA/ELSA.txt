@@ -124,4 +124,5 @@
                                          
     [Mike]  
          [New Cacti]  ssh root@10.1.37.11  (root newegg@123)   (with firewall, must login from 10.16.133.43)
-                      web http://10.1.37.11/   (my AD account, use firefox, reboot if fail)          
+                      web http://10.1.37.11/   (my AD account, use firefox, reboot if fail)         
+                      php : /data/html/ELSA 
