@@ -109,13 +109,16 @@
                                    ssh  port 22222 :  jh7b  / EggNew@456
                                    mysql --host=localhost --user=cactiuser --password=CJs9H5iH
                                    $database_port = "3306";
-                   [Web Config]  Graph Templates --> Upper Limit (--upper-limit) --> 10000000000
+                   [Web Config]  
+                                 Tutorial : http://docs.cacti.net/manual:088:3a_advanced_topics.1_data_input_methods
+                                 Graph Templates --> Upper Limit (--upper-limit) --> 10000000000
                                  Configuration --> Settings --> General --> Poller Logging Level --> LOW or DEBUG                
                                                                 Poller --> Script and Script Server Timeout Value --> 240
                                  Data Input Methods --> Input Type --> Script/Command 
                                                         Input String --> /usr/bin/php /home/jh7b/ELSA_stat.php 
                                                                                                  ELSA_stat_more.php
                                                                                                  ELSA_earliest.php
+                                 Make your script executable?                                                                
                                  See log : System Utilities --> View Cacti Log File
                                            /var/www/html/log/
                                  Debug : http://docs.cacti.net/manual:088:4_help.2_debugging#debugging   
@@ -126,5 +129,5 @@
          [New Cacti]  ssh root@10.1.37.11  (root newegg@123)   (with firewall, must login from 10.16.133.43)
                       web http://10.1.37.11/   (my AD account, use firefox, reboot if fail)         
                       php : /data/html/ELSA 
-                      Tutorial : http://docs.cacti.net/manual:088:3a_advanced_topics.1_data_input_methods
+                      
                       
