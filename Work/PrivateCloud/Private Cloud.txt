@@ -1,0 +1,82 @@
+[Question] 
+Plugin execution not covered by lifecycle configuration:
+com.googlecode.maven-java-formatter-plugin:maven-java-formatter-plugin:0.3.1:format (execution: default, phase: compile)	
+pom.xml	/CSWebApp	line 176	Maven Project Build Lifecycle Mapping Problem
+
+
+
+----------------------------------------------------------------------------------------------
+[Usage]  
+Running war on JBoss & test restful: 
+1.Export war from Eclipse
+2.Put war at : jboss-as-7.1.1.Final\standalone\deployments
+3.execute jboss-as-7.1.1.Final\bin\standalone.bat 
+4.
+{
+"username":"hw98",
+"password":"xeaqscdzw12#"
+}
+
+Private cloud folder : \\stfps01\Dept_Folder\IT\GSDT\GIT_HW\cswebapp
+
+
+Git : 	git clone ssh://jt99@10.16.140.101/git
+Git password  : jh7b/11aaAA@@ or hw98/11aaAA@@
+
+
+[Remote login] 10.16.140.102   devadmin  / 11qqQQ@@ (11aaAA@@) 
+
+----------------------------------------------------------------------------------------------
+
+
+[web page]
+
+Cloudstack Client 成都
+8/21 switch to : http://10.16.70.2:8080/client/
+http://10.16.76.2:8080/client/
+admin / password
+
+
+前端操作頁
+http://10.16.83.197/CloudPlatform/Web1/index.htm
+(old : http://10.16.83.197/CloudPlatform/Web/#/login)
+
+
+ROCKET API
+http://10.16.83.197/CloudPlatform/docs/
+http://10.16.83.197/CloudPlatform/docs/Helper/
+
+
+102 log:  http://10.16.140.102/jboss_server.log
+
+
+
+新的 zoneid ='7423ae7b-78d7-4430-8674-5bddd2bdbfa8'
+--------------------------------------------------------------------------------
+[JBPM]
+10.16.140.105
+
+[st02dev04(10.16.140.105)]
+Account: el43/11qqQQ@@
+SSH連線走22222 port
+輸入sudo su – 後再輸入11qqQQ@@即可取得root權限
+
+JBoss Server 10.16.140.105:8080 
+        10.16.140.105:8080/jbpm-console
+        帳號：admin
+        密碼：admin
+
+Apache/PHP   10.16.140.105:80
+        phpMyAdmin: http://10.16.140.105:80/phpMyAdmin
+        帳號：root
+        密碼：qwerty
+Mysql帳號密碼同此
+
+--------------------------------------------------------------------------------
+[jBoss]
+https://docs.jboss.org/author/display/AS71/Admin+Guide
+DeploymentCommands : https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-DeploymentCommands
+https://community.jboss.org/wiki/DeployAndUndeployWithTheCLI
+
+
+-------------------------------------------------------------------------------------------

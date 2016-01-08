@@ -1,0 +1,7 @@
+1. 在最左邊的column num上按右鍵選插入三次(插入三列)
+2. 展開任一個API, 並全選三列複製
+3. 全選新增的三列, 貼上
+4. 全選新增的第二跟第三列,  選上方資料-->群組-->群組-->列
+5. 完成  (Refer to http://boringfreeware.blogspot.tw/2013/02/office-excel.html#.VIAZsjGUeCk)
+          (Google "excel 群組 設定")
+          

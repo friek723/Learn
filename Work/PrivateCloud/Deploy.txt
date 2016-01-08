@@ -1,0 +1,42 @@
+﻿1. 連線到開發機
+ssh devadmin@10.16.140.102
+輸入密碼
+
+2.下載最新的Source Code
+cd ~/git 
+git reset --hard
+git pull
+
+3.部署
+cd ~/git
+mvn clean
+mvn package
+
+其他常用操作
+
+1.背景運行JBoss
+cd ~/jboss-as-7.1.2.Final/bin/
+nohup ./standalone.sh &
+
+2.關閉jboss(if necessary)
+~/jboss-as-7.1.2.Final/bin/jboss-cli.sh --connect command=:shutdown
+
+3.覆寫standalone.xml 
+cp ~/git/src/main/resources/config/standalone.xml ~/jboss-as-7.1.2.Final/standalone/configuration/standalone.xml
+
+4.覆寫DB
+mysql -u root -pqwerty cswebapp < ~/git/src/main/resources/sql/cswebapp.sql;
+
+
+mySql command line
+1. ssh devadmin@10.16.140.102
+2. mysql -u devadmin -p
+3. qwerty
+
+
+Restart!!! :
+sudo su
+jboss-as-7.1.2.Final/bin/jboss-cli.sh --connect command=:shutdown
+nohup jboss-as-7.1.2.Final/bin/standalone.sh
+
+ 
