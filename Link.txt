@@ -1,4 +1,4 @@
-﻿HTML
+HTML
     - <div> & <span> : http://www.w3schools.com/html/html_blocks.asp
                        (use with css 'class' selector) http://www.w3schools.com/html/html_classes.asp 
                        http://www.twisu.com.tw/4/CSS_class_list/CSS_0202.html
@@ -1071,6 +1071,7 @@ PHP
                   DB:     database/migrations/2014_10_12_000000_create_XXX_table.php
                   Root for routes.php & index.html & AngularJS : public/
                   Sql config  : .env
+                                config/database.php
                   config      : config/app.php
                   Middleware : app\Http\Middleware
                   composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
