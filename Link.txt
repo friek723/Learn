@@ -1073,6 +1073,7 @@ PHP
                   Sql config  : .env
                                 config/database.php
                   config      : config/app.php
+                  service providers : app/Providers
                   Middleware : app\Http\Middleware
                   composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
 
