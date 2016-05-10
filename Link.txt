@@ -1061,7 +1061,7 @@ PHP
                   http://laravel-recipes.com/recipes/282/running-phps-built-in-web-server 
             - jwt-auth : https://github.com/tymondesigns/jwt-auth/wiki
                          ! Unable to get "Authorization " header : http://stackoverflow.com/questions/20853604/laravel-get-request-headers
-                         
+            - receive each SQL query executed by your application : Search "Listening For Query Events" in https://laravel.com/docs/5.2/database           
             - Directory Structure
                   View :  resources/views/XXX.blade.php
                           resources/views/YYY/XXX.blade.php
