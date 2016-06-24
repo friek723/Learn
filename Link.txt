@@ -1795,6 +1795,10 @@ function Call_HTTP_API($method, $url, $header = null, $data = false) {
             curl_setopt($curl, CURLOPT_POST, 1);
 
             if ($data){
+                if($header == null){
+                    $header = array();
+                }
+                array_push($header, 'Content-Type: application/json');
                 curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
             }
             break;
