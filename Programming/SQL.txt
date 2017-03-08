@@ -26,6 +26,25 @@ SQL
              [Syntax] SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name=table2.column_name;
              Join 的 WHERE 條件式位置 - see [note6]:  https://tlcheng.wordpress.com/2011/07/08/sql-join-的-where-條件式位置/ 
              
+    - UNION : https://www.w3schools.com/sql/sql_union.asp
+              The UNION operator is used to combine the result-set of two or more SELECT statements.
+              Notice that each SELECT statement within the UNION must have the same number of columns. The columns must also have similar data types. Also, the columns in each SELECT statement must be in the same order.
+      UNION ALL to select all (duplicate values also) 
+      Syntax : SELECT column_name(s) FROM table1
+               UNION
+               SELECT column_name(s) FROM table2;
+
+    - EXISTS : 
+               Syntax :
+                   SELECT [column_name... | expression1 ] FROM [table_name]
+                  WHERE [NOT] EXISTS (subquery)
+
+               http://www.w3resource.com/sql/special-operators/sql_exists.php
+                    A valid EXISTS subquery must contain an outer reference and it must be a correlated Subquery. 
+
+               EXISTS v.s. IN : http://sqlinthewild.co.za/index.php/2009/08/17/exists-vs-in/
+                  IN does a direct match between the column specified before the IN keyword and the values returned by the subquery. When using IN there can only be a single column specified in the select clause of the subquery
+
     - WITH (NOLOCK) : http://blog.xuite.net/linriva/blog/39534686-%5BT-SQL%5D+WITH+(NOLOCK)%3A+%E6%8F%90%E5%8D%87%E6%9F%A5%E8%A9%A2%E6%95%88%E7%8E%87%E5%92%8C%E9%81%BF%E5%85%8DLOCK%E7%99%BC%E7%94%9F+(%E9%98%B2%E6%AD%A2%E8%B3%87%E6%96%99%E9%81%B8%E5%8F%96%E6%99%82%E8%A2%AB%E9%8E%96%E6%AD%BB)--%E8%BD%89%E8%B2%BC
                       http://www.codeproject.com/Tips/590560/wi                      
     - Dirty Reads : The read is officially “dirty” when it reads data that is uncommitted. This can become problematic if the uncommitted transaction fails or for some other reason is rolled back.
