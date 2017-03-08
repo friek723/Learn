@@ -3,6 +3,12 @@ SQL
     
     - http://www.1keydata.com/tw/sql/sql.html
     - SQL injection : http://www.w3schools.com/sql/sql_injection.asp
+                      !http://www.wikihow.com/Prevent-SQL-Injection-in-PHP
+                          To prevent SQL injections we will have to use something called prepared statements which uses bound parameters. Prepared Statements do not combine variables with SQL strings, so it is not possible for an attacker to modify the SQL statement. Prepared Statements combine the variable with the compiled SQL statement, this means that the SQL and the variables are sent separately and the variables are just interpreted as strings, not part of the SQL statement.
+                      !http://wiki.hashphp.org/Validation    
+                      https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
+                      
+
     - (SubQuery): http://www.1keydata.com/tw/sql/sql-subquery.html 
     - IN : http://www.1keydata.com/tw/sql/sqlin.html
            SELECT * FROM Store_Information WHERE Store_Name IN ('Los Angeles', 'San Diego');
