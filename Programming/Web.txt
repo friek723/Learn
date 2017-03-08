@@ -8,9 +8,15 @@ Web Technology :
           - File Upload Vulnerabilities 
               https://www.wordfence.com/learn/how-to-prevent-file-upload-vulnerabilities/
 
-          - XSS : Cross Site Scripting Attacks
-              https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks/
-          
+          - XSS : Cross Site Scripting Attacks : Cross-Site Scripting (abbreviated as XSS) is a class of security vulnerability whereby an attacker manages to use a website to deliver a potentially malicious JavaScript payload to an end user.
+
+              !https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks/
+              https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
+              http://stackoverflow.com/questions/3623236/htmlspecialchars-vs-htmlentities-when-concerned-with-xss
+              http://www.acunetix.com/websitesecurity/cross-site-scripting/
+              http://www.acunetix.com/blog/articles/preventing-xss-attacks/
+              https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet
+
           - Cross-site request forgery (CSRF)
               https://en.wikipedia.org/wiki/Cross-site_request_forgery
               https://github.com/pillarjs/understanding-csrf)

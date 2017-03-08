@@ -16,7 +16,17 @@ PHP
                            #!/usr/bin/php -q   OR   #!/usr/bin/env php
                            <?php
                        2. php xxx.php
-                      
+    
+
+    - Anonymous functions, also known as closures : 
+          http://www.php.net/manual/en/functions.anonymous.php
+          http://stackoverflow.com/questions/15042197/access-variables-from-parent-scope-in-anonymous-php-function
+             : Use the "use" keyword to Access variables from parent scope
+
+    - isset() vs empty() vs is_null() : https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/
+
+    - generator function & yield keyword  : http://php.net/manual/en/language.generators.syntax.php
+
     PHP log & debug : 
                 error_log() -> http://php.net/manual/en/function.error-log.php
                                Write to a file (!make it writable): error_log("You messed up!", 3, "/var/tmp/my-errors.log");    
