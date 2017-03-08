@@ -12,7 +12,14 @@ Web Technology :
           http://www.django-rest-framework.org/topics/ajax-csrf-cors/
           http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
           http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
-                    
+    
+    - [security]  https://www.wordfence.com/learn/
+          - [security] File Upload Vulnerabilities 
+              https://www.wordfence.com/learn/how-to-prevent-file-upload-vulnerabilities/
+
+          - [security] XSS : Cross Site Scripting Attacks
+              https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks/
+
     - Token Based Authentication
           !!https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
             https://scotch.io/tutorials/the-anatomy-of-a-json-web-token           
