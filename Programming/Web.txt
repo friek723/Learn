@@ -1,0 +1,157 @@
+Web Technology : 
+    - Cross-origin resource sharing (CORS)
+          https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  (header : Access-Control-Allow-Origin: *)
+          http://enable-cors.org/index.html
+          http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+   
+    - Cross-site request forgery (CSRF)
+          https://en.wikipedia.org/wiki/Cross-site_request_forgery
+          https://github.com/pillarjs/understanding-csrf)
+          https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
+          http://laravel.com/docs/5.1/routing#csrf-protection
+          http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+          http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
+          http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
+                    
+    - Token Based Authentication
+          !!https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+            https://scotch.io/tutorials/the-anatomy-of-a-json-web-token           
+          http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+          !https://stormpath.com/blog/token-auth-spa/
+          http://www.django-rest-framework.org/api-guide/authentication/
+         
+    - OAuth & OpenID     
+          Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
+          
+          OAuth 
+              http://en.wikipedia.org/wiki/OAuth
+              http://oauth.net/2/     (http://oauth.net/)
+              http://blog.yorkxin.org/posts/2013/09/30/oauth2-1-introduction/
+          
+          OpenID 
+              http://briian.com/5328/openid.html    
+         
+    - RESTful : http://rest.elkstein.org/
+
+    - Sessions & Cookies
+        ! http://www.tangowithdjango.com/book/chapters/cookie.html
+        http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
+   
+          
+
+
+
+
+
+
+
+
+
+
+
+HTTP & WEB tool
+ - [Fiddler] web debugging proxy  : http://www.telerik.com/fiddler 
+             1. captures HTTP and HTTPS traffic and logs it 
+             2. can also be used to modify ("fiddle with") HTTP traffic for troubleshooting purposes as it is being sent or received.
+ - (Press F12 on Chrome) http://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome
+ - Chrome plugin [Live HTTP Headers] https://chrome.google.com/webstore/detail/live-http-headers/iaiioopjkcekapmldfgbebdclcnpgnlo
+ - How Web Browsers work : http://taligarsiel.com/Projects/howbrowserswork1.htm
+ - (!!Readme) A Software Developer's Guide to HTTP : http://odetocode.com/Articles/List
+ - POST v.s. GET : http://blog.toright.com/posts/1203/%E6%B7%BA%E8%AB%87-http-method%EF%BC%9A%E8%A1%A8%E5%96%AE%E4%B8%AD%E7%9A%84-get-%E8%88%87-post-%E6%9C%89%E4%BB%80%E9%BA%BC%E5%B7%AE%E5%88%A5%EF%BC%9F.html
+ 
+Web Framework
+ - http://hotframeworks.com/
+   http://www.hurricanesoftwares.com/most-popular-web-application-frameworks/
+   http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks
+   http://en.wikipedia.org/wiki/Web_application_framework
+   
+Web server & App server 
+ - http://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server
+ [Reverse Proxy Server] http://www.arthurtoday.com/2010/01/reverse-proxy-server.html
+                        http://en.wikipedia.org/wiki/Reverse_proxy
+                        [NGINX Reverse Proxy] http://nginx.com/resources/admin-guide/reverse-proxy/
+                                              http://en.wikipedia.org/wiki/Nginx
+ - Nginx v.s. Apache
+                    http://stackoverflow.com/questions/11171992/nginx-v-apache-for-high-traffic-sites
+                    http://stackoverflow.com/questions/4540669/nginx-and-apache
+                    http://readystate4.com/2012/07/08/nginx-the-non-blocking-model-and-why-apache-sucks/
+                    http://blog.martinfjordvald.com/2011/02/nginx-primer-2-from-apache-to-nginx/
+                
+ - Apache 
+       config : http://linux.vbird.org/linux_server/0360apache.php#www_basic_pkg
+                https://help.ubuntu.com/lts/serverguide/httpd.html#http-configuration
+                http://stackoverflow.com/questions/22519159/how-does-apache-know-which-file-to-use-in-etc-httpd-conf-d
+                http://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
+                http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
+                [Path]
+                  /etc/apache2/apache2.conf
+                  /etc/apache/apache2.conf
+                  /etc/httpd/conf/httpd.conf 
+                  /etc/httpd/conf.d/*.conf
+                
+                [content] : see [note9] for example
+                         
+       log : /var/log/httpd/error_log 
+             /var/log/apache2/error.log    
+                
+       restart : service httpd restart
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+
+[note9]
+NameVirtualHost *:80
+<VirtualHost *:80>
+        #  General setup for the virtual host
+        ServerName elsa
+        Redirect permanent / https://10.1.38.81/
+</VirtualHost>
+
+<VirtualHost *:443>
+        #  General setup for the virtual host
+        ServerName elsa
+        SSLEngine on
+        SSLCertificateFile      /etc/httpd/elsatest.pem
+        SSLCertificateKeyFile   /etc/httpd/elsatest.key
+        SSLCACertificateFile    /etc/httpd/root.pem
+        SSLCertificateChainFile /etc/httpd/intranet.pem
+        SSLCipherSuite RC4-SHA:AES128-SHA:HIGH:!aNULL:!MD5
+        SSLHonorCipherOrder on
+        DocumentRoot /usr/local/elsa/web/lib
+        SetEnv ELSA_CONF /etc/elsa_web.conf
+        <Location "/">
+                Order Allow,Deny
+                Allow from all
+                SetHandler perl-script
+                PerlResponseHandler Plack::Handler::Apache2
+                PerlSetVar psgi_app /usr/local/elsa/web/lib/Web.psgi
+        </Location>
+        # Cleanup proxied HTTP auth
+        RewriteEngine on
+        RewriteCond %{HTTP:Authorization} ^(.*)
+        RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+</VirtualHost>
+
+NameVirtualHost *:8080
+<VirtualHost *:8080>
+        ServerName phpMyAdmin
+        DocumentRoot /var/www/html
+        <Location "/">
+                Order Allow,Deny
+                Allow from all
+        </Location>
+</VirtualHost>
+
+               

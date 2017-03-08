@@ -1,0 +1,285 @@
+Python
+        Good tuturial : http://www.diveintopython3.net/
+                        http://www.tutorialspoint.com/python/
+        http://docs.openstack.org/user-guide/content/
+        Install from sources: : python setup.py install
+        Building a Python 3 REST application : http://www.giantflyingsaucer.com/blog/?p=5192
+        Bundling Python files into a stand-alone executable :  http://blog.ablepear.com/2012/10/bundling-python-files-into-stand-alone.html
+        make a py file executable :  http://stackoverflow.com/questions/304883/what-do-i-use-on-linux-to-make-a-python-program-executable
+        
+        pip freeze (Output installed packages in requirements format.) - http://reader.roodo.com/thinkingmore/archives/18853358.html
+                                                                         https://devcenter.heroku.com/articles/getting-started-with-python#declare-app-dependencies
+        
+        Install package : https://packaging.python.org/en/latest/pip_easy_install.html
+                          http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
+        
+        [Django] 
+                    Official tutorial : https://www.djangoproject.com/start/
+                    http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
+                    Django 虛擬環境 activate : VENV\Scripts\activate
+                    Run server : python manage.py runserver 0.0.0.0:8000
+                                 Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                                                        http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
+                                                         
+                    [Deploy & Server]
+                                https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
+                                !! https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+                                [Apache and mod_wsgi]
+                                          [Install]
+                                                  https://code.google.com/p/modwsgi/wiki/QuickInstallationGuide
+                                                     Missing Python Header Files : https://code.google.com/p/modwsgi/wiki/InstallationIssues
+                                                  https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/modwsgi/
+                                                  See 'Install Apache and mod_wsgi' : https://docs.djangoproject.com/en/1.7/topics/install/ 
+                                                  !!! Check [note1] on the bottom of this doc
+                                          [Config]  https://code.google.com/p/modwsgi/wiki/ConfigurationDirectives
+                                          [Apache log] print  : /var/log/apache2/error.log   
+                                                       access : /var/log/apache2/access.log
+                                                       (https://www.a2hosting.com/kb/developer-corner/apache-web-server/viewing-apache-log-files)
+                                                       (
+                                                         No need to enable WSGIRestrictStdout? : 
+                                                                              http://stackoverflow.com/questions/3543572/in-django-how-do-i-allow-print-statements-to-work-with-apache-wsgi
+                                                                              http://blog.dscpl.com.au/2009/04/wsgi-and-printing-to-standard-output.html
+                                                        )
+                                                       
+                                [gunicorn] : http://gunicorn-docs.readthedocs.org/en/latest/install.html#ubuntu
+                                            [Run server] : 1. Switch dir to manage.py
+                                                           2. gunicorn myproject.wsgi -b 0.0.0.0:22222
+                                                              background : (nohup gunicorn tutorial.wsgi -b 0.0.0.0:22222  &>myout.txt &)  --> log : nohup.out or myout.txt 
+                                                              SSL(https) (gunicorn tutorial.wsgi -b 0.0.0.0:22222 --certfile=server.crt --keyfile=server.key)
+                                                           http://gunicorn-docs.readthedocs.org/en/latest/run.html
+                                                           Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                             SSL : http://stackoverflow.com/questions/7406805/running-gunicorn-on-https
+                                                   http://serverfault.com/questions/224122/what-is-crt-and-key-and-how-can-i-generate-them
+                                                   http://www.akadia.com/services/ssh_test_certificate.html
+                                             [Nginx + gunicorn] http://docs.gunicorn.org/en/latest/deploy.html
+                                                                https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx
+                                                                http://www.quora.com/What-are-the-differences-between-nginx-and-gunicorn
+                                                                http://blog.etianen.com/blog/2014/01/19/gunicorn-heroku-django/
+                                                                Also see [Reverse Proxy Server] above
+                                                   
+                                [uWSGI] :  https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+                                         https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/
+                                         ![Nginx + uWSGI] https://uwsgi.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
+                                         
+                    [REST]
+                            http://www.django-rest-framework.org/
+                            http://www.ngenworks.com/blog/how-django-rest-framework-changed-my-life
+                    [Sessions & Cookies]
+                            https://docs.djangoproject.com/en/1.7/topics/http/sessions/
+                            http://www.tangowithdjango.com/book/chapters/cookie.html
+                            
+                    [AJAX, Cross Site Request Forgery  & Cross-Origin Resource Sharing] http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+                    
+                    
+        Timer :  http://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
+        
+        Time :  from time import gmtime, strftime, localtime
+                strftime("%Y-%m-%d %H:%M:%S", localtime())
+        
+        Scheduler :  1. http://apscheduler.readthedocs.org/en/latest/
+                        http://stackoverflow.com/questions/11523918/python-start-a-function-at-given-time
+                     2. https://github.com/dbader/schedule
+                        http://stackoverflow.com/questions/2398661/schedule-a-repeating-event-in-python-3   (Search dbader)
+        
+        HTTP :  http://docs.python-requests.org/en/latest/index.html
+          
+        LDAP :  http://www.python-ldap.org/docs.shtml
+                http://www.python-ldap.org/doc/html/index.html
+                http://stackoverflow.com/questions/4784775/ldap-query-in-python
+        json : http://xahlee.info/perl-python/python_json_tutorial.html
+                   import json
+                   json.dumps() returns type string
+                   json.loads() returns type dict
+        
+        import name conflicts : http://stackoverflow.com/questions/1900189/how-to-access-a-standard-library-module-in-python-when-there-is-a-local-module-w
+                                http://stackoverflow.com/questions/6031584/python-importing-from-builtin-library-when-module-with-same-name-exists
+                                http://programmers.stackexchange.com/questions/187403/import-module-vs-from-module-import-function
+                                
+        Compare dictionary : http://stackoverflow.com/questions/4527942/comparing-two-dictionaries-in-python
+                             (dict1 == dict2)
+                             (shared_items = set(A.items()) & set(B.items()))
+                             (diff_items = set(A.items()) ^ set(B.items()))
+        
+        String difference : http://stackoverflow.com/questions/10775029/finding-differences-between-strings
+                                --> note that the input of Differ().compare(s1,s2) can be string or list, that produce different output.
+                            difflib (see [note10]) --> https://docs.python.org/2/library/difflib.html
+                            
+         
+        Finding what methods an object has : http://stackoverflow.com/questions/34439/finding-what-methods-an-object-has                     
+        Object method & attribute:
+                        All attributes for a object: print dir(objectName) 
+                        All callable methods for a object: print [method for method in dir(objectName) if callable(getattr(objectName, method))]
+
+        SSH (pxssh)(extends pexpect.spawn):  
+                      http://pexpect.readthedocs.org/en/latest/api/pxssh.html
+                      http://www.pythonforbeginners.com/code-snippets-source-code/ssh-connection-with-python
+                      could not set shell prompt : http://stackoverflow.com/questions/21268497/cant-seem-to-get-pexpect-to-print-data-from-command
+                      
+        SSH2 (paramiko)(Good compatibility, I've used it more, see [note7]): 
+                         http://www.rummandba.com/2012/04/python-script-for-remote-server.html
+                         Code (Execute commands and copy files over SSH): http://garage4hackers.com/showthread.php?t=3234
+                         Code : http://sebastiandahlgren.se/2012/10/11/using-paramiko-to-send-ssh-commands/     
+                         sftp : Google "paramiko file transfer"
+                         
+        Console command (Pexpect, extended by pxssh) : Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
+                                                       https://github.com/pexpect/pexpect/blob/master/doc/overview.rst
+                                                       http://pexpect.readthedocs.org/en/latest/api/pexpect.html
+                                                       !http://linux.byexamples.com/archives/346/python-how-to-access-ssh-with-pexpect/
+                                                       
+        Execute Shell Command in Python : http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+                                                       
+        run background as a daemon :    http://code.activestate.com/recipes/278731/
+                                        http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
+
+
+
+
+                
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+[note1] Apache + mod_wsgi install steps 
+           1156  apt-cache search apache | less
+           1157  sudo apt-get install apache2
+           1158  sudo apt-get install apache2-dev
+           
+           1169  wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.4.5.tar.gz
+           1171  tar xvfz 4.4.5.tar.gz
+           1173  cd mod_wsgi-4.4.5/
+           1175  ./configure
+           
+           1179  python
+           1182  apt-cache search python2.7 | less
+           1186  apt-cache search python2.7-dev | less
+           1187  sudo apt-get install python2.7-dev
+           1189  make
+           1192  sudo make install
+           1195  apache2 -v
+           
+                 cd /etc/apache2/sites-available
+           1202  sudo vi 000-default.conf 
+           Add :
+                    WSGIScriptAlias / /home/stack/django_prj/tutorial/tutorial/wsgi.py
+                    WSGIPythonPath /home/stack/django_prj/tutorial
+                    
+                    <Directory /home/stack/django_prj/tutorial/tutorial>
+                    <Files wsgi.py>
+                    Require all granted
+                    </Files>
+                    </Directory>
+          
+                 cd /etc/apache2
+           1207  sudo vi apache2.conf
+           Add :  LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+                 
+           1228  sudo apachectl restart
+           1071  sudo apachectl stop
+           1072  sudo apachectl start
+           
+           [Apache log] print  : /var/log/apache2/error.log   
+                        access : /var/log/apache2/access.log
+                        
+
+
+[note7]
+def get_paramiko(host, user, passwd, cmdList):
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    print "Connecting..."
+    ssh.connect(hostname=host, username=user, password=passwd)
+    print "Host " + host + " connected"
+
+
+    stdin = None
+    stdout = None
+    stderr = None
+    try:
+        count = 0
+        for cmd in cmdList:
+            count+=1
+            stdin, stdout, stderr = ssh.exec_command(cmd)
+            print "Command : " + cmd
+            #print type(stdout)
+            cmd_out = stdout.readlines()
+            if count != len(cmdList): # not last one
+                print "cmd out : " + str(cmd_out)
+    except Exception ,e:
+        print "Exception!!"
+        print e
+        print stderr.readlines()
+
+    str_result = ''.join(str(e) for e in cmd_out)
+
+    text_file = open("paramiko_out_"+host, "w")
+    text_file.write(str_result)
+    text_file.close()
+
+    ssh.close()
+    print 'OK'
+
+
+
+
+[note10]
+from difflib import Differ # str compare
+def str_diff(s1, s2):  # !! s1 and s2 are both String
+    ret = ""
+
+    # 1. The two inputs of Differ().compare() can be string or list, that would produce different output.
+    # 2. For string, output dif looks like : ['  a', '  a', '  a', '- b', '- b', '- b', '+ k', '+ k', '+ k', '  c', '  c', '  c']   
+    # 3. For list, output dif looks like : ['This is line not change\r\n', '- This is line removed\r\n', '?      ^^\n', '+ This is line added\r\n', '?     ^^\n']
+    #           where ^ stands for the position of different char for the line before.
+    # 4. !!! So another easier way to compare is to split s1 and s2 into lines as type list, each item in the list represents a line, then compare two lists.
+    #        The output would be more accurate according to test. 
+    
+    dif = list(Differ().compare(s2, s1))  # !! s1 and s2 are both String
+
+    # Debug : 
+    #write_file("qwert" , ''.join(str(e) for e in dif))
+ 
+
+    keys = ['-','+']    
+    for key in keys: 
+        tmp = ""
+        currentLine = ""
+        isChange = False
+        for i, d in enumerate(dif):
+            if i == len(dif)-1 or d[2] == '\n': # find a new line or last line
+                if isChange == True:
+                    if currentLine.isspace() == False:  # and isIgnoredConfig(currentLine) == False --> it's done in get_ssh() already
+                        tmp = tmp + currentLine + "\r\n" + "<br>"
+                        print "str_diff : add currentLine : " + currentLine
+                    else:
+                        #if isIgnoredConfig(currentLine) == True:
+                        #    print "str_diff : ignore config change -->" + currentLine
+                        if currentLine.isspace() == True:
+                            print "str_diff : current line contains space or newline only : " + currentLine    
+                    if i == len(dif)-1:
+                        print "the last line"
+                currentLine = ""
+                isChange = False
+            elif d[0] == key: # find diff char in this line
+                isChange = True
+                currentLine += d[2]
+            elif d[0] in keys:
+                pass
+            else:
+                currentLine += d[2]
+        if tmp != "" and tmp.isspace() == False:
+            if key == '-':
+                ret = ret + " Remove : <br>" + tmp
+            else:
+                ret = ret + " Add : <br>" + tmp
+
+
+    return ret
+    
+                                        

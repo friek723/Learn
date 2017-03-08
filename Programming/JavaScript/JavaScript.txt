@@ -1,0 +1,269 @@
+Javascript
+    - !!online editor for JS + HTML + CSS : http://plnkr.co/edit/     (Examples : http://plnkr.co/)
+    
+    - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
+                                                                        https://www.airpair.com/js/javascript-framework-comparison
+                                                                        
+    - http://www.w3schools.com/js/default.asp
+    - (jQuery v.s. AngularJS) https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough
+                                 http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background
+                                 http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
+    - Closures in JavaScript : http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
+                               http://www.w3schools.com/js/js_function_closures.asp
+                            
+    - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
+      (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
+    
+    - Check-for-null-undefined-or-blank-variables :　if(value){} 　http://stackoverflow.com/questions/5515310/is-there-a-standard-function-to-check-for-null-undefined-or-blank-variables-in
+       
+    - [IDE] IntelliJ IDEA : https://www.jetbrains.com/idea/
+                                   
+    [jQuery] jQuery is a lightweight, "write less, do more", JavaScript library.
+             The jQuery library contains the following features:
+								HTML/DOM manipulation
+								CSS manipulation
+								HTML event methods
+								Effects and animations
+								AJAX
+								Utilities
+             The jQuery library is a single JavaScript file : <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+             
+        - http://www.w3schools.com/jquery/default.asp
+        - DataTable (generate html <table...> dynamically)  https://datatables.net/
+                                                            https://datatables.net/examples/index
+                                                            http://datatables.net/manual/index
+                                                            http://datatables.net/reference/index
+                                                            
+                     How to handle large datasets : https://datatables.net/forums/discussion/4214/solved-how-to-handle-large-datasets
+                                                    http://datatables.net/forums/discussion/8789/tips-for-using-datatables-with-very-large-data-sets
+                                                    ! http://datatables.net/examples/server_side/
+                                                    ! http://datatables.net/manual/server-side
+                                                    
+        - Redirect with post data [note12]: http://stackoverflow.com/questions/19036684/jquery-redirect-with-post-data
+        
+        
+    [AngularJS] AngularJS is a JavaScript framework.  It is a library written in JavaScript.
+                AngularJS is a MVC based framework.
+                AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions.
+                AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
+                   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+        - Tutorial : 
+                   https://docs.angularjs.org/tutorial
+                   https://docs.angularjs.org/guide
+                   中文: http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/index.html
+                   ! AngularJS Fundamentals In 60-ish Minutes  : https://www.youtube.com/watch?v=i9MHigUZKEM
+                   http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
+                   http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
+                   http://weblogs.asp.net/dwahlin/video-tutorial-angularjs-fundamentals-in-60-ish-minutes
+                   http://www.w3schools.com/angular/default.asp
+                   Example App code : https://github.com/angular-app/angular-app
+                                      http://www.codeproject.com/Articles/637430/Angular-js-example-application
+	      - $q : http://blog.begin.com.tw/?p=30
+	             https://docs.angularjs.org/api/ng/service/$q   
+	         
+	      - Data Binding : https://docs.angularjs.org/guide/databinding
+	                        (Two-way Data Binding) https://docs.angularjs.org/tutorial/step_04
+	                                               http://staal.io/blog/2014/02/05/2-way-data-binding-under-the-microscope/
+	                        What is two way binding? : http://stackoverflow.com/questions/13504906/what-is-two-way-binding
+	                             
+	      - Scopes & dirty checking: https://docs.angularjs.org/guide/scope         
+	                                 http://stackoverflow.com/questions/24698620/dirty-checking-on-angular                                            
+	                      The concept of a scope in Angular is crucial. A scope can be seen as the glue which allows the template, model and controller to work together.
+	                      Angular uses scopes, along with the information contained in the template, data model, and controller, to keep models and views separate, but in sync. 
+	                      Any changes made to the model are reflected in the view; any changes that occur in the view are reflected in the model.
+
+        - Service v.s. Factory v.s. Provider :
+              service : https://docs.angularjs.org/guide/services 
+              !http://roxannera.blogspot.tw/2014/01/angularjs-service-factory-provider.html
+              !http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory
+              https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make#5-service-vs-factory
+              http://hamisme.blogspot.tw/2013/07/service-factoryprovider-angularjs.html
+        
+        - ng-model v.s. ng-bind : http://stackoverflow.com/questions/12419619/whats-the-difference-between-ng-model-and-ng-bind
+                               ng-bind  : one-way data binding ($scope --> view)
+		                                          ng-bind and the double-curly notation "{{ ... }}" are interchangeable.
+		                                          The advantage ng-bind has over the double-curly notation is that it takes AngularJS time to bootstrap and execute before it can find and replace all the double curly braces from the HTML. 
+		                                          That means, for a portion of a second while the browser starts, you might see flashing double curly braces in the UI before AngularJS has the chance to kick in and replace them. 
+		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
+                               ng-model : two-way data binding ($scope --> view and view --> $scope)
+        
+        - ng-if v.s. ng-show/ng-hide : http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
+        
+        - ng-focus & ng-blur (event when mouse on & leave input box): http://jsfiddle.net/deathhell/UTn5y/2/
+                                  
+        - UI Bootstrap : http://angular-ui.github.io/bootstrap/
+        - UI Grid : http://ui-grid.info
+        - Angular Google Pie Chart : http://plnkr.co/edit/mMT8r8?p=info 
+        - Animation : http://plnkr.co/edit/uW4v9T
+                                            
+        - AngularJS + ASP.NET MVC : http://www.codeproject.com/Articles/806029/Getting-started-with-AngularJS-and-ASP-NET-MVC-Par
+                                    http://www.codeproject.com/Articles/806500/Getting-started-with-AngularJS-and-ASP-NET-MVC-P
+                                    http://www.codeproject.com/Articles/843044/Getting-started-with-AngularJS-and-ASP-NET-MVC-The                                           
+        - Single Page Application with ASP.NET and AngularJS : http://channel9.msdn.com/Events/Build/2014/3-644
+                                                               (code : https://github.com/jongalloway/Angular-and-ASPNET-Build2014) (Use firefox to open AngularMTG\Step 6\index.html)
+               
+        - What I would recommend instead of Angular.js? :   https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99
+                                                            https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
+               
+                                                               
+    [AJAX] 
+        - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+        - jQuery provides several methods for AJAX functionality. 
+            With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post. 
+                And you can load the external data directly into the selected HTML elements of your web page.
+            Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. 
+                the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.                
+        - http://www.w3schools.com/ajax/default.asp
+        - API doc : http://api.jquery.com/jquery.ajax/
+        - Cross-Origin resource sharing(CORS)(Cross origin requests): http://en.wikipedia.org/wiki/Cross-origin_resource_sharing 
+                                                                 (See ASP.NET solution below, search "Cross-Origin")
+                                                                 (Chrome extension : 'Allow-Control-Allow-Origin')
+                                                               !! Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
+                                                                 
+        - Comet ("server push", "Reverse Ajax) :  Comet is a web application model in which a long-held HTTP request allows a web server to push data to a browser, without the browser explicitly requesting it. 
+                                                  (Gmail-send-the-real-time-notification)
+                  http://en.wikipedia.org/wiki/Comet_(programming)
+                  http://stackoverflow.com/questions/732705/how-is-gmail-chat-able-to-make-ajax-requests-without-client-interaction
+                  http://stackoverflow.com/questions/1086380/how-does-facebook-gmail-send-the-real-time-notification
+        
+    [Node.js] (1)server-side and networking applications, written in JavaScript
+              (2)Node.js shines in real-time web applications employing push technology over websockets. 
+              (3)The main idea of Node.js: use non-blocking, event-driven I/O to remain lightweight and efficient, 
+                       in the face of data-intensive real-time applications that run across distributed devices.
+              (4)Node.js operates on a single thread, using non-blocking I/O calls.
+                 The design goal of a Node.js application is that any function performing I/O must use a callback.
+          
+          General Introduction : https://www.quora.com/What-is-Node-js-for
+                                 http://www.talentbuddy.co/blog/on-building-with-node-js-at-medium-and-growing-as-a-developer/
+                                 http://www.talentbuddy.co/blog/building-with-node-js/
+              
+          http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
+          http://www.toptal.com/javascript/guide-to-full-stack-javascript-initjs
+          When to use & When not to use ： http://nodeguide.com/convincing_the_boss.html
+          Installing Node.js via package manager : https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+          
+          Lib : 
+              formidable  (receiving file uploads) : http://debuggable.com/posts/parsing-file-uploads-at-500-mb-s-with-node-js:4c03862e-351c-4faa-bb67-4365cbdd56cb
+              
+          Framework : 
+                  AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : http://www.quora.com/JavaScript-Frameworks/AngularJS-Meteor-Backbone-Express-or-plain-NodeJs-When-to-use-each-one
+                  
+                  'Meteor' web framework (https://www.meteor.com/about)
+                      How Meteor Uses NodeJS - https://meteorhacks.com/how-meteor-uses-node.html
+                      7 Reasons to Develop Your Next Web App with Meteor : http://www.sitepoint.com/7-reasons-develop-next-web-app-meteor/
+                      http://stackoverflow.com/questions/11461411/node-js-vs-meteor-js-whats-the-difference
+                      Examples : http://www.icoding.co/2013/02/meteor-%E5%88%9D%E9%AB%94%E9%A9%97%EF%BC%88%E4%B8%8A%EF%BC%89
+                                 http://www.icoding.co/2013/02/meteor-%E5%88%9D%E9%AB%94%E9%A9%97%EF%BC%88%E4%B8%8B%EF%BC%89
+                                 https://www.andrewmunsell.com/blog/introduction-to-realtime-web-meteor-and-nodejs
+                                 
+                  'Express.js' --> web framework for Node.js, and the de-facto standard for the majority of Node.js applications.
+                      http://expressjs.com/
+                      template : http://jade-lang.com/
+          Tutorial :
+                  API DOCS : https://nodejs.org/api/
+                  https://nodejs.org/documentation/
+                  Introduction to Node.js - https://www.youtube.com/watch?v=jo_B4LTHi3I
+                  http://nodeschool.io/
+				          http://www.nodebeginner.org/index-zh-tw.html        
+				          Real Time Chat With NodeJS : http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socket-io-and-expressjs--net-31708
+				          http://nodeguide.com/beginner.html
+				          https://www.codeschool.com/courses/real-time-web-with-node-js
+				          For Beginners. Deploy Your Blog to Heroku : http://howtonode.org/deploy-blog-to-heroku
+                  ! Seven Awesome Things You Can Build with Node.js : http://blog.teamtreehouse.com/7-awesome-things-can-build-node-js
+
+
+
+
+
+ 
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+
+
+      
+
+JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/js/js_json.asp
+        Data is in name:value pairs (name and value separated by a colon). 
+        The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only.(while the "name" of Javascript is non text)
+        The JSON format is syntactically identical to the code for creating JavaScript objects.
+        Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.                            
+        [Syntax Rules] :
+						#Data is in name/value pairs
+						#Data is separated by commas
+						#Curly braces hold objects
+						#Square brackets hold arrays
+						#
+								JSON Data - A Name and a Value
+										JSON data is written as name/value pairs, just like JavaScript object properties.
+										A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:	"firstName":"John"
+										!Note	: JSON names require double quotes. JavaScript names don't.
+								
+								JSON Objects
+										JSON objects are written inside curly braces.
+										Just like in JavaScript, objects can contain multiple name/value pairs:
+										{"firstName":"John", "lastName":"Doe"}
+								
+								JSON Arrays
+										JSON arrays are written inside square brackets.
+										Just like in JavaScript, an array can contain objects
+
+       - http://j796160836.pixnet.net/blog/post/30530326-%E7%9E%AD%E8%A7%A3json%E6%A0%BC%E5%BC%8F
+       JSON convert tool  :  http://www.jsoneditoronline.org/
+       
+       [Java]Convert JSONObject to mongo DBObject :  See [note2] below
+                                                     http://stackoverflow.com/questions/5699323/using-json-with-mongodb
+       [Java]Convert JSONObject to Map : !!! http://stackoverflow.com/questions/21720759/convert-jsonobject-to-map
+                                       http://stackoverflow.com/questions/6323205/convert-json-string-to-java-mapjsonlib
+       
+       
+
+
+
+
+                              
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+
+
+					              
+
+
+
+
+[note12] jQuery - Redirect with post data (to let browser save file automatically)
+         http://stackoverflow.com/questions/19036684/jquery-redirect-with-post-data
+         Backend : refer to [note8]
+    // jquery extend function
+    $.extend(
+    {
+        redirectPost: function(location, args)
+        {
+            var form = '';
+            $.each( args, function( key, value ) {
+                form += '<input type="hidden" name="'+key+'" value="'+value+'">';
+            });
+            $('<form action="'+location+'" method="POST">'+form+'</form>').appendTo('body').submit();
+        }
+    });
+    
+    usage 1: var redirect = 'http://www.website.com/page?id=23231';
+            $.redirectPost(redirect, {x: 'example', y: 'abc'});
+    usage 2: Compare (A) and (B)    
+             //(A) use redirect in order to let browser save excel file automatically.
+             var redirect = urlBase + 'exportReport' + '?page=' + page + '&rowsPerPage=' + rowsPerPage + '&reportType=' + reportType + assetTypeQueryString;
+             $.redirectPost(redirect, searchObj);
+
+             //(B) calling http API
+             return $http({
+                 method: 'POST',
+                 url: urlBase + 'exportReport' + '?page=' + page + '&rowsPerPage=' + rowsPerPage + '&reportType=' + reportType + assetTypeQueryString,
+                 data: searchObj
+             });    
+
+
+
