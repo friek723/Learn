@@ -3,22 +3,22 @@ Web Technology :
           https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  (header : Access-Control-Allow-Origin: *)
           http://enable-cors.org/index.html
           http://www.django-rest-framework.org/topics/ajax-csrf-cors/
-   
-    - Cross-site request forgery (CSRF)
-          https://en.wikipedia.org/wiki/Cross-site_request_forgery
-          https://github.com/pillarjs/understanding-csrf)
-          https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
-          http://laravel.com/docs/5.1/routing#csrf-protection
-          http://www.django-rest-framework.org/topics/ajax-csrf-cors/
-          http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
-          http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
-    
+       
     - [security]  https://www.wordfence.com/learn/
-          - [security] File Upload Vulnerabilities 
+          - File Upload Vulnerabilities 
               https://www.wordfence.com/learn/how-to-prevent-file-upload-vulnerabilities/
 
-          - [security] XSS : Cross Site Scripting Attacks
+          - XSS : Cross Site Scripting Attacks
               https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks/
+          
+          - Cross-site request forgery (CSRF)
+              https://en.wikipedia.org/wiki/Cross-site_request_forgery
+              https://github.com/pillarjs/understanding-csrf)
+              https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
+              http://laravel.com/docs/5.1/routing#csrf-protection
+              http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+              http://www.codeproject.com/Articles/686881/Hack-Proof-Your-ASP-NET-Applica
+              http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
 
     - Token Based Authentication
           !!https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
