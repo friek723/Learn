@@ -1,7 +1,12 @@
 Javascript
 
     [ES6] 
-    
+        https://ponyfoo.com/articles/es6-arrow-functions-in-depth
+        https://ponyfoo.com/articles/es6-classes-in-depth
+        https://ponyfoo.com/articles/es6-let-const-and-temporal-dead-zone-in-depth
+        https://ponyfoo.com/articles/es6-iterators-in-depth
+        https://ponyfoo.com/articles/es6-generators-in-depth
+        
 
     - !!online editor for JS + HTML + CSS : http://plnkr.co/edit/     (Examples : http://plnkr.co/)
     
