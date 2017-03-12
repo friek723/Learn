@@ -37,12 +37,6 @@ Javascript
                   (1) It forces you to manage dependencies by ensuring your script tags appear in the proper order, and makes it cumbersome to manage complex dependency graphs
                   (2) To quote Kyle Simpson's in the LAB.js documentation: "with regular <script> tags, you cannot control [script] loading and executing behavior reliably cross-browser."
 
-              [Browserify vs Webpack]  
-                  Browserify seeks to extend the Node ecosystem into to the browser. It only supports Node's flavor of the CommonJS require syntax, and provides browser-specific shims for much of Node's core functionality.
-
-                  Webpack seeks to unify Javascript module syntaxes and provide tools for a full swath of static asset management tasks. It imposes no restrictions on your choice of module syntax, and offers full support for Javascript, CSS, and even image preprocessing.
-
-                  If your project and dependencies are already closely tied to the Node ecosystem, Browserify is a solid choice. If you need more power to manage static assets than you can shake a script at, Webpack's your tool.
           - http://jasonlamswatow.com/getting-started-with-browserify/
                  
           - http://fireqqtw.logdown.com/posts/253978-browserify-increases-outside-the-node-modules-path
@@ -56,7 +50,7 @@ Javascript
           - https://webpack.js.org/    
           - https://webpack.github.io/
           - https://rhadow.github.io/2015/03/23/webpackIntro/
-          - https://github.com/petehunt/webpack-howto
+          - !! https://github.com/petehunt/webpack-howto
             Why webpack?
               It's like browserify but can split your app into multiple files. If you have multiple pages in a single-page app, the user only downloads code for just that page. If they go to another page, they don't redownload common code.
 
@@ -94,9 +88,22 @@ Javascript
 
               With "browserify or webpack", it becomes super-easy to concatenate all your modules into big minified files, which is awesome for performance, especially for mobile devices. Not so with Bower, which will require significantly more labor to get the same effect.
 
+    [Browserify vs. Webpack vs. grunt vs. gulp]
+          - https://scotch.io/tutorials/getting-started-with-browserify
+              [Browserify vs Webpack]  
+                  Browserify seeks to extend the Node ecosystem into to the browser. It only supports Node's flavor of the CommonJS require syntax, and provides browser-specific shims for much of Node's core functionality.
 
+                  Webpack seeks to unify Javascript module syntaxes and provide tools for a full swath of static asset management tasks. It imposes no restrictions on your choice of module syntax, and offers full support for Javascript, CSS, and even image preprocessing.
 
+                  If your project and dependencies are already closely tied to the Node ecosystem, Browserify is a solid choice. If you need more power to manage static assets than you can shake a script at, Webpack's your tool.
+          - https://npmcompare.com/compare/browserify,grunt,gulp,webpack
+          - [!!2nd Answer] http://stackoverflow.com/questions/35062852/npm-vs-bower-vs-browserify-vs-gulp-vs-grunt-vs-webpack
 
+          - !! https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9#.wawxwgdxx
+               Avoid the Webpack docs initially and read Pete Hunt’s excellent intro instead. Once you’ve done that, check out hjs-webpack by @HenrikJoreteg to have your mind blown. You’ll be amazed how quickly you can stand up a complex build process using three simple configuration variables. Working in React? Check out React Slingshot for a full-blown React development environment built on Webpack.
+               https://github.com/petehunt/webpack-howto
+               https://github.com/HenrikJoreteg/hjs-webpack
+               ! https://github.com/coryhouse/react-slingshot
 
     [ES6] 
         https://ponyfoo.com/articles/es6-arrow-functions-in-depth
