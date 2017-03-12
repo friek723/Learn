@@ -47,6 +47,26 @@ Javascript
                  
           - http://fireqqtw.logdown.com/posts/253978-browserify-increases-outside-the-node-modules-path
 
+ 
+    [Webpack]
+          - https://github.com/webpack/webpack
+              webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+
+          - [concept] https://webpack.js.org/concepts/              
+          - https://webpack.js.org/    
+          - https://webpack.github.io/
+          - https://rhadow.github.io/2015/03/23/webpackIntro/
+          - https://github.com/petehunt/webpack-howto
+            Why webpack?
+              It's like browserify but can split your app into multiple files. If you have multiple pages in a single-page app, the user only downloads code for just that page. If they go to another page, they don't redownload common code.
+
+              It often replaces grunt or gulp because it can build and bundle CSS, preprocessed CSS, compile-to-JS languages and images, among other things.
+
+              It supports AMD and CommonJS, among other module systems (Angular, ES6). If you don't know what to use, use CommonJS.
+
+          - https://webpack.github.io/docs/what-is-webpack.html
+              Existing module bundlers are not well suited for big projects (big single page applications). The most pressing reason for developing another module bundler was "Code Splitting" and that static assets should fit seamlessly together through modularization.
+
 
     [Bower] A package manager for the web
           - https://bower.io/
@@ -67,7 +87,7 @@ Javascript
               npm is most commonly used for managing Node.js modules, but it works for the front-end too when combined with Browserify and/or $ npm dedupe.
 
               Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree (size heavy) while Bower requires a flat dependency tree (puts the burden of dependency resolution on the user).
-              
+
             - https://www.quora.com/Why-use-Bower-when-there-is-npm
               In almost all cases, it's more appropriate to use Browserify and npm over Bower.
               There is simply no benefit for a front-end developer to use Bower over npm.
