@@ -1,5 +1,54 @@
 Javascript
 
+    [Babel] 
+          - https://babeljs.io/
+              Babel is a JavaScript compiler.
+              Babel has support for the latest version of JavaScript through syntax transformers. These plugins allow you to use new syntax, right now without waiting for browser support.
+              Babel can convert JSX syntax and strip out type annotations. Check out our React preset to get started. 
+          - https://github.com/babel/babel
+              The compiler for writing next generation JavaScript.
+              Babel is a community-driven tool that helps you write the latest version of JavaScript.
+              When your supported environments don't support certain features natively, it will help you compile it down to a supported version.
+
+     [Browserify] 
+          - http://browserify.org/
+              Browserify lets you require('modules') in the browser by bundling up all of your dependencies. 
+              Browsers don't have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.
+              Use many of the tens of thousands of modules on NPM in the browser
+          - https://github.com/substack/node-browserify
+              require('modules') in the browser
+              Use a node-style require() to organize your browser code and load modules installed by npm.
+              Browserify will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single <script> tag.
+
+              Many npm modules that don't do IO will just work after being browserified. Others take more work.
+              Many node built-in modules have been wrapped to work in the browser, but only when you explicitly require() or use their functionality.
+
+          - http://blakeembrey.com/articles/2013/09/introduction-to-browserify/
+              Browserify is a development tool that allows us to write node.js-style modules that compile for use in the browser. Just like node, we write our modules in separate files, exporting external methods and properties using the module.exports and exports variables. We can even require other modules using the require function, and if we omit the relative path it'll resolve to the module in the node_modules directory.
+
+              we have a bundle.js file that bundled the three modules we wrote, we can add a single script tag reference to it into our html page and it'll execute in the browser automatically resolving require calls. 
+
+              Since browserify implements the node.js module resolve algorithm, we can easily use npm to install modules from the package manager and use them inside the browser. There are lots of modules on npm that are made for tools such as browserify, but even more exciting is watching modules that were specifically written for node running in a browser environment without any effort. 
+          - ! https://scotch.io/tutorials/getting-started-with-browserify
+              Browserify lets you use require in the browser, the same way you'd use it in Node. It's not just syntactic sugar for loading scripts on the client. It's a tool that brings all the resources NPM ecosystem off of the server, and into the client.
+
+              Why Browserify: 
+              Module loading in the client is an inherently different beast. In the simplest case, you load your modules in a series of <script> tags in your HTML. This is perfectly correct, but it can be problematic for two reasons:
+                  (1) It forces you to manage dependencies by ensuring your script tags appear in the proper order, and makes it cumbersome to manage complex dependency graphs
+                  (2) To quote Kyle Simpson's in the LAB.js documentation: "with regular <script> tags, you cannot control [script] loading and executing behavior reliably cross-browser."
+
+              Browserify vs Webpack : 
+                  Browserify seeks to extend the Node ecosystem into to the browser. It only supports Node's flavor of the CommonJS require syntax, and provides browser-specific shims for much of Node's core functionality.
+
+                  Webpack seeks to unify Javascript module syntaxes and provide tools for a full swath of static asset management tasks. It imposes no restrictions on your choice of module syntax, and offers full support for Javascript, CSS, and even image preprocessing.
+
+                  If your project and dependencies are already closely tied to the Node ecosystem, Browserify is a solid choice. If you need more power to manage static assets than you can shake a script at, Webpack's your tool.
+          - http://jasonlamswatow.com/getting-started-with-browserify/
+                 
+          - http://fireqqtw.logdown.com/posts/253978-browserify-increases-outside-the-node-modules-path
+
+          
+
     [ES6] 
         https://ponyfoo.com/articles/es6-arrow-functions-in-depth
         https://ponyfoo.com/articles/es6-classes-in-depth
