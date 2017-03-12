@@ -10,7 +10,7 @@ Javascript
               Babel is a community-driven tool that helps you write the latest version of JavaScript.
               When your supported environments don't support certain features natively, it will help you compile it down to a supported version.
 
-     [Browserify] 
+    [Browserify] 
           - http://browserify.org/
               Browserify lets you require('modules') in the browser by bundling up all of your dependencies. 
               Browsers don't have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.
@@ -37,7 +37,7 @@ Javascript
                   (1) It forces you to manage dependencies by ensuring your script tags appear in the proper order, and makes it cumbersome to manage complex dependency graphs
                   (2) To quote Kyle Simpson's in the LAB.js documentation: "with regular <script> tags, you cannot control [script] loading and executing behavior reliably cross-browser."
 
-              Browserify vs Webpack : 
+              [Browserify vs Webpack]  
                   Browserify seeks to extend the Node ecosystem into to the browser. It only supports Node's flavor of the CommonJS require syntax, and provides browser-specific shims for much of Node's core functionality.
 
                   Webpack seeks to unify Javascript module syntaxes and provide tools for a full swath of static asset management tasks. It imposes no restrictions on your choice of module syntax, and offers full support for Javascript, CSS, and even image preprocessing.
@@ -47,7 +47,36 @@ Javascript
                  
           - http://fireqqtw.logdown.com/posts/253978-browserify-increases-outside-the-node-modules-path
 
-          
+
+    [Bower] A package manager for the web
+          - https://bower.io/
+            Bower can manage components that contain HTML, CSS, JavaScript, fonts or even image files. Bower doesn’t concatenate or minify code or do anything else - it just installs the right versions of the packages you need and their dependencies.
+
+            Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you’re looking for. Bower keeps track of these packages in a manifest file, bower.json
+
+            Bower is optimized for the front-end.
+
+          - https://github.com/bower/bower
+            Bower offers a generic, unopinionated solution to the problem of front-end package management,
+
+          - https://gofore.com/stop-using-bower/
+            Bower doesn’t support nested dependencies.
+
+          [Bower v.s. npm] 
+            - http://stackoverflow.com/questions/18641899/what-is-the-difference-between-bower-and-npm
+              npm is most commonly used for managing Node.js modules, but it works for the front-end too when combined with Browserify and/or $ npm dedupe.
+
+              Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree (size heavy) while Bower requires a flat dependency tree (puts the burden of dependency resolution on the user).
+              
+            - https://www.quora.com/Why-use-Bower-when-there-is-npm
+              In almost all cases, it's more appropriate to use Browserify and npm over Bower.
+              There is simply no benefit for a front-end developer to use Bower over npm.
+
+              With "browserify or webpack", it becomes super-easy to concatenate all your modules into big minified files, which is awesome for performance, especially for mobile devices. Not so with Bower, which will require significantly more labor to get the same effect.
+
+
+
+
 
     [ES6] 
         https://ponyfoo.com/articles/es6-arrow-functions-in-depth
