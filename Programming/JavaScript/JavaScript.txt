@@ -40,6 +40,8 @@ Javascript
           - http://jasonlamswatow.com/getting-started-with-browserify/
                  
           - http://fireqqtw.logdown.com/posts/253978-browserify-increases-outside-the-node-modules-path
+          - Babelify : http://chris.house/blog/grunt-configuration-for-react-browserify-babelify/
+                       If you’re using React’s JSX syntax (which you should be), you’ll need Babelify, which is a Babel transformer specifically made for Browserify. Each time you save a .js in your React application, Babelify will convert your JSX syntax into JavaScript, and Browserify will compile all your separate .js modules together into one file that the browser understands
 
  
     [Webpack]
@@ -61,6 +63,8 @@ Javascript
           - https://webpack.github.io/docs/what-is-webpack.html
               Existing module bundlers are not well suited for big projects (big single page applications). The most pressing reason for developing another module bundler was "Code Splitting" and that static assets should fit seamlessly together through modularization.
 
+          - !! Video : https://www.youtube.com/watch?v=VkTCL6Nqm6Y
+                    --> refer to : https://github.com/petehunt/webpack-howto
 
     [Bower] A package manager for the web
           - https://bower.io/
