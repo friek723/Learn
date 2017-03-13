@@ -111,6 +111,46 @@ Javascript
                https://github.com/HenrikJoreteg/hjs-webpack
                ! https://github.com/coryhouse/react-slingshot
 
+    [CommonJS]  CommonJS is a project with the goal of specifying an ecosystem for JavaScript outside the browser (for example, on the server or for native desktop applications).
+          - http://wiki.commonjs.org/wiki/CommonJS
+          - https://en.wikipedia.org/wiki/CommonJS
+          - https://webpack.github.io/docs/commonjs.html
+            module.exports + require("xxx");
+          - [CommonJS v.s AMD] 
+              http://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs
+              CommonJS is a way of defining modules with the help of an exports object, that defines the module contents.
+
+              CommonJS was not particularly designed with browsers in mind, so it doesn't fit in the browser environment very well. Apparently, this has something to do with asynchronous loading, etc.
+
+              On the other hand, RequireJS implements AMD, which is designed to suit the browser environment(source). Apparently, AMD started as an spinoff of the CommonJS Transport format and evolved into its own module definition API. 
+
+    [AMD (Asynchronous Module Definition) ]
+        - https://webpack.github.io/docs/amd.html
+           AMD (Asynchronous Module Definition) was the response to those who thought the CommonJS Module system was not ready for the browser because its nature was synchronous.
+
+           AMD specifies a standard for modular JavaScript such that modules can load their dependencies asynchronously, solving the problems associated with synchronous loading.
+        - https://en.wikipedia.org/wiki/Asynchronous_module_definition
+        - http://requirejs.org/docs/whyamd.html
+        - [CommonJS vs AMD vs ES2015]
+          https://auth0.com/blog/javascript-module-systems-showdown/
+          "The main difference between AMD and CommonJS lies in its support for asynchronous module loading."
+
+        - !JavaScript Modules : https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.f9csbj4ue
+        
+        [RequireJS] : A implementation of AMD
+                      - http://requirejs.org/
+                        RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments
+
+    [Grunt] Grunt is a JavaScript task runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting, etc. It uses a command-line interface to run custom tasks defined in a file
+        - https://gruntjs.com/
+
+    [Gulp] It is a task runner built on Node.js and Node Package Manager (npm), used for automation of time-consuming and repetitive tasks involved in web development like minification, concatenation, cache busting, unit testing, linting, optimization etc.
+        - http://gulpjs.com/
+        - https://www.sitepoint.com/introduction-gulp-js/    
+        - https://www.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+                
+
+
     [ES6] 
         https://ponyfoo.com/articles/es6-arrow-functions-in-depth
         https://ponyfoo.com/articles/es6-classes-in-depth
