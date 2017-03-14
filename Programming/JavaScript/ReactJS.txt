@@ -8,5 +8,15 @@ Tutorial :
       http://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
 
 
-10 Tips for Better Redux Architecture : https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.uy4idbsyx
+   10 Tips for Better Redux Architecture : https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.uy4idbsyx
+
+
+[starter kit] - order by popularity
+    !!!! https://github.com/facebookincubator/create-react-app   
+       (used by redux : http://redux.js.org/docs/introduction/Examples.html)
+    !!!  https://github.com/kriasoft/react-starter-kit
+    !!   https://github.com/davezuko/react-redux-starter-kit
+    !    https://github.com/coryhouse/react-slingshot
+    ! http://andrewhfarmer.com/starter-project/
+       (Find your starter)
 
