@@ -10,7 +10,11 @@ Tutorial :
 
    10 Tips for Better Redux Architecture : https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.uy4idbsyx
 
-
+   - Read HTML from file : 
+      https://facebook.github.io/react/docs/dom-elements.html
+      http://stackoverflow.com/questions/40108843/react-how-to-load-and-render-external-html-file
+      https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+      
 [starter kit] - order by popularity
     !!!! https://github.com/facebookincubator/create-react-app   
        (used by redux : http://redux.js.org/docs/introduction/Examples.html)

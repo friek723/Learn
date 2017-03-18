@@ -32,3 +32,16 @@ CSS
                          http://www.lonniebest.com/formatcss/
     - Frondend tools : http://www.icoding.co/2012/12/tools-for-frontend-eng
 
+    - A MULTILEVEL DROPDOWN MENU WITH CSS AND IMPROVE IT VIA JQUERY 
+       http://www.kriesi.at/archives/create-a-multilevel-dropdown-menu-with-css-and-improve-it-via-jquery
+
+    - Font size  
+       Pixels vs Em vs Rem vs Percent vs Viewport Units : 
+         - https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7#.o1z4w7dm0
+         - http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
+
+       viewport-percentage lengths : 
+         - http://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container
+            
+
+
