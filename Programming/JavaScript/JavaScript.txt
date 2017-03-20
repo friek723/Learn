@@ -168,6 +168,13 @@ Javascript
         - https://googlechrome.github.io/samples/object-assign-es6/
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 
+    - Promise, generator, async and ES6
+        http://huli.logdown.com/posts/292655-javascript-promise-generator-async-es6
+        https://developers.google.com/web/fundamentals/getting-started/primers/promises
+        https://developers.google.com/web/fundamentals/getting-started/primers/async-functions
+        https://jigsawye.com/2016/04/18/understanding-javascript-async-await/
+        https://www.toptal.com/javascript/javascript-promises
+        
     - Detecting when user scrolls to bottom of div with jQuery
        - http://stackoverflow.com/questions/6271237/detecting-when-user-scrolls-to-bottom-of-div-with-jquery
        - http://stackoverflow.com/questions/22675126/what-is-offsetheight-clientheight-scrollheight

@@ -1,4 +1,10 @@
 Web Technology : 
+
+
+    - *** Google Developer : 
+        https://developers.google.com/web/fundamentals/
+        https://developers.google.com/web/
+        
     - Cross-origin resource sharing (CORS)
           https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  (header : Access-Control-Allow-Origin: *)
           http://enable-cors.org/index.html
