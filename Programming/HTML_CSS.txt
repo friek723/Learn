@@ -7,7 +7,8 @@ HTML
                       
     - form action="#" : The form will submit to itself (current URL),  http://stackoverflow.com/questions/8862035/what-does-it-mean-when-the-form-action-attribute-is-number-pound-symbol-sig
     
-
+    - Refresh document every x seconds : https://www.w3schools.com/tags/att_meta_http_equiv.asp
+    
 -----------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
@@ -43,5 +44,18 @@ CSS
        viewport-percentage lengths : 
          - http://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container
             
+    - preprocessor : 
+         https://www.sitepoint.com/6-current-options-css-preprocessors/
+         https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus
+
+    - PostCSS     
+         https://www.signalonline.at/en/blog/moving-sass-to-postcss
+         http://huli.logdown.com/posts/262723-experiences-what-is-postcss
+         http://postcss.org/
+         https://github.com/postcss/postcss
+         https://autoprefixer.github.io/
+
+ 
+
 
 

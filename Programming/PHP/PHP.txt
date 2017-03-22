@@ -68,14 +68,15 @@ PHP
                           resources/views/YYY/XXX.blade.php
                   Model :      app/*.php  (class XXX extends Model)
                   Controller : app/Http/Controllers/XXXController.php
-                  Route :      app/Http/routes.php
+                  Route :      app/Http/routes.php  (root is public/)
                   DB:     database/migrations/2014_10_12_000000_create_XXX_table.php
-                  Root for routes.php & index.html & AngularJS : public/
+                  Root for routes  +  index.html  +  AngularJS : public/
                   Sql config  : .env
                                 config/database.php
                   config      : config/app.php
                   service providers : app/Providers
                   Middleware : app\Http\Middleware
+                  Kernal (middleware & route) : app/Http/Kernal.php
                   composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
 
         [Symfony2]

@@ -1,5 +1,6 @@
 Web Technology : 
 
+    [Roadmap] !! https://github.com/kamranahmedse/developer-roadmap
 
     - *** Google Developer : 
         https://developers.google.com/web/fundamentals/
@@ -39,6 +40,13 @@ Web Technology :
           !https://stormpath.com/blog/token-auth-spa/
           http://www.django-rest-framework.org/api-guide/authentication/
          
+          - JWT token : JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
+          After login we get a JWT Token from server, for every subsequent request we put JWT token in Http Header  --> Authorization: Bearer TOKEN_STRING
+              https://jwt.io/introduction/
+              http://stackoverflow.com/questions/24709944/jwt-token-in-postman-header
+              http://stackoverflow.com/questions/33265812/best-http-authorization-header-type-for-jwt
+
+
     - OAuth & OpenID     
           Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
           

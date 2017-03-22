@@ -14,7 +14,14 @@ Tutorial :
       https://facebook.github.io/react/docs/dom-elements.html
       http://stackoverflow.com/questions/40108843/react-how-to-load-and-render-external-html-file
       https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-      
+   
+   - Chinese : http://huli.logdown.com/posts/276040-react-resource-consolidation
+
+[Flux] 
+    http://blog.andrewray.me/flux-for-stupid-people/
+    http://huli.logdown.com/posts/276040-react-resource-consolidation
+    
+
 [starter kit] - order by popularity
     !!!! https://github.com/facebookincubator/create-react-app   
        (used by redux : http://redux.js.org/docs/introduction/Examples.html)

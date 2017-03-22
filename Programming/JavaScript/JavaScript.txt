@@ -67,6 +67,7 @@ Javascript
                     --> refer to : https://github.com/petehunt/webpack-howto
           - !! https://github.com/facebookincubator/create-react-app
                (tool used by redux exmaples : http://redux.js.org/docs/introduction/Examples.html)
+          - ! http://blog.andrewray.me/webpack-when-to-use-and-why/
 
     [Bower] A package manager for the web
           - https://bower.io/
