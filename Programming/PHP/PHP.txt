@@ -38,6 +38,11 @@ PHP
     
     Cron Jobs Lock (to avoid overlaps): http://abhinavsingh.com/how-to-use-locks-in-php-cron-jobs-to-avoid-cron-overlaps/
     
+    [composer] Package Manager
+         - http://stackoverflow.com/questions/33052195/what-are-the-differences-between-composer-update-and-composer-install
+         - https://getcomposer.org/doc/01-basic-usage.md
+
+
     [Framework] http://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results/ 
                 Install LAMP : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04  
         [Laravel] Most popular in 2015

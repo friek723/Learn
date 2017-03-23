@@ -1,0 +1,13 @@
+package manager : 
+  - https://blog.versioneye.com/2014/01/15/which-programming-language-has-the-best-package-manager/
+
+  Common package managers : 
+                            # Linux: Aptitude
+                            # .NET: Nuget
+                            # PERL: CPAN
+                            # Ruby: Gems / Bundler
+                            # PHP: Composer / Packagist
+                            # Python: PIP / PyPI 
+                            # Node: NPM
+                            # JS, CSS, HTML : Bower
+                            # Java: Maven and Gradle

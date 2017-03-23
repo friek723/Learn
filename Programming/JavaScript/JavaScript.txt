@@ -187,6 +187,9 @@ Javascript
 
     - !!online editor for JS + HTML + CSS : http://plnkr.co/edit/     (Examples : http://plnkr.co/)
     
+    - print JS Object : http://stackoverflow.com/questions/957537/how-can-i-display-a-javascript-object
+                        console.log(JSON.stringify(object));
+
     - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
                                                                         https://www.airpair.com/js/javascript-framework-comparison
                                                                         
@@ -293,7 +296,7 @@ Javascript
                                                             https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
                
                                                                
-    [AJAX] 
+    [AJAX] example code see [note1] 
         - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
         - jQuery provides several methods for AJAX functionality. 
             With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post. 
@@ -414,7 +417,114 @@ JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 
+[note1]
 
+    $.ajax({
+              url: "/test/login/public/api/authenticate",
+              type:"POST",
+              data: 
+                {
+                    email: $('#e_in').val(),
+                    password: $('#p_in').val()
+                },
+              contentType:"application/x-www-form-urlencoded",
+              timeout: 9000, // in milliseconds
+              success: function(data, status){
+                    //alert("Data: " + data + "\nStatus: " + status);
+                    
+                    console.log(JSON.stringify(data));
+                    console.log(JSON.stringify(status)); 
+
+                    if(status == 'success'){
+                        //alert("success");
+                    }else{
+                        //alert("status not success");
+                    }
+              }
+    }).done(function() {
+                //alert( "done" );
+            })
+      .fail(function(xhr, status, error) {
+                //alert( "error" );
+                //alert( xhr );
+                //alert( status );
+                //alert( error );
+                console.log(JSON.stringify(xhr));
+                console.log(JSON.stringify(status)); 
+                console.log(JSON.stringify(error)); 
+
+       });
+
+       
+
+[note8]
+// - The $exportArray is a 2-dimension array. (row & column)
+// - Each row is a php Associative Array :  array("key"=>"value")
+// - The first row is used to generate column names in excel, so it must has all possible keys.
+//   (You may insert a dummy first row with all possible keys.)
+// - usage : exportArrayToXlsx($pushedArray, array("filename"=>"php://output", "title"=>"Fixed Asset Report") );
+// - frontend : refer to [note12]
+function exportArrayToXlsx ($exportArray, $exportParam) {
+
+    $objPHPExcel = new PHPExcel();
+
+    // Set properties
+    $objPHPExcel->getProperties()->setCreator($exportParam['title'])
+                    ->setLastModifiedBy($exportParam['title'])
+                    ->setTitle($exportParam['title'])
+                    ->setSubject($exportParam['title'])
+                    ->setDescription($exportParam['title'])
+                    ->setKeywords($exportParam['title'])
+                    ->setCategory($exportParam['title']);
+
+    // Set active sheet
+    $objPHPExcel->setActiveSheetIndex(0);
+    $objPHPExcel->getActiveSheet()->setTitle($exportParam['title']);
+
+    // Set cell value
+    //rows are 1-based whereas columns are 0-based, so “A1″ becomes (0,1).
+    //$objPHPExcel->setCellValueByColumnAndRow($column, $row, $value);
+    //$objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(0, 1, "This is A1");
+    for($row = 0; $row < count($exportArray); $row++){
+        ksort($exportArray[$row]);  // sort by key
+        foreach ($exportArray[$row] AS $key => $value){
+            // Find key index from first row
+            $key_index = -1;
+            if (array_key_exists($key, $exportArray[0])){
+                $key_index = array_search($key, array_keys($exportArray[0]));
+            }
+
+            // Set key(column name)
+            if($row==0){
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($key_index, 1, $key);
+            }
+
+            // Set Value (each row)
+            if($key_index != -1){
+                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($key_index, $row+2, $value);
+            }else{
+                // Can not find $key in $row
+            }
+
+        }
+    }
+
+    // Browser download
+    if (strcmp("php://output", $exportParam['filename'])==0){
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="FixedAssets.xls"');
+        header('Cache-Control: max-age=0');
+    }
+
+    // Write to file
+    // If you want to output e.g. a PDF file, simply do:
+    //$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'PDF');
+    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+    $objWriter->save($exportParam['filename']); // Excel2007 : '.xlsx'   Excel5 : '.xls'
+
+    echo jsonStatus('success');
+
+}
 
 					              
 

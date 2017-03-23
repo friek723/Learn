@@ -7,6 +7,8 @@ HTML
                       
     - form action="#" : The form will submit to itself (current URL),  http://stackoverflow.com/questions/8862035/what-does-it-mean-when-the-form-action-attribute-is-number-pound-symbol-sig
     
+    - page index link:  <a href="#showcase">Showcase</a>  ==> this links to the same page and auto scroll to the html element id = "showcase"  
+
     - Refresh document every x seconds : https://www.w3schools.com/tags/att_meta_http_equiv.asp
     
 -----------------------------------------------------------------------------------------------------
@@ -55,7 +57,15 @@ CSS
          https://github.com/postcss/postcss
          https://autoprefixer.github.io/
 
- 
+    - how to center a div :
+        div {
+              position: absolute;
+              width: X%;
+              height: Y%;
+              left:  (100% - width)/2 ;
+              top:  (100% - height)/2 ;
+        }
+
 
 
 

@@ -64,7 +64,10 @@ Web Technology :
         ! http://www.tangowithdjango.com/book/chapters/cookie.html
         http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
    
-          
+    - Single Page Application SPA 
+        https://docs.cozy.io/en/hack/getting-started/learn-single-page-app-way.html
+        http://singlepageappbook.com/
+             
 
 
 
@@ -74,6 +77,9 @@ Web Technology :
 
 
 
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 
 HTTP & WEB tool
@@ -86,12 +92,26 @@ HTTP & WEB tool
  - (!!Readme) A Software Developer's Guide to HTTP : http://odetocode.com/Articles/List
  - POST v.s. GET : http://blog.toright.com/posts/1203/%E6%B7%BA%E8%AB%87-http-method%EF%BC%9A%E8%A1%A8%E5%96%AE%E4%B8%AD%E7%9A%84-get-%E8%88%87-post-%E6%9C%89%E4%BB%80%E9%BA%BC%E5%B7%AE%E5%88%A5%EF%BC%9F.html
  
+
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
 Web Framework
  - http://hotframeworks.com/
    http://www.hurricanesoftwares.com/most-popular-web-application-frameworks/
    http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks
    http://en.wikipedia.org/wiki/Web_application_framework
    
+
+
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
 Web server & App server 
  - http://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server
  [Reverse Proxy Server] http://www.arthurtoday.com/2010/01/reverse-proxy-server.html
