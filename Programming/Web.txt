@@ -34,27 +34,46 @@ Web Technology :
               http://www.asp.net/web-api/overview/security/preventing-cross-site-request-forgery-(csrf)-attacks
 
     - Token Based Authentication
-          !!https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
-            https://scotch.io/tutorials/the-anatomy-of-a-json-web-token           
-          http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
-          !https://stormpath.com/blog/token-auth-spa/
-          http://www.django-rest-framework.org/api-guide/authentication/
-         
+          - !!https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+          - https://scotch.io/tutorials/the-anatomy-of-a-json-web-token           
+          - http://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+          - !https://stormpath.com/blog/token-auth-spa/
+          - http://www.django-rest-framework.org/api-guide/authentication/
+          - ! https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/
+          - http://stackoverflow.com/questions/35308263/storing-authentication-tokens-in-a-restful-api-without-using-http-sessions
+          - !https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/
+          - Angular JWT: https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/
+
+
           - JWT token : JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
           After login we get a JWT Token from server, for every subsequent request we put JWT token in Http Header  --> Authorization: Bearer TOKEN_STRING
-              https://jwt.io/introduction/
-              http://stackoverflow.com/questions/24709944/jwt-token-in-postman-header
-              http://stackoverflow.com/questions/33265812/best-http-authorization-header-type-for-jwt
+              - https://jwt.io/introduction/
+              - https://jwt.io/ : Debug/Decode token
+              - http://stackoverflow.com/questions/24709944/jwt-token-in-postman-header
+              - http://stackoverflow.com/questions/33265812/best-http-authorization-header-type-for-jwt
+              - https://float-middle.com/json-web-tokens-jwt-vs-sessions/
+              - !! http://robmclarty.com/blog/what-is-a-json-web-token
+                    No Session to Manage (stateless): The token has everything you need to identify users, and the rest of your app's state can be stored in local storage on the client side. No need for a session object stored on the server.
+              
+
+          - Where to store the token on client side ? 
+             - !!https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage
+             - https://security.stackexchange.com/questions/80727/best-place-to-store-authentication-tokens-client-side
 
 
     - OAuth & OpenID     
           Difference : http://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth
           
+
+          OAuth 2 v.s. JSON Web Tokens : JWT is an authentication protocol, OAuth2 is an authentication framework. It is possible to have an OAuth2 implementation that issues JSON Web Tokens as an authentication mechanism. 
+              - http://www.seedbox.com/en/blog/2015/06/05/oauth-2-vs-json-web-tokens-comment-securiser-un-api/
+
           OAuth 
               http://en.wikipedia.org/wiki/OAuth
               http://oauth.net/2/     (http://oauth.net/)
               http://blog.yorkxin.org/posts/2013/09/30/oauth2-1-introduction/
-          
+              !! https://www.slideshare.net/alvarosanchezmariscal/stateless-authentication-with-oauth-2-and-jwt-javazone-2015
+
           OpenID 
               http://briian.com/5328/openid.html    
          
@@ -64,6 +83,11 @@ Web Technology :
         ! http://www.tangowithdjango.com/book/chapters/cookie.html
         http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
    
+        Where should you store your shopping cart? 
+        ("Session" or "Cookie" or "Web Storage" or "Database") 
+           http://www.wiliam.com.au/wiliam-blog/where-should-you-store-your-cart
+           http://ux.stackexchange.com/questions/72894/for-shopping-cart-use-a-session-or-cookie
+
     - Single Page Application SPA 
         https://docs.cozy.io/en/hack/getting-started/learn-single-page-app-way.html
         http://singlepageappbook.com/
@@ -104,7 +128,10 @@ Web Framework
    http://www.hurricanesoftwares.com/most-popular-web-application-frameworks/
    http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks
    http://en.wikipedia.org/wiki/Web_application_framework
-   
+ - popularity 
+    - Frontend : https://github.com/showcases/front-end-javascript-frameworks
+    - Backend : https://github.com/showcases/web-application-frameworks
+
 
 
 

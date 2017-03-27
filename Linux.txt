@@ -97,15 +97,18 @@
      2. http://www.liamdelahunty.com/tips/linux_find_string_files.php
         (find . | xargs grep 'string' -sl)
   
-- Find a file : http://linux.vbird.org/linux_basic/0220filemanager.php#file_find_file
+- Find a file : - http://linux.vbird.org/linux_basic/0220filemanager.php#file_find_file
+                - https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line
+                - http://www.codecoffee.com/tipsforlinux/articles/21.html
                 1. locate   (faster than find) 
                 2. whereis  (只找幾個特定的目錄而已)
                 3. find : 
-				                find . -name 'program.c' 2>/dev/null
-				                find / -name 'program.c' 2>/dev/null
-				                sudo find / -name 'program.c'
-				                !sudo find . -name 'filename*'       (use *) 
-				                (!! If search folder, path must end with "/")
+				       (1)find . -name 'program.c' 2>/dev/null
+				       (2)find / -name 'program.c' 2>/dev/null
+				       (3)sudo find / -name 'program.c'
+				       (4)!sudo find . -name 'filename*'  (use *) 
+				           ==> Find a file called testfile.txt in current and sub-directories. 
+				       (!! If search folder, path must end with "/")
                 
 - Install remote desktop : You'd be able to login using "Remote Desktop Connection Client" on Windows OS.
                           (Fail): 1.  sudo apt-get install ubuntu-desktop

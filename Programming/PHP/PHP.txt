@@ -80,19 +80,32 @@ PHP
                                 config/database.php
                   config      : config/app.php
                   service providers : app/Providers
-                  Middleware : app\Http\Middleware
+                  Middleware : app\Http\Middleware (filtering HTTP requests entering your application)
                   Kernal (middleware & route) : app/Http/Kernal.php
                   composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
+
+            - raw SQL query
+                  - ! https://laracasts.com/discuss/channels/general-discussion/raw-queries-1?page=1
+                  - http://fideloper.com/laravel-raw-queries
+
+
 
         [Symfony2]
             ...
             
     [phpMyAdmin] Search across a whole database : select the database you wish to perform the search in and click the ‘Search‘ tab.
-    
-                 1. Download from official site & place it under /var/www
-                 2. mv config.sample.inc.php config.inc.php 
-                 3. set AllowNoPassword to true  (default : root/no pass)
-                 4. login & change password in General settings
+        Config : https://docs.phpmyadmin.net/en/latest/config.html
+
+        Install : https://docs.phpmyadmin.net/en/latest/setup.html#
+            Ubuntu install : 
+                - https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04
+                - https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+
+            My install (QuickInstall): 
+                   1. Download from official site & place it under /var/www
+                   2. mv config.sample.inc.php config.inc.php 
+                   3. set AllowNoPassword to true  (default : root/no pass)
+                   4. login & change password in General settings
     
     [Excel]  
         import/export : sample code see [note8]
