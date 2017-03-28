@@ -169,6 +169,8 @@ Web server & App server
              /var/log/apache2/error.log    
                 
        restart : service httpd restart
+                 OR 
+                 sudo service apache2 restart 
 
 
 

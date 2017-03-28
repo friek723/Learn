@@ -90,7 +90,9 @@
                 Security :  /etc/cron.allow or /etc/cron.deny
                 log : /var/log/syslog
                 
-                
+
+- ls explain : https://www.garron.me/en/go2linux/ls-file-permissions.html
+
 - Find String in files - 
      1.(Better?) http://stackoverflow.com/questions/16956810/finding-all-files-containing-a-text-string-on-linux
                  (grep -Ril "text-to-find-here" .)

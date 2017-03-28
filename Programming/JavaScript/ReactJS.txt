@@ -17,6 +17,13 @@ Tutorial :
    
    - Chinese : http://huli.logdown.com/posts/276040-react-resource-consolidation
 
+
+[React-Router] 
+    react-router-tutorial : https://github.com/reactjs/react-router-tutorial/tree/master/lessons
+
+    URL params : https://github.com/reactjs/react-router-tutorial/tree/master/lessons/06-params
+    
+
 [Flux] 
     http://blog.andrewray.me/flux-for-stupid-people/
     http://huli.logdown.com/posts/276040-react-resource-consolidation

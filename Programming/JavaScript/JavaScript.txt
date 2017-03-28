@@ -205,6 +205,8 @@ Javascript
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
     
+    - Get http query string values in JavaScript?  http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
     - Check-for-null-undefined-or-blank-variables :　if(value){} 　http://stackoverflow.com/questions/5515310/is-there-a-standard-function-to-check-for-null-undefined-or-blank-variables-in
        
     - [IDE] IntelliJ IDEA : https://www.jetbrains.com/idea/

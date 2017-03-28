@@ -88,6 +88,34 @@ PHP
                   - ! https://laracasts.com/discuss/channels/general-discussion/raw-queries-1?page=1
                   - http://fideloper.com/laravel-raw-queries
 
+            - Scaffold & CRUD Generator (sort by popularity): 
+                - https://github.com/InfyOmLabs/laravel-generator
+                - https://github.com/appzcoder/crud-generator
+                - https://github.com/crocodic-studio/crudbooster
+                - https://github.com/engrnvd/laravel-crud-generator
+
+            - 500-internal-server-error (all request got error) : The storage directory needs to be writable by the webserver user.
+                - !http://stackoverflow.com/questions/23540083/failed-to-open-stream-permission-denied-error-laravel  
+                - http://stackoverflow.com/questions/31543175/getting-a-500-internal-server-error-on-laravel-5-ubuntu-14-04
+                - http://stackoverflow.com/questions/17020513/laravel-4-failed-to-open-stream-permission-denied
+            - 404 Not Found (all request got error) : It's all about ".htaccess" and "mod_rewrite", there is a default .htaccess under Laravel project/public/.
+                solution 1: vi "/etc/apache2/apache2.conf" ("AllowOverride" None ==> All)   
+                                                        <Directory /var/www/>
+                                                                AllowOverride All
+                                                        </Directory>
+                            - http://stackoverflow.com/questions/21458080/the-requested-url-projectname-users-was-not-found-on-this-server-laravel?answertab=votes#tab-top
+                            - https://laravel.io/forum/06-11-2014-not-found-but-route-exists
+
+                solution 2: vi "/etc/apache2/sites-available/000-default.conf"
+                             Add :<Directory /var/www/html>
+                                    Options Indexes FollowSymLinks MultiViews
+                                    AllowOverride All
+                                    Order allow,deny
+                                    allow from all
+                                  </Directory>
+                            - https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04     
+                            - https://www.digitalocean.com/community/tutorials/how-to-use-the-htaccess-file
+
 
 
         [Symfony2]
