@@ -92,7 +92,7 @@ PHP
                 - https://github.com/InfyOmLabs/laravel-generator
                 - https://github.com/appzcoder/crud-generator
                 - https://github.com/crocodic-studio/crudbooster
-                - https://github.com/engrnvd/laravel-crud-generator
+                - https://github.com/engrnvd/laravel-crud-generator  (tried, easy)
 
             - 500-internal-server-error (all request got error) : The storage directory needs to be writable by the webserver user.
                 - !http://stackoverflow.com/questions/23540083/failed-to-open-stream-permission-denied-error-laravel  
