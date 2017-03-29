@@ -157,14 +157,21 @@ Web server & App server
                 http://stackoverflow.com/questions/22519159/how-does-apache-know-which-file-to-use-in-etc-httpd-conf-d
                 http://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
                 http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
-                [Path]
-                  /etc/apache2/apache2.conf
-                  /etc/apache/apache2.conf
-                  /etc/httpd/conf/httpd.conf 
-                  /etc/httpd/conf.d/*.conf
                 
-                [content] : see [note9] for example
-                         
+                [Path] !!! http://serverfault.com/questions/216252/how-to-configure-apache-sites-available-vs-httpd-conf
+
+                    - "main" config : /etc/apache2/apache2.conf
+                                      /etc/apache/apache2.conf
+                                      /etc/httpd/conf/httpd.conf 
+                                      /etc/httpd/conf.d/*.conf
+                    - "user" config : /etc/apache2/httpd.conf
+                    - vhosts : /etc/apache2/sites-available 
+                               - [content] : see [note9] for example
+                               - files (one per file, typically) you might want to number them, e.g. 00-domain.com, 01-otherdomain.com
+                               - !! Set Up Apache Virtual Hosts on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts
+                    - ports (Listen directives) : /etc/apache2/ports.conf
+                    - mods : /etc/apache2/mods-available
+                
        log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 

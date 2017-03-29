@@ -67,7 +67,15 @@ PHP
                   http://laravel-recipes.com/recipes/282/running-phps-built-in-web-server 
             - jwt-auth : https://github.com/tymondesigns/jwt-auth/wiki
                          ! Unable to get "Authorization " header : http://stackoverflow.com/questions/20853604/laravel-get-request-headers
-            - receive each SQL query executed by your application : Search "Listening For Query Events" in https://laravel.com/docs/5.2/database           
+            - receive each SQL query executed by your application : Search "Listening For Query Events" in https://laravel.com/docs/5.2/database     
+
+            - command :  
+               php artisan make:migration create_posts_table   (create migration)
+               php artisan make:model Post                     (create model)
+               php artisan make:controller PostController      (create controller)
+               php artisan migrate                             (create DB tables from migration)
+
+
             - Directory Structure
                   View :  resources/views/XXX.blade.php
                           resources/views/YYY/XXX.blade.php
@@ -94,11 +102,16 @@ PHP
                 - https://github.com/crocodic-studio/crudbooster
                 - https://github.com/engrnvd/laravel-crud-generator  (tried, easy)
 
-            - 500-internal-server-error (all request got error) : The storage directory needs to be writable by the webserver user.
+            - 500-internal-server-error (all request got error) : The storage directory needs to be writable by the webserver user. 
+                (solution :  sudo chown -R ubuntu:www-data project_root
+                             sudo chmod -R 777 storage    (No need)
+                )
                 - !http://stackoverflow.com/questions/23540083/failed-to-open-stream-permission-denied-error-laravel  
                 - http://stackoverflow.com/questions/31543175/getting-a-500-internal-server-error-on-laravel-5-ubuntu-14-04
                 - http://stackoverflow.com/questions/17020513/laravel-4-failed-to-open-stream-permission-denied
-            - 404 Not Found (all request got error) : It's all about ".htaccess" and "mod_rewrite", there is a default .htaccess under Laravel project/public/.
+            - 404 Not Found (all request got error) : 
+                (1) It's all about ".htaccess" and "mod_rewrite", there is a default .htaccess under Laravel project/public/.
+                (2) The API URL is not correct
                 solution 1: vi "/etc/apache2/apache2.conf" ("AllowOverride" None ==> All)   
                                                         <Directory /var/www/>
                                                                 AllowOverride All

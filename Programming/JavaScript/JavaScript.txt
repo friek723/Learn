@@ -241,6 +241,8 @@ Javascript
                 AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
                    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
+        - Interview Questions : https://www.tutorialspoint.com/angularjs/angularjs_interview_questions.htm
+        
         - Tutorial : 
                    https://docs.angularjs.org/tutorial
                    https://docs.angularjs.org/guide
@@ -281,8 +283,13 @@ Javascript
 		                                          This is only for the very first page load, and not on views loaded after the first load. You will not have that issue with ng-bind.
                                ng-model : two-way data binding ($scope --> view and view --> $scope)
         
-        - ng-if v.s. ng-show/ng-hide : http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
-        
+        - $scope.$watch and $scope.$apply : http://stackoverflow.com/questions/15112584/how-do-i-use-scope-watch-and-scope-apply-in-angularjs
+
+
+        - ng-if v.s. ng-show/ng-hide : 
+            http://stackoverflow.com/questions/21869283/when-to-favor-ng-if-vs-ng-show-ng-hide
+            http://stackoverflow.com/questions/19177732/what-is-the-difference-between-ng-if-and-ng-show-ng-hide
+
         - ng-focus & ng-blur (event when mouse on & leave input box): http://jsfiddle.net/deathhell/UTn5y/2/
                                   
         - UI Bootstrap : http://angular-ui.github.io/bootstrap/
