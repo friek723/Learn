@@ -52,6 +52,7 @@
       Middleware : app\Http\Middleware (filtering HTTP requests entering your application)
       Kernal (middleware & route) : app/Http/Kernal.php
       composer(use other lib) : composer.json     (run "composer update" in project root after updating this file)
+      log & cache & session :  storage/...
 
 
 
@@ -66,6 +67,55 @@
     - https://github.com/appzcoder/crud-generator
     - https://github.com/crocodic-studio/crudbooster
     - https://github.com/engrnvd/laravel-crud-generator  (!!!tried, easy)
+        Run php artisan nvd:crud table_name, it will create : 
+              #Model class Location generated successfully.
+              #Route model binding inserted successfully in /var/www/html/jobseek/jobseeking/app/Providers/RouteServiceProvider.php
+              #created route: Route::resource('location','LocationController');
+              #LocationController generated successfully.
+              #View file index generated successfully.
+              #View file edit generated successfully.
+              #View file show generated successfully.
+              #View file create generated successfully.
+
+
+
+[View]
+    - Share variable in all views : http://stackoverflow.com/questions/29715813/laravel-5-global-blade-view-variable-available-in-all-templates
+    
+    - Where is css/js/images/fonts : http://stackoverflow.com/questions/22875556/where-do-javascript-and-css-files-go-in-a-laravel-project
+    
+
+[Controller]
+    - route model binding : https://laravel.com/docs/5.2/routing#route-model-binding
+    
+    - input validation : 
+         Option 1 : Handle error message in Controller
+             https://laravel.io/forum/12-11-2015-how-to-implement-laravel-request-validation
+             Controller :
+                 use Validator;
+                 $validator = Validator::make($request->all(), Job::validationRules());
+                 if ($validator->fails()) {
+                     $message = $validator->errors();
+                     Log::info('postjob_api Validator error : '.$message);
+                     return response()->json($message, 500);
+                 }
+
+
+         Option 2 : Laravel will automatically redirect the user back to their previous location. In addition, all of the validation errors will automatically be set to the view in $errors. See https://laravel.com/docs/5.4/validation#form-request-validation
+             Controller : 
+                 $this->validate($request, Job::validationRules());
+             View : 
+                 @if (count($errors) > 0)
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                 @endif
+
+
+
+
+[Migration]
+    - Adding/Renaming field in migration-schema : http://stackoverflow.com/questions/30682362/adding-field-to-laravel-migration-schema
 
 
 [setup errors]
