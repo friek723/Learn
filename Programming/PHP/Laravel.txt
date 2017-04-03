@@ -57,6 +57,7 @@
 
 
 - raw SQL query
+      - https://laravel.com/docs/5.2/database#running-queries
       - ! https://laracasts.com/discuss/channels/general-discussion/raw-queries-1?page=1
       - http://fideloper.com/laravel-raw-queries
 
