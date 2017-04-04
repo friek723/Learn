@@ -70,6 +70,9 @@ CSS
               top:  (100% - height)/2 ;
         }
 
+    - text next line : to use "word-wrap: break-word", need to set a width 
+        http://stackoverflow.com/questions/8369819/how-do-i-make-a-text-go-onto-the-next-line-if-it-overflows
+
 
 
 

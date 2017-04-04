@@ -306,6 +306,8 @@ Javascript
         - What I would recommend instead of Angular.js? :   https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99
                                                             https://medium.com/este-js-framework/what-i-would-recommend-instead-of-angular-js-62b057d8a9e     
                
+        - application skeleton for a typical AngularJS web app : https://github.com/angular/angular-seed  (usage : https://www.codetutorial.io/hotel-booking-engine-with-laravel-5-and-angularjs-p2/)
+               
                                                                
     [AJAX] example code see [note1] 
         - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
