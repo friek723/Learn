@@ -73,6 +73,29 @@ CSS
     - text next line : to use "word-wrap: break-word", need to set a width 
         http://stackoverflow.com/questions/8369819/how-do-i-make-a-text-go-onto-the-next-line-if-it-overflows
 
+    - Truncate long string/text : 
+        https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+        https://www.w3schools.com/cssref/css3_pr_text-overflow.asp
+        (!! To get it work, the text may need to be inside a <div>, apply css to div directly.)
+            .truncate {
+              width: 250px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+
+    - make table cell width even (overlap problem on mobile): 
+                                    table {
+                                      table-layout: fixed;
+                                    }
+    - make table responsive (use bootstrap):
+         https://www.w3schools.com/bootstrap/bootstrap_ref_css_tables.asp
+          <div class="table-responsive">
+            <table class="table">
+              ...
+            </table>
+          </div>
 
 
 
