@@ -85,17 +85,21 @@ CSS
             }
 
 
-    - make table cell width even (overlap problem on mobile): 
+    [table]
+        - make table cell width even (overlap problem on mobile): 
                                     table {
                                       table-layout: fixed;
                                     }
-    - make table responsive (use bootstrap):
-         https://www.w3schools.com/bootstrap/bootstrap_ref_css_tables.asp
-          <div class="table-responsive">
-            <table class="table">
-              ...
-            </table>
-          </div>
+        - make table responsive (use bootstrap):
+              https://www.w3schools.com/bootstrap/bootstrap_ref_css_tables.asp
+              <div class="table-responsive">
+                <table class="table">
+                  ...
+                </table>
+              </div>
+
+    - icon : https://www.w3schools.com/icons/default.asp
+             (Font Awesome icons, Bootstrap Icons, Google Icons)
 
 
 
