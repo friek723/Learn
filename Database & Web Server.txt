@@ -1,0 +1,24 @@
+[Scaling DB, MySQL Cluster]
+    - https://www.mysql.com/products/cluster/scalability.html
+    - https://www.digitalocean.com/community/tutorials/how-to-create-a-multi-node-mysql-cluster-on-ubuntu-16-04
+    - http://www.cc.ntu.edu.tw/chinese/epaper/0037/20160620_3707.html
+    - https://en.wikipedia.org/wiki/MySQL_Cluster
+    - https://www.howtoforge.com/loadbalanced_mysql_cluster_debian
+    - https://www.youtube.com/watch?v=DnWItDTZL2c
+    - https://www.youtube.com/watch?annotation_id=annotation_1011535783&feature=iv&src_vid=DnWItDTZL2c&v=A7dBB8_yNJI
+    - database solution for scaling MySQL used by Youtube : vitess.io
+    - ![good concept] https://www.slideshare.net/mkindahl/mysql-sharding-tools-and-best-practices-for-horizontal-scaling
+    - ! http://stackoverflow.com/questions/11707879/difference-between-scaling-horizontally-and-vertically-for-databases
+        (A good example for horizontal scaling is Cassandra , MongoDB .. and a good example for vertical scaling is MySQL - Amazon RDS)
+    - ! http://www.oshyn.com/Blogs/2011/November/A-Summary-of-Scaling-Options-for-MySQL?page=NaN
+
+
+
+
+
+
+Database Normalization : https://www.thoughtco.com/database-normalization-basics-1019735
+
+
+[Scaling Web Server]
+    - ! https://blog.hartleybrody.com/scale-load/

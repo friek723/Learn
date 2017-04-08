@@ -134,6 +134,17 @@ Web Framework
 
 
 
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+[CMS content management systems]
+
+    list of notable CMS : https://en.wikipedia.org/wiki/List_of_content_management_systems
+    
+    Top 10 PHP CMS : https://weblizar.com/top-10-php-cms/
+
+
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
@@ -168,10 +179,24 @@ Web server & App server
                     - vhosts : /etc/apache2/sites-available 
                                - [content] : see [note9] for example
                                - files (one per file, typically) you might want to number them, e.g. 00-domain.com, 01-otherdomain.com
+                               - (STEP 1) Add xxx.conf (see [note9][example port 8080 for PHP Laravel site])
+                                 (STEP 2) sudo a2ensite xxx.conf    (enable it)
+                                 (STEP 3-1) service apache2 reload
+                                 (STEP 3-2) If you use port other than 80 : 
+                                              sudo vi /etc/apache2/ports.conf
+                                              Add :
+                                                   Listen 80
+                                                   Listen 8080
+                                              see http://stackoverflow.com/questions/3940909/configure-apache-to-listen-on-port-other-than-80     
+                                 (STEP 4) sudo service apache2 restart
                                - !! Set Up Apache Virtual Hosts on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts
                     - ports (Listen directives) : /etc/apache2/ports.conf
                     - mods : /etc/apache2/mods-available
                 
+                [How to use https] 
+                   - (tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
+                   - https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
+                   
        log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 
@@ -236,5 +261,43 @@ NameVirtualHost *:8080
                 Allow from all
         </Location>
 </VirtualHost>
+---------------------------------------
+[laravel.conf]
+
+<VirtualHost *:80>     
+        ServerAdmin webmaster@localhost
+       
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        DocumentRoot /var/www
+        <Directory /var/www>
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride All
+          Order allow,deny
+          allow from all
+        </Directory>
+</VirtualHost>
+---------------------------------------
+[example port 8080 for PHP Laravel site]
+
+<VirtualHost *:8080>
+        ServerAdmin webmaster@localhost
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        DocumentRoot /var/www/jobseek/jobseeking/public
+        <Directory /var/www/jobseek/jobseeking/public>
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride All
+          Order allow,deny
+          allow from all
+        </Directory>
+</VirtualHost>
+---------------------------------------
+
+
+
 
                
