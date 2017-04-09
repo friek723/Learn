@@ -551,7 +551,8 @@ GIT
                                                      git checkout master (Going back to lastest ver, otherwise git doesn't know which branch it is when doing pull)
                                                      
         - Get current version(commit) :  git rev-parse HEAD   (http://stackoverflow.com/questions/949314/how-to-retrieve-the-hash-for-the-current-commit-in-git)
-                                               
+         
+        - git diff filename : see difference between local and last commit in console                                      
 				- git checkout file: to discard changes in working directory
 				
 				- remote url : "git remote show origin" or "git remote -v"  (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)

@@ -177,6 +177,7 @@ Javascript
         https://www.toptal.com/javascript/javascript-promises
         
     - Detecting when user scrolls to bottom of div with jQuery
+       (see [note2])
        - http://stackoverflow.com/questions/6271237/detecting-when-user-scrolls-to-bottom-of-div-with-jquery
        - http://stackoverflow.com/questions/22675126/what-is-offsetheight-clientheight-scrollheight
        
@@ -469,6 +470,52 @@ JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/
        });
 
        
+
+
+[note2] code from my ReactJS project (my homepage)
+  componentDidMount: function() {
+
+    // Bind to scroll bar of current Div : 
+    document.getElementById("middleDiv").addEventListener("scroll", this.handleScroll);
+    // Bind to scroll bar of browser window : (Same layout in mobile browser may use window bar to scroll instead of current div bar) 
+    window.addEventListener("scroll", this.handleScrollWindow);
+  },
+
+  handleScrollWindow: function(event) {
+
+      const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;      
+      const body = document.body;
+      const html = document.documentElement;
+      const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+      const windowBottom = windowHeight + window.pageYOffset;
+      //console.log('windowHeight : '.concat(windowHeight));
+      //console.log('pageYOffset : '.concat(window.pageYOffset));
+      //console.log('docHeight : '.concat(docHeight));
+      if (windowBottom >= (docHeight * 0.95 )) {
+        console.log('Window : bottom reached');
+        
+      } else {
+        console.log('Window : NOT at bottom');        
+      }  
+  },
+
+  handleScroll: function(event) {
+
+      //console.log(event);    
+      //console.log("scrollTop" + $("#middleDiv").scrollTop());
+      //console.log("innerHeight" + $("#middleDiv").innerHeight());
+      //console.log("scrollHeight" + $("#middleDiv")[0].scrollHeight);
+      if($("#middleDiv").scrollTop() + $("#middleDiv").innerHeight() 
+              >= $("#middleDiv")[0].scrollHeight * 0.95) {
+            console.log('Div : Bottom reached');
+      }else{
+            console.log('Div : NOT at bottom');
+      }
+  },
+
+
+
+
 
 [note8]
 // - The $exportArray is a 2-dimension array. (row & column)
