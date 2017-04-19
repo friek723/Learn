@@ -16,11 +16,11 @@ SQL
         
         - PDO v.s. ORM (Object-relational mapping): 
                # PDO is a specific implementation of a Database Access Abstraction Layer, it enables you to connect, run SQL and retrieve results from the database with an API that is consistent across different database backends (e.g. MySQL, PostgreSQL, MS SQL, etc.)
-               # ORM : It's a framework for mapping relational tables to application domain objects and relationships between them. 
+               # ORM : It's a framework for mapping relational tables to application domain objects and relationships between them. (see PHP Laravel "Eloquent ORM")
                
                - http://stackoverflow.com/questions/10526190/difference-between-orm-and-pdo
                - https://en.wikipedia.org/wiki/Object-relational_mapping
-               
+
 
     - (SubQuery): http://www.1keydata.com/tw/sql/sql-subquery.html 
     - IN : http://www.1keydata.com/tw/sql/sqlin.html
