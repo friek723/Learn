@@ -27,6 +27,9 @@ PHP
 
     - isset() vs empty() vs is_null() : https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/
 
+    - require() v.s. include() v.s. require_once()  
+          http://stackoverflow.com/questions/2418473/difference-between-require-include-and-require-once
+          
     - Fatal error: Maximum function nesting level of ‘100’ reached  (while doing Laravel phpunit test)
         [solution] editing the Xdebug PHP extension settings in php.ini or xdebug.ini and add the following: xdebug.max_nesting_level=500. After making the change, restart your web server.
         https://piwik.org/faq/troubleshooting/faq_20014/
@@ -35,7 +38,7 @@ PHP
 
         https://code.tutsplus.com/tutorials/pdo-vs-mysqli-which-should-you-use--net-24059
         http://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo
-        
+
 
     - Traits : a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent classes living in different class hierarchies. 
               - http://php.net/manual/en/language.oop5.traits.php
