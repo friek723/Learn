@@ -206,6 +206,18 @@ Javascript
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
     
+    - window.onload vs $(document).ready() : http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+
+    - Event Bubbling : http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+      How to stop bubbling : https://www.w3schools.com/jquery/event_stoppropagation.asp
+                             https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
+
+
+    - JSON.stringify and JSON.parse : http://stackoverflow.com/questions/17785592/difference-between-json-stringify-and-json-parse
+       JSON.stringify() : convert a JavaScript object into a string
+       JSON.parse() : convert text into a JavaScript object
+
+
     - Get http query string values in JavaScript?  http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 
     - Check-for-null-undefined-or-blank-variables :　if(value){} 　http://stackoverflow.com/questions/5515310/is-there-a-standard-function-to-check-for-null-undefined-or-blank-variables-in

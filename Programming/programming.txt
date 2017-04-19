@@ -11,3 +11,13 @@ package manager :
                             # Node: NPM
                             # JS, CSS, HTML : Bower
                             # Java: Maven and Gradle
+
+
+[Design Patterns]
+    - https://www.tutorialspoint.com/design_pattern/index.htm
+    - https://github.com/kamranahmedse/design-patterns-for-humans
+    
+
+7 Acronyms Every Developer Should Know :  http://thefullstack.xyz/dry-yagni-kiss-tdd-soc-bdfu/
+
+

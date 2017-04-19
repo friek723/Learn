@@ -15,6 +15,9 @@ HTML
         http://stackoverflow.com/questions/20727910/what-is-escaped-unescaped-output
         https://www.w3schools.com/php/func_string_htmlentities.asp
         
+    - Canvas v.s. SVG : https://www.w3schools.com/html/html5_svg.asp
+                        http://stackoverflow.com/questions/5882716/html5-canvas-vs-svg-vs-div
+                             
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------

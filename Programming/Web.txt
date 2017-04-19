@@ -2,6 +2,11 @@ Web Technology :
 
     [Roadmap] !! https://github.com/kamranahmedse/developer-roadmap
 
+    - SEO : http://backlinko.com/google-ranking-factors
+            http://katemats.com/what-every-programmer-should-know-about-seo/
+            
+    - Make website fast : http://learntocodewith.me/posts/make-your-website-fast/
+
     - *** Google Developer : 
         https://developers.google.com/web/fundamentals/
         https://developers.google.com/web/
@@ -78,7 +83,13 @@ Web Technology :
               http://briian.com/5328/openid.html    
          
     - RESTful : http://rest.elkstein.org/
-
+                 
+                [POST v.s. PUT]
+                    https://ihower.tw/blog/archives/6483
+                    http://stackoverflow.com/questions/630453/put-vs-post-in-rest
+                    http://restcookbook.com/HTTP%20Methods/put-vs-post/
+                    
+ 
     - Sessions & Cookies
         ! http://www.tangowithdjango.com/book/chapters/cookie.html
         http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions

@@ -6,7 +6,9 @@ PHP
                  ?>
 
     - php.ini : where is it?   php -i | grep 'php.ini'
-    
+                               OR
+                               php --ini
+
     How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 14.04 : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
     
     Extension Management Tools - Pecl and Pear : http://www.openfoundry.org/tw/tech-column/8531-php-extension-management-tools-pecl-and-pear
@@ -24,6 +26,21 @@ PHP
              : Use the "use" keyword to Access variables from parent scope
 
     - isset() vs empty() vs is_null() : https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/
+
+    - Fatal error: Maximum function nesting level of ‘100’ reached  (while doing Laravel phpunit test)
+        [solution] editing the Xdebug PHP extension settings in php.ini or xdebug.ini and add the following: xdebug.max_nesting_level=500. After making the change, restart your web server.
+        https://piwik.org/faq/troubleshooting/faq_20014/
+    
+    - PDO vs. MySQLi : The core advantage of PDO over MySQLi is in its database driver support(database abstraction layer). At the time of this writing, PDO supports 12 different drivers, opposed to MySQLi, which supports MySQL only.
+
+        https://code.tutsplus.com/tutorials/pdo-vs-mysqli-which-should-you-use--net-24059
+        http://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo
+        
+
+    - Traits : a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent classes living in different class hierarchies. 
+              - http://php.net/manual/en/language.oop5.traits.php
+              - http://stackoverflow.com/questions/39466521/difference-between-trait-and-an-abstract-class-in-php
+
 
     - generator function & yield keyword  : http://php.net/manual/en/language.generators.syntax.php
 

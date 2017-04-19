@@ -15,6 +15,9 @@
 
 
 
+!!! http://highscalability.com/all-time-favorites/
+
+Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
 
 
 Database Normalization : https://www.thoughtco.com/database-normalization-basics-1019735
@@ -22,3 +25,7 @@ Database Normalization : https://www.thoughtco.com/database-normalization-basics
 
 [Scaling Web Server]
     - ! https://blog.hartleybrody.com/scale-load/
+    - https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application
+    
+[MemCache]
+    Install - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04
