@@ -1,4 +1,8 @@
 Javascript
+    [Tutorial]
+        ! http://javascript.info/
+
+
 
     [Babel] 
           - https://babeljs.io/
@@ -200,9 +204,18 @@ Javascript
     - (jQuery v.s. AngularJS) https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough
                                  http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background
                                  http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
-    - Closures in JavaScript : http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
-                               http://www.w3schools.com/js/js_function_closures.asp
-                            
+
+    - Closures in JavaScript : 
+        # A closure is a function having access to the parent scope, even after the parent function has closed.
+        # Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions 'remember' the environment in which they were created.
+
+        # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+        # http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
+        # http://www.w3schools.com/js/js_function_closures.asp
+        # !!! Why use? : https://howtonode.org/why-use-closure
+                        https://medium.com/written-in-code/practical-uses-for-closures-c65640ae7304
+                        https://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/
+
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
     

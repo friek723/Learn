@@ -34,7 +34,8 @@ SQL
                           See [note5] below
     
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
-    - JOIN : http://www.tutorialspoint.com/sql/sql-using-joins.htm
+    - JOIN : !!! https://www.codeproject.com/articles/33052/visual-representation-of-sql-joins
+             http://www.tutorialspoint.com/sql/sql-using-joins.htm
              http://www.w3schools.com/sql/sql_join_inner.asp
              [Syntax] SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name=table2.column_name;
              Join 的 WHERE 條件式位置 - see [note6]:  https://tlcheng.wordpress.com/2011/07/08/sql-join-的-where-條件式位置/ 

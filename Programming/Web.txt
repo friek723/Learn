@@ -181,6 +181,17 @@ Web server & App server
                 http://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
                 
                 [Path] !!! http://serverfault.com/questions/216252/how-to-configure-apache-sites-available-vs-httpd-conf
+                       !! Where to find : http://stackoverflow.com/questions/12202021/where-is-my-httpd-conf-file-located-apache
+                       !!! https://wiki.apache.org/httpd/DistrosDefaultLayout
+
+                    - httpd.conf v.s. apache2.conf : 
+                        # apache2.conf: the main Apache2 configuration file. Contains settings that are global to Apache2.
+                        # httpd.conf: historically the main Apache2 configuration file, named after the httpd daemon. The file can be used for user specific configuration options that globally effect Apache2.
+                        # httpd.conf is empty (or nonexistent) in some distributions. If an apache2.conf is present you should probably not edit this, but include your own httpd.conf from the apache2.conf. This is because apache2.conf may be overwritten by package updates. Your apache2.conf therefore should include this line. If it doesn't already, you can add it yourself: Include httpd.conf
+
+                        - https://serverfault.com/questions/430974/ubuntu-apache-httpd-conf-or-apache2-conf
+                        - https://superuser.com/questions/676328/should-i-use-httpd-conf-or-apache2-conf-for-apache-configuration
+                        - https://askubuntu.com/questions/652095/cant-find-httpd-conf
 
                     - "main" config : /etc/apache2/apache2.conf
                                       /etc/apache/apache2.conf
@@ -215,7 +226,9 @@ Web server & App server
                  OR 
                  sudo service apache2 restart 
 
-
+       Running Multiple Apache Instances : 
+          - https://wiki.apache.org/httpd/RunningMultipleApacheInstances
+          - https://serverfault.com/questions/397235/how-to-run-two-instances-of-apache-on-same-system-ubuntu
 
 
 
