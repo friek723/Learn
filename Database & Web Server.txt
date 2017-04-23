@@ -1,3 +1,18 @@
+[SQL vs NoSQL]
+    - !!! https://www.sitepoint.com/sql-vs-nosql-differences/
+          Projects where SQL is ideal:
+                #logical related discrete data requirements which can be identified up-front
+                #data integrity is essential
+                #standards-based proven technology with good developer experience and support.
+          Projects where NoSQL is ideal:
+                #unrelated, indeterminate or evolving data requirements
+                #simpler or looser project objectives, able to start coding immediately
+                #speed and scalability is imperative.
+    - !! http://www.informit.com/articles/article.aspx?p=2429465
+    - https://www.pluralsight.com/blog/software-development/relational-non-relational-databases
+
+
+
 [Scaling DB, MySQL Cluster]
     - https://www.mysql.com/products/cluster/scalability.html
     - https://www.digitalocean.com/community/tutorials/how-to-create-a-multi-node-mysql-cluster-on-ubuntu-16-04
