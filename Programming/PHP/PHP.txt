@@ -56,6 +56,10 @@ PHP
                 
                 log path :  Either /var/log/httpd/error_log Or /var/log/apache2/error.log
     
+                get_class() : get class name of object 
+                gettype() : Get the type of a variable
+
+                 
     Cron Jobs Lock (to avoid overlaps): http://abhinavsingh.com/how-to-use-locks-in-php-cron-jobs-to-avoid-cron-overlaps/
     
     [composer] Package Manager

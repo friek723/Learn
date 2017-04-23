@@ -1,7 +1,8 @@
 Javascript
     [Tutorial]
         ! http://javascript.info/
-
+          https://www.toptal.com/javascript/interview-questions
+          
 
 
     [Babel] 
@@ -158,6 +159,9 @@ Javascript
 
     [ES6] 
         let : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+              Variables declared by let have as their scope the block in which they are defined, as well as in any contained sub-blocks . In this way, let works very much like var. The main difference is that the scope of a var variable is the entire enclosing function:
+              [usage example] solve the problem when creating closures in loops (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
         const : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
         classes : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
         Template literals : 
@@ -205,21 +209,30 @@ Javascript
                                  http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background
                                  http://stackoverflow.com/questions/13151725/how-is-angularjs-different-from-jquery
 
+    - "this" : https://howtonode.org/what-is-this
+
     - Closures in JavaScript : 
         # A closure is a function having access to the parent scope, even after the parent function has closed.
         # Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions 'remember' the environment in which they were created.
+        # Use Cases : (1) Emulate private members/functions (class)
+                      (2) Using a closure as function factory instead of class objects for aysnc events like setTimeout()
 
-        # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+        # !!! https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
         # http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
         # http://www.w3schools.com/js/js_function_closures.asp
-        # !!! Why use? : https://howtonode.org/why-use-closure
-                        https://medium.com/written-in-code/practical-uses-for-closures-c65640ae7304
-                        https://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/
+        # !!! Why use? : !https://howtonode.org/why-use-closure
+                         !https://medium.com/written-in-code/practical-uses-for-closures-c65640ae7304
+                          https://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/
+                          http://jibbering.com/faq/notes/closures/
 
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
     
-    - window.onload vs $(document).ready() : http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+    - window.onload vs $(document).ready() : 
+      - http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+      $(function(){...}) is a shortcut for $(document).ready(function(){...});
+      - http://stackoverflow.com/questions/16242190/jquery-syntax-function-inside-parentheses-after-dollar-sign
+
 
     - Event Bubbling : http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
       How to stop bubbling : https://www.w3schools.com/jquery/event_stoppropagation.asp
