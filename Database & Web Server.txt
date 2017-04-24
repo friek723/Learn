@@ -35,7 +35,40 @@
 Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
 
 
-Database Normalization : https://www.thoughtco.com/database-normalization-basics-1019735
+Database Normalization : 
+   There are two goals of the normalization process: 
+   (1) eliminating "redundant" data (for example, storing the same data in more than one table) 
+   (2) ensuring data "dependencies" make sense (only storing related data in a table).
+
+   [WHY] https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/       
+       - to minimize duplicate data, 
+       - to minimize or avoid data modification issues
+       - to simplify queries. 
+
+    [HOW]
+        http://www.1keydata.com/database-normalization/
+        https://www.thoughtco.com/database-normalization-basics-1019735
+        http://www.studytonight.com/dbms/database-normalization.php
+        https://www.tutorialspoint.com/dbms/database_normalization.htm
+        !! https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/
+
+        [1NF] First Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-8-database-first-normal-form-explained-in-simple-english/
+            # Primary key uniquely identify each row, Eliminate duplicative columns
+            # Each column contains atomic values, not repeating groups of columns (When a value is atomic, the values cannot be further subdivided)
+
+        [2NF] Second Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-10-database-second-normal-form-explained-in-simple-english/
+            # The table is in 1st normal form
+            # All non-key attributes are fully functional dependent on the primary key (primary key maybe composite key).
+            
+        [3NF] Third Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-11-database-third-normal-form-explained-in-simple-english/
+            # A table is in 2nd normal form.
+            # A is functionally dependent on B, and B is functionally dependent on C. In this case, C is transitively dependent on A via B.
+              - It contains only columns that are non-transitively dependent on the primary key(There is no transitive functional dependency).
+              OR : 
+              - Every non-prime attribute of table must be dependent on primary key, or we can say that, there should not be the case that a non-prime attribute is determined by another non-prime attribute. 
+              OR : 
+              - To be non-transitively dependent, then, means that all the columns are dependent on the primary key (a criteria for 2nd normal form) and no other columns in the table.
+
 
 
 [Scaling Web Server]

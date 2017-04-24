@@ -17,7 +17,7 @@ Web Technology :
           http://www.django-rest-framework.org/topics/ajax-csrf-cors/
        
     - [security]  https://www.wordfence.com/learn/
-          - File Upload Vulnerabilities 
+          - File Upload Vulnerabilities : upload a malicious file directly which is then executed.(Ex : *.php)
               https://www.wordfence.com/learn/how-to-prevent-file-upload-vulnerabilities/
 
           - XSS : Cross Site Scripting Attacks : Cross-Site Scripting (abbreviated as XSS) is a class of security vulnerability whereby an attacker manages to use a website to deliver a potentially malicious JavaScript payload to an end user.
@@ -31,7 +31,7 @@ Web Technology :
 
           - Cross-site request forgery (CSRF)
               https://en.wikipedia.org/wiki/Cross-site_request_forgery
-              https://github.com/pillarjs/understanding-csrf)
+              https://github.com/pillarjs/understanding-csrf
               https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
               http://laravel.com/docs/5.1/routing#csrf-protection
               http://www.django-rest-framework.org/topics/ajax-csrf-cors/

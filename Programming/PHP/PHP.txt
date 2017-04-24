@@ -29,7 +29,11 @@ PHP
 
     - require() v.s. include() v.s. require_once()  
           http://stackoverflow.com/questions/2418473/difference-between-require-include-and-require-once
-          
+        
+    - compact() v.s. extract()
+      compact() : compact() looks for a variable with that name in the current symbol table and adds it to the output array such that the variable name becomes the key and the contents of the variable become the value. (extract() does the opposite.)
+
+
     - Fatal error: Maximum function nesting level of ‘100’ reached  (while doing Laravel phpunit test)
         [solution] editing the Xdebug PHP extension settings in php.ini or xdebug.ini and add the following: xdebug.max_nesting_level=500. After making the change, restart your web server.
         https://piwik.org/faq/troubleshooting/faq_20014/
