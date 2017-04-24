@@ -35,17 +35,18 @@
 Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
 
 
-Database Normalization : 
+[Database Normalization] 
    There are two goals of the normalization process: 
    (1) eliminating "redundant" data (for example, storing the same data in more than one table) 
    (2) ensuring data "dependencies" make sense (only storing related data in a table).
 
+   However if Normalization goes too far, it will impact performace.
    [WHY] https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/       
        - to minimize duplicate data, 
        - to minimize or avoid data modification issues
        - to simplify queries. 
 
-    [HOW]
+   [HOW]
         http://www.1keydata.com/database-normalization/
         https://www.thoughtco.com/database-normalization-basics-1019735
         http://www.studytonight.com/dbms/database-normalization.php
@@ -75,5 +76,15 @@ Database Normalization :
     - ! https://blog.hartleybrody.com/scale-load/
     - https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application
     
-[MemCache]
-    Install - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04
+
+
+[MySQL]
+    Backup/Restore - 
+             #https://dev.mysql.com/doc/refman/5.7/en/backup-types.html
+             #http://mysqlserverteam.com/creating-and-restoring-database-backups-with-mysqldump-and-mysql-enterprise-backup-part-1-of-2/
+             #https://www.electrictoolbox.com/mysqldump-schema-only/
+
+
+
+
+
