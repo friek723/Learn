@@ -30,10 +30,6 @@
 
 
 
-!!! http://highscalability.com/all-time-favorites/
-
-Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
-
 
 [Database Normalization] 
    There are two goals of the normalization process: 
@@ -78,12 +74,13 @@ Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
     
 
 
-[MySQL]
-    Backup/Restore - 
-             #https://dev.mysql.com/doc/refman/5.7/en/backup-types.html
-             #http://mysqlserverteam.com/creating-and-restoring-database-backups-with-mysqldump-and-mysql-enterprise-backup-part-1-of-2/
-             #https://www.electrictoolbox.com/mysqldump-schema-only/
 
+
+!!! http://highscalability.com/all-time-favorites/
+
+Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
+
+Visualize Database Schemas (tool) :  http://www.codediesel.com/data/5-tools-to-visualize-database-schemas/
 
 
 

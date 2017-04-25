@@ -85,6 +85,36 @@ SQL
 
 
 
+[MySQL]
+    Backup/Restore - 
+             #https://dev.mysql.com/doc/refman/5.7/en/backup-types.html
+             #http://mysqlserverteam.com/creating-and-restoring-database-backups-with-mysqldump-and-mysql-enterprise-backup-part-1-of-2/
+             #https://www.electrictoolbox.com/mysqldump-schema-only/
+    
+    [Allow Connect From Remote]
+        # AWS and Linux firewall allow port 3306  
+          check port listening command : netstat -tlpn
+                                         You should see "0.0.0.0:3306" in "Local Address" column 
+                                         If you see "127.0.0.1:3306", only local is allowed (then go to step 2 : mysql config level)
+
+        # mysql config level   :   Edit bind-address = 0.0.0.0 in my.cnf
+           https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
+        # mysql user level
+           method 1 : 
+               http://www.thegeekstuff.com/2010/08/allow-mysql-client-connection
+               http://fecbob.pixnet.net/blog/post/39089345-%E6%8E%88%E6%AC%8A%E8%A8%AA%E5%95%8Fmysql-server%28%E9%81%A0%E7%AB%AF%E9%80%A3%E7%B7%9Amysql%E6%8F%90%E7%A4%BAhost-is-not-
+           method 2 : 
+                     (1) login via phpMyAdmin
+                     (2) open DB 'mysql',  open table 'user'
+                     (3) Find your user name, modify column 'host' to %  (allow all ip)
+
+    [Restart]
+        sudo /etc/init.d/mysql restart 
+        OR
+        sudo service mysql restart 
+        https://askubuntu.com/questions/82374/how-do-i-start-stop-mysql-server
+
+
 
 
 -----------------------------------------------------------------------------------------

@@ -1,5 +1,17 @@
 Web Technology : 
 
+
+    [HTTP2] : https://blog.stackpath.com/glossary/http2/
+              https://http2.github.io/faq/#what-are-the-key-differences-to-http1x
+              https://simular.co/knowledge/site-build/68-about-http2-and-http11.html
+              Verify HTTP/2.0 Support : https://tools.keycdn.com/http2-test
+              How to enable on Apache : 
+                  https://geekflare.com/http2-implementation-apache-nginx/
+                  https://blog.othree.net/log/2015/10/19/apache2-http2/
+                  https://www.rosehosting.com/blog/how-to-set-up-apache-with-http2-support-on-ubuntu-16-04/
+                  https://www.dadcomputerclub.com/ubuntu-14-04-3-apache-http-2-web-server-setup/
+
+
     [Roadmap] !! https://github.com/kamranahmedse/developer-roadmap
 
     - SEO : http://backlinko.com/google-ranking-factors
@@ -104,13 +116,38 @@ Web Technology :
         http://singlepageappbook.com/
              
 
+    [Performance]
+        - General : !! https://varvy.com/pagespeed/
+                    !! https://varvy.com/performance/
 
+        - How a webpage is loaded and displayed : https://varvy.com/pagespeed/display.html
+          html --> download (css + js + image) --> render html + css
 
+        - Connection: "Keep-Alive" (HTTP header)   (TCP slow start)
+          - How to turn on : webserver config or .htaccess
+          - ! https://varvy.com/pagespeed/keep-alive.html
+          - https://varvy.com/pagespeed/slow-start.html
+          - https://www.maxcdn.com/one/visual-glossary/tcp-slow-start/
 
+        - Cache-Control: max-age=2592000, public (HTTP header)
+          - How to turn on : webserver config or .htaccess  
+          - ! https://varvy.com/pagespeed/cache-control.html
+          - https://varvy.com/pagespeed/leverage-browser-caching.html
+          - http://dev.mobify.com/blog/beginners-guide-to-http-cache-headers/
+          - https://varvy.com/performance/application-cache.html
 
+        - Gzip compression
+          - How to turn on : webserver config or .htaccess  
+          - ! https://varvy.com/pagespeed/enable-compression.html
 
-
-
+        - Critical rendering path : https://varvy.com/pagespeed/critical-render-path.html
+                                    https://varvy.com/pagespeed/first-view.html
+          Defer loading javascript : https://varvy.com/pagespeed/defer-loading-javascript.html
+                                     https://varvy.com/pagespeed/render-blocking.html
+          Defer loading images : https://varvy.com/pagespeed/defer-images.html
+          Eliminate render blocking css : https://varvy.com/pagespeed/render-blocking-css.html
+                                          https://varvy.com/pagespeed/critical-css-calls.html
+                                          https://varvy.com/performance/cssom.html
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
@@ -172,8 +209,23 @@ Web server & App server
                     http://stackoverflow.com/questions/4540669/nginx-and-apache
                     http://readystate4.com/2012/07/08/nginx-the-non-blocking-model-and-why-apache-sucks/
                     http://blog.martinfjordvald.com/2011/02/nginx-primer-2-from-apache-to-nginx/
-                
+
+ - .htaccess : redirects, enabling compression, rewriting urls, leveraging browser caching...etc
+               The file provides a way to do things to your webserver that would normally be done in configuration files of your webserver. 
+      - !! http://www.htaccess-guide.com/
+           http://www.htaccess-guide.com/preventing-access-to-your-php-includes-files/
+           http://www.htaccess-guide.com/disable-directory-listings/
+           http://www.htaccess-guide.com/redirects/
+      - https://varvy.com/pagespeed/htaccess.html
+      - http://www.askapache.com/htaccess/
+      - https://www.digitalocean.com/community/tutorials/how-to-use-the-htaccess-file
+      - http://www.freewebmasterhelp.com/tutorials/htaccess/
+        http://www.freewebmasterhelp.com/tutorials/htaccess/2
+
+
  - Apache 
+      document : https://httpd.apache.org/docs/
+
        config : http://linux.vbird.org/linux_server/0360apache.php#www_basic_pkg
                 https://help.ubuntu.com/lts/serverguide/httpd.html#http-configuration
                 http://stackoverflow.com/questions/22519159/how-does-apache-know-which-file-to-use-in-etc-httpd-conf-d
@@ -219,20 +271,27 @@ Web server & App server
                    - (tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
                    - https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
                    
-       log : /var/log/httpd/error_log 
+      log : /var/log/httpd/error_log 
              /var/log/apache2/error.log    
                 
-       restart : service httpd restart
+      restart : service httpd restart
                  OR 
                  sudo service apache2 restart 
 
-       Running Multiple Apache Instances : 
+      Running Multiple Apache Instances : 
           - https://wiki.apache.org/httpd/RunningMultipleApacheInstances
           - https://serverfault.com/questions/397235/how-to-run-two-instances-of-apache-on-same-system-ubuntu
 
+      Check setting (which MPM used?): "apachectl -V"
 
-
-
+      Which Apache MPM (Multi-Processing Modules) to use?
+          - How to config : http://dasunhegoda.com/configure-apache-multi-processing-modules-mpms/531/
+          - Which MPM used? : "apachectl -V"
+          - doc : http://httpd.apache.org/docs/2.4/mpm.html
+          - ! https://serverfault.com/questions/383526/how-do-i-select-which-apache-mpm-to-use
+          - https://tecadmin.net/apache-mpm-prefork-and-worker-and-event/
+          - https://amigotechnotes.wordpress.com/2014/02/17/how-multi-core-processors-accelerate-your-lamp-applications/
+          - http://stackoverflow.com/questions/1623914/what-is-thread-safe-or-non-thread-safe-in-php
 
 
 

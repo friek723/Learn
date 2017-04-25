@@ -22,4 +22,9 @@ package manager :
 
 7 Acronyms Every Developer Should Know :  http://thefullstack.xyz/dry-yagni-kiss-tdd-soc-bdfu/
 
+[Queue]  http://queues.io/
+         https://github.com/resque/resque
+         http://cakeresque.kamisama.me/
+         
+
 
