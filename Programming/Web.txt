@@ -119,6 +119,10 @@ Web Technology :
     [Performance]
         - General : !! https://varvy.com/pagespeed/
                     !! https://varvy.com/performance/
+                    https://www.keycdn.com/blog/website-performance-optimization/
+
+        - Website Speed Test : https://tools.keycdn.com/speed
+                               https://tools.keycdn.com/ping
 
         - How a webpage is loaded and displayed : https://varvy.com/pagespeed/display.html
           html --> download (css + js + image) --> render html + css
@@ -132,6 +136,8 @@ Web Technology :
         - Cache-Control: max-age=2592000, public (HTTP header)
           - How to turn on : webserver config or .htaccess  
           - ! https://varvy.com/pagespeed/cache-control.html
+          - !! https://www.keycdn.com/blog/http-cache-headers/
+               https://www.keycdn.com/support/cache-control/
           - https://varvy.com/pagespeed/leverage-browser-caching.html
           - http://dev.mobify.com/blog/beginners-guide-to-http-cache-headers/
           - https://varvy.com/performance/application-cache.html
@@ -148,6 +154,8 @@ Web Technology :
           Eliminate render blocking css : https://varvy.com/pagespeed/render-blocking-css.html
                                           https://varvy.com/pagespeed/critical-css-calls.html
                                           https://varvy.com/performance/cssom.html
+
+
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
@@ -269,6 +277,7 @@ Web server & App server
                 
                 [How to use https] 
                    - (tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
+                   - Free-ssl-certificates : https://www.keycdn.com/blog/free-ssl-certificates/
                    - https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
                    
       log : /var/log/httpd/error_log 
