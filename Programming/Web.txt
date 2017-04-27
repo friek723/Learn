@@ -1,6 +1,12 @@
 Web Technology : 
 
 
+    How Browser works : http://taligarsiel.com/Projects/howbrowserswork1.htm
+                        http://taligarsiel.com/Projects/howbrowserswork1.htm#The_order_of_processing_scripts_and_style_sheets
+
+                        [How page render] https://friendlybit.com/css/rendering-a-web-page-step-by-step/
+                                          STEPS : Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
+
     [HTTP2] : https://blog.stackpath.com/glossary/http2/
               https://http2.github.io/faq/#what-are-the-key-differences-to-http1x
               https://simular.co/knowledge/site-build/68-about-http2-and-http11.html
@@ -119,13 +125,17 @@ Web Technology :
     [Performance]
         - General : !! https://varvy.com/pagespeed/
                     !! https://varvy.com/performance/
-                    https://www.keycdn.com/blog/website-performance-optimization/
+                    !!! https://www.nginx.com/blog/10-tips-for-10x-application-performance/
+                    !!! https://www.keycdn.com/blog/website-performance-optimization/
+                    https://developers.google.com/web/fundamentals/performance/
+                    https://www.keycdn.com/blog/web-performance-advice/
 
         - Website Speed Test : https://tools.keycdn.com/speed
                                https://tools.keycdn.com/ping
 
         - How a webpage is loaded and displayed : https://varvy.com/pagespeed/display.html
-          html --> download (css + js + image) --> render html + css
+                                                  https://friendlybit.com/css/rendering-a-web-page-step-by-step/
+          Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
 
         - Connection: "Keep-Alive" (HTTP header)   (TCP slow start)
           - How to turn on : webserver config or .htaccess
@@ -145,16 +155,19 @@ Web Technology :
         - Gzip compression
           - How to turn on : webserver config or .htaccess  
           - ! https://varvy.com/pagespeed/enable-compression.html
+          - Check : https://checkgzipcompression.com/
 
         - Critical rendering path : https://varvy.com/pagespeed/critical-render-path.html
                                     https://varvy.com/pagespeed/first-view.html
+                                    !! https://developers.google.com/web/fundamentals/performance/critical-rendering-path/
           Defer loading javascript : https://varvy.com/pagespeed/defer-loading-javascript.html
                                      https://varvy.com/pagespeed/render-blocking.html
           Defer loading images : https://varvy.com/pagespeed/defer-images.html
           Eliminate render blocking css : https://varvy.com/pagespeed/render-blocking-css.html
                                           https://varvy.com/pagespeed/critical-css-calls.html
                                           https://varvy.com/performance/cssom.html
-
+                                          https://varvy.com/pagespeed/optimize-css-delivery.html
+                                          https://varvy.com/pagespeed/style-script-order.html
 
 
 ----------------------------------------------------------------------------------------------
@@ -275,9 +288,10 @@ Web server & App server
                     - ports (Listen directives) : /etc/apache2/ports.conf
                     - mods : /etc/apache2/mods-available
                 
-                [How to use https] 
-                   - (tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
-                   - Free-ssl-certificates : https://www.keycdn.com/blog/free-ssl-certificates/
+                [HTTPS] 
+                   - !(tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
+                   - !! Free-ssl-certificates : https://www.keycdn.com/blog/free-ssl-certificates/
+                                                https://www.keycdn.com/blog/http-to-https/
                    - https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
                    
       log : /var/log/httpd/error_log 

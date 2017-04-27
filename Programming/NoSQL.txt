@@ -5,4 +5,52 @@ LIST OF NOSQL DATABASES : http://nosql-database.org/
 [MemCache]
     Install - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04
 
-    
+
+
+[Mongo DB]
+	- Install on Ubuntu : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+	- Quick trial : http://try.mongodb.org/
+	- !Introduction : http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/
+	            http://www.tutorialspoint.com/mongodb/
+	- Config : /etc/mongodb.conf
+	- Bind to all ip : Add "bind_ip = 0.0.0.0" to /etc/mongodb.conf
+	             http://stackoverflow.com/questions/4961177/how-to-listen-only-to-localhost-on-mongodb
+	- GUI tool :   http://docs.mongodb.org/ecosystem/tools/administration-interfaces/
+	         http://blog.mongodirector.com/which-is-the-best-mongodb-gui/
+	         (tried this) http://robomongo.org/
+	         http://www.mongovue.com/
+	- Find the latest three records (for command line):  db.collection_test.find().sort({time: -1}).limit(3)
+	                      (for python code) : collection.find().sort("time", -1).limit(3):
+
+	- php : define('connectionString', 'mongodb://domain:abc123@10.1.37.154:27017');  
+	     - (legacy) http://php.net/manual/en/book.mongo.php   (See 'Core Classes')
+	     - http://php.net/manual/en/set.mongodb.php
+	  http://php.net/manual/en/mongo.sqltomongo.php  (SQL to Mongo Mapping Chart)
+	  
+	- mongo console (type 'mongo' on linux):    
+	           mongo  (remote -->  mongo 10.1.37.154:27017/admin -u user -p pass) 
+	           use db_test
+	             db.collection_test.find()
+
+	-[convert all fields to string] http://stackoverflow.com/questions/4973095/mongodb-how-to-change-the-type-of-a-field                 
+	                             db.getCollection('collection_tmp').find({field_name : {$exists : true}}).forEach( function(obj) { obj.field_name = ""+obj.field_name; db.collection_tmp.save(obj); } )
+
+	- Fast paging : http://blog.mongodirector.com/fast-paging-with-mongodb/
+
+	- Convert MySQL Queries to MongoDB Syntax : http://www.querymongo.com
+	                                        http://docs.mongodb.org/manual/reference/sql-comparison/  (SQL to Mongo Mapping Chart)
+	                                        http://blog.serverdensity.com/wp-content/uploads/2010/06/sql-to-mongodb.pdf
+	                                        
+	- aggregate & group by : Select manufacturer, model, createDate, count(poNumber) From list Where location='US' Group By poNumber
+														 -->    db.list.aggregate( 
+																		    { 
+																		        $match : {location : "US"} 
+																		    }, 
+																		    { 
+																		        $group : {_id : "$poNumber", 
+																		         manufacturer: {$push: "$manufacturer"}, 
+																		         model: {$push: "$model"}, 
+																		         createDate:{$push: "$createDate"}, 
+																		         total : { $sum : 1 }} 
+																		    } 
+																		)
