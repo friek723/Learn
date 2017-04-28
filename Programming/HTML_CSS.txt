@@ -27,6 +27,10 @@ HTML
 
 
 CSS 
+    [Bootstrap] http://getbootstrap.com/components/
+
+    [iocns] http://fontawesome.io/icons/
+    
     - selector (element, id, class): http://www.w3schools.com/css/css_selectors.asp
                                      http://www.1keydata.com/css-tutorial/tw/class-id.php
     - style : http://www.w3schools.com/html/html_css.asp

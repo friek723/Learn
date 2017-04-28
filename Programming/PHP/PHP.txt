@@ -25,6 +25,12 @@ PHP
           http://stackoverflow.com/questions/15042197/access-variables-from-parent-scope-in-anonymous-php-function
              : Use the "use" keyword to Access variables from parent scope
 
+    - serialize()  unserialize() __sleep()  __wakeup()
+        - http://stackoverflow.com/questions/11630341/use-of-php-magic-methods-sleep-and-wakeup
+        - http://stackoverflow.com/questions/13148917/how-can-i-store-objects-in-a-session-in-php
+        - http://php.net/manual/en/language.oop5.serialization.php
+            Using serialize to save an object will save all variables in an object. "The methods in an object will not be saved".
+
     - isset() vs empty() vs is_null() : https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/
 
     - require() v.s. include() v.s. require_once()  

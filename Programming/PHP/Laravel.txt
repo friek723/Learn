@@ -6,6 +6,9 @@
 
 - CSRF Protection(cross-site request forgeries) : http://laravel.com/docs/5.1/routing#csrf-protection
 
+- Shopping Cart : (series 1 ~ 16) https://www.youtube.com/watch?v=4J939dDUH4M
+
+
 - !! Examples (with AngularJs) : http://learninglaravel.net/topics/angularjs
                                  https://www.codetutorial.io/tutorial/laravel-5/
 - Video course : https://laracasts.com/series/laravel-5-fundamentals
@@ -84,7 +87,7 @@
                   Otherwise there is error doing JWT token auth
 
 [Model]
-    Mass assignment : specify either a fillable or guarded attribute on the model, as all Eloquent models protect against mass-assignment.
+    Mass assignment : specify either a "fillable" or "guarded" attribute on the model, as all Eloquent models protect against mass-assignment.
         http://stackoverflow.com/questions/22279435/what-does-mass-assignment-mean-in-laravel
         https://laravel.com/docs/5.2/eloquent#mass-assignment
 
