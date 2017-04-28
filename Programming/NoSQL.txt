@@ -11,7 +11,7 @@ LIST OF NOSQL DATABASES : http://nosql-database.org/
 	- Install on Ubuntu : http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 	- Quick trial : http://try.mongodb.org/
 	- !Introduction : http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/
-	            http://www.tutorialspoint.com/mongodb/
+	                  http://www.tutorialspoint.com/mongodb/
 	- Config : /etc/mongodb.conf
 	- Bind to all ip : Add "bind_ip = 0.0.0.0" to /etc/mongodb.conf
 	             http://stackoverflow.com/questions/4961177/how-to-listen-only-to-localhost-on-mongodb

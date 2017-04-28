@@ -26,5 +26,6 @@ package manager :
          https://github.com/resque/resque
          http://cakeresque.kamisama.me/
          
-
-
+[Homebrew]
+    What is Homebrew for OS X? : https://www.quora.com/What-is-Homebrew-for-OS-X
+    (Like apt-get for Ubuntu)
