@@ -1,0 +1,14 @@
+- PATH 
+    Add shell path to Mac OSx : https://coolestguidesontheplanet.com/add-shell-path-osx/
+                                Ex : echo 'export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"' >> ~/.bash_profile
+
+
+- How to take a screenshot : https://support.apple.com/en-us/HT201361
+                             # Entire screen : 
+                                 1. Shift-Command-3    
+                                 2. .png file on your desktop
+                             # Portion of your screen :  
+                                 1. Shift-Command-4  
+                                 2. drag to select an area  
+                                 3. png file on your desktop
+

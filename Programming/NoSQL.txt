@@ -13,8 +13,13 @@ LIST OF NOSQL DATABASES : http://nosql-database.org/
 	- !Introduction : http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/
 	                  http://www.tutorialspoint.com/mongodb/
 	- Config : /etc/mongodb.conf
-	- Bind to all ip : Add "bind_ip = 0.0.0.0" to /etc/mongodb.conf
-	             http://stackoverflow.com/questions/4961177/how-to-listen-only-to-localhost-on-mongodb
+	- Bind to all ip : 
+	                Add "bind_ip = 0.0.0.0" to /etc/mongod.conf
+	                http://stackoverflow.com/questions/4961177/how-to-listen-only-to-localhost-on-mongodb
+                 OR (update 2017/5/1)
+                    sudo vi /etc/mongod.conf    (modify :  bindIp: 0.0.0.0)
+                    sudo service mongod restart
+
 	- GUI tool :   http://docs.mongodb.org/ecosystem/tools/administration-interfaces/
 	         http://blog.mongodirector.com/which-is-the-best-mongodb-gui/
 	         (tried this) http://robomongo.org/
