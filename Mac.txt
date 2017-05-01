@@ -12,3 +12,38 @@
                                  2. drag to select an area  
                                  3. png file on your desktop
 
+[Install]
+    - mongo-php-driver on Mac OS X : 
+        - Install PEAR and PECL on Mac OS X : https://jason.pureconcepts.net/2012/10/install-pear-pecl-mac-os-x/
+
+        - Installing AutoConf to fix ERROR "phpize failed" : 
+           https://gist.github.com/anunay/7698181
+           ("phpize failed" is the erorr when try to install php-mongo-driver : sudo pecl install mongodb)
+
+        - Install mongo-php-driver : 
+          https://github.com/mongodb/mongo-php-driver/issues/188
+          http://php.net/manual/en/mongodb.installation.pecl.php
+          [steps]
+              [??? May not needed : Because this didn't work until I install with pecl] 
+                  http://php.net/manual/en/mongodb.installation.homebrew.php
+                  "brew install php70-mongodb"    (depends on the local php version)
+                  
+              sudo brew install openssl
+              export LDFLAGS=-L/usr/local/opt/openssl/lib
+              export CPPFLAGS=-I/usr/local/opt/openssl/include
+              pecl download mongodb
+		          tar zxvf mongodb*.tgz
+			        cd mongodb*
+			        phpize
+			        ./configure --with-openssl-dir=/usr/local/opt/openssl
+			        make
+			        sudo make install          
+              After install : 
+	               vi /usr/local/etc/php/7.0/conf.d/ext-mongodb.ini   (find in phpinfo())
+	               delete : 
+	                   extension="/usr/local/opt/php70-mongodb/mongodb.so"
+	               add : 
+	                   extension="/usr/local/Cellar/php70/7.0.18_10/lib/php/extensions/no-debug-non-zts-20151012/mongodb.so"
+
+
+
