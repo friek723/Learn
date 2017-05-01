@@ -299,7 +299,7 @@ Web server & App server
                 
       restart : service httpd restart
                  OR 
-                 sudo service apache2 restart 
+                sudo service apache2 restart 
 
       Running Multiple Apache Instances : 
           - https://wiki.apache.org/httpd/RunningMultipleApacheInstances
