@@ -112,12 +112,38 @@ SQL
         sudo /etc/init.d/mysql restart 
         OR
         sudo service mysql restart  (use this?)
+        OR 
+        sudo systemctl restart mysql
+
         https://askubuntu.com/questions/82374/how-do-i-start-stop-mysql-server
 
     [Reset your root password]
-        http://www.codero.com/knowledge-base/content/33/296/en/how-to-reset-your-root-mysql-password.html
-        https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password
-        
+
+        [steps] sudo service mysql stop
+                sudo service mysql start --skip-grant-tables
+                (OR : sudo vi /etc/mysql/my.cnf
+                      search for [mysqld] add "skip-grant-tables" below
+                      sudo service mysql restart
+                )
+                sudo mysql     OR     sudo mysql -u root
+                (Once logged in, you should see the following prompt: mysql>)
+                mysql> use mysql;
+                mysql> UPDATE user SET password=PASSWORD("NEW_PASSWORD") WHERE User='root';
+                mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+                mysql> flush privileges;
+                mysql> SELECT * FROM user;
+                mysql> quit
+                sudo service mysql restart
+
+        - ! http://www.codero.com/knowledge-base/content/33/296/en/how-to-reset-your-root-mysql-password.html
+        - https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password
+        - https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password
+
+        [If installed without password]  plugin : auth_socket v.s. mysql_native_password
+            If you install 5.7 and don’t provide a password to the root user, it will use the auth_socket plugin. That plugin doesn’t care and doesn’t need a password. It just checks if the user is connecting using a UNIX socket and then compares the username.
+            If we want to configure a password, we need to change the plugin and set the password at the same time
+            See : https://www.percona.com/blog/2016/03/16/change-user-password-in-mysql-5-7-with-plugin-auth_socket/
+
 
 
 -----------------------------------------------------------------------------------------
