@@ -166,19 +166,31 @@
     - 404 Not Found (all http request got error) : 
         (1) It's all about ".htaccess" and "mod_rewrite", there is a default .htaccess under Laravel project/public/.
         (2) The API URL is not correct
-        solution 1: vi "/etc/apache2/apache2.conf" ("AllowOverride" None ==> All)   
+        solution 1: 
+                    [step 1]
+                        vi "/etc/apache2/apache2.conf" ("AllowOverride" None ==> All)   
                                                 <Directory /var/www/>
                                                         AllowOverride All
                                                 </Directory>
+                    [step 2] activate mod_rewrite
+                         sudo a2enmod rewrite
+                         sudo service apache2 restart
+
                     - http://stackoverflow.com/questions/21458080/the-requested-url-projectname-users-was-not-found-on-this-server-laravel?answertab=votes#tab-top
                     - https://laravel.io/forum/06-11-2014-not-found-but-route-exists
 
-        solution 2: vi "/etc/apache2/sites-available/000-default.conf"
-                     Add :<Directory /var/www/html>
-                            Options Indexes FollowSymLinks MultiViews
-                            AllowOverride All
-                            Order allow,deny
-                            allow from all
-                          </Directory>
-                    - https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04     
+        solution 2 (!!Better):
+                    [step 1] 
+                     vi "/etc/apache2/sites-available/000-default.conf"
+                     Add :   <Directory /var/www/html>
+                               Options Indexes FollowSymLinks MultiViews
+                               AllowOverride All
+                               Order allow,deny
+                               allow from all
+                             </Directory>
+                    [step 2] activate mod_rewrite
+                         sudo a2enmod rewrite
+                         sudo service apache2 restart
+
+                    - !!! https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04     
                     - https://www.digitalocean.com/community/tutorials/how-to-use-the-htaccess-file
