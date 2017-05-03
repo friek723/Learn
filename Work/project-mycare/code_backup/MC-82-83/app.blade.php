@@ -128,7 +128,7 @@ body {
     position: fixed;
     right:0;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -140,6 +140,14 @@ body {
     /*margin-right: -220px;*/
     width: 80%;
 }
+
+
+#topbar-right {
+  position: absolute;
+  top:10%;
+  right: 10%;
+}
+
 
 /*-------------------------------*/
 /*     Sidebar nav styles        */
@@ -363,6 +371,8 @@ body {
   -webkit-transition: all .35s ease-in-out;
 }
 
+
+
 </style>
 
 
@@ -433,7 +443,7 @@ body {
         <div id="page-content-wrapper" >
 
             <!-- Top Menu -->
-            <nav class="navbar navbar-default navbar-static-top"  >
+            <nav class="navbar navbar-default navbar-static-top" >
                 
                     <div class="navbar-header" >
 
@@ -460,14 +470,16 @@ body {
                         </a>
                     </div>
 
-                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <div class="" id="app-navbar-collapse" >
                         <!-- Left Side Of Navbar -->
-                        <ul class="nav navbar-nav">
+                        <!--
+                        <ul class="nav navbar-nav" style="background-color:blue">
                             &nbsp;
                         </ul>
+                        -->
 
                         <!-- Right Side Of Navbar -->
-                        <ul class="nav navbar-nav navbar-right" style="display: inline">
+                        <ul class="nav navbar-nav" id ="topbar-right" >
                             <!-- Authentication Links -->
                             @if (Auth::guest())
                                 <li><a href="{{ route('login') }}">Login</a></li>
