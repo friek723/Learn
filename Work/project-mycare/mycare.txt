@@ -1,1 +1,9 @@
-Mac mongo DB connection error 500 : valet restart
+- Mac mongo DB connection error 500 : valet restart
+
+
+
+[side menu]
+    - http://bootsnipp.com/snippets/featured/fancy-sidebar-navigation
+    - https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm
+      https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_food_blog&stacked=h
+      

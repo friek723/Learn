@@ -28,7 +28,7 @@
                   http://php.net/manual/en/mongodb.installation.homebrew.php
                   "brew install php70-mongodb"    (depends on the local php version)
                   
-              sudo brew install openssl
+              brew install openssl
               export LDFLAGS=-L/usr/local/opt/openssl/lib
               export CPPFLAGS=-I/usr/local/opt/openssl/include
               pecl download mongodb
@@ -41,8 +41,10 @@
               After install : 
 	               vi /usr/local/etc/php/7.0/conf.d/ext-mongodb.ini   (find in phpinfo())
 	               delete : 
+                     [mongodb]
 	                   extension="/usr/local/opt/php70-mongodb/mongodb.so"
 	               add : 
+                     [mongodb]
 	                   extension="/usr/local/Cellar/php70/7.0.18_10/lib/php/extensions/no-debug-non-zts-20151012/mongodb.so"
 
 
