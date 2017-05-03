@@ -87,7 +87,7 @@ body {
 /*-------------------------------*/
 
 #app {
-    padding-left: 0;
+    /*padding-left: 0;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -95,22 +95,24 @@ body {
 }
 
 #app.toggled {
-    padding-left: 220px;
+    /*padding-left: 220px;*/
 }
 
 #sidebar-wrapper {
     z-index: 1000;
-    left: 220px;
+    /*left: 220px;*/
     width: 0;
     height: 100%;
-    margin-left: -220px;
+    /*margin-left: -220px;*/
     overflow-y: auto;
     overflow-x: hidden;
     background: #1a1a1a;
+    
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    
 }
 
 #sidebar-wrapper::-webkit-scrollbar {
@@ -118,17 +120,25 @@ body {
 }
 
 #app.toggled #sidebar-wrapper {
-    width: 220px;
+    /*width: 220px;*/
+    width: 20%;
 }
 
 #page-content-wrapper {
+    position: fixed;
+    right:0;
     width: 100%;
     height: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #app.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -220px;
+    
+    /*margin-right: -220px;*/
+    width: 80%;
 }
 
 /*-------------------------------*/
@@ -138,7 +148,6 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 220px;
     margin: 0;
     padding: 0;
     list-style: none;
