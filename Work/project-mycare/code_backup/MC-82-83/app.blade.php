@@ -626,6 +626,8 @@ body {
     <script> 
     $(document).ready(function(e) {
         $(".alert-success").fadeOut(5000);
+
+        $('[data-toggle="tooltip"]').tooltip()
     });
     $(function() { $('#froala-editor').froalaEditor({
             toolbarInline: false,
