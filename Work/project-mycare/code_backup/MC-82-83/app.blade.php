@@ -106,7 +106,7 @@ body {
     /*margin-left: -220px;*/
     overflow-y: auto;
     overflow-x: hidden;
-    background: #1a1a1a;
+    background: #2f4050;
     
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -407,7 +407,7 @@ body {
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" >
             <ul class=" sidebar-nav">  <!-- remove class nav ? -->
                 <li class="sidebar-brand">
-                    <a href="{{ url('/') }}">
+                    <a href="{{ url('/') }}"  style="background-color : #263238;">
                         {{ config('app.name', 'myCare') }}
                     </a>
                 </li>
@@ -494,7 +494,7 @@ body {
                     <div class="" id="app-navbar-collapse" >
                         <!-- Left Side Of Navbar -->
                         <!--
-                        <ul class="nav navbar-nav" style="background-color:blue">
+                        <ul class="nav navbar-nav" >
                             &nbsp;
                         </ul>
                         -->
