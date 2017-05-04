@@ -128,7 +128,7 @@ body {
     position: fixed;
     right:0;
     width: 80%;
-    /*height: 100%;*/
+    height: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -146,8 +146,14 @@ body {
 /*     Topbar nav styles        */
 /*-------------------------------*/
 
+#topbar-wrapper {
+  display: block;
+  height : 80px;  
+}
+
 #topbar-right {
   position: absolute;
+  
   top:10%;
   right: 10%;
 }
@@ -401,8 +407,8 @@ body {
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" >
             <ul class=" sidebar-nav">  <!-- remove class nav ? -->
                 <li class="sidebar-brand">
-                    <a href="#">
-                       Brand
+                    <a href="{{ url('/') }}">
+                        {{ config('app.name', 'myCare') }}
                     </a>
                 </li>
                 <li>
@@ -455,7 +461,7 @@ body {
         <div id="page-content-wrapper" >
 
             <!-- Top Menu -->
-            <nav class="navbar navbar-default navbar-static-top" >
+            <div class="navbar navbar-default navbar-static-top" id="topbar-wrapper">
                 
                     <div class="navbar-header" >
 
@@ -476,10 +482,13 @@ body {
                         </button>
                         -->
 
-                        <!-- Branding Image -->
+                       
+                        <!-- Branding Image 
                         <a class="navbar-brand" href="{{ url('/') }}">
                             {{ config('app.name', 'myCare') }}
                         </a>
+                        -->
+
                     </div>
 
                     <div class="" id="app-navbar-collapse" >
@@ -551,7 +560,7 @@ body {
                         </ul>
                     </div>
                 
-            </nav>
+            </div>
             <!-- End of Top Menu -->
 
           
