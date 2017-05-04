@@ -38,9 +38,6 @@
 
     <link rel="stylesheet" href="{{url('css/bootstrap-switch.css')}}">
     
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    -->
 
 
     {{-- Froala editor --}}
@@ -78,9 +75,7 @@ body {
     overflow-x: auto;
 }
 
-.nav .open > a, 
-.nav .open > a:hover, 
-.nav .open > a:focus {background-color: transparent;}
+
 
 /*-------------------------------*/
 /*           app                 */
@@ -99,6 +94,7 @@ body {
 }
 
 #sidebar-wrapper {
+
     z-index: 1000;
     /*left: 220px;*/
     width: 20%;
@@ -193,6 +189,7 @@ body {
             transition: width .2s ease-in;
 
 }
+/*
 .sidebar-nav li:first-child a {
     color: #fff;
     background-color: #1a1a1a;
@@ -221,8 +218,10 @@ body {
 .sidebar-nav li:nth-child(9):before {
     background-color: #35acdf;   
 }
-.sidebar-nav li:hover:before,
-.sidebar-nav li.open:hover:before {
+*/
+
+/*
+.sidebar-nav li:hover:before {
     width: 100%;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
@@ -230,8 +229,9 @@ body {
             transition: width .2s ease-in;
 
 }
-
+*/
 .sidebar-nav li a {
+    font-size: 18px;
     display: block;
     color: #ddd;
     text-decoration: none;
@@ -240,13 +240,28 @@ body {
 
 .sidebar-nav li a:hover,
 .sidebar-nav li a:active,
-.sidebar-nav li a:focus,
-.sidebar-nav li.open a:hover,
-.sidebar-nav li.open a:active,
-.sidebar-nav li.open a:focus{
-    color: #fff;
+.sidebar-nav li a:focus {
+   
+    color: #37474F;
+    background-color: #00BCD4;
     text-decoration: none;
-    background-color: transparent;
+    /*background-color: transparent;*/
+}
+
+.sidebar-nav .dropdown-menu li a {
+    
+    background-color:#c0d0d3;
+    color: #37474F;
+}
+
+.sidebar-nav .dropdown-menu li a:hover,
+.sidebar-nav .dropdown-menu li a:active,
+.sidebar-nav .dropdown-menu li a:focus {
+    
+    color: #37474F;
+    background-color: #00BCD4;
+    text-decoration: none;
+    /*background-color: transparent;*/
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -431,7 +446,6 @@ body {
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
@@ -473,21 +487,6 @@ body {
                             <span class="hamb-bottom"></span>
                         </button>
                       
-                        <!--
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                            <span class="sr-only">Toggle Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        -->
-
-                       
-                        <!-- Branding Image 
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('app.name', 'myCare') }}
-                        </a>
-                        -->
 
                     </div>
 
@@ -748,9 +747,7 @@ body {
       });  
     });
     </script>
-    <!--
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    -->
+    
 
 </body>
 </html>
