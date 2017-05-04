@@ -447,12 +447,14 @@ body {
                 </li>
                 <li>
                     <a href="#">
+                        <i class="fa fa-eercast"></i> 
                         <div class="nav-label"> Home </div>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <i class="fa fa-microchip"></i> 
                         <div class="nav-label"> About </div>
                     </a>
                 </li>
@@ -475,11 +477,13 @@ body {
 
                 <li>
                     <a href="#">
+                        <i class="fa fa-calendar"></i> 
                         <div class="nav-label"> Events </div>
                     </a>
                 </li>
                 <li>
                     <a href="#">
+                        <i class="fa fa-bus"></i> 
                         <div class="nav-label"> Team </div>
                     </a>
                 </li>
@@ -487,7 +491,7 @@ body {
                 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> 
-                      <i class="fa fa-address-card"></i> 
+                      <i class="fa fa-eye"></i> 
                       <div class="nav-label"> Actions </div>
                       <span class="fa fa-angle-left"></span>
                   </a>
@@ -503,16 +507,19 @@ body {
                 
                 <li>
                     <a href="#">
+                        <i class="fa fa-building"></i> 
                         <div class="nav-label"> Services </div>
                     </a>
                 </li>
                 <li>
                     <a href="#">
+                        <i class="fa fa-database"></i> 
                         <div class="nav-label"> Contact </div>
                     </a>
                 </li>
                 <li>
                     <a href="#">
+                        <i class="fa fa-cube"></i> 
                         <div class="nav-label"> Follow me </div>
                     </a>
                 </li>
