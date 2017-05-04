@@ -126,9 +126,20 @@ body {
 }
 
 #app.toggled #page-content-wrapper {
+    right:0;
     width: 100%;
 }
 
+@media screen and ( max-width:768px ) {
+  #sidebar-wrapper { 
+      width: 80%;
+  }
+
+  #page-content-wrapper {
+      right:-62.5%; /* (100 - width of #sidebar-wrapper@768px) - width of #page-content-wrapper */
+  } 
+
+}
 
 /*-------------------------------*/
 /*     Topbar nav styles        */
