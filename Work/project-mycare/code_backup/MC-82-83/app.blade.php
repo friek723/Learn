@@ -93,7 +93,7 @@ body {
 #sidebar-wrapper {
 
     z-index: 1000;
-    width: 15%;
+    width: 17.5%;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -117,7 +117,7 @@ body {
 #page-content-wrapper {
     position: fixed;
     right:0;
-    width: 85%; /* = 100 - width of #sidebar-wrapper*/
+    width: 82.5%; /* = 100 - width of #sidebar-wrapper*/
     height: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -281,13 +281,13 @@ body {
 
 .sidebar-nav li .nav-label{ 
   display: inline;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .sidebar-nav i {
   
   position: absolute;
-  left: 3%;
+  left: 6%;
 
 }
 /*-------------------------------*/
