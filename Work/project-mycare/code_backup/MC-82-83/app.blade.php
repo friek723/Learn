@@ -93,7 +93,7 @@ body {
 #sidebar-wrapper {
 
     z-index: 1000;
-    width: 17.5%;
+    width: 25%;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -117,7 +117,7 @@ body {
 #page-content-wrapper {
     position: fixed;
     right:0;
-    width: 82.5%; /* = 100 - width of #sidebar-wrapper*/
+    width: 75%; /* = 100 - width of #sidebar-wrapper*/
     height: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -129,16 +129,25 @@ body {
     right:0;
     width: 100%;
 }
+/*
+@media screen and ( max-width:1224px ) {
+  #sidebar-wrapper { 
+      width: 25%;
+  }
 
+  #page-content-wrapper {
+      width: 75%; 
+  } 
+}
+*/
 @media screen and ( max-width:768px ) {
   #sidebar-wrapper { 
       width: 80%;
   }
 
   #page-content-wrapper {
-      right:-62.5%; /* (100 - width of #sidebar-wrapper@768px) - width of #page-content-wrapper */
+      right:-55%; /* (100 - width of #sidebar-wrapper@768px) - width of #page-content-wrapper */
   } 
-
 }
 
 /*-------------------------------*/
