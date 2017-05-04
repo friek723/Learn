@@ -101,7 +101,7 @@ body {
 #sidebar-wrapper {
     z-index: 1000;
     /*left: 220px;*/
-    width: 0;
+    width: 20%;
     height: 100%;
     /*margin-left: -220px;*/
     overflow-y: auto;
@@ -121,13 +121,13 @@ body {
 
 #app.toggled #sidebar-wrapper {
     /*width: 220px;*/
-    width: 20%;
+    width: 0%;
 }
 
 #page-content-wrapper {
     position: fixed;
     right:0;
-    width: 100%;
+    width: 80%;
     /*height: 100%;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -138,9 +138,13 @@ body {
 #app.toggled #page-content-wrapper {
     
     /*margin-right: -220px;*/
-    width: 80%;
+    width: 100%;
 }
 
+
+/*-------------------------------*/
+/*     Topbar nav styles        */
+/*-------------------------------*/
 
 #topbar-right {
   position: absolute;
@@ -372,6 +376,14 @@ body {
 }
 
 
+/*-------------------------------*/
+/* Override Bootstrap (app.css)  */
+/*-------------------------------*/
+.container {
+  width: 97%;
+}
+
+
 
 </style>
 
@@ -542,8 +554,9 @@ body {
             </nav>
             <!-- End of Top Menu -->
 
+          
             @yield('content')
-
+         
         </div>
         <!-- End of Page Content -->
 
