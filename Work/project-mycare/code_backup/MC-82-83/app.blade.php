@@ -89,17 +89,12 @@ body {
     transition: all 0.5s ease;
 }
 
-#app.toggled {
-    /*padding-left: 220px;*/
-}
 
 #sidebar-wrapper {
 
     z-index: 1000;
-    /*left: 220px;*/
-    width: 20%;
+    width: 15%;
     height: 100%;
-    /*margin-left: -220px;*/
     overflow-y: auto;
     overflow-x: hidden;
     background: #2f4050;
@@ -116,14 +111,13 @@ body {
 }
 
 #app.toggled #sidebar-wrapper {
-    /*width: 220px;*/
     width: 0%;
 }
 
 #page-content-wrapper {
     position: fixed;
     right:0;
-    width: 80%;
+    width: 85%; /* = 100 - width of #sidebar-wrapper*/
     height: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -132,8 +126,6 @@ body {
 }
 
 #app.toggled #page-content-wrapper {
-    
-    /*margin-right: -220px;*/
     width: 100%;
 }
 
@@ -230,12 +222,13 @@ body {
 
 }
 */
+
 .sidebar-nav li a {
     font-size: 18px;
     display: block;
     color: #ddd;
     text-decoration: none;
-    padding: 10px 15px 10px 30px;    
+    padding: 10px 15px 10px 30px; 
 }
 
 .sidebar-nav li a:hover,
@@ -249,7 +242,6 @@ body {
 }
 
 .sidebar-nav .dropdown-menu li a {
-    
     background-color:#c0d0d3;
     color: #37474F;
 }
@@ -282,6 +274,22 @@ body {
 
 }
 
+.sidebar-nav .fa.fa-angle-left,
+.sidebar-nav .fa.fa-angle-down {
+  float: right;
+}
+
+.sidebar-nav li .nav-label{ 
+  display: inline;
+  margin-left: 15px;
+}
+
+.sidebar-nav i {
+  
+  position: absolute;
+  left: 3%;
+
+}
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
@@ -420,50 +428,82 @@ body {
 
         <!-- Side Menu -->
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" >
-            <ul class=" sidebar-nav">  <!-- remove class nav ? -->
+            <ul class="sidebar-nav">  <!-- remove class nav ? -->
                 <li class="sidebar-brand">
                     <a href="{{ url('/') }}"  style="background-color : #263238;">
                         {{ config('app.name', 'myCare') }}
                     </a>
                 </li>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#">
+                        <div class="nav-label"> Home </div>
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">
+                        <div class="nav-label"> About </div>
+                    </a>
                 </li>
 
-                 
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                      <i class="fa fa-address-card"></i> 
+                      <div class="nav-label"> Works </div>
+                      <span class="fa fa-angle-left"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"> <div class="nav-label"> Test1 </div></a></li>
+                    <li><a href="#"> <div class="nav-label"> Test2 </div></a></li>
+                    <li><a href="#"> <div class="nav-label"> Test3 </div></a></li>
+                    <li><a href="#"> <div class="nav-label"> Test4 </div></a></li>
+                    <li><a href="#"> <div class="nav-label"> Test5 </div></a></li>
+                  </ul>
+                </li>
+
                 <li>
-                    <a href="#">Events</a>
+                    <a href="#">
+                        <div class="nav-label"> Events </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Team</a>
+                    <a href="#">
+                        <div class="nav-label"> Team </div>
+                    </a>
                 </li>
                 
                 
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> 
+                      <i class="fa fa-address-card"></i> 
+                      <div class="nav-label"> Actions </div>
+                      <span class="fa fa-angle-left"></span>
+                  </a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="#"><div class="nav-label"> Action </div></a></li>
+                    <li><a href="#"><div class="nav-label"> Another Action </div></a></li>
+                    <li><a href="#"><div class="nav-label"> Something else here </div></a></li>
+                    <li><a href="#"><div class="nav-label"> Sperated link </div></a></li>
                   </ul>
                 </li>
                 
 
                 
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">
+                        <div class="nav-label"> Services </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">
+                        <div class="nav-label"> Contact </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/maridlcrmn">Follow me</a>
+                    <a href="#">
+                        <div class="nav-label"> Follow me </div>
+                    </a>
                 </li>
                 
 
@@ -744,7 +784,21 @@ body {
       
       $('[data-toggle="offcanvas"]').click(function () {
             $('#app').toggleClass('toggled');
+      });
+
+      $('[data-toggle="dropdown"]').click(function () {
+            $('.sidebar-nav .dropdown-toggle').not(this).find('span').removeClass('fa-angle-down');
+            $('.sidebar-nav .dropdown-toggle').not(this).find('span').addClass('fa-angle-left');
+
+            if(  $(this).find('span').hasClass('fa-angle-left') ){
+              $(this).find('span').removeClass('fa-angle-left');
+              $(this).find('span').addClass('fa-angle-down');
+            }else if( $(this).find('span').hasClass('fa-angle-down')  ) {
+              $(this).find('span').removeClass('fa-angle-down');
+              $(this).find('span').addClass('fa-angle-left');
+            }
       });  
+
     });
     </script>
     
