@@ -80,92 +80,89 @@ $(document).ready(function () {
 });
 
 
-
-
-
+// Remember user side menu show/hide
 var show_side_menu = localStorage.getItem("show_side_menu");
 if (show_side_menu == null){
     show_side_menu = "show";  // default
     localStorage.setItem("show_side_menu", show_side_menu);
 }
+var side_menu_width_screen_min_768 = 25; // unit is % for Desktop
+var side_menu_width_screen_max_768 = 80; // unit is % for mobile 
 if(show_side_menu == "hide"){
-
-    document.write('<style>              \
-            @media screen and ( min-width:768px ) {  \
-              #sidebar-wrapper {           \
-                  width: 0%;              \
-              }                            \
-                                           \
-              #app.toggled #sidebar-wrapper {   \
-                  width: 25%;                    \
-              }                                 \
-                                                \
-              #page-content-wrapper {           \
-                  width: 100%;                   \
-              }                                 \
-              #app.toggled #page-content-wrapper {  \
-                  width: 75%;                      \
-              }                                     \
-            }                                        \
-                                 \
-            @media screen and ( max-width:768px ) {   \
-              #sidebar-wrapper {                      \
-                  width: 0%;                         \
-              }                                       \
-              #app.toggled #sidebar-wrapper {         \
-                  width: 80%;                          \
-              }                                       \
-                                                      \
-              #page-content-wrapper {                 \
-                  right:0%;    \
-              }                                       \
-              #app.toggled #page-content-wrapper {    \
-                  right:-80%; /* -(width of .toggled #sidebar-wrapper@768px) */            \
-              }                                       \
-            }                                         \
-        </style>                                      \
-    ');
-
-
-}else{  
-
-    document.write('<style>              \
-            @media screen and ( min-width:768px ) {  \
-              #sidebar-wrapper {           \
-                  width: 25%;              \
-              }                            \
-                                           \
-              #app.toggled #sidebar-wrapper {   \
-                  width: 0%;                    \
-              }                                 \
+    var side_menu_css_string = '                          \
+              <style>                                     \
+                @media screen and ( min-width:768px ) {   \
+                  #sidebar-wrapper {                      \
+                      width: 0%;                          \
+                  }                                       \
                                                           \
-              #page-content-wrapper {           \
-                  width: 75%;                   \
-              }                                 \
-              #app.toggled #page-content-wrapper {  \
-                  width: 100%;                      \
-              }                                     \
-            }                                        \
-                                 \
-            @media screen and ( max-width:768px ) {   \
-              #sidebar-wrapper {                      \
-                  width: 80%;                         \
-              }                                       \
-              #app.toggled #sidebar-wrapper {         \
-                  width: 0%;                          \
-              }                                       \
+                  #app.toggled #sidebar-wrapper {         \
+                      width: ' + side_menu_width_screen_min_768.toString() +'%; \
+                  }                                       \
                                                           \
-              #page-content-wrapper {                 \
-                  right:-80%; /* -(width of #sidebar-wrapper@768px) */   \
-              }                                       \
-              #app.toggled #page-content-wrapper {    \
-                  right:0;                            \
-              }                                       \
-            }                                         \
-        </style>                                      \
-    ');
-
+                  #page-content-wrapper {                 \
+                      width: 100%;                        \
+                  }                                       \
+                  #app.toggled #page-content-wrapper {    \
+                      width: ' + (100-side_menu_width_screen_min_768).toString() + '%;  \
+                  }                                       \
+                }                                         \
+                                                          \
+                @media screen and ( max-width:768px ) {   \
+                  #sidebar-wrapper {                      \
+                      width: 0%;                          \
+                  }                                       \
+                  #app.toggled #sidebar-wrapper {         \
+                      width: ' + side_menu_width_screen_max_768.toString() + '%;  \
+                  }                                       \
+                                                          \
+                  #page-content-wrapper {                 \
+                      right:0%;                           \
+                  }                                       \
+                  #app.toggled #page-content-wrapper {    \
+                      right: ' + (-side_menu_width_screen_max_768).toString() + '%;    /* -(width of .toggled #sidebar-wrapper@768px) */  \
+                  }                                       \
+                }                                         \
+              </style>                                    \
+                  ';
+}else{
+    var side_menu_css_string = '                          \
+              <style>                                     \
+                @media screen and ( min-width:768px ) {   \
+                  #sidebar-wrapper {                      \
+                      width: ' + side_menu_width_screen_min_768.toString() +'%; \
+                  }                                       \
+                                                          \
+                  #app.toggled #sidebar-wrapper {         \
+                      width: 0%;                          \
+                  }                                       \
+                                                          \
+                  #page-content-wrapper {                 \
+                      width: ' + (100-side_menu_width_screen_min_768).toString() + '%;  \
+                  }                                       \
+                  #app.toggled #page-content-wrapper {    \
+                      width: 100%;                        \
+                  }                                       \
+                }                                         \
+                                                          \
+                @media screen and ( max-width:768px ) {   \
+                  #sidebar-wrapper {                      \
+                      width: ' + side_menu_width_screen_max_768.toString() + '%;   \
+                  }                                       \
+                  #app.toggled #sidebar-wrapper {         \
+                      width: 0%;                          \
+                  }                                       \
+                                                          \
+                  #page-content-wrapper {                 \
+                      right: ' + (-side_menu_width_screen_max_768).toString() + '%;    /* -(width of .toggled #sidebar-wrapper@768px) */  \
+                  }                                       \
+                  #app.toggled #page-content-wrapper {    \
+                      right:0%;                           \
+                  }                                       \
+                }                                         \
+              </style>                                    \
+                  ';
 }
-
+document.write(side_menu_css_string);
 //END :  Side Menu script     
     
