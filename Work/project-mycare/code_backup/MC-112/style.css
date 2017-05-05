@@ -275,7 +275,7 @@ body {
 #sidebar-wrapper {
 
     z-index: 1000;
-    /*width: 25%;*/
+    /*width: 25%;*/  /* dynamically set in sidebar.js */
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -293,14 +293,14 @@ body {
 }
 
 #app.toggled #sidebar-wrapper {
-    /*width: 0%;*/
+    /*width: 0%;*/  /* dynamically set in sidebar.js */
 }
 
 #page-content-wrapper {
     position: fixed;
     overflow: auto; /* position "fixed" need to enable auto scroll. */
     right:0;
-    /*width: 75%;*/ /* = 100 - width of #sidebar-wrapper*/
+    /*width: 75%;*/ /* = 100 - width of #sidebar-wrapper*/  /* dynamically set in sidebar.js */
     height: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -310,31 +310,27 @@ body {
 
 #app.toggled #page-content-wrapper {
     right:0;
-    /*width: 100%;*/
+    /*width: 100%;*/   /* dynamically set in sidebar.js */
 }
 
 @media screen and ( max-width:768px ) {
   #sidebar-wrapper { 
-      /*width: 80%;*/
+      /*width: 80%;*/  /* dynamically set in sidebar.js */
   }
 
   #app.toggled #sidebar-wrapper {
-      /*width: 0%;*/
+      /*width: 0%;*/   /* dynamically set in sidebar.js */
   }
 
   #page-content-wrapper {
-      /*right:-55%;*/ /* (100 - width of #sidebar-wrapper@768px) - width of #page-content-wrapper 
-                     OR : - (width of #sidebar-wrapper@768px) + width of #sidebar-wrapper  */
-
-
-      /*right:-80%;*/ /* -(width of #sidebar-wrapper@768px) */
+      /*right:-80%;*/ /* -(width of #sidebar-wrapper@768px) */  /* dynamically set in sidebar.js */
       width:100%;
 
   } 
 
   #app.toggled #page-content-wrapper {
-    /*right:0;*/
-    width: 100%;
+      /*right:0;*/   /* dynamically set in sidebar.js */
+      width: 100%;
   }
 
 }

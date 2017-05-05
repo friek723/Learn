@@ -51,18 +51,10 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-
-
     {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>--}}
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="{{ asset('js/sidebar.js') }}"></script>
-
-
-
-
-
-
+    <script src="{{ asset('js/sidebar.js') }}"></script>  <!-- Must be executed here before DOM render-->
 
 </head>
 
@@ -267,11 +259,8 @@
 
 
     <!-- Scripts -->
-
     <script src="{{ asset('js/app.js') }}"></script>
-  
     <script src="{{ asset('js/autosize.min.js') }}"></script>
-   
     <script src="{{ asset('js/jquery.timepicker.js') }}"></script>
     <script src="{{ asset('js/picker.js') }}"></script>
     <script src="{{ asset('js/picker.date.js') }}"></script>

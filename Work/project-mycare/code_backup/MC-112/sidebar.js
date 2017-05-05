@@ -57,6 +57,11 @@ $(document).ready(function () {
   
   $('[data-toggle="offcanvas"]').click(function () {
         $('#app').toggleClass('toggled');
+
+        // Remember user side menu show/hide
+        var show_side_menu = localStorage.getItem("show_side_menu") ? localStorage.getItem("show_side_menu"):"show";
+        show_side_menu = (show_side_menu == "show") ? "hide" : "show";
+        localStorage.setItem("show_side_menu", show_side_menu);
   });
 
   $('[data-toggle="dropdown"]').click(function () {
@@ -75,54 +80,54 @@ $(document).ready(function () {
 });
 
 
-//$('#app').addClass('no-transition');
-//$('#sidebar-wrapper').addClass('no-transition');
-//$('#page-content-wrapper').addClass('no-transition');
-//$('.app_style').toggleClass('toggled');
-//$("#sidebar-wrapper").css({ "visibility": "visible",  });
 
 
 
+var show_side_menu = localStorage.getItem("show_side_menu");
+if (show_side_menu == null){
+    show_side_menu = "show";  // default
+    localStorage.setItem("show_side_menu", show_side_menu);
+}
+if(show_side_menu == "hide"){
+
+    document.write('<style>              \
+            @media screen and ( min-width:768px ) {  \
+              #sidebar-wrapper {           \
+                  width: 0%;              \
+              }                            \
+                                           \
+              #app.toggled #sidebar-wrapper {   \
+                  width: 25%;                    \
+              }                                 \
+                                                \
+              #page-content-wrapper {           \
+                  width: 100%;                   \
+              }                                 \
+              #app.toggled #page-content-wrapper {  \
+                  width: 75%;                      \
+              }                                     \
+            }                                        \
+                                 \
+            @media screen and ( max-width:768px ) {   \
+              #sidebar-wrapper {                      \
+                  width: 0%;                         \
+              }                                       \
+              #app.toggled #sidebar-wrapper {         \
+                  width: 80%;                          \
+              }                                       \
+                                                      \
+              #page-content-wrapper {                 \
+                  right:0%;    \
+              }                                       \
+              #app.toggled #page-content-wrapper {    \
+                  right:-80%; /* -(width of .toggled #sidebar-wrapper@768px) */            \
+              }                                       \
+            }                                         \
+        </style>                                      \
+    ');
 
 
-
-document.write('<style>              \
-        @media screen and ( min-width:768px ) {  \
-          #sidebar-wrapper {           \
-              width: 0%;              \
-          }                            \
-                                       \
-          #app.toggled #sidebar-wrapper {   \
-              width: 25%;                    \
-          }                                 \
-          #page-content-wrapper {           \
-              width: 100%;                   \
-          }                                 \
-          #app.toggled #page-content-wrapper {  \
-              width: 75%;                      \
-          }                                     \
-        }                                        \
-                             \
-        @media screen and ( max-width:768px ) {   \
-          #sidebar-wrapper {                      \
-              width: 0%;                         \
-          }                                       \
-          #app.toggled #sidebar-wrapper {         \
-              width: 80%;                          \
-          }                                       \
-          #page-content-wrapper {                 \
-              right:0%; /* -(width of #sidebar-wrapper@768px) */   \
-          }                                       \
-          #app.toggled #page-content-wrapper {    \
-              right:-80%;                            \
-          }                                       \
-        }                                         \
-    </style>                                      \
-');
-
-
-if(false)
-{  
+}else{  
 
     document.write('<style>              \
             @media screen and ( min-width:768px ) {  \
@@ -133,6 +138,7 @@ if(false)
               #app.toggled #sidebar-wrapper {   \
                   width: 0%;                    \
               }                                 \
+                                                          \
               #page-content-wrapper {           \
                   width: 75%;                   \
               }                                 \
@@ -148,6 +154,7 @@ if(false)
               #app.toggled #sidebar-wrapper {         \
                   width: 0%;                          \
               }                                       \
+                                                          \
               #page-content-wrapper {                 \
                   right:-80%; /* -(width of #sidebar-wrapper@768px) */   \
               }                                       \
@@ -159,11 +166,6 @@ if(false)
     ');
 
 }
-
-
-
-
-
 
 //END :  Side Menu script     
     
