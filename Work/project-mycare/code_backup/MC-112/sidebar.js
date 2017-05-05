@@ -32,12 +32,12 @@ function AutosearchResident(){
 
 
 //START :  Side Menu script        TODO : merge this with the other...
-$(document).ready(function () {
+$(document).ready(function () {  
   var trigger = $('.hamburger'),
-     isClosed = false;
+     isClosed = false; // default side menu show
 
     trigger.click(function () {
-      hamburger_cross();      
+        // hamburger_cross();      
     });
 
     function hamburger_cross() {
