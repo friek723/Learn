@@ -7,3 +7,9 @@
     - https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm
       https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_food_blog&stacked=h
       
+
+
+[Issue]      
+    https://openinformatics.atlassian.net/browse/MC-112  : 
+        1. use WebStorage (localStorage) to remember it.
+        2. Use visibility to hide everything before call $('#app').toggleClass('toggled');

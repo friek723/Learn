@@ -548,7 +548,7 @@ GIT
 				                                               )
 				                                                 
         - Jump to any previous version temporarily : git checkout SHA_number
-                                                     git checkout master (Going back to lastest ver, otherwise git doesn't know which branch it is when doing pull)
+                                                     git checkout Branch_Name (Ex : git checkout master)  => (Going back to lastest ver, otherwise git doesn't know which branch it is when doing pull)
                                                      
         - Get current version(commit) :  git rev-parse HEAD   (http://stackoverflow.com/questions/949314/how-to-retrieve-the-hash-for-the-current-commit-in-git)
          
