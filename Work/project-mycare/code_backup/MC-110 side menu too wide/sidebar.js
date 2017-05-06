@@ -86,12 +86,8 @@ if (show_side_menu == null){
     show_side_menu = "show";  // default
     localStorage.setItem("show_side_menu", show_side_menu);
 }
-var windowWidth = $(window).width();
-var side_menu_width_screen_min_768 = 220; // unit is % for Desktop
+var side_menu_width_screen_min_768 = 220; // unit is px for Desktop
 var side_menu_width_screen_max_768 = 80; // unit is % for mobile 
-console.log("windowWidth 1: " + windowWidth);
-console.log("side_menu_width_screen_min_768 : " + side_menu_width_screen_min_768);
-console.log("windowWidth 2: " + (windowWidth-side_menu_width_screen_min_768)  );
 if(show_side_menu == "hide"){
     var side_menu_css_string = '                          \
               <style>                                     \
@@ -103,13 +99,13 @@ if(show_side_menu == "hide"){
                   #app.toggled #sidebar-wrapper {         \
                       width: ' + side_menu_width_screen_min_768.toString() +'px; \
                   }                                       \
+                                                          \
                   #page-content-wrapper {                 \
-                      left:   0%;                        \
+                      left:   0;                          \
                   }                                       \
                   #app.toggled #page-content-wrapper {    \
-                      left: ' + (side_menu_width_screen_min_768).toString() + 'px;  \
+                      left: ' + side_menu_width_screen_min_768.toString() + 'px; \
                   }                                       \
-                                                          \
                 }                                         \
                                                           \
                 @media screen and ( max-width:768px ) {   \
@@ -140,13 +136,13 @@ if(show_side_menu == "hide"){
                   #app.toggled #sidebar-wrapper {         \
                       width: 0%;                          \
                   }                                       \
+                                                          \
                   #page-content-wrapper {                 \
-                      left: ' + (side_menu_width_screen_min_768).toString() + 'px;  \
+                      left: ' + side_menu_width_screen_min_768.toString() + 'px;  \
                   }                                       \
                   #app.toggled #page-content-wrapper {    \
-                      left:    0%;                        \
+                      left: 0;                            \
                   }                                       \
-                                                          \
                 }                                         \
                                                           \
                 @media screen and ( max-width:768px ) {   \
