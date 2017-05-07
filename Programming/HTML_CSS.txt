@@ -108,5 +108,14 @@ CSS
     - icon : https://www.w3schools.com/icons/default.asp
              (Font Awesome icons, Bootstrap Icons, Google Icons)
 
+    - How to dynamically set css before DOM render (Avoiding Flickering)
+          How : Add javascript code to <head> </head>
+                   document.write('<style type="text/css">body{display:none}</style>');
+                   OR 
+                   document.write('<link rel="stylesheet" href="xxx.css">');
+                (Execute code immediately on loading JS, Don't put it in document.ready)   
+          Why :
+                (If you use jQuery to modify css here, it won't have any effect due to DOM not loading yet! You cannot find any element, class or id )
+          http://monc.se/kitchen/152/avoiding-flickering-in-jquery
 
 
