@@ -74,15 +74,23 @@
     - https://github.com/appzcoder/crud-generator
     - https://github.com/crocodic-studio/crudbooster
     - https://github.com/engrnvd/laravel-crud-generator  (!!!tried, easy)
-        Run php artisan nvd:crud table_name, it will create : 
-              #Model class Location generated successfully.
-              #Route model binding inserted successfully in /var/www/html/jobseek/jobseeking/app/Providers/RouteServiceProvider.php
-              #created route: Route::resource('location','LocationController');
-              #LocationController generated successfully.
-              #View file index generated successfully.
-              #View file edit generated successfully.
-              #View file show generated successfully.
-              #View file create generated successfully.
+        [step 1]
+            "php artisan make:migration create_xxxs_table"   (create migration file)
+            Add your schema in /database/migrations/create_xxxs_table.php
+        [step 2]
+            "php artisan migrate"       (create tables in DB from migration)
+        [step 3] laravel-crud-generator
+            "php artisan nvd:crud table_name"            
+            This command will create below files based on TABLE table_name in DB.
+            It will create : 
+                  #Model class Location generated successfully.
+                  #Route model binding inserted successfully in /var/www/html/jobseek/jobseeking/app/Providers/RouteServiceProvider.php
+                  #created route: Route::resource('location','LocationController');
+                  #LocationController generated successfully.
+                  #View file index generated successfully.
+                  #View file edit generated successfully.
+                  #View file show generated successfully.
+                  #View file create generated successfully.
         [Problem] It will overwrite Default User Model to (class User extends Model)
                   Should correct it back to default (class User extends Authenticatable)
                   Otherwise there is error doing JWT token auth
@@ -138,21 +146,41 @@
 
 
 [Migration]
-    - Adding/Renaming field in migration-schema : http://stackoverflow.com/questions/30682362/adding-field-to-laravel-migration-schema
+    - Create Table : 
+        [step 1]
+            "php artisan make:migration create_xxxs_table"   (create migration file)
+             Add your schema in /database/migrations/create_xxxs_table.php
+        [step 2]
+            "php artisan migrate"       (create tables in DB from migration)
+
+        [Problem]
+             Schema::create('table_names',...).  
+             !! [Table Name] Do NOT add "s" for the noun that cannot add "s"
+                (The noun's singular == plural )
+                Because Laravel Eloquent will look for singular form (== plural form)
+             Ex : use "education" instead of "educations" in Schema::create('education',...)
+             - https://laracasts.com/discuss/channels/eloquent/laravel-table-names-are-plural-by-default
+
+    - Adding/Renaming field in migration-schema : !! Do Not alter old migration file. Add new migration file for adding/renaming column. (This is how Laravel is designed and keeps track of migration history.)
+        - http://stackoverflow.com/questions/30682362/adding-field-to-laravel-migration-schema
         step 1 : php artisan make:migration alter_users_table_add_xxx
         step 2 : Add new column (edit .../database/migrations/alter_users_table_add_xxx.php)
                  public function up()
                  {
-                     Schema::table('users', function(Blueprint $table)
-                     {
-                           $table->string('email');                    
-                     });
+                      if (!Schema::hasColumn('users', 'location_id')) {
+                          Schema::table('users', function(Blueprint $table)
+                          {
+                              $table->integer('location_id')->unsigned();
+                              $table->foreign('location_id')->references('id')->on('locations');
+                          });
+                      }
                  }
         step 3 : php artisan migrate     (modify DB)
         
-        [Problem : adding a new column which is a foreign key] 
+        [Problem : adding a new column which is a foreign key => be sure to set default value] 
             - https://laravel.io/forum/09-18-2014-foreign-key-not-saving-in-migration
             [Error] Run migrate, see "Cannot add or update a child row: a foreign key constraint fails"
+                    Sometimes there won't be any migration error and just show completed without adding new columns to DB.
             [Solution] Set default value : $table->integer('some_foreign_id')->unsigned()->default(1);
 
 [setup errors]

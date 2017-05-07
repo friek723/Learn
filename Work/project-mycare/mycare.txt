@@ -6,10 +6,17 @@
     - http://bootsnipp.com/snippets/featured/fancy-sidebar-navigation
     - https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm
       https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_food_blog&stacked=h
-      
+    
+    Refer to the other team : http://115.166.143.10/sapphire/resident.html  
 
 
 [Issue]      
     https://openinformatics.atlassian.net/browse/MC-112  : 
         1. use WebStorage (localStorage) to remember it.
         2. Use visibility to hide everything before call $('#app').toggleClass('toggled');
+
+
+[Laracast]
+	Laracast account
+	un: cchang@openinformatics.com.au
+	pwd: Hobbit!23
