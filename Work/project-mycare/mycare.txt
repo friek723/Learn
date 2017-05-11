@@ -13,24 +13,47 @@
 [Image Crop & Upload]
     Compare : 
         http://stackoverflow.com/questions/33693028/cropping-on-server-side-vs-cropping-on-client-and-sending-base64-string
+        http://ourcodeworld.com/articles/read/281/top-7-best-image-cropping-javascript-and-jquery-plugins
 
     Server :
         http://image.intervention.io/
         https://github.com/Folkloreatelier/laravel-image
         https://sidharath.com/blog/97/jquery-cropper-with-laravel
+        [jcrop]
+            ! http://jsfiddle.net/w1Lh4w2t/
+            https://jsfiddle.net/zm7e0jev/
+            https://jsfiddle.net/bea09mz9/3/
+            https://dzone.com/articles/crop-image-client-side-jcrop
+            http://stackoverflow.com/questions/17402948/crop-and-upload-image-on-client-side-without-server-side-code-involve
+            http://www.dunebook.com/cropping-an-image-with-jcrop-in-laravel/
+            !http://stackoverflow.com/questions/34651017/how-should-i-crop-the-image-at-client-side-using-jcrop-and-upload-it
+
+        [croppic]
+            http://www.croppic.net/
+
+        [slimimagecropper : Buy]
+            http://slimimagecropper.com/
+
     Client : 
         [Vue Crop]
             https://github.com/pespantelis/vue-crop
             https://laracasts.com/discuss/channels/vue/vue-crop
 
         [cropper]
-            https://github.com/fengyuanchen/cropper  
+            https://github.com/fengyuanchen/cropper
+            https://github.com/fengyuanchen/cropperjs  
             https://fengyuanchen.github.io/cropper/
+            https://github.com/fengyuanchen/cropper/issues/489
+            https://github.com/fengyuanchen/cropper/issues/572
+            https://github.com/fengyuanchen/cropper/issues/612
+            https://github.com/blueimp/JavaScript-Canvas-to-Blob
 
-        http://www.croppic.net/
-        [jcrop.js] https://jsfiddle.net/bea09mz9/3/
-        http://www.dunebook.com/cropping-an-image-with-jcrop-in-laravel/
-        https://tympanus.net/codrops/2014/10/30/resizing-cropping-images-canvas/
+        [HTML5 <canvas>]
+            http://www.html5canvastutorials.com/tutorials/html5-canvas-image-crop/
+            https://tympanus.net/codrops/2014/10/30/resizing-cropping-images-canvas/
+            https://blogs.sap.com/2014/08/14/client-side-image-cropping/
+
+    [Data URI]  https://en.wikipedia.org/wiki/Data_URI_scheme
 
 
 [Issue]      
