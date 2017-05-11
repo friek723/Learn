@@ -10,6 +10,29 @@
     Refer to the other team : http://115.166.143.10/sapphire/resident.html  
 
 
+[Image Crop & Upload]
+    Compare : 
+        http://stackoverflow.com/questions/33693028/cropping-on-server-side-vs-cropping-on-client-and-sending-base64-string
+
+    Server :
+        http://image.intervention.io/
+        https://github.com/Folkloreatelier/laravel-image
+        https://sidharath.com/blog/97/jquery-cropper-with-laravel
+    Client : 
+        [Vue Crop]
+            https://github.com/pespantelis/vue-crop
+            https://laracasts.com/discuss/channels/vue/vue-crop
+
+        [cropper]
+            https://github.com/fengyuanchen/cropper  
+            https://fengyuanchen.github.io/cropper/
+
+        http://www.croppic.net/
+        [jcrop.js] https://jsfiddle.net/bea09mz9/3/
+        http://www.dunebook.com/cropping-an-image-with-jcrop-in-laravel/
+        https://tympanus.net/codrops/2014/10/30/resizing-cropping-images-canvas/
+
+
 [Issue]      
     https://openinformatics.atlassian.net/browse/MC-112  : 
         1. use WebStorage (localStorage) to remember it.
