@@ -41,6 +41,7 @@
 
         [cropper]
             https://github.com/fengyuanchen/cropper
+            https://github.com/fengyuanchen/cropper/tree/master/examples/crop-avatar
             https://github.com/fengyuanchen/cropperjs  
             https://fengyuanchen.github.io/cropper/
             https://github.com/fengyuanchen/cropper/issues/489
