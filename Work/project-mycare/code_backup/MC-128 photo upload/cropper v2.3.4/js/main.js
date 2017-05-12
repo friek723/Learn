@@ -327,46 +327,6 @@ $(function () {
 
 
 
-/*
-function readURL(input) {
-  alert("upload file !!");
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      $('#image')
-        .attr('src', e.target.result)
-        .width(150)
-        .height(200);
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-*/
 
-/*
-document.getElementById('picField').onchange = function (evt) {
-    //alert("onchange !!");
-    var tgt = evt.target || window.event.srcElement,
-        files = tgt.files;
 
-    // FileReader support
-    if (FileReader && files && files.length) {
-       // alert("support !!");
-        var fr = new FileReader();
-        fr.onload = function () {
-            //alert("onload !!");
-            document.getElementById("image").src = fr.result;
-        }
-        fr.readAsDataURL(files[0]);
-    }
-    // Not supported
-    else if(!FileReader){
-       alert(" not support 1");
-    }else if(!files){
-       alert(" not support 2");
-    }else if(!files.length){
-       alert(" not support 3");
-    }
 
-}
-*/
