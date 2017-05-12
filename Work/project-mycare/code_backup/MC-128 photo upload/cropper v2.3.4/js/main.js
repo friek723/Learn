@@ -1,3 +1,5 @@
+//   https://github.com/fengyuanchen/cropper
+
 $(function () {
 
   'use strict';
@@ -13,13 +15,22 @@ $(function () {
   var $dataScaleX = $('#dataScaleX');
   var $dataScaleY = $('#dataScaleY');
   var options = {
-        aspectRatio: 2/3,  // 16 / 9,
+        aspectRatio:  35/45, // 16 / 9,
         preview: '.img-preview',
+        viewMode: 0,
+        autoCropArea : 1,
         crop: function (e) {
+          console.log("crop options : " + " h : " + e.height 
+                                        + " w : " + e.width
+                                        + " x : " + e.x
+                                        + " y : " + e.y
+                                        );
+          
           $dataX.val(Math.round(e.x));
           $dataY.val(Math.round(e.y));
           $dataHeight.val(Math.round(e.height));
           $dataWidth.val(Math.round(e.width));
+
           $dataRotate.val(e.rotate);
           $dataScaleX.val(e.scaleX);
           $dataScaleY.val(e.scaleY);
@@ -269,12 +280,13 @@ $(function () {
         if (/^image\/\w+$/.test(file.type)) {
           blobURL = URL.createObjectURL(file);
 
+
           // Check image size and resize image window
           var img_check_size = new Image;
           img_check_size.onload = function() {
-            console.log("img_check_size " + img_check_size.width + "  "+ img_check_size.height);            
 
-        
+            console.log("img_check_size " + " w "+img_check_size.width + " h "+ img_check_size.height);            
+       
             // Set image container w/h when loading
             var img_containe_width = 768/2;
             var img_containe_height = img_containe_width * img_check_size.height / img_check_size.width;
@@ -284,6 +296,7 @@ $(function () {
             //$('#image').css({ "width": img_containe_width });
             $('#img-container').css({ "height": img_containe_height });
             $('#img-container').css({ "width": img_containe_width });
+            // End of Set image container w/h
 
 
             // Draw image...
@@ -293,11 +306,10 @@ $(function () {
             }).cropper('reset').cropper('replace', blobURL);
             $inputImage.val('');
             console.log("inputImage.change done");
-
+            // End of Draw image...
 
           };
           img_check_size.src = blobURL;
-
 
 
         } else {
