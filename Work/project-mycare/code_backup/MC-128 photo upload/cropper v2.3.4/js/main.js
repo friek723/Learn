@@ -13,7 +13,7 @@ $(function () {
   var $dataScaleX = $('#dataScaleX');
   var $dataScaleY = $('#dataScaleY');
   var options = {
-        aspectRatio: 16 / 9,
+        aspectRatio: 2/3,  // 16 / 9,
         preview: '.img-preview',
         crop: function (e) {
           $dataX.val(Math.round(e.x));
@@ -27,6 +27,7 @@ $(function () {
       };
 
 
+
   // Tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -35,9 +36,14 @@ $(function () {
   $image.on({
     'build.cropper': function (e) {
       console.log(e.type);
+      console.log('build.cropper' + e.currentTarget.naturalHeight);
+      console.log('build.cropper' + e.currentTarget.naturalWidth);
     },
     'built.cropper': function (e) {
       console.log(e.type);
+      console.log('built.cropper' + e.currentTarget.naturalHeight);
+      console.log('built.cropper' + e.currentTarget.naturalWidth);
+
     },
     'cropstart.cropper': function (e) {
       console.log(e.type, e.action);
@@ -249,6 +255,7 @@ $(function () {
 
   if (URL) {
     $inputImage.change(function () {
+      console.log("inputImage.change ...");
       var files = this.files;
       var file;
 
@@ -261,12 +268,38 @@ $(function () {
 
         if (/^image\/\w+$/.test(file.type)) {
           blobURL = URL.createObjectURL(file);
-          $image.one('built.cropper', function () {
 
-            // Revoke when load complete
-            URL.revokeObjectURL(blobURL);
-          }).cropper('reset').cropper('replace', blobURL);
-          $inputImage.val('');
+          // Check image size and resize image window
+          var img_check_size = new Image;
+          img_check_size.onload = function() {
+            console.log("img_check_size " + img_check_size.width + "  "+ img_check_size.height);            
+
+        
+            // Set image container w/h when loading
+            var img_containe_width = 768/2;
+            var img_containe_height = img_containe_width * img_check_size.height / img_check_size.width;
+            console.log('scaled height ' + img_containe_height);
+            console.log('scaled width ' + img_containe_width);
+            //$('#image').css({ "height": img_containe_height });
+            //$('#image').css({ "width": img_containe_width });
+            $('#img-container').css({ "height": img_containe_height });
+            $('#img-container').css({ "width": img_containe_width });
+
+
+            // Draw image...
+            $image.one('built.cropper', function () {
+              // Revoke when load complete
+              URL.revokeObjectURL(blobURL);
+            }).cropper('reset').cropper('replace', blobURL);
+            $inputImage.val('');
+            console.log("inputImage.change done");
+
+
+          };
+          img_check_size.src = blobURL;
+
+
+
         } else {
           window.alert('Please choose an image file.');
         }
