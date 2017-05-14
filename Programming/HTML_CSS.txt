@@ -124,5 +124,5 @@ CSS
     - [Modal]:  https://www.w3schools.com/bootstrap/bootstrap_modal.asp
                 https://www.w3schools.com/howto/howto_css_modals.asp
 
-
+    - DropDown (Select/Option) Text too long : http://stackoverflow.com/questions/10306796/drop-down-list-width-fit-selected-item-text
 
