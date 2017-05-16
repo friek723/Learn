@@ -1,0 +1,77 @@
+[Performance fundamentals] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/Performance_fundamentals
+    - To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the <canvas> element (which includes WebGL). Somewhere "in between" HTML/CSS and Canvas is SVG, which offers some benefits of both.
+    
+    -  The key to fast startup is to keep two things in mind: UPP (user-perceived performance) is all that matters, and there's a "critical path" to each user-perceived event above. The critical path is exactly and only the code that must run to produce the event.
+
+    - to reach a user-perceived startup event more quickly, the main "trick" is run only the code on the critical path. Shorten the critical path by simplifying the scene.
+
+    - JavaScript is a dynamically-typed language, and the Web platform allows loading code, HTML, CSS, images, and other resources dynamically. These features can be used to defer work that's off the critical path by loading unnecessary content "lazily" some time after startup.
+
+    - Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
+
+    - locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup.
+
+    - Use HTML and CSS to implement content that's mostly static, scrolled, and infrequently animated. Use Canvas to implement highly dynamic content, like games that need tight control over rendering and don't need theming.
+
+    - Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
+
+    - When applications are sent to the background, a visibilitychange event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded
+
+    - you have a long list of elements (let’s say tweets), don’t move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance.
+
+    - Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, "Firefox's Network Monitor" will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
+
+    - If your page contains JavaScript code that is taking a long time to run, the "JavaScript profiler" will pinpoint the slowest lines of code
+
+    - The Built-in Gecko Profiler is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs.
+
+    - Using YSlow (which requires Firebug) provides extremely helpful recommendations for improving performance. Many of the identified problems and suggested solutions are especially useful for mobile browsers. You should definitely run YSlow and follow its recommendations.
+
+    
+[Optimizing startup performance] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/Optimizing_startup_performance
+
+    - starting up as asynchronously as possible
+      you should write your code so that your app creates a Web worker that does as much as possible in a background thread (for example, fetching and processing data.) Then, anything that must be done on the main thread (such as user events and rendering UI) should be broken up into small pieces so that the app's event loop continues to cycle while it starts up. This will prevent the app, browser, and/or device from appearing to have locked up.
+
+    - [Web Workers]  
+       https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+      [Concurrency model and Event Loop]
+       https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+    
+    - unless you can easily pull out the "pure calculation" chunks of your startup process into workers, you'll wind up having to run most or all of your startup code on the main thread.
+
+    - Use the defer or async attribute on script tags needed at startup. This allows HTML parsers to process documents more efficiently.
+
+    - If you need to decode asset files (for example, decoding JPEG files and turning them into raw texture data for later use by WebGL), that's great to do in workers.
+
+    - Don't include scripts or stylesheets that don't participate in the critical path in your startup HTML file. Load them only when needed.
+
+    - The more stuff you can do asynchronously, the better advantage your app can take of multicore processors.
+
+    - The most important thing to do to try to help with the main code's startup process is to refactor the code into small pieces that can be done in chunks interspersed across multiple calls to your app's main loop, so that the main thread gets to handle input and the like.
+
+    - consider having background music playing or a nice splash screen displayed. In between calculations, update your progress indicator, make changes to the display, or anything else you might be able to do to help the user feel like your app is doing something instead of sitting there quietly.
+
+
+[UI Synchronicity] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/UI_Synchronicity
+    
+    - A Sync UI is a user interface that is tightly coupled to the state of background data or processing. Some examples of Sync UIs are loading spinners or modal dialogs. The intent of a Sync UI is to block the user from continued interaction until the relevant processing or state changes have been completed. Sync UIs should be used in situations where the next interaction is dependent on the completion of the current interaction.
+
+    - An Async UI is a user interface that is decoupled from any processing or background data state. Async UI has perceived benefits over a Sync UI:
+
+        - The user interface responds to feedback immediately and feels responsive
+        - Processing occurs in the background
+        - UI Continuation doesn't block the interface
+
+
+[CSS and JavaScript animation performance] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance
+
+
+
+[When to load JS in page flow]
+    http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+    - The current state-of-the-art is to put scripts in the <head> tag and use the async or defer attributes. This allows your scripts to be downloaded asap without blocking your browser.
+
+    https://developers.google.com/speed/docs/insights/BlockingJS
+
+

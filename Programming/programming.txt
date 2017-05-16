@@ -29,3 +29,9 @@ package manager :
 [Homebrew]
     What is Homebrew for OS X? : https://www.quora.com/What-is-Homebrew-for-OS-X
     (Like apt-get for Ubuntu)
+
+
+[Microservices]
+    - https://smartbear.com/learn/api-design/what-are-microservices/
+    - https://www.nginx.com/blog/building-a-web-frontend-with-microservices-and-nginx-plus/
+    

@@ -1,6 +1,12 @@
 Javascript
     [Tutorial]
-          https://developer.mozilla.org/en-US/docs/Web/JavaScript
+          !!https://developer.mozilla.org/en-US/docs/Web/JavaScript
+              - [Concurrency model and Event Loop]
+                    https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+              - [Web Workers]  
+                    https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+                    https://www.html5rocks.com/en/tutorials/workers/basics/
+                    
         ! http://javascript.info/
           https://www.toptal.com/javascript/interview-questions
           
@@ -353,6 +359,8 @@ Javascript
                                                                
     [AJAX] example code see [note1] 
         - (Asynchronous JavaScript and XML.) AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+        - ! https://developer.mozilla.org/en-US/docs/AJAX
+        - XMLHttpRequest : https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
         - jQuery provides several methods for AJAX functionality. 
             With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post. 
                 And you can load the external data directly into the selected HTML elements of your web page.
