@@ -155,7 +155,8 @@ Web Technology :
           - http://dev.mobify.com/blog/beginners-guide-to-http-cache-headers/
           - https://varvy.com/performance/application-cache.html
 
-        - Gzip compression
+        - Gzip compression (Request Header --> Accept-Encoding: "gzip, deflate, br")
+          - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
           - How to turn on : webserver config or .htaccess  
           - ! https://varvy.com/pagespeed/enable-compression.html
           - Check : https://checkgzipcompression.com/

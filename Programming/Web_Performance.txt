@@ -68,6 +68,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+[FireFox Developer Tools] https://developer.mozilla.org/en-US/docs/Tools
+    
+    Performace : https://developer.mozilla.org/en-US/docs/Tools/Performance
+                 https://developer.mozilla.org/en-US/docs/Tools/Performance/UI_Tour
+
+                 [WaterFall] https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall
+                     - algorithm the browser uses to update the page in response to some event : 
+
+                        (1) JavaScript Function Call: some event - for example, a DOM event - causes some JavaScript in the page to run. The JavaScript changes some of the page's DOM or CSSOM.
+                        (2) Recalculate Style: if the browser thinks the computed styles for page elements have changed, it must then recalculate them.
+                        (3) Layout: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
+                        (4) Paint: finally, the browser needs to repaint the elements to the screen. One last step is not shown in this sequence: the page may be split into layers, which are painted independently and then combined in a process called "Composition".
+
+                     - CSS animations update the page without having to run any JavaScript.
+
+                     - Not all CSS property changes cause a reflow. Changing properties that can alter an object's geometry and position, such as width, display, font-size, or top, will cause a reflow. However, changing properties that don't alter geometry or position, such as color or opacity, will not.
+
+                     - For a rate of 60 frames per second, that gives the browser 16.7 milliseconds to execute the complete flow.
+
+                     - By default, a site's JavaScript is executed in the same thread that the browser uses for layout updates, repaints, DOM events, and so on. This means that long-running JavaScript functions can cause unresponsiveness (jank): animations may not be smooth, or the site might even freeze.
+
+                     - [Garbage collection] GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.
+
+    Network Monitor : https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor
+
+
+
 [When to load JS in page flow]
     http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
     - The current state-of-the-art is to put scripts in the <head> tag and use the async or defer attributes. This allows your scripts to be downloaded asap without blocking your browser.
