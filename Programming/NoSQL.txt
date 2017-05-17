@@ -59,3 +59,13 @@ LIST OF NOSQL DATABASES : http://nosql-database.org/
 																		         total : { $sum : 1 }} 
 																		    } 
 																		)
+
+
+
+    - Auto Complete : https://groups.google.com/forum/#!topic/mongodb-user/MOKYDp83rPs
+                      http://www.drgcms.org/blog/Damjan%20Rems/how-to-speed-up-querying-for-autocomplete-fields-with-mongodb-2015-11-24
+                      http://stackoverflow.com/questions/3305561/how-to-query-mongodb-with-like
+
+                      
+
+

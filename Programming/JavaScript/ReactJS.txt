@@ -30,8 +30,8 @@ Tutorial :
     
 
 [starter kit] - order by popularity
-    !!!! https://github.com/facebookincubator/create-react-app   
-       (used by redux : http://redux.js.org/docs/introduction/Examples.html)
+    !!!!! https://github.com/facebookincubator/create-react-app   
+          (used by redux : http://redux.js.org/docs/introduction/Examples.html)
     !!!  https://github.com/kriasoft/react-starter-kit
     !!   https://github.com/davezuko/react-redux-starter-kit
     !    https://github.com/coryhouse/react-slingshot
