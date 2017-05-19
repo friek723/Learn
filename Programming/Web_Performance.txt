@@ -98,6 +98,25 @@
 
                      - two different approaches to fixing them. The first is to split long-running functions into pieces and use requestAnimationFrame to schedule each piece, and the second is to run the whole function in a separate thread using a web worker.
                      
+                           (1) we'll split up the function into a number of much smaller self-contained functions, and schedule each one using requestAnimationFrame().
+
+                             requestAnimationFrame() tells the browser to run the given function in each frame, just before it performs a repaint. As long as each function is reasonably small, the browser should be able to keep inside its frame budget.
+
+                           (2) Web workers enable you to run JavaScript in a separate thread. The main thread and the worker thread can't call each other directly, but communicate using an asynchronous messaging API.
+                           
+                             the worker runs all the primality tests, and it doesn't seem to have any effect at all on the responsiveness of the main thread. This might seem unlikely, but because workers run in a separate thread, they can take advantage of multi-core processors, which a single-threaded web site can't.
+                             
+                             The main limitation of web workers is that DOM APIs are not available to code running in a worker.
+                             
+                     - window.requestAnimationFrame(callback); : https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+
+                         The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes as an argument a callback to be invoked before the repaint.
+
+                         Your callback routine must itself call requestAnimationFrame() if you want to animate another frame at the next repaint.
+
+                         You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers
+
+
                  [WaterFall] https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall
                      - The Waterfall gives you insight into the sorts of things the browser is doing as it runs your site or app. It's based on the idea that the things a browser does when running a site can be divided into various types - running JavaScript, updating layout, and so on - and that at any given point in time, the browser is doing one of those things.
 

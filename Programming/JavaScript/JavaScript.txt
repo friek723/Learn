@@ -4,9 +4,11 @@ Javascript
               - [Concurrency model and Event Loop]
                     https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
               - [Web Workers]  
-                    https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
-                    https://www.html5rocks.com/en/tutorials/workers/basics/
+                    - https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+                    - https://www.html5rocks.com/en/tutorials/workers/basics/
                     [demo] https://www.youtube.com/watch?v=WBmttwfA_k8&feature=youtu.be
+                    - [Sample Code] https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript
+                    - The main limitation of web workers is that DOM APIs are not available to code running in a worker. (thread safe?)   
 
         ! http://javascript.info/
           https://www.toptal.com/javascript/interview-questions
@@ -243,6 +245,8 @@ Javascript
       $(function(){...}) is a shortcut for $(document).ready(function(){...});
       - http://stackoverflow.com/questions/16242190/jquery-syntax-function-inside-parentheses-after-dollar-sign
 
+
+    - Function.prototype.bind() : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 
     - Event Bubbling : http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
       How to stop bubbling : https://www.w3schools.com/jquery/event_stoppropagation.asp
