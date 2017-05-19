@@ -55,7 +55,7 @@
 
         [2NF] Second Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-10-database-second-normal-form-explained-in-simple-english/
             # The table is in 1st normal form
-            # All non-key attributes are fully functional dependent on the primary key (primary key maybe composite key).
+            # All non-key attributes are fully functional dependent on the primary key (primary key maybe composite key, it's considered "NOT fully dependent" when a column depends on only parial of primary key).
             
         [3NF] Third Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-11-database-third-normal-form-explained-in-simple-english/
             # A table is in 2nd normal form.
