@@ -17,7 +17,19 @@ HTML
         
     - Canvas v.s. SVG : https://www.w3schools.com/html/html5_svg.asp
                         http://stackoverflow.com/questions/5882716/html5-canvas-vs-svg-vs-div
-                             
+    
+    - POST an array from an HTML form : 
+        (server side can assign this array to mongo DB directly, will see corresponding object in Mongo)
+        - http://stackoverflow.com/questions/3314567/how-to-get-form-input-array-into-php-array
+        - https://laravel.io/forum/02-28-2014-subbmiting-form-with-array-of-text-fields
+        - https://www.designedbyaturtle.co.uk/2014/submit-an-array-with-a-html-form/
+        - http://stackoverflow.com/questions/9073690/post-an-array-from-an-html-form-without-javascript
+        - https://codereview.stackexchange.com/questions/94493/submit-an-array-as-an-html-form-value-using-javascript
+        - http://stackoverflow.com/questions/4688880/html-element-array-name-something-or-name-something
+        - https://laracasts.com/discuss/channels/general-discussion/any-better-way-to-transform-this-html-input-array
+
+
+                         
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
