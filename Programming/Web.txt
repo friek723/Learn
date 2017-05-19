@@ -132,6 +132,11 @@ Web Technology :
                     !!! https://www.keycdn.com/blog/website-performance-optimization/
                     https://developers.google.com/web/fundamentals/performance/
                     https://www.keycdn.com/blog/web-performance-advice/
+                    https://developer.yahoo.com/performance/rules.html
+                    !!!!![Professional Website Performance Optimizing The Front End And The Back End by Peter Smith – 2013]
+                        - https://github.com/imkrimerman/javascript-ebooks/blob/master/%5BProfessional%20Website%20Performance%20Optimizing%20The%20Front%20End%20And%20The%20Back%20End%20by%20Peter%20Smith%20%E2%80%93%202013%5D.pdf
+                        - https://www.safaribooksonline.com/library/view/professional-website-performance/9781118551721/
+
 
         - Website Speed Test : https://tools.keycdn.com/speed
                                https://tools.keycdn.com/ping
@@ -147,6 +152,8 @@ Web Technology :
           - https://www.maxcdn.com/one/visual-glossary/tcp-slow-start/
 
         - Cache-Control: max-age=2592000, public (HTTP header)
+          - if you use a far future Expires header you have to change the component's filename whenever the component changes. At Yahoo! we often make this step part of the build process: a version number is embedded in the component's filename, for example, yahoo_2.0.6.js.
+            (http://developer.yahoo.com/performance/rules.html#expires)
           - How to turn on : webserver config or .htaccess  
           - ! https://varvy.com/pagespeed/cache-control.html
           - !! https://www.keycdn.com/blog/http-cache-headers/
@@ -154,6 +161,11 @@ Web Technology :
           - https://varvy.com/pagespeed/leverage-browser-caching.html
           - http://dev.mobify.com/blog/beginners-guide-to-http-cache-headers/
           - https://varvy.com/performance/application-cache.html
+
+        - ETag : 
+              http://stackoverflow.com/questions/499966/etag-vs-header-expires
+              https://blog.othree.net/log/2012/12/22/cache-control-and-etag/
+              https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
 
         - Gzip compression (Request Header --> Accept-Encoding: "gzip, deflate, br")
           - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
@@ -172,6 +184,21 @@ Web Technology :
                                           https://varvy.com/performance/cssom.html
                                           https://varvy.com/pagespeed/optimize-css-delivery.html
                                           https://varvy.com/pagespeed/style-script-order.html
+
+        - other:
+              # Inline images use the data: URL scheme to embed the image data in the actual page.
+              
+              # The HTML specification clearly states that stylesheets are to be included in the HEAD of the page. (https://developer.yahoo.com/performance/rules.html#css_top) 
+              
+              # Preload Components : By preloading components you can take advantage of the time the browser is idle and request components (like images, styles and scripts) you'll need in the future.  (https://developer.yahoo.com/performance/rules.html)
+              
+              # Splitting components (to different domains) allows you to maximize parallel downloads. Make sure you're using not more than 2-4 domains because of the DNS lookup penalty. For example, you can host your HTML and dynamic content on www.example.org and split static components between static1.example.org and static2.example.org
+              (https://developer.yahoo.com/performance/rules.html)
+              (!! http://sgdev-blog.blogspot.com.au/2014/01/maximum-concurrent-connection-to-same.html)
+
+              # You should make sure static components are requested with cookie-free requests. Create a subdomain and host all your static components there.
+                If your domain is www.example.org, you can host your static components on static.example.org
+                (https://developer.yahoo.com/performance/rules.html)
 
 
 ----------------------------------------------------------------------------------------------

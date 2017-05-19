@@ -76,7 +76,8 @@
 [Reverse Proxy Server - related to CDN]
     - !!! http://stackoverflow.com/questions/224664/difference-between-proxy-server-and-reverse-proxy-server
     - ! https://www.linuxbabe.com/it-knowledge/differences-between-forward-proxy-and-reverse-proxy
-    - [nice picture] 
+    - [nice picture]
+      ! https://www.incapsula.com/cdn-guide/glossary/reverse-proxy.html 
       https://www.quora.com/Whats-the-difference-between-a-reverse-proxy-and-forward-proxy
       http://www.jscape.com/blog/bid/87783/Forward-Proxy-vs-Reverse-Proxy 
     - https://www.keycdn.com/support/using-a-varnish-cdn-stack-with-keycdn/
@@ -85,6 +86,7 @@
 
 [CDN (Content Delivery Network)]
     https://www.keycdn.com/content-delivery-network
+    https://www.incapsula.com/cdn-guide/glossary/reverse-proxy.html
 
 
 !!! http://highscalability.com/all-time-favorites/
