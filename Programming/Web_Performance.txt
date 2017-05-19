@@ -83,7 +83,26 @@
     Performace : https://developer.mozilla.org/en-US/docs/Tools/Performance
                  https://developer.mozilla.org/en-US/docs/Tools/Performance/UI_Tour
 
+                 [Frame rate] https://developer.mozilla.org/en-US/docs/Tools/Performance/Frame_rate
+                     - Frame rate is a measure of a website's responsiveness. A low or inconsistent frame rate can make a site appear unresponsive or janky, making for a bad user experience.
+
+                       A frame rate of 60fps is the target for smooth performance, giving you a time budget of 16.7ms for all the updates needed in response to some event.
+
+                       The frame rate graph in the Performance tool shows you the frame rate over the course of a recording. It gives you a quick indication of where your site might be having problems
+
+                     - consider splitting it into pieces and running the pieces inside requestAnimationFrame, or even running the entire function in a worker. 
+
+                 [Intensive_JavaScript] https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript
+
+                     - By default the browser uses a single thread to run all the JavaScript in your page as well as to perform layout, reflows, and garbage collection. This means that long-running JavaScript functions can block the thread, leading to an unresponsive page and a bad user experience.
+
+                     - two different approaches to fixing them. The first is to split long-running functions into pieces and use requestAnimationFrame to schedule each piece, and the second is to run the whole function in a separate thread using a web worker.
+                     
                  [WaterFall] https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall
+                     - The Waterfall gives you insight into the sorts of things the browser is doing as it runs your site or app. It's based on the idea that the things a browser does when running a site can be divided into various types - running JavaScript, updating layout, and so on - and that at any given point in time, the browser is doing one of those things.
+
+                       So if you see a sign of a performance problem - a drop in the frame rate, for example - you can go to the Waterfall to see what the browser was doing at that point in the recording.
+
                      - algorithm the browser uses to update the page in response to some event : 
 
                         (1) JavaScript Function Call: some event - for example, a DOM event - causes some JavaScript in the page to run. The JavaScript changes some of the page's DOM or CSSOM.
@@ -100,6 +119,41 @@
                      - By default, a site's JavaScript is executed in the same thread that the browser uses for layout updates, repaints, DOM events, and so on. This means that long-running JavaScript functions can cause unresponsiveness (jank): animations may not be smooth, or the site might even freeze.
 
                      - [Garbage collection] GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.
+
+
+                 [Call Tree] https://developer.mozilla.org/en-US/docs/Tools/Performance/Call_Tree
+                     - The Call Tree tells you which JavaScript functions the browser spent the most time in. By analyzing its results, you can find bottlenecks in your code
+
+                     - Samples is the number of samples that were taken when we were executing this particular function.
+
+                       Self Cost is that number as a percentage of the total number of samples in the selected portion of the recording.
+
+                     - Functions with a relatively high Self Cost are good candidates for optimization, either because they take a long time to run, or because they are called very often.
+
+                 [Flame Chart] https://developer.mozilla.org/en-US/docs/Tools/Performance/Flame_Chart
+                     - The Flame Chart shows you the state of the JavaScript stack for your code at every millisecond during the performance profile.
+
+                       This gives you a way to know exactly which function was executing at any point during the recording, how long it ran for, and where it was called from.
+
+                     - The Call Tree and the Flame Chart are both used to analyze your site's JavaScript, and they both use the same data: a sample of the JavaScript engine's stack, taken periodically during the recording.
+
+                 [Allocations] https://developer.mozilla.org/en-US/docs/Tools/Performance/Allocations
+                     - The Allocations view in the Performance tool shows you which functions in your page are allocating the most memory over the course of the profile.
+
+                       For performance this is important mostly because allocating a lot of memory, or making a lot of allocations, can trigger garbage collection. This in turn can hurt the responsiveness of a page.
+
+                     - "Self" records samples taken only in this function. "Total" records samples taken in this function or in functions called by this function. A
+
+                     - the main connection between the allocation profile of a site and its responsiveness is the cost of garbage collection (GC).
+
+                       With a garbage-collected language, like JavaScript, the runtime periodically needs to walk the heap looking for objects that are no longer reachable, and then freeing the memory they occupy. While GC events like this are executing, the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.
+
+                     - To reduce the impact on responsiveness, SpiderMonkey (the JavaScript engine in Firefox) can perform GC in small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.
+
+                     - GC events are shown as red markers in the Waterfall view, and are a big red flag for responsiveness
+
+                     - allocation pressure - allocating a lot of memory, or allocating memory at a high rate - makes SpiderMonkey more likely to run garbage collection, and more likely to run full, non-incremental garbage collection.
+
 
     Network Monitor : https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor
 
