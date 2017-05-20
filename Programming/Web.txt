@@ -162,7 +162,10 @@ Web Technology :
           - http://dev.mobify.com/blog/beginners-guide-to-http-cache-headers/
           - https://varvy.com/performance/application-cache.html
 
-        - ETag : 
+        - ETag: "15f0fff99ed5aae4edffdd6496d7131f" (HTTP header) (Content-based conditional request)
+          Last-Modified: Mon, 03 Jan 2011 17:45:57 GMT (HTTP header) (time-based conditional request)
+              ! https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers
+              http://stackoverflow.com/questions/20978189/how-304-not-modified-works
               http://stackoverflow.com/questions/499966/etag-vs-header-expires
               https://blog.othree.net/log/2012/12/22/cache-control-and-etag/
               https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
@@ -187,7 +190,7 @@ Web Technology :
 
         - other:
               # Inline images use the data: URL scheme to embed the image data in the actual page.
-              
+                (Adcantage is no need to issue another request to download image.)
               # The HTML specification clearly states that stylesheets are to be included in the HEAD of the page. (https://developer.yahoo.com/performance/rules.html#css_top) 
               
               # Preload Components : By preloading components you can take advantage of the time the browser is idle and request components (like images, styles and scripts) you'll need in the future.  (https://developer.yahoo.com/performance/rules.html)
@@ -198,6 +201,9 @@ Web Technology :
 
               # You should make sure static components are requested with cookie-free requests. Create a subdomain and host all your static components there.
                 If your domain is www.example.org, you can host your static components on static.example.org
+                (https://developer.yahoo.com/performance/rules.html)
+              
+              # Using external files in the real world generally produces faster pages because the JavaScript and CSS files are cached by the browser. JavaScript and CSS that are inlined in HTML documents get downloaded every time the HTML document is requested.
                 (https://developer.yahoo.com/performance/rules.html)
 
 

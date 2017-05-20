@@ -199,3 +199,12 @@
     https://developers.google.com/speed/docs/insights/BlockingJS
 
 
+
+[Professional Website Performance Optimizing The Front End And The Back End by Peter Smith – 2013]
+- https://github.com/imkrimerman/javascript-ebooks/blob/master/%5BProfessional%20Website%20Performance%20Optimizing%20The%20Front%20End%20And%20The%20Back%20End%20by%20Peter%20Smith%20%E2%80%93%202013%5D.pdf
+
+    - [Tool] https://www.webpagetest.org
+
+    - Avoid empty src="" (will issue a request)
+
+    - spefifying the width/height of image (browser can render smoothly after image downloaded.)(p.89)
