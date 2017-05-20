@@ -116,6 +116,20 @@
 
                          You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers
 
+                         [Animation] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance#Off_main_thread_animation
+
+                                     The requestAnimationFrame() API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to setTimeout()/setInterval(), which need a specific delay parameter, requestAnimationFrame() is much more efficient. Developers can create an animation by simply changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
+
+                 [animation_performance] https://developer.mozilla.org/en-US/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance
+                     - There are many ways to implement web animations, such as CSS transitions/animations or JavaScript-based animations (using requestAnimationFrame().
+
+                     -  in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations 
+
+                     - CSS transitions/animations are simply resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a requestAnimationFrame() callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.
+
+                     - Off main thread animation
+                       we'd argue that CSS animations are the better choice. But how? The key is that as long as the properties we want to animate do not trigger reflow/repaint (read CSS triggers for more information), we can move those sampling operations out of the main thread. The most common property is the CSS transform. If an element is promoted as a layer, animating transform properties can be done in the GPU, meaning better performance/efficiency, especially on mobile. 
+                       
 
                  [WaterFall] https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall
                      - The Waterfall gives you insight into the sorts of things the browser is doing as it runs your site or app. It's based on the idea that the things a browser does when running a site can be divided into various types - running JavaScript, updating layout, and so on - and that at any given point in time, the browser is doing one of those things.
