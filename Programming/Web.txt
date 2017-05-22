@@ -308,7 +308,7 @@ Web server & App server
                                       /etc/httpd/conf/httpd.conf 
                                       /etc/httpd/conf.d/*.conf
                     - "user" config : /etc/apache2/httpd.conf
-                    - vhosts : /etc/apache2/sites-available 
+                    - vhosts : /etc/apache2/sites-available  (000-default.conf for port 80 by default)
                                - [content] : see [note9] for example
                                - files (one per file, typically) you might want to number them, e.g. 00-domain.com, 01-otherdomain.com
                                - (STEP 1) Add xxx.conf (see [note9][example port 8080 for PHP Laravel site])
@@ -325,6 +325,16 @@ Web server & App server
                     - ports (Listen directives) : /etc/apache2/ports.conf
                     - mods : /etc/apache2/mods-available
                 
+                    - How to Change web root :
+                          1. Don't modify main config (/etc/apache2/apache2.conf)
+                          2. sudo vi /etc/apache2/sites-available/000-default.conf
+                          3. Edit : 
+                                DocumentRoot /var/www/html/mycare/public         
+                                <Directory /var/www/html/mycare/
+                                ...
+                                </Directory>
+                          4. sudo service apache2 restart
+
                 [HTTPS] 
                    - !(tried OK) https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
                    - !! Free-ssl-certificates : https://www.keycdn.com/blog/free-ssl-certificates/
