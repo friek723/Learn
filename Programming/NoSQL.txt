@@ -60,6 +60,8 @@ LIST OF NOSQL DATABASES : http://nosql-database.org/
 																		    } 
 																		)
 
+    - Join and field reference: 
+        https://docs.mongodb.com/manual/reference/database-references/
 
 
     - Auto Complete : https://groups.google.com/forum/#!topic/mongodb-user/MOKYDp83rPs

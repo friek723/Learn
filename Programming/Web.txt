@@ -9,6 +9,7 @@ Web Technology :
                                           STEPS : Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
 
     [HTTP2] : https://blog.stackpath.com/glossary/http2/
+              http://kamranahmed.info/blog/2016/08/13/http-in-depth/
               https://http2.github.io/faq/#what-are-the-key-differences-to-http1x
               https://simular.co/knowledge/site-build/68-about-http2-and-http11.html
               Verify HTTP/2.0 Support : https://tools.keycdn.com/http2-test
@@ -141,6 +142,9 @@ Web Technology :
         - Website Speed Test : https://tools.keycdn.com/speed
                                https://tools.keycdn.com/ping
 
+        - Web Cache :  !!http://kamranahmed.info/blog/2017/03/14/quick-guide-to-http-caching/
+                         (1)Browser Cache  (2)Proxy Cache   (3)Reverse Proxy Cache
+
         - How a webpage is loaded and displayed : https://varvy.com/pagespeed/display.html
                                                   https://friendlybit.com/css/rendering-a-web-page-step-by-step/
           Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
@@ -164,6 +168,7 @@ Web Technology :
 
         - ETag: "15f0fff99ed5aae4edffdd6496d7131f" (HTTP header) (Content-based conditional request)
           Last-Modified: Mon, 03 Jan 2011 17:45:57 GMT (HTTP header) (time-based conditional request)
+          (Both are used with "Cache-Control")
               ! https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers
               http://stackoverflow.com/questions/20978189/how-304-not-modified-works
               http://stackoverflow.com/questions/499966/etag-vs-header-expires
