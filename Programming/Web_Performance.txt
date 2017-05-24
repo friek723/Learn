@@ -218,6 +218,18 @@
 
     - Load Balancer set a cookie when a client first visit. (The cookie contains the ID of the back-end server handling the request.)
 
+    - In MySQL sharding (scaling write) setup, you must add a extra step of logic to your app code.
+      Fisrt, you must keep track of which shards reside on which servers.(store this lookup table in app config or memcache). Every time your app performs a query, it must consult this table to determine which server to send the query.
+      In Mongo, all this is taken care of automatically through the use of two additional services : mogos and configuration servers. App is unaware that sharding is even happening. (p.344)
+
+    - Choosing the sharding key is the most difficult part of setting up sharding. (key = email address , username or...any fields) (p.344)
+
+    - Replication offers you security against node failing(and some degree of read scaling).
+      While sharding provides write scaling.
+      Combine them togerther is the most popular ways for setting up Mongo cluster.
+      (Each shard is a replica set.)  (p.349 and 350)
+      
+
 
 
 
