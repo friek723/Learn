@@ -202,6 +202,8 @@
 
 [Professional Website Performance Optimizing The Front End And The Back End by Peter Smith – 2013]
 - https://github.com/imkrimerman/javascript-ebooks/blob/master/%5BProfessional%20Website%20Performance%20Optimizing%20The%20Front%20End%20And%20The%20Back%20End%20by%20Peter%20Smith%20%E2%80%93%202013%5D.pdf
+- (backend only) https://books.google.com.au/books?id=8YyhNm3QHSIC&pg=PA139&dq=ajax+preemptive+loading&hl=zh-TW&source=gbs_toc_r&cad=4#v=onepage&q&f=false
+
 
     - [Tool] https://www.webpagetest.org
 
@@ -229,8 +231,16 @@
       Combine them togerther is the most popular ways for setting up Mongo cluster.
       (Each shard is a replica set.)  (p.349 and 350)
       
+    - Count the number of Elements in DOM : document.getElementsByTagName('*').length
 
+    - Cache a reference to a element if you want to access it many times.(don't have to traverse the tree and find it.)
 
-
+    - Fetch the JS via XHR and passing the reponse to eval() or insert in to DOM via inside a <script> tag.
+      OR 
+      $("#hidden_modal").load( "cropper_modal_outter.html", function(){ // load complete });
+      OR 
+      var element1 = document.createElement("script");
+      element1.src = "js/cropper/common.js";
+      document.body.appendChild(element1);
 
 
