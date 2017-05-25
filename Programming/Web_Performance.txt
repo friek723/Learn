@@ -304,10 +304,74 @@
         Run layout on the render tree to compute geometry of each node.
         Paint the individual nodes to the screen.
       Optimizing the critical rendering path is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.
+      Both HTML and CSS are render blocking resources. 
 
-    - When declaring your style sheet assets, pay close attention to the media type and queries; they greatly impact critical rendering path performance.
+    - By default, CSS is treated as a render blocking resource, which means that the browser won't render any processed content until the CSSOM is constructed. Make sure to keep your CSS lean, deliver it as quickly as possible, and "use media types and queries to unblock rendering".
 
-    - JavaScript blocks DOM construction unless explicitly declared as async.
+      (1) By default, CSS is treated as a render blocking resource.
+      (2) Media types and media queries allow us to mark some CSS resources as non-render blocking.
+      (3) The browser downloads all CSS resources, regardless of blocking or non-blocking behavior.
+
+    - If we have some CSS styles that are only used under certain conditions, for example, when the page is being printed or being projected onto a large monitor? It would be nice if we didn’t have to block rendering on these resources.
+        CSS "media types" and "media queries" allow us to address these use cases:
+          <link href="style.css" rel="stylesheet">
+          <link href="print.css" rel="stylesheet" media="print">
+          <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
+        the last stylesheet declaration provides a "media query," which is executed by the browser: if the conditions match, the browser blocks rendering until the style sheet is downloaded and processed.
+
+        By using media queries, we can tailor our presentation to specific use cases, such as display versus print, and also to dynamic conditions such as changes in screen orientation, resize events, and more. When declaring your style sheet assets, pay close attention to the media type and queries; they greatly impact critical rendering path performance.
+
+    - note that "render blocking" only refers to whether the browser has to hold the initial rendering of the page on that resource. In either case, the browser still downloads the CSS asset, albeit with a lower priority for non-blocking resources.
+
+    - To deliver optimal performance, make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path.
+
+    - JavaScript
+      (1)JavaScript can query and modify the DOM and the CSSOM.
+      (2)JavaScript execution blocks on the CSSOM.
+      (3)JavaScript blocks DOM construction unless explicitly declared as async.
+
+    - while JavaScript affords us lots of power, it creates lots of additional limitations on how and when the page is rendered.
+
+    - JS script is executed at the exact point where it is inserted in the document. When the HTML parser encounters a script tag, it pauses its process of constructing the DOM and yields control to the JavaScript engine; after the JavaScript engine finishes running, the browser then picks up where it left off and resumes DOM construction.
+
+      In other words, our script block can't find any elements later in the page because they haven't been processed yet! Or, put slightly differently: executing our inline script blocks DOM construction, which also delays the initial render.
+
+    - 
+      (1)The location of the script in the document is significant.
+      (2)When the browser encounters a script tag, DOM construction pauses until the script finishes executing.
+      (3)JavaScript can query and modify the DOM and the CSSOM.
+      (4)JavaScript execution pauses until the CSSOM is ready.
+      To a large degree, "optimizing the critical rendering path" refers to understanding and optimizing the dependency graph between HTML, CSS, and JavaScript.
+
+    - By default, JavaScript execution is "parser blocking": when the browser encounters a script in the document it must pause DOM construction, hand over control to the JavaScript runtime, and let the script execute before proceeding with DOM construction. We saw this in action with an inline script in our earlier example. In fact, inline scripts are always parser blocking unless you write additional code to defer their execution.
+
+    - Whether we use a <script> tag or an inline JavaScript snippet, you'd expect both to behave the same way. In both cases, the browser pauses and executes the script before it can process the remainder of the document. However, in the case of an external JavaScript file the browser must pause to wait for the script to be fetched from disk, cache, or a remote server, which can add tens to thousands of milliseconds of delay to the critical rendering path.
+
+    - Adding the async keyword to the script tag tells the browser not to block DOM construction while it waits for the script to become available, which can significantly improve performance.
+      (or "defer" keyword)
+
+    - https://developers.google.com/web/tools/lighthouse/
+      The Lighthouse approach runs a series of automated tests against a page, and then generates a report on the page's CRP performance. 
+
+    - The Navigation Timing API approach captures Real User Monitoring (RUM) metrics. As the name implies, these metrics are captured from real user interactions with your site and provide an accurate view into real-world CRP performance, as experienced by your users across a variety of devices and network conditions.
+
+    - In general, a good approach is to use Lighthouse to identify obvious CRP optimization opportunities, and then to instrument your code with the Navigation Timing API to monitor how your app performs out in the wild.
+
+    - The Navigation Timing API captures all the relevant timestamps and our code simply waits for the onload event to fire 
+      var t = window.performance.timing,
+      interactive = t.domInteractive - t.domLoading,
+
+    - https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp
+    
+    - !! Normally Browser wait for CSSOM before executing JavaScript. 
+        - because the JavaScript might query the CSSOM, we must block the CSS file until it downloads before we can execute JavaScript.
+        - as soon as the browser hits the script tag it blocks and waits until the CSSOM is constructed.
+        - in order to execute the JavaScript file we have to block and wait for CSSOM; recall that JavaScript can query the CSSOM and hence the browser pauses until style.css is downloaded and CSSOM is constructed.
+
+    - An asynchronous script has several advantages: (keyword "async")
+      The script is no longer parser blocking and is not part of the critical rendering path.
+      Because there are no other critical scripts, the CSS doesn't need to block the domContentLoaded event.
+
 
 
 
