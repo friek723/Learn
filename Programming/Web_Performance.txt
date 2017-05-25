@@ -192,11 +192,7 @@
 
 
 
-[When to load JS in page flow]
-    http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
-    - The current state-of-the-art is to put scripts in the <head> tag and use the async or defer attributes. This allows your scripts to be downloaded asap without blocking your browser.
 
-    https://developers.google.com/speed/docs/insights/BlockingJS
 
 
 
@@ -242,5 +238,78 @@
       var element1 = document.createElement("script");
       element1.src = "js/cropper/common.js";
       document.body.appendChild(element1);
+
+    - MySQL Tuning : 
+          Table Cache : store table in memory.
+          Thread Cache : reuse Thread from a pool for new connection.
+
+
+[Google DevTools]
+  https://developers.google.com/web/tools/chrome-devtools/
+  http://discover-devtools.codeschool.com/
+
+
+[Google] https://developers.google.com/web/fundamentals/performance/
+    - keep pre-load data to a minimum so that your app loads fast, and use idle time to load remaining data.
+         
+    - Vector graphics is the use of polygons to represent images in computer graphics.
+      Vector graphics use lines, points, and polygons to represent an image.
+      Vector images are zoom and resolution-independent
+      prefer vector images whenever possible as they are resolution independent and always deliver sharp results
+      
+    - SVG [Scalable Vector Graphics]
+      SVG is an XML-based image format
+      SVG files should be minified to reduce their size
+      SVG files should be compressed with GZIP
+      All modern browsers support Scalable Vector Graphics (SVG), which is an XML-based image format for two-dimensional graphics: we can embed the SVG markup directly on the page, or as an external resource. In turn, an SVG file can be created by most vector-based drawing software, or by hand and directly in your favorite text editor.
+
+    - [Font] the browser must construct the render tree, which is dependent on the DOM and CSSOM trees, before it knows which font resources it needs in order to render the text. As a result, font requests are delayed well after other critical resources, and the browser may be blocked from rendering text until the resource is fetched.
+
+    - Cache-Control "no-cache" and "no-store"
+        "no-cache" indicates that the returned response can't be used to satisfy a subsequent request to the same URL without first checking with the server if the response has changed. As a result, if a proper validation token (ETag) is present, no-cache incurs a roundtrip to validate the cached response, but can eliminate the download if the resource has not changed.
+
+        By contrast, "no-store" is much simpler. It simply disallows the browser and all intermediate caches from storing any version of the returned response—for example, one containing private personal or banking data. Every time the user requests this asset, a request is sent to the server and a full response is downloaded.
+  
+    - You change the URL of the resource and force the user to download the new response whenever its content changes. Typically, you do this by embedding a fingerprint of the file, or a version number, in its filename—for example, style.x234dff.css.
+
+    - The combination of ETag, Cache-Control, and unique URLs allows you to deliver the best of all worlds: long-lived expiration times, control over where the response can be cached, and on-demand updates.
+
+    - Before the browser can render the page, it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible.
+      HTML markup is transformed into a Document Object Model (DOM); CSS markup is transformed into a CSS Object Model (CSSOM).
+      DOM and CSSOM are independent data structures.
+
+    - Why does the CSSOM have a tree structure? When computing the final set of styles for any object on the page, the browser starts with the most general rule applicable to that node (for example, if it is a child of a body element, then all body styles apply) and then recursively refines the computed styles by applying more specific rules; that is, the rules "cascade down."
+
+    - The CSSOM and DOM trees are combined into a "render tree", which is then used to compute the layout of each visible element and serves as an input to the paint process that renders the pixels to screen.
+      
+       (1) The DOM and CSSOM trees are combined to form the render tree.
+       (2) "Render tree" contains only the nodes required to render the page.
+       (3) "Layout" computes the exact position and size of each object.
+       (4) The last step is "paint", which takes in the final render tree and renders the pixels to the screen.
+
+    - Some nodes are hidden via CSS and are also omitted from the render tree
+
+    - Note: As a brief aside, note that visibility: hidden is different from display: none. The former makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
+
+    - The final output is a render that contains both the content and style information of all the visible content on the screen. With the render tree in place, we can proceed to the "layout" stage. 
+      Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the viewport of the device---that's the "layout" stage, also known as "reflow."
+      The output of the layout process is a "box model," which precisely captures the exact position and size of each element within the viewport: all of the relative measurements are converted to absolute pixels on the screen.
+
+    - Finally, now that we know which nodes are visible, and their computed styles and geometry, we can pass this information to the final stage, which converts each node in the render tree to actual pixels on the screen. This step is often referred to as "painting" or "rasterizing."
+
+    - Here's a quick recap of the browser's steps:
+        Process HTML markup and build the DOM tree.
+        Process CSS markup and build the CSSOM tree.
+        Combine the DOM and CSSOM into a render tree.
+        Run layout on the render tree to compute geometry of each node.
+        Paint the individual nodes to the screen.
+      Optimizing the critical rendering path is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.
+
+    - When declaring your style sheet assets, pay close attention to the media type and queries; they greatly impact critical rendering path performance.
+
+    - JavaScript blocks DOM construction unless explicitly declared as async.
+
+
+
 
 

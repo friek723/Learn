@@ -159,6 +159,7 @@ Web Technology :
           - if you use a far future Expires header you have to change the component's filename whenever the component changes. At Yahoo! we often make this step part of the build process: a version number is embedded in the component's filename, for example, yahoo_2.0.6.js.
             (http://developer.yahoo.com/performance/rules.html#expires)
           - How to turn on : webserver config or .htaccess  
+          - !!! [good pic] https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
           - ! https://varvy.com/pagespeed/cache-control.html
           - !! https://www.keycdn.com/blog/http-cache-headers/
                https://www.keycdn.com/support/cache-control/
@@ -192,6 +193,12 @@ Web Technology :
                                           https://varvy.com/performance/cssom.html
                                           https://varvy.com/pagespeed/optimize-css-delivery.html
                                           https://varvy.com/pagespeed/style-script-order.html
+
+        - When to load JS in page flow : 
+            !! http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+            - The current state-of-the-art is to put scripts in the <head> tag and use the async or defer attributes. This allows your scripts to be downloaded asap without blocking your browser.
+
+            https://developers.google.com/speed/docs/insights/BlockingJS
 
         - other:
               # Inline images use the data: URL scheme to embed the image data in the actual page.
