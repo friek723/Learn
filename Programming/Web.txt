@@ -8,7 +8,8 @@ Web Technology :
                         [How page render] https://friendlybit.com/css/rendering-a-web-page-step-by-step/
                                           STEPS : Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
 
-    [HTTP2] : https://blog.stackpath.com/glossary/http2/
+    [HTTP2] : https://developers.google.com/web/fundamentals/performance/http2/
+              https://blog.stackpath.com/glossary/http2/
               http://kamranahmed.info/blog/2016/08/13/http-in-depth/
               https://http2.github.io/faq/#what-are-the-key-differences-to-http1x
               https://simular.co/knowledge/site-build/68-about-http2-and-http11.html

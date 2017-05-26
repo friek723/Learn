@@ -388,4 +388,53 @@
 
     - Reduce the complexity of your selectors (css)
 
+    - It is, however, possible to force a browser to perform layout earlier with JavaScript. It is called a "forced synchronous layout" = style write + style read
+
+    - (1)Avoid long-running input handlers; they can block scrolling.
+      (2)Do not make style changes in input handlers.
+      (3)Debounce your handlers; store event values and deal with style changes in the next requestAnimationFrame callback.
+
+      Avoid style changes in input handlers : 
+      Input handlers, like those for scroll and touch, are scheduled to run just before any requestAnimationFrame callbacks.
+      If you make a visual change inside one of those handlers, then at the start of the requestAnimationFrame, there will be style changes pending. If you then read visual properties at the start of the requestAnimationFrame callback, as the advice in “Avoid large, complex layouts and layout thrashing” suggests, you will trigger a forced synchronous layout!
+      You should always debounce visual changes to the next requestAnimationFrame callback:
+      (https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers)
+
+    - [HTTP2] https://developers.google.com/web/fundamentals/performance/http2/
+      In short, HTTP/2 breaks down the HTTP protocol communication into an exchange of binary-encoded frames, which are then mapped to messages that belong to a particular stream, all of which are multiplexed within a single TCP connection. This is the foundation that enables all other features and performance optimizations provided by the HTTP/2 protocol.
+
+      With HTTP/1.x, if the client wants to make multiple parallel requests to improve performance, then multiple TCP connections must be used. 
+      The new binary framing layer in HTTP/2 removes these limitations, and enables full request and response multiplexing, by allowing the client and server to break down an HTTP message into independent frames, interleave them, and then reassemble them on the other end.
+
+      The ability to break down an HTTP message into independent frames, interleave them, and then reassemble them on the other end is the single most important enhancement of HTTP/2. In fact, it introduces a ripple effect of numerous performance benefits across the entire stack of all web technologies, 
+      enabling us to:
+            (1)Interleave multiple requests in parallel without blocking on any one.
+            (2)Interleave multiple responses in parallel without blocking on any one.
+            (3)Use a single connection to deliver multiple requests and responses in parallel.
+            (4)Remove unnecessary HTTP/1.x workarounds (see Optimizing for HTTP/1.x, such as concatenated files, image sprites, and domain sharding.
+            (5)Deliver lower page load times by eliminating unnecessary latency and improving utilization of available network capacity.
+
+      By reusing the same connection, HTTP/2 is able to both make more efficient use of each TCP connection, and also significantly reduce the overall protocol overhead. Further, the use of fewer connections reduces the memory and processing footprint along the full connection path (in other words, client, intermediaries, and origin servers).
+
+      In fact, if you have ever inlined a CSS, JavaScript, or any other asset via a data URI (see Resource Inlining), then you already have hands-on experience with server push.
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[High PerformanceBrowser Networking] : https://hpbn.co
+
+
+
     
