@@ -362,18 +362,30 @@
       interactive = t.domInteractive - t.domLoading,
 
     - https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp
-    
+
     - !! Normally Browser wait for CSSOM before executing JavaScript. 
         - because the JavaScript might query the CSSOM, we must block the CSS file until it downloads before we can execute JavaScript.
         - as soon as the browser hits the script tag it blocks and waits until the CSSOM is constructed.
         - in order to execute the JavaScript file we have to block and wait for CSSOM; recall that JavaScript can query the CSSOM and hence the browser pauses until style.css is downloaded and CSSOM is constructed.
+        - Parser blocking JavaScript forces the browser to wait for the CSSOM and pauses construction of the DOM, which in turn can significantly delay the time to first render.
 
     - An asynchronous script has several advantages: (keyword "async")
       The script is no longer parser blocking and is not part of the critical rendering path.
       Because there are no other critical scripts, the CSS doesn't need to block the domContentLoaded event.
 
+    - Put CSS in the document head
+      Specify all CSS resources as early as possible within the HTML document so that the browser can discover the <link> tags and dispatch the request for the CSS as soon as possible.
+    
+    - Inline render-blocking CSS
+      For best performance, you may want to consider inlining the critical CSS directly into the HTML document. This eliminates additional roundtrips in the critical path and if done correctly can deliver a "one roundtrip" critical path length where only the HTML is a blocking resource.
 
+    - Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
+      Move long-running JavaScript off the main thread to Web Workers.
 
+    - JavaScript runs on the browser’s main thread, right alongside style calculations, layout, and, in many cases, paint. If your JavaScript runs for a long time, it will block these other tasks, potentially causing frames to be missed.
+      In many cases you can move pure computational work to Web Workers, if, for example, the it doesn’t require DOM access.
+      Web Workers do not have DOM access. 
 
+    - Reduce the complexity of your selectors (css)
 
-
+    
