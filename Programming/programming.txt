@@ -34,4 +34,15 @@ package manager :
 [Microservices]
     - https://smartbear.com/learn/api-design/what-are-microservices/
     - https://www.nginx.com/blog/building-a-web-frontend-with-microservices-and-nginx-plus/
+
+
+
+[Interview]
+http://bigdataconsultants.blogspot.com.au/
+
+
+
+
+
+
     

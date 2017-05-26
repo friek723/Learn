@@ -425,7 +425,8 @@
 
 
 
-
+[Database]
+https://www.smashingmagazine.com/2011/03/speeding-up-your-websites-database/
 
 
 
