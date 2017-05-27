@@ -436,6 +436,54 @@ https://www.smashingmagazine.com/2011/03/speeding-up-your-websites-database/
 
 
 [High PerformanceBrowser Networking] : https://hpbn.co
+    - Script execution can issue a synchronous doc.write and block DOM parsing and construction. Similarly, scripts can query for a computed style of any object, which means that JavaScript can also block on CSS. Consequently, the construction of DOM and CSSOM objects is frequently intertwined: "DOM construction cannot proceed until JavaScript is executed", and "JavaScript execution cannot proceed until CSSOM is available". 
+
+    -  recall the popular "styles at the top, scripts at the bottom" best practice? Now you know why! Rendering and script execution are blocked on stylesheets; get the CSS down to the user as quickly as you can. 
+
+    - 
+        Critical resources such as CSS and JavaScript should be discoverable as early as possible in the document.
+
+        CSS should be delivered as early as possible to unblock rendering and JavaScript execution.
+
+        Noncritical JavaScript should be deferred to avoid blocking DOM and CSSOM construction.
+
+        The HTML document is parsed incrementally by the parser; hence the document should be periodically flushed for best performance. 
+
+     - 
+        <link rel="dns-prefetch" href="//hostname_to_resolve.com"> 
+        <link rel="subresource"  href="/javascript/myapp.js"> 
+        <link rel="prefetch"     href="/images/big.jpeg"> 
+        <link rel="prerender"    href="//example.org/next_page.html"> 
+
+        Pre-resolve specified hostname.
+
+        Prefetch critical resource found later on this page.
+
+        Prefetch resource for this or future navigation.
+
+        Prerender specified page in anticipation of next user destination. 
+
+     - Server-Sent Events (SSE) : https://hpbn.co/server-sent-events-sse/
+        SSE was an early addition to the HTML5 specification and is natively supported by most modern browsers. 
+        Server-Sent Events enables efficient server-to-client streaming of text-based event data—e.g., real-time notifications or updates generated on the server. 
+
+        Under the hood, SSE provides an efficient, cross-browser implementation of XHR streaming; the actual delivery of the messages is done over a single, long-lived HTTP connection. However, unlike dealing XHR streaming on our own, the browser handles all the connection management and message parsing, allowing our applications to focus on the business logic! In short, SSE makes working with real-time data simple and efficient.
+
+        var source = new EventSource("/path/to/stream-url"); 
+        source.onopen = function () { ... }; 
+        source.onerror = function () { ... }; 
+        source.addEventListener("foo", function (event) { 
+          processFoo(event.data);
+        });
+        source.onmessage = function (event) {  
+          log_message(event.id, event.data);
+           ...
+        }
+
+        Lack of support for binary streaming is not an oversight. SSE was specifically designed as a simple, efficient, server-to-client transport for text-based data. If you need to transfer binary payloads, then a WebSocket is the right tool for the job. 
+
+
+
 
 
 
