@@ -208,7 +208,7 @@
     - spefifying the width/height of image (browser can render smoothly after image downloaded.)(p.89)
 
     - Nginx as a Reverse Proxy to Apache
-    - Nginx can act as Reverse Proxy and Load Balancer ans Static File Server. (p.177)
+    - Nginx can act as Reverse Proxy and Load Balancer and Static File Server. (p.177)
 
     - HW Load Balancer v.s. SW Load Balancer
       HW : on OSI layer 3 and 4 (TCP/IP)
