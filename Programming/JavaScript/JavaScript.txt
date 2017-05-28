@@ -240,12 +240,18 @@ Javascript
     - Enable cross-origin resource sharing(CORS) : http://enable-cors.org/index.html
       (Related to 'Cross Site Request Forgery(CSRF)' :  https://github.com/pillarjs/understanding-csrf)
     
-    - window.onload vs $(document).ready() : 
+    - window.onload vs $(document).ready() v.s. DOMContentLoaded: 
+      - !! https://api.jquery.com/ready/
+        !! https://learn.jquery.com/using-jquery-core/document-ready/
       - http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
       $(function(){...}) is a shortcut for $(document).ready(function(){...});
       - http://stackoverflow.com/questions/16242190/jquery-syntax-function-inside-parentheses-after-dollar-sign
+      - ! https://www.kirupa.com/html5/running_your_code_at_the_right_time.htm
+      - DOMContentLoaded : 
+        https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+        https://javascript.info/onload-ondomcontentloaded
 
-
+ 
     - Function.prototype.bind() : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 
     - Event Bubbling : http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
