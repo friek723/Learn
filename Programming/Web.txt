@@ -148,7 +148,7 @@ Web Technology :
 
         - How a webpage is loaded and displayed : https://varvy.com/pagespeed/display.html
                                                   https://friendlybit.com/css/rendering-a-web-page-step-by-step/
-          Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
+          (Not exactly correct) : Download HTML --> parse HTLM + build DOM --> download css/JS/image --> CSS parsed (CSSOM) --> JS parsed + executed  --> render 
 
         - Connection: "Keep-Alive" (HTTP header)   (TCP slow start)
           - How to turn on : webserver config or .htaccess
@@ -196,6 +196,8 @@ Web Technology :
                                           https://varvy.com/pagespeed/style-script-order.html
 
         - When to load JS in page flow : 
+            !! https://www.kirupa.com/html5/running_your_code_at_the_right_time.htm
+               ("load" event, "DOMContentLoaded" event)
             !! https://www.w3schools.com/tags/att_script_defer.asp
             !! http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
             - The current state-of-the-art is to put scripts in the <head> tag and use the async or defer attributes. This allows your scripts to be downloaded asap without blocking your browser.
