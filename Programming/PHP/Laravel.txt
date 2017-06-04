@@ -31,6 +31,20 @@
 - receive each SQL query executed by your application : Search "Listening For Query Events" in https://laravel.com/docs/5.2/database     
 
 
+- !!! API : https://laravel.com/api/5.4/
+
+- Get current Route/Controller : 
+   (1) Model (Permission): 
+              use Illuminate\Support\Facades\Route;
+              use Illuminate\Support\Facades\Request;
+              public static function test()
+              { 
+                // Print : App\\Http\\Controllers\\PermissionController@listing 
+                Log::debug('currentRouteName '. Route::getCurrentRoute()->getActionName());
+
+                Log::debug('Request::is '. Request::is('permission/*')); 
+              }
+   (2) View : @if (App\Domains\Permission::test())
 
 - command :  
    composer create-project --prefer-dist laravel/laravel project_name   (create new project)
