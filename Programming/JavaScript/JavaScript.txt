@@ -212,6 +212,7 @@ Javascript
 
     [Frameworks]
         - http://todomvc.com/     (Helping you select an MV* framework)
+          https://github.com/tastejs/todomvc
         - Front-end JavaScript frameworks (Angular.js, Backbone, ember.js): https://github.com/showcases/front-end-javascript-frameworks
                                                                         https://www.airpair.com/js/javascript-framework-comparison
         - Angular v.s. React : https://www.quora.com/Which-JavaScript-framework-is-best-to-learn-first-Angular-React-+-Redux-or-Node
@@ -416,7 +417,12 @@ Javascript
           Framework : 
                   AngularJS, Meteor, Backbone, Express or plain NodeJs? When to use each one? : http://www.quora.com/JavaScript-Frameworks/AngularJS-Meteor-Backbone-Express-or-plain-NodeJs-When-to-use-each-one
                   
+                  - [Node.js Frameworks] http://noeticforce.com/best-nodejs-frameworks-for-web-and-app-development
+
                   'Meteor' web framework (https://www.meteor.com/about)
+                      - Introduction : https://guide.meteor.com/
+                        Meteor is a full-stack JavaScript platform for developing modern web and mobile applications. Meteor includes a key set of technologies for building connected-client reactive applications, a build tool, and a curated set of packages from the Node.js and general JavaScript community.
+
                       How Meteor Uses NodeJS - https://meteorhacks.com/how-meteor-uses-node.html
                       7 Reasons to Develop Your Next Web App with Meteor : http://www.sitepoint.com/7-reasons-develop-next-web-app-meteor/
                       http://stackoverflow.com/questions/11461411/node-js-vs-meteor-js-whats-the-difference

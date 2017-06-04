@@ -2,6 +2,12 @@
 
 
 
+[Table Collapse & Expand]
+    - http://www.jankoatwarpspeed.com/expand-table-rows-with-jquery-jexpand-plugin/
+    - http://jsfiddle.net/y4Mdy/
+      https://stackoverflow.com/questions/16926752/expand-collapse-table-rows-with-jquery
+      
+
 [side menu]
     - http://bootsnipp.com/snippets/featured/fancy-sidebar-navigation
     - https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm
