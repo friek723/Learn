@@ -67,6 +67,11 @@ SQL
     - Locking in SQL Server : http://www.sqlteam.com/article/introduction-to-locking-in-sql-server    
     - Connection String Reference : http://www.connectionstrings.com/
 
+    - FOREIGN KEY constraint : 
+      - https://dev.mysql.com/doc/refman/5.6/en/glossary.html#glos_foreign_key_constraint
+      - https://www.w3schools.com/sql/sql_foreignkey.asp
+      The type of constraint that maintains database consistency through a foreign key relationship. Like other kinds of constraints, it can prevent data from being inserted or updated if data would become inconsistent
+
     - [mysql]
              Install:
                 1. sudo yum install mysql-server
