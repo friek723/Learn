@@ -19,6 +19,8 @@ PHP
                            <?php
                        2. php xxx.php
     
+    - Threads and PHP : http://jpauli.github.io/2017/01/12/threads-and-php.html
+                        With PHP you do things, and whatever could take "more time than usual" should not be done in PHP. That's why we use "Queue based" system to async some heavy tasks in PHP (Gearman, AMQP, ActiveMQ etc...).
 
     - Anonymous functions, also known as closures : 
           http://www.php.net/manual/en/functions.anonymous.php
