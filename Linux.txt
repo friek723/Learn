@@ -49,6 +49,11 @@
 		                          http://stackoverflow.com/questions/10516384/linux-how-to-delete-multiple-files-at-once
 		                          http://www.cyberciti.biz/faq/linux-unix-how-to-find-and-remove-files/
 
+     [Change login default dir] 
+         add cd /var/www/websites to the end of your ~/.bashrc
+         https://serverfault.com/questions/499565/change-default-directory-when-i-ssh-to-server
+
+
 - User 
       Create root user : 1. useradd -o -u 0 -g 0 username    (useradd -u UID -g 初始群組 username)
                          2. passwd username
