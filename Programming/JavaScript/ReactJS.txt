@@ -31,6 +31,8 @@ Tutorial :
 
 [starter kit] - order by popularity
     !!!!! [Official React Starter Kit] https://github.com/facebookincubator/create-react-app
+                                       Doc : https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
+                                       
             Supported by Official React : https://facebook.github.io/react/docs/installation.html
                                             https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html
 
