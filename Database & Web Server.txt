@@ -100,12 +100,20 @@ Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
 Visualize Database Schemas (tool) :  http://www.codediesel.com/data/5-tools-to-visualize-database-schemas/
 
 
-[Task Queue & Message Broker]
+[Task Manager & Message Broker (Queue)]
+    [RabbitMQ] : message broker, Advanced Message Queuing Protocol (AMQP) 
+                 http://www.rabbitmq.com/getstarted.html
+                 
     [RabbitMQ and Celery]
         - !! https://abhishek-tiwari.com/post/amqp-rabbitmq-and-celery-a-visual-guide-for-dummies
+        - !! How Instagram Feeds Work: Celery and RabbitMQ : https://blogs.vmware.com/vfabric/2013/04/how-instagram-feeds-work-celery-and-rabbitmq.html
 
     [Celery] http://www.celeryproject.org/
         - MULTI BROKER SUPPORT
           The recommended message broker is RabbitMQ, but support for Redis, Beanstalk, MongoDB, CouchDB, and databases (using SQLAlchemy or the Django ORM) is also available.
 
+    [Queue]  
+         http://queues.io/
+         https://github.com/resque/resque
+         http://cakeresque.kamisama.me/
 
