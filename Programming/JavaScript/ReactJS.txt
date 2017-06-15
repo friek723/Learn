@@ -52,3 +52,118 @@ Tutorial :
     ! http://andrewhfarmer.com/starter-project/
        (Find your starter)
 
+
+
+[Note on Officail Tutorial] https://facebook.github.io/react/docs/hello-world.html
+    [JSX] : You can embed any JavaScript expression in JSX by wrapping it in curly braces.
+            const element = (
+              <h1>
+                Hello, {formatName(user)}!
+              </h1>
+            );
+            
+            We split JSX over multiple lines for readability. While it isn't required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.
+
+            After compilation, JSX expressions become regular JavaScript objects.
+            This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions
+
+            Specifying Attributes with JSX : You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+            Ex : const element = <div tabIndex="0"></div>;
+                 const element = <img src={user.avatarUrl}></img>;
+
+            Since JSX is closer to JavaScript than HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
+            !! For example, class becomes className in JSX, and tabindex becomes tabIndex.
+
+            It is safe to embed user input in JSX:
+            const title = response.potentiallyMaliciousInput;
+            // This is safe:
+            const element = <h1>{title}</h1>;
+            By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that's not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.
+
+            [JSX Represents Objects]
+              Babel compiles JSX down to React.createElement() calls.
+              These two examples are identical:
+                const element = (
+                  <h1 className="greeting">
+                    Hello, world!
+                  </h1>
+                );
+
+                const element = React.createElement(
+                  'h1',
+                  {className: 'greeting'},
+                  'Hello, world!'
+                );
+
+              React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object.
+              These objects are called "React elements". You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+    
+    [Rendering Elements]
+        Elements are the smallest building blocks of React apps.
+        An element describes what you want to see on the screen:
+        const element = <h1>Hello, world</h1>;
+        Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
+
+        !! Elements are what components are "made of".
+
+        <div id="root"></div> 
+        We call this a "root" DOM node because everything inside it will be managed by React DOM.
+        Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+
+        To render a React element into a root DOM node, pass both to ReactDOM.render():
+          const element = <h1>Hello, world</h1>;
+          ReactDOM.render(
+            element,
+            document.getElementById('root')
+          );
+
+        [Updating Element]
+            React elements are immutable. Once you create an element, you can't change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
+
+            In practice, most React apps only call ReactDOM.render() once. 
+
+            React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
+
+            thinking about how the UI should look at any given moment rather than how to change it over time eliminates a whole class of bugs.
+
+    [Components and Props]            
+        Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+        !! Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called "props") and return React elements describing what should appear on the screen.
+
+        [Functional and Class Components]
+          The simplest way to define a component is to write a JavaScript function:
+            function Welcome(props) {
+              return <h1>Hello, {props.name}</h1>;
+            }
+          This function is a valid React component because it accepts a single "props" object argument with data and returns a React element. We call such components "functional" because they are literally JavaScript functions.
+          You can also use an ES6 class to define a component:
+            class Welcome extends React.Component {
+              render() {
+                return <h1>Hello, {this.props.name}</h1>;
+              }
+            }
+          The above two components are equivalent from React's point of view.
+
+        [Rendering a Component]
+            elements can also represent user-defined components:
+                const element = <Welcome name="Sara" />;
+            When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object "props".
+            For example, this code renders "Hello, Sara" on the page:
+              function Welcome(props) {
+                return <h1>Hello, {props.name}</h1>;
+              }
+              const element = <Welcome name="Sara" />;
+              ReactDOM.render(
+                element,
+                document.getElementById('root')
+              );
+
+            !!! Always start component names with a capital letter.
+                For example, <div /> represents a DOM tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+
+            !! Components must return a single root element. This is why we added a <div> to contain all the <Welcome /> elements.
+ 
+            Typically, new React apps have a single App component at the very top. However, if you integrate React into an existing app, you might start bottom-up with a small component like Button and gradually work your way to the top of the view hierarchy.
+
+            
+
