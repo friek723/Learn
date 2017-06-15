@@ -374,7 +374,7 @@ Tutorial :
               The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. 
               A good rule of thumb is that elements inside the map() call need keys.
               Keys used within arrays should be unique among their siblings. However they don't need to be globally unique. 
-              
+
             function NumberList(props) {
               const numbers = props.numbers;
               const listItems = numbers.map((number) =>
@@ -392,3 +392,87 @@ Tutorial :
               <NumberList numbers={numbers} />,
               document.getElementById('root')
             );
+
+    [Forms] HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.
+            in most cases, it's convenient to have a JavaScript function that handles the submission of the form and has access to the data that the user entered into the form. The standard way to achieve this is with a technique called "controlled components".
+
+            In HTML, a <textarea> element defines its text by its children:
+            <textarea>
+              Hello there, this is some text in a text area
+            </textarea>
+            In React, a <textarea> uses a value attribute instead.
+            render() {
+              return (
+                <form onSubmit={this.handleSubmit}>
+                  <label>
+                    Name:
+                    <textarea value={this.state.value} onChange={this.handleChange} />
+                  </label>
+                  <input type="submit" value="Submit" />
+                </form>
+              );
+            }
+
+            <input type="text">, <textarea>, and <select> all work very similarly - they all accept a value attribute that you can use to implement a controlled component.
+
+            ES6 computed property name syntax to update the state key corresponding to the given input name:
+              this.setState({
+                [name]: value
+              });
+            It is equivalent to this ES5 code:
+              var partialState = {};
+              partialState[name] = value;
+              this.setState(partialState);
+            
+            [Sample Code]
+                  class Reservation extends React.Component {
+                    constructor(props) {
+                      super(props);
+                      this.state = {
+                        isGoing: true,
+                        numberOfGuests: 2
+                      };
+
+                      this.handleInputChange = this.handleInputChange.bind(this);
+                    }
+
+                    handleInputChange(event) {
+                      const target = event.target;
+                      const value = target.type === 'checkbox' ? target.checked : target.value;
+                      const name = target.name;
+
+                      this.setState({
+                        [name]: value
+                      });
+                    }
+
+                    handleSubmit(event) {
+                      alert('A name was submitted: ' + this.state.value);
+                      event.preventDefault();
+                    }
+
+                    render() {
+                      return (
+                        <form onSubmit={this.handleSubmit}>
+                          <label>
+                            Is going:
+                            <input
+                              name="isGoing"
+                              type="checkbox"
+                              checked={this.state.isGoing}
+                              onChange={this.handleInputChange} />
+                          </label>
+                          <br />
+                          <label>
+                            Number of guests:
+                            <input
+                              name="numberOfGuests"
+                              type="number"
+                              value={this.state.numberOfGuests}
+                              onChange={this.handleInputChange} />
+                          </label>
+                        </form>
+                      );
+                    }
+                  }
+
