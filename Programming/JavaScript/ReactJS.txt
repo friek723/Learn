@@ -64,7 +64,7 @@ Tutorial :
             
             We split JSX over multiple lines for readability. While it isn't required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.
 
-            After compilation, JSX expressions become regular JavaScript objects.
+            !!! After compilation, JSX expressions become regular JavaScript objects.
             This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions
 
             Specifying Attributes with JSX : You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
@@ -548,6 +548,33 @@ Tutorial :
 
         !!! Remember that components may accept arbitrary props, including primitive values, React elements, or functions. React elements like <Contacts /> and <Chat /> are just objects, so you can pass them as props like any other data.
 
+        If you want to reuse non-UI functionality between components, we suggest extracting it into a separate JavaScript module.
+
+    [Thinking in React]
+    
+        Build a static version first :
+            To build a static version of your app that renders your data model, you'll want to build components that reuse other components and pass data using props. props are a way of passing data from parent to child.
+            don't use state at all to build this static version. State is reserved only for interactivity, that is, data that changes over time. Since this is a static version of the app, you don't need it.
+
+            You can build top-down or bottom-up. That is, you can either start with building the components higher up in the hierarchy or with the ones lower in it. In simpler examples, it's usually easier to go top-down, and on larger projects, it's easier to go bottom-up and write tests as you build.
+
+            React's one-way data flow (also called one-way binding) keeps everything modular and fast.
+
+            There are two types of "model" data in React: props and state. 
+
+            To make your UI interactive, you need to be able to trigger changes to your underlying data model. React makes this easy with state.
+
+            Is it state?
+              Is it passed in from a parent via props? If so, it probably isn't state.
+              Does it remain unchanged over time? If so, it probably isn't state.
+              Can you compute it based on any other state or props in your component? If so, it isn't state.
+
+            Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. This is often the most challenging part for newcomers to understand, so follow these steps to figure it out:
+            For each piece of state in your application:
+                - Identify every component that renders something based on that state.
+                - Find a common owner component (a single component above all the components that need the state in the hierarchy).
+                - Either the common owner or another component higher up in the hierarchy should own the state.
+                - If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
 
 
 
