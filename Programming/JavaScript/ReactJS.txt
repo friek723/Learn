@@ -551,6 +551,7 @@ Tutorial :
         If you want to reuse non-UI functionality between components, we suggest extracting it into a separate JavaScript module.
 
     [Thinking in React]
+        source code : https://codepen.io/rohan10/pen/qRqmjd
     
         Build a static version first :
             To build a static version of your app that renders your data model, you'll want to build components that reuse other components and pass data using props. props are a way of passing data from parent to child.
