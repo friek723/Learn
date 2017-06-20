@@ -28,6 +28,10 @@ Tutorial :
     http://blog.andrewray.me/flux-for-stupid-people/
     http://huli.logdown.com/posts/276040-react-resource-consolidation
     
+[Ajax - interact with server]
+    !! http://andrewhfarmer.com/react-ajax-best-practices/
+       https://hashnode.com/post/5-best-libraries-for-making-ajax-calls-in-react-cis8x5f7k0jl7th53z68s41k1
+       
 
 [starter kit] - order by popularity
     !!!!! [Official React Starter Kit] https://github.com/facebookincubator/create-react-app
@@ -73,6 +77,8 @@ Tutorial :
 
             Since JSX is closer to JavaScript than HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
             !! For example, class becomes className in JSX, and tabindex becomes tabIndex.
+            
+            !! <span style={{color: 'red'}}>
 
             It is safe to embed user input in JSX:
             const title = response.potentiallyMaliciousInput;
