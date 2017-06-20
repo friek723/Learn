@@ -18,6 +18,9 @@ Tutorial :
    - Chinese : http://huli.logdown.com/posts/276040-react-resource-consolidation
 
 
+[Scroll to bottom]
+    2nd answer : https://stackoverflow.com/questions/26556436/react-after-render-code
+
 [React-Router] 
     react-router-tutorial : https://github.com/reactjs/react-router-tutorial/tree/master/lessons
 
