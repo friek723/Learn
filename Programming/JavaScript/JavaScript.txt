@@ -187,6 +187,8 @@ Javascript
         - https://googlechrome.github.io/samples/object-assign-es6/
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 
+    - Node.js require vs. ES6 import : http://researchhubs.com/post/computing/javascript/nodejs-require-vs-es6-import-export.html
+    
     - Promise, generator, async and ES6
         https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
         http://huli.logdown.com/posts/292655-javascript-promise-generator-async-es6
