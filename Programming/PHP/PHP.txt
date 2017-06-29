@@ -33,6 +33,9 @@ PHP
                  PHP's native $_SESSION sessions transparently serialize and unserialize objects that support PHP's serialization protocol or the Serializable interface. You do not need to explicitly serialize them.                 
         - http://php.net/manual/en/language.oop5.serialization.php
             Using serialize to save an object will save all variables in an object. "The 'methods' in an object will not be saved".
+        - http://php.net/manual/en/function.serialize.php
+            serialize — Generates a storable representation of a value
+            return value : string
 
     - isset() vs empty() vs is_null() : https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/
 
