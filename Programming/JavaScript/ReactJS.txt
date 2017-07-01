@@ -586,7 +586,90 @@ Tutorial :
                 - Either the common owner or another component higher up in the hierarchy should own the state.
                 - If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
 
+    [JSX In Depth]
+        JSX just provides syntactic sugar for the React.createElement(component, props, ...children) function. The JSX code:
+
+          <MyButton color="blue" shadowSize={2}>
+            Click Me
+          </MyButton>
+
+        compiles into:
+
+          React.createElement(
+            MyButton,
+            {color: 'blue', shadowSize: 2},
+            'Click Me'
+          )
+
+        If you want to test out how some specific JSX is converted into JavaScript, you can try out the online Babel compiler. (https://babeljs.io/repl/#?babili=false&evaluate=true&lineWrap=false&presets=es2015%2Creact%2Cstage-0&targets=&browsers=&builtIns=false&debug=false&code_lz=GYVwdgxgLglg9mABACwKYBt1wBQEpEDeAUIogE6pQhlIA8AJjAG4B8AEhlogO5xnr0AhLQD0jVgG4iAXyA)
+
+        Capitalized types indicate that the JSX tag is referring to a React component. These tags get compiled into a direct reference to the named variable, so if you use the JSX <Foo /> expression, Foo must be in scope.
+
+        Since JSX compiles into calls to React.createElement, the React library must also always be in scope from your JSX code. --> import React from 'react';
+        If you don't use a JavaScript bundler and loaded React from a <script> tag, it is already in scope as the React global.
+
+        User-Defined Components Must Be Capitalized
+            When an element type starts with a lowercase letter, it refers to a built-in component like <div> or <span> and results in a string 'div' or 'span' passed to React.createElement('div'). Types that start with a capital letter like <Foo /> compile to React.createElement(Foo) and correspond to a component defined or imported in your JavaScript file.
+
+        Choosing the Type at Runtime
+            You cannot use a general expression as the React element type. If you do want to use a general expression to indicate the type of the element, just assign it to a capitalized variable first.
+
+              import { PhotoStory, VideoStory } from './stories';
+              const components = {
+                photo: PhotoStory,
+                video: VideoStory
+              };
+
+              function Story(props) {
+                // Correct! JSX type can be a capitalized variable.
+                const SpecificStory = components[props.storyType];
+                return <SpecificStory story={props.story} />;
+              }
+
+        Props in JSX : 
+            (1) JavaScript Expressions as Props
+                You can pass any JavaScript expression as a prop, by surrounding it with {}
+                if statements and for loops are not expressions in JavaScript, so they can't be used in JSX directly. Instead, you can put these in the surrounding code. For example:
+                    function NumberDescriber(props) {
+                      let description;
+                      if (props.number % 2 == 0) {
+                        description = <strong>even</strong>;
+                      } else {
+                        description = <i>odd</i>;
+                      }
+                      return <div>{props.number} is an {description} number</div>;
+                    }
+
+            (2) String Literals
+                You can pass a string literal as a prop. These two JSX expressions are equivalent:
+                    <MyComponent message="hello world" />
+
+                    <MyComponent message={'hello world'} />
+                When you pass a string literal, its value is HTML-unescaped. So these two JSX expressions are equivalent:
+                    <MyComponent message="&lt;3" />
+
+                    <MyComponent message={'<3'} />
+
+            (3) Props Default to "True"
+                If you pass no value for a prop, it defaults to true. These two JSX expressions are equivalent:
+                    <MyTextBox autocomplete />
+
+                    <MyTextBox autocomplete={true} />
+
+            (4) Spread Attributes
+                If you already have props as an object, and you want to pass it in JSX, you can use ... as a "spread" operator to pass the whole props object. These two components are equivalent:
+                    function App1() {
+                      return <Greeting firstName="Ben" lastName="Hector" />;
+                    }
+
+                    function App2() {
+                      const props = {firstName: 'Ben', lastName: 'Hector'};
+                      return <Greeting {...props} />;
+                    }
+                Spread attributes can be useful when you are building generic containers.
+                
 
 
 
+       
 
