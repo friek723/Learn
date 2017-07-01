@@ -667,7 +667,55 @@ Tutorial :
                       return <Greeting {...props} />;
                     }
                 Spread attributes can be useful when you are building generic containers.
-                
+
+        Children in JSX : 
+            In JSX expressions that contain both an opening tag and a closing tag, the content between those tags is passed as a special prop: props.children. There are several different ways to pass children:
+
+                (1) String Literals
+                    You can put a string between the opening and closing tags and props.children will just be that string. This is useful for many of the built-in HTML elements. For example:
+                      <MyComponent>Hello world!</MyComponent>
+                    This is valid JSX, and props.children in MyComponent will simply be the string "Hello world!".
+
+                    JSX removes whitespace at the beginning and ending of a line. It also removes blank lines. New lines adjacent to tags are removed; new lines that occur in the middle of string literals are condensed into a single space.
+
+                (2) JSX Children
+                    You can provide more JSX elements as the children. This is useful for displaying nested components:
+                      <MyContainer>
+                        <MyFirstComponent />
+                        <MySecondComponent />
+                      </MyContainer>
+
+                    You can mix together different types of children, so you can use string literals together with JSX children. This is another way in which JSX is like HTML, so that this is both valid JSX and valid HTML:
+                      <div>
+                        Here is a list:
+                        <ul>
+                          <li>Item 1</li>
+                          <li>Item 2</li>
+                        </ul>
+                      </div>
+                    A React component can't return multiple React elements, but a single JSX expression can have multiple children, so if you want a component to render multiple things you can wrap it in a div like this.
+
+                (3) JavaScript Expressions as Children
+                    You can pass any JavaScript expression as children, by enclosing it within {}
+                    This is often useful for rendering a list of JSX expressions of arbitrary length. For example, this renders an HTML list:
+                    
+                        function Item(props) {
+                          return <li>{props.message}</li>;
+                        }
+
+                        function TodoList() {
+                          const todos = ['finish doc', 'submit pr', 'nag dan to review'];
+                          return (
+                            <ul>
+                              {todos.map((message) => <Item key={message} message={message} />)}
+                            </ul>
+                          );
+                        }
+
+                (4) Functions as Children
+                (5) Booleans, Null, and Undefined Are Ignored
+
+
 
 
 
