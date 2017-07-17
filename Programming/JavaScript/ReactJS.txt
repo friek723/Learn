@@ -746,8 +746,47 @@ Tutorial :
                           My JavaScript variable is {String(myVariable)}.
                         </div>
 
+    [Typechecking With PropTypes]    
+        Note : React.PropTypes has moved into a different package since React v15.5. Please use the prop-types library instead.
+        We provide a codemod script to automate the conversion.
 
+        For some applications, you can use JavaScript extensions like Flow or TypeScript to typecheck your whole application. But even if you don't use those, React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special propTypes property:
+            import PropTypes from 'prop-types';
 
+            class Greeting extends React.Component {
+              render() {
+                return (
+                  <h1>Hello, {this.props.name}</h1>
+                );
+              }
+            }
+
+            Greeting.propTypes = {
+              name: PropTypes.string
+            };
+
+        When an invalid value is provided for a prop, a warning will be shown in the JavaScript console.
+        For performance reasons, propTypes is only checked in development mode.
+
+        [Default Prop Values]
+          You can define default values for your props by assigning to the special defaultProps property:
+              class Greeting extends React.Component {
+                render() {
+                  return (
+                    <h1>Hello, {this.props.name}</h1>
+                  );
+                }
+              }
+
+              // Specifies the default values for props:
+              Greeting.defaultProps = {
+                name: 'Stranger'
+              };
+          The defaultProps will be used to ensure that this.props.name will have a value if it was not specified by the parent component.     
+          The propTypes typechecking happens after defaultProps are resolved, so typechecking will also apply to the defaultProps.
+
+    [Refs and the DOM]
+    
 
 
        
