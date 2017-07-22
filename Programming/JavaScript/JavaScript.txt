@@ -484,6 +484,11 @@ JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/
 								JSON Arrays
 										JSON arrays are written inside square brackets.
 										Just like in JavaScript, an array can contain objects
+ 
+       - JSON.stringify and JSON.parse : 
+         http://stackoverflow.com/questions/17785592/difference-between-json-stringify-and-json-parse
+         # JSON.stringify() : convert a JavaScript object into a string
+         # JSON.parse() : convert text into a JavaScript object
 
        - http://j796160836.pixnet.net/blog/post/30530326-%E7%9E%AD%E8%A7%A3json%E6%A0%BC%E5%BC%8F
        JSON convert tool  :  http://www.jsoneditoronline.org/
@@ -493,6 +498,10 @@ JSON  - JSON stands for "JavaScript Object Notation" : http://www.w3schools.com/
        [Java]Convert JSONObject to Map : !!! http://stackoverflow.com/questions/21720759/convert-jsonobject-to-map
                                        http://stackoverflow.com/questions/6323205/convert-json-string-to-java-mapjsonlib
        
+       - JSONP (JSON with Padding)
+         JSONP is really a simple trick to overcome the XMLHttpRequest same domain policy. (As you know one cannot send AJAX (XMLHttpRequest) request to a different domain.)
+         So - instead of using XMLHttpRequest we have to use script HTML tags, the ones you usually use to load js files.
+         See 2nd answer : https://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
        
 
 
