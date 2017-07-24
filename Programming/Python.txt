@@ -131,7 +131,12 @@ Python
         run background as a daemon :    http://code.activestate.com/recipes/278731/
                                         http://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux?rq=1
 
+        async/await  : 
+                       !https://hackernoon.com/asynchronous-python-45df84b82434
+                       https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/
+                       http://aiohttp.readthedocs.io/
 
+                       
 
 
                 
