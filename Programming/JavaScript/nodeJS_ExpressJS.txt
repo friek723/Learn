@@ -36,7 +36,8 @@
       
       Send Image with socket.io : https://stackoverflow.com/questions/26331787/socket-io-node-js-simple-example-to-send-image-files-from-server-to-client
       
-
+      module.exports and exports : https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+      
       Tutorial :
               API DOCS : https://nodejs.org/api/
               https://nodejs.org/documentation/
