@@ -6,6 +6,8 @@
 
 - CSRF Protection(cross-site request forgeries) : http://laravel.com/docs/5.1/routing#csrf-protection
 
+- How to use external classes and PHP files : http://laraveldaily.com/how-to-use-external-classes-and-php-files-in-laravel-controller/
+
 - !! Shopping Cart : (series 1 ~ 16) https://www.youtube.com/watch?v=oc1_DHfL89k
                                      https://www.youtube.com/watch?v=4J939dDUH4M
 
