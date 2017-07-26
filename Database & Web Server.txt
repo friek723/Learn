@@ -28,6 +28,14 @@
     - ! http://www.oshyn.com/Blogs/2011/November/A-Summary-of-Scaling-Options-for-MySQL?page=NaN
 
 
+[DB sharding v.s. partitioning]
+    https://stackoverflow.com/questions/6188047/why-do-we-divide-a-mysql-table-into-many-smaller-tables
+    https://stackoverflow.com/questions/23977850/when-to-use-horizontal-partitioning-and-when-to-use-database-sharding
+    https://www.quora.com/Whats-the-difference-between-sharding-DB-tables-and-partitioning-them
+    https://dev.mysql.com/doc/refman/5.7/en/partitioning-overview.html
+    https://dev.mysql.com/doc/refman/5.7/en/partitioning.html
+    https://stackoverflow.com/questions/20771435/database-sharding-vs-partitioning
+    
 
 
 
@@ -65,7 +73,6 @@
               - Every non-prime attribute of table must be dependent on primary key, or we can say that, there should not be the case that a non-prime attribute is determined by another non-prime attribute. 
               OR : 
               - To be non-transitively dependent, then, means that all the columns are dependent on the primary key (a criteria for 2nd normal form) and no other columns in the table.
-
 
 
 [Scaling Web Server]
