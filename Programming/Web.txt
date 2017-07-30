@@ -265,6 +265,18 @@ Web Framework
 
 
 ----------------------------------------------------------------------------------------------
+WebRTC (live streaming)
+    - https://github.com/webrtc/apprtc
+    - https://webrtc.org/start/
+    - https://webrtc.org/
+    - https://webrtc.github.io/samples/
+    - https://github.com/webrtc
+    - https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+    - https://www.webrtc-experiment.com/
+    - https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+    - https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill
+ 
+
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
