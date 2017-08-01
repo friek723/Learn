@@ -15,6 +15,7 @@ Python
         
         [Django] 
                     Official tutorial : https://www.djangoproject.com/start/
+                    ! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
                     http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
                     Django 虛擬環境 activate : VENV\Scripts\activate
                     Run server : python manage.py runserver 0.0.0.0:8000
