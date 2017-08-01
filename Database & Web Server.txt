@@ -1,3 +1,5 @@
+IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saas/
+
 [SQL vs NoSQL]
     - !!! https://www.sitepoint.com/sql-vs-nosql-differences/
           Projects where SQL is ideal:
