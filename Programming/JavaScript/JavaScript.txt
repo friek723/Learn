@@ -202,8 +202,8 @@ Javascript
        - http://stackoverflow.com/questions/6271237/detecting-when-user-scrolls-to-bottom-of-div-with-jquery
        - http://stackoverflow.com/questions/22675126/what-is-offsetheight-clientheight-scrollheight
        
-
-
+    - Sending forms through JavaScript  : https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript#Using_XMLHttpRequest_and_the_FormData_object
+    
     - !! introduction_to_JavaScript
          https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 
