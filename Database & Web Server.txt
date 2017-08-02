@@ -82,7 +82,7 @@ IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saa
     - https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application
     
 
-[Reverse Proxy Server - related to CDN]
+[Reverse Proxy Server - related to CDN] : the reverse proxy layer is the real muscle behind a CDN.
     - https://www.nginx.com/blog/10-tips-for-10x-application-performance/
       (1) Load balancing
       (2) Caching static files
@@ -100,8 +100,10 @@ IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saa
 [CDN (Content Delivery Network)]
     https://www.keycdn.com/content-delivery-network
     https://www.incapsula.com/cdn-guide/glossary/reverse-proxy.html
-
-
+    http://www.danielmayor.com/tag/cdn
+    ! https://www.section.io/blog/content-delivery-network-architecture-cdn/
+      https://www.section.io/blog/cdn-reverse-proxy-cdn-comparison/
+      
 !!! http://highscalability.com/all-time-favorites/
 
 Scalable Web Architecture : http://www.aosabook.org/en/distsys.html
