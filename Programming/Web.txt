@@ -103,7 +103,8 @@ Web Technology :
           OpenID 
               http://briian.com/5328/openid.html    
          
-    - RESTful : http://rest.elkstein.org/
+    - RESTful :!!http://restcookbook.com/
+                 http://rest.elkstein.org/
                  
                 [POST v.s. PUT]
                     https://ihower.tw/blog/archives/6483
