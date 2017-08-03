@@ -39,6 +39,7 @@
       module.exports and exports : https://www.sitepoint.com/understanding-module-exports-exports-node-js/
       
       Tutorial :
+              !! Shopping cart (Express & MongoDB): https://www.youtube.com/playlist?list=PL55RiY5tL51rajp7Xr_zk-fCFtzdlGKUp
               API DOCS : https://nodejs.org/api/
               https://nodejs.org/documentation/
               !https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs
