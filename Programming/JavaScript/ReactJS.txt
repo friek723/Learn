@@ -40,8 +40,10 @@ Tutorial :
     react-router-tutorial : https://github.com/reactjs/react-router-tutorial/tree/master/lessons
 
     URL params : https://github.com/reactjs/react-router-tutorial/tree/master/lessons/06-params
-    
 
+[Redux]
+    https://www.youtube.com/playlist?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_
+        
 [Flux] 
     http://blog.andrewray.me/flux-for-stupid-people/
     http://huli.logdown.com/posts/276040-react-resource-consolidation

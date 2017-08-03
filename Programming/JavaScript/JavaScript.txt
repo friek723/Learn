@@ -60,6 +60,9 @@ Javascript
 
  
     [Webpack]
+          - !!! Tutorial : https://www.youtube.com/playlist?list=PL55RiY5tL51rcCnrOrZixuOsZhAHHy6os
+                           (diff branches for diff courses) https://github.com/mschwarzmueller/yt-webpack2-basics
+
           - https://github.com/webpack/webpack
               webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
 
