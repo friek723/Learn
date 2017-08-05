@@ -186,9 +186,13 @@ Javascript
         https://ponyfoo.com/articles/es6-iterators-in-depth
         https://ponyfoo.com/articles/es6-generators-in-depth
     
-    Object.assign() : can be used to merge objects.
+    Object.assign() and Spread operator
+        - Object.assign() can be used to merge objects.
         - https://googlechrome.github.io/samples/object-assign-es6/
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+        - Spread operator vs Object.assign
+          !! https://stackoverflow.com/questions/38462000/difference-between-object-assign-and-object-spread
+             https://stackoverflow.com/questions/32925460/spread-operator-vs-object-assign
 
     - Node.js require vs. ES6 import : http://researchhubs.com/post/computing/javascript/nodejs-require-vs-es6-import-export.html
     
