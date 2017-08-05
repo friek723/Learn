@@ -563,6 +563,7 @@ GIT
 				     show current branch : git branch
 				     show all local and remote branches : git branch -a
 				     show only remote branches : git branch -r
+             Switch branch : git checkout branch_name 
 				                 
 				- list untracked files : git status -u
 				
