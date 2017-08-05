@@ -1,0 +1,8 @@
+[Starter Kit]
+    Official : https://github.com/react-community/create-react-native-app
+
+    Others :    
+	        [ignite 2]
+	            https://github.com/infinitered/ignite 
+	            https://infinite.red/ignite
+
