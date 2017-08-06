@@ -54,9 +54,14 @@
    php artisan make:model Post                     (create model)
    php artisan make:controller PostController      (create controller)
    php artisan migrate                             (create DB tables from migration)
+   php artisan migrate --path="database/migrations/your_path" (Same as above. with specific path)
    php artisan migrate:rollback                    (rolls back the last "batch" of migrations that ran, which may include multiple migration files)
+   php artisan nvd:crud <tableName> (Generate crud for a specific table in the database, compare with "laravel-crud-generator" below)
 
-
+   Summary of command and API (but a little old v4) : http://cheats.jesse-obrien.ca/
+   php artisan help command_name (!! Help & Doc)
+   php artisan list  (!! List All Commands + version) 
+   Optimization Commands  : www.ckdigital.net/laravel-5-artisan-optimization-commands/
 
 
 - Directory Structure
