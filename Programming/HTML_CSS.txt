@@ -28,6 +28,7 @@ HTML
         - http://stackoverflow.com/questions/4688880/html-element-array-name-something-or-name-something
         - https://laracasts.com/discuss/channels/general-discussion/any-better-way-to-transform-this-html-input-array
 
+    - <!DOCTYPE html> means HTML 5 : https://www.w3schools.com/tags/tag_doctype.asp
 
                          
 --------------------------------------------------------------------------------------------------
