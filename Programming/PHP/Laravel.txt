@@ -66,7 +66,7 @@
       Controller : app/Http/Controllers/XXXController.php
       Route :      app/Http/routes.php  (root is public/)
       DB:     database/migrations/2014_10_12_000000_create_XXX_table.php
-      Root for routes  +  index.html  +  AngularJS : public/
+      Root for routes/index.html/AngularJS : public/
       Sql config  : .env
                     config/database.php
       config      : config/app.php
@@ -203,8 +203,8 @@
             [Solution] If run "multiple" new migration on a outdated DB, will see the same error "foreign key constraint fails". (Because foreign key and the referred TABLE are created in the same migration batch. The new TABLE can not be used immediately.)
                     (1) php artisan clear-compiled 
                     (2) php artisan optimize   
-                    (make sure your new migration class has been registered correctly, otherwise rollback error)
-                    http://stackoverflow.com/questions/36115802/laravel-5-2-php-artisan-migraterollback-error
+                    (This will make sure your new migration class has been registered correctly, otherwise rollback error)
+                    - http://stackoverflow.com/questions/36115802/laravel-5-2-php-artisan-migraterollback-error
                     (3) php artisan migrate:rollback
                     (4) php artisan migrate   (migrate again to add foreign key)
 
