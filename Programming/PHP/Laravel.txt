@@ -94,7 +94,8 @@
     - https://github.com/InfyOmLabs/laravel-generator
     - https://github.com/appzcoder/crud-generator
     - https://github.com/crocodic-studio/crudbooster
-    - https://github.com/engrnvd/laravel-crud-generator  (!!!tried, easy)
+    - !! https://github.com/engrnvd/laravel-crud-generator  (!!!tried, easy)
+        [step 0] Install laravel-crud-generator (follow instructions above.)
         [step 1]
             "php artisan make:migration create_xxxs_table"   (create migration file)
             Add your schema in /database/migrations/create_xxxs_table.php
