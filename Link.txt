@@ -525,11 +525,37 @@ GIT
     
     - origin : origin is not the remote repository name. It is an alias given to the URL pointing to the default remote repository.
                This alias is set by default when cloning from/to a remote for the first time.        
-        "git remote" or "git remote -v" : lists the shortnames of each remote handle you’ve specified.
-                                          If you’ve cloned your repository, you should at least see origin – that is the default name Git gives to the server you cloned from.
-    
-                          
+                                 
 		[command] 
+        -  "git remote" or "git remote -v" (tracking-branch): 
+              #lists the shortnames of each remote handle you’ve specified.
+              #If you’ve cloned your repository, you should at least see origin – that is the default name Git gives to the server you cloned from.
+              #Manage the set of repositories ("remotes") whose branches you track.              
+              !! Understanding Tracking Branches : https://lornajane.net/posts/2014/understanding-tracking-branches-in-git
+              !! https://felipec.wordpress.com/2013/09/01/advanced-git-concepts-the-upstream-tracking-branch/
+
+        -  [merge] https://www.atlassian.com/git/tutorials/git-merge
+             Merge the src_branch into the dst_branch
+             git checkout dst_branch
+             git merge src_branch  (git merge --no-ff src_branch  --> generate a merge commit)
+           [merge conflicts] https://www.atlassian.com/git/tutorials/git-merge
+             Git's merging process is that it uses the familiar edit/stage/commit workflow to resolve merge conflicts. When you encounter a merge conflict, running the git status command shows you which files need to be resolved. 
+
+             1. git status
+             2. Fix conflict manually
+             3. "git add" on the conflicted file(s)
+             4. git commit + git push
+      
+        - git push fail : https://www.atlassian.com/git/tutorials/comparing-workflows
+             1. git pull --rebase origin master (--rebase option tells Git to move all of Mary’s commits to the tip of the master branch)
+             2. If rebasing generate conflicts, Git will pause the rebase at the current commit and output conflict message
+                (1) git status
+                (2) Fix conflict manually
+                (3) "git add" on the conflicted file(s)
+                (4) git rebase --continue
+                And that’s all there is to it. Git will move on to the next commit and repeat the process for any other commits that generate conflicts.
+             3. [Optional] If want to revert 1., run "git rebase --abort" 
+
 		    - clone : git clone ssh://jh7b@10.16.90.215:22222/var/www/html/jh7b/testsite/assets
 		              git clone https://
 		              git clone git://
@@ -564,11 +590,21 @@ GIT
 				     show all local and remote branches : git branch -a
 				     show only remote branches : git branch -r
              Switch branch : git checkout branch_name 
-				                 
+				     Create : https://www.atlassian.com/git/tutorials/comparing-workflows
+                1. git checkout -b marys-feature master (create a branch called marys-feature based on master)
+                2. git push -u origin marys-feature (pushes marys-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. )
+
 				- list untracked files : git status -u
 				
 				- pull v.s. fetch : git pull does a git fetch followed by a git merge (http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch)
 				
+        - git pull [options] [<repository> [<refspec>…​]]   https://git-scm.com/docs/git-pull
+          [options] : --rebase ... etc 
+          repository : <repository> should be the name of a remote repository EX : origin
+          refspec :  branch name, usually it is the name of a branch in the remote repository.
+        
+        - git push -u <remote name> <branch name> : push and tracking remote branch (use git push only after this.)
+
 				- Deletes all Untracked files/directories : git clean -f -d
 								  
 				[Add/Rm]

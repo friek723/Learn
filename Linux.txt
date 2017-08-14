@@ -37,6 +37,8 @@
               
 
 - File/Dir 
+     Rename/Change all filename extentions from jsx to js recursively: find . -name "*.jsx" -exec bash -c 'mv "$1" "${1%.jsx}".js' - '{}' \;
+
      copy ALL : "cp -a src dest"  (http://linux.vbird.org/linux_basic/0220filemanager.php#cp) 
 									      -a  ：相當於 -pdr 的意思，至於 pdr 請參考下列說明；(常用)
 												-d  ：若來源檔為連結檔的屬性(link file)，則複製連結檔屬性而非檔案本身；
