@@ -44,7 +44,9 @@ Tutorial :
 [Redux]
     !! Video : https://www.youtube.com/playlist?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_
                https://github.com/mschwarzmueller/reactjs-redux-basics
-               
+    
+    Why-should-objects-in-redux-be-immutable : https://stackoverflow.com/questions/34958775/why-should-objects-in-redux-be-immutable
+
 [Flux] 
     http://blog.andrewray.me/flux-for-stupid-people/
     http://huli.logdown.com/posts/276040-react-resource-consolidation
