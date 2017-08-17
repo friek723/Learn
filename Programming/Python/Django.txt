@@ -1,0 +1,109 @@
+        
+        [Django] 
+                    Official tutorial : https://www.djangoproject.com/start/
+                    ! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+                    http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
+                    Django 虛擬環境 activate : VENV\Scripts\activate
+                    Run server : python manage.py runserver 0.0.0.0:8000
+                                 Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                                                        http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
+                                                         
+                    [Deploy & Server]
+                                https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
+                                !! https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+                                [Apache and mod_wsgi]
+                                          [Install]
+                                                  https://code.google.com/p/modwsgi/wiki/QuickInstallationGuide
+                                                     Missing Python Header Files : https://code.google.com/p/modwsgi/wiki/InstallationIssues
+                                                  https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/modwsgi/
+                                                  See 'Install Apache and mod_wsgi' : https://docs.djangoproject.com/en/1.7/topics/install/ 
+                                                  !!! Check [note1] on the bottom of this doc
+                                          [Config]  https://code.google.com/p/modwsgi/wiki/ConfigurationDirectives
+                                          [Apache log] print  : /var/log/apache2/error.log   
+                                                       access : /var/log/apache2/access.log
+                                                       (https://www.a2hosting.com/kb/developer-corner/apache-web-server/viewing-apache-log-files)
+                                                       (
+                                                         No need to enable WSGIRestrictStdout? : 
+                                                                              http://stackoverflow.com/questions/3543572/in-django-how-do-i-allow-print-statements-to-work-with-apache-wsgi
+                                                                              http://blog.dscpl.com.au/2009/04/wsgi-and-printing-to-standard-output.html
+                                                        )
+                                                       
+                                [gunicorn] : http://gunicorn-docs.readthedocs.org/en/latest/install.html#ubuntu
+                                            [Run server] : 1. Switch dir to manage.py
+                                                           2. gunicorn myproject.wsgi -b 0.0.0.0:22222
+                                                              background : (nohup gunicorn tutorial.wsgi -b 0.0.0.0:22222  &>myout.txt &)  --> log : nohup.out or myout.txt 
+                                                              SSL(https) (gunicorn tutorial.wsgi -b 0.0.0.0:22222 --certfile=server.crt --keyfile=server.key)
+                                                           http://gunicorn-docs.readthedocs.org/en/latest/run.html
+                                                           Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                             SSL : http://stackoverflow.com/questions/7406805/running-gunicorn-on-https
+                                                   http://serverfault.com/questions/224122/what-is-crt-and-key-and-how-can-i-generate-them
+                                                   http://www.akadia.com/services/ssh_test_certificate.html
+                                             [Nginx + gunicorn] http://docs.gunicorn.org/en/latest/deploy.html
+                                                                https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx
+                                                                http://www.quora.com/What-are-the-differences-between-nginx-and-gunicorn
+                                                                http://blog.etianen.com/blog/2014/01/19/gunicorn-heroku-django/
+                                                                Also see [Reverse Proxy Server] above
+                                                   
+                                [uWSGI] :  https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
+                                         https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/
+                                         ![Nginx + uWSGI] https://uwsgi.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
+                                         
+                    [REST]
+                            http://www.django-rest-framework.org/
+                            http://www.ngenworks.com/blog/how-django-rest-framework-changed-my-life
+                    [Sessions & Cookies]
+                            https://docs.djangoproject.com/en/1.7/topics/http/sessions/
+                            http://www.tangowithdjango.com/book/chapters/cookie.html
+                            
+                    [AJAX, Cross Site Request Forgery  & Cross-Origin Resource Sharing] http://www.django-rest-framework.org/topics/ajax-csrf-cors/
+                    
+                    
+                
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+
+
+[note1] Apache + mod_wsgi install steps 
+           1156  apt-cache search apache | less
+           1157  sudo apt-get install apache2
+           1158  sudo apt-get install apache2-dev
+           
+           1169  wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.4.5.tar.gz
+           1171  tar xvfz 4.4.5.tar.gz
+           1173  cd mod_wsgi-4.4.5/
+           1175  ./configure
+           
+           1179  python
+           1182  apt-cache search python2.7 | less
+           1186  apt-cache search python2.7-dev | less
+           1187  sudo apt-get install python2.7-dev
+           1189  make
+           1192  sudo make install
+           1195  apache2 -v
+           
+                 cd /etc/apache2/sites-available
+           1202  sudo vi 000-default.conf 
+           Add :
+                    WSGIScriptAlias / /home/stack/django_prj/tutorial/tutorial/wsgi.py
+                    WSGIPythonPath /home/stack/django_prj/tutorial
+                    
+                    <Directory /home/stack/django_prj/tutorial/tutorial>
+                    <Files wsgi.py>
+                    Require all granted
+                    </Files>
+                    </Directory>
+          
+                 cd /etc/apache2
+           1207  sudo vi apache2.conf
+           Add :  LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+                 
+           1228  sudo apachectl restart
+           1071  sudo apachectl stop
+           1072  sudo apachectl start
+           
+           [Apache log] print  : /var/log/apache2/error.log   
+                        access : /var/log/apache2/access.log
+                        
+
