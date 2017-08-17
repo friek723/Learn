@@ -1,8 +1,10 @@
 
+[Tutorials]
+ - Official tutorial : https://www.djangoproject.com/start/
+ - ! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+ - http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
 
-Official tutorial : https://www.djangoproject.com/start/
-! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
-http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
+
 Django 虛擬環境 activate : VENV\Scripts\activate
 Run server : python manage.py runserver 0.0.0.0:8000
              Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
@@ -51,6 +53,7 @@ Run server : python manage.py runserver 0.0.0.0:8000
 [REST]
         http://www.django-rest-framework.org/
         http://www.ngenworks.com/blog/how-django-rest-framework-changed-my-life
+        
 [Sessions & Cookies]
         https://docs.djangoproject.com/en/1.7/topics/http/sessions/
         http://www.tangowithdjango.com/book/chapters/cookie.html

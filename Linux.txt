@@ -131,6 +131,10 @@
 - Network
     check ip address : ifconfig eth0 | grep inet | awk '{ print $2 }'
                        ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+                       ! ip addr show
+                       ! hostname -I
+                       ! /sbin/ifconfig
+                       !! public ip : curl ipinfo.io/ip
                        
 		- port/firewall
 		        !Check remote port open :  "telnet ip port"  
