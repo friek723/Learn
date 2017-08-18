@@ -9,7 +9,35 @@ Python
         
         pip freeze (Output installed packages in requirements format.) - http://reader.roodo.com/thinkingmore/archives/18853358.html
                                                                          https://devcenter.heroku.com/articles/getting-started-with-python#declare-app-dependencies
+        [pip : Package Manager]
+            Install on Ubuntu : https://www.rosehosting.com/blog/how-to-install-pip-on-ubuntu-16-04/
+                sudo apt-get update && sudo apt-get -y upgrade
+                sudo apt-get install python-pip
+                pip -V
+                [Error : pip install xxx] locale.Error: unsupported locale setting
+                                          solution : export LC_ALL=C
+            - pip search package_name
+            - pip install package_name
+            - pip uninstall package_name
+            - pip freeze   (Output installed packages in requirements format)
+            - pip list     (List installed packages)
+            - pip --help
+
         
+        [virtualenv] http://docs.python-guide.org/en/latest/dev/virtualenvs/
+            command : 
+                - virtualenv my_project  : start a new virtual project.
+                   it will create a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages.
+                - source my_project/bin/activate : begin using the virtual environment, it needs to be activated
+                  The name of the current virtual environment will now appear on the left of the prompt (e.g. (my_project)Your-Computer:your_project UserName$) to let you know that it’s active. From now on, any package that you install using pip will be placed in the my_project folder, isolated from the global Python installation.
+                - deactivate : If you are done working in the virtual environment for the moment, you can deactivate it:
+                - To delete a virtual environment, just delete its folder. (In this case, it would be rm -rf my_project.)
+                - pip freeze > requirements.txt : This will create a requirements.txt file, which contains a simple list of all the packages in the current environment, and their respective versions.
+                - pip install -r requirements.txt : Later it will be easier for a different developer (or you, if you need to re-create the environment) to install the same packages using the same versions
+
+
+
+
         Install package : https://packaging.python.org/en/latest/pip_easy_install.html
                           http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
         
