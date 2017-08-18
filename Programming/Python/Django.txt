@@ -24,7 +24,22 @@ Run server : python manage.py runserver 0.0.0.0:8000
 
     - python manage.py startapp app_name : create your app, make sure you’re in the same directory as manage.py and type this command:
 
+    - python manage.py migrate : The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your mysite/settings.py file and the database migrations shipped with the app
 
+    - To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting.
+      ==> INSTALLED_APPS = [ 'polls.apps.PollsConfig', ... ]
+
+    - python manage.py makemigrations polls : you’re telling Django that you’ve made some changes to your models and that you’d like the changes to be stored as a migration.
+      Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py.
+
+    - python manage.py sqlmigrate polls 0001 : (polls/migrations/0001_initial.py) 
+      The sqlmigrate command takes migration names and returns their SQL: 
+          CREATE TABLE ... 
+          ALTER TABLE ...
+      The sqlmigrate command doesn’t actually run the migration on your database - it just prints it to the screen so that you can see what SQL Django thinks is required. It’s useful for checking what Django is going to do or if you have database administrators who require SQL scripts for changes.
+
+    - python manage.py check :  this checks for any problems in your project without making migrations or touching the database. (https://docs.djangoproject.com/en/1.11/ref/django-admin/#django-admin-check)
+      
 
 [Deploy & Server]
             https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
