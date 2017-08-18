@@ -4,6 +4,9 @@
  - ! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
  - http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
 
+[Concept]
+ - A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+
 
 Django 虛擬環境 activate : VENV\Scripts\activate
 Run server : python manage.py runserver 0.0.0.0:8000
@@ -11,7 +14,7 @@ Run server : python manage.py runserver 0.0.0.0:8000
                                                     http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
 
 [Command]
-    - django-admin startproject mysite      
+    - django-admin startproject mysite : create a project (A project can contain multiple apps.)     
     - python manage.py runserver 0.0.0.0:8000
       Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
                                              http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
@@ -19,6 +22,7 @@ Run server : python manage.py runserver 0.0.0.0:8000
       [Solution] Add server ip or domain name to project/settings.py : 
                  ALLOWED_HOSTS = ["54.250.173.48"] OR ["jimmypy.hopto.org"]
 
+    - python manage.py startapp app_name : create your app, make sure you’re in the same directory as manage.py and type this command:
 
 
 
