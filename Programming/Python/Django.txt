@@ -15,9 +15,11 @@ Run server : python manage.py runserver 0.0.0.0:8000
     - python manage.py runserver 0.0.0.0:8000
       Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
                                              http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
-      [Error : see host not allowed error accessing http://...] 
-      [Solution] Add server ip to project/settings.py : ALLOWED_HOSTS = ["54.250.173.48"]
-      
+      [Error : see "DisallowedHost" accessing http://...] 
+      [Solution] Add server ip or domain name to project/settings.py : 
+                 ALLOWED_HOSTS = ["54.250.173.48"] OR ["jimmypy.hopto.org"]
+
+
 
 
 [Deploy & Server]
