@@ -9,7 +9,17 @@ Django 虛擬環境 activate : VENV\Scripts\activate
 Run server : python manage.py runserver 0.0.0.0:8000
              Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
                                                     http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
-                                     
+
+[Command]
+    - django-admin startproject mysite      
+    - python manage.py runserver 0.0.0.0:8000
+      Unable to access server from outside : http://stackoverflow.com/questions/2260727/accessing-local-django-webserver-from-outside-world
+                                             http://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
+      [Error : see host not allowed error accessing http://...] 
+      [Solution] Add server ip to project/settings.py : ALLOWED_HOSTS = ["54.250.173.48"]
+      
+
+
 [Deploy & Server]
             https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
             !! https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
