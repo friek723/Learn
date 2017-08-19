@@ -62,6 +62,7 @@ IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saa
         [1NF] First Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-8-database-first-normal-form-explained-in-simple-english/
             # Primary key uniquely identify each row, Eliminate duplicative columns
             # Each column contains atomic values, not repeating groups of columns (When a value is atomic, the values cannot be further subdivided)
+              (repeating groups of columns : such as Customer1Name, Customer2Name, and Customer3Name)
 
         [2NF] Second Normal Form : https://www.essentialsql.com/get-ready-to-learn-sql-10-database-second-normal-form-explained-in-simple-english/
             # The table is in 1st normal form
