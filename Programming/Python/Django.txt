@@ -3,7 +3,8 @@
  - Official tutorial : https://www.djangoproject.com/start/
  - ! https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
  - http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
-
+ - blog : http://sillygod-blog.logdown.com/archives
+ 
 [Concept]
  - A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
 
