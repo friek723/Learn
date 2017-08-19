@@ -103,6 +103,12 @@ Run server : python manage.py runserver 0.0.0.0:8000
         
 [AJAX, Cross Site Request Forgery  & Cross-Origin Resource Sharing] http://www.django-rest-framework.org/topics/ajax-csrf-cors/
                     
+[Celery + RabbitMQ] 
+    - https://stackoverflow.com/questions/35498583/django-celery-with-rabbitmq
+      http://www.marinamele.com/2014/02/how-to-install-celery-on-django-and.html
+    - http://docs.celeryproject.org/en/latest/django/index.html
+    
+
                     
                 
 -------------------------------------------------------------------------------------------------
