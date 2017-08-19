@@ -43,8 +43,8 @@ IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saa
 
 [Database Normalization] 
    There are two goals of the normalization process: 
-   (1) eliminating "redundant" data (for example, storing the same data in more than one table) 
-   (2) ensuring data "dependencies" make sense (only storing related data in a table).
+   (1) !! eliminating "redundant" data (for example, storing the same data in more than one table) 
+   (2) !! ensuring data "dependencies" make sense (only storing related data in a table).
 
    However if Normalization goes too far, it will impact performace.
    [WHY] https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/       
