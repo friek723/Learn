@@ -115,6 +115,7 @@ Visualize Database Schemas (tool) :  http://www.codediesel.com/data/5-tools-to-v
 [Task Manager & Message Broker (Queue)]
     [RabbitMQ] : message broker, Advanced Message Queuing Protocol (AMQP) 
                  http://www.rabbitmq.com/getstarted.html
+                 Install on Ubuntu : see [note1]
                  
     [RabbitMQ and Celery]
         - !! https://abhishek-tiwari.com/post/amqp-rabbitmq-and-celery-a-visual-guide-for-dummies
@@ -131,4 +132,44 @@ Visualize Database Schemas (tool) :  http://www.codediesel.com/data/5-tools-to-v
          !! http://queues.io/
          https://github.com/resque/resque
          http://cakeresque.kamisama.me/
+
+
+
+
+---------------------------------------------------------------------------
+
+[note1]  Install RabbitMQ on Ubuntu
+     
+      https://www.rabbitmq.com/install-debian.html
+
+      $ echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+
+      $ sudo apt-get update
+
+      $ sudo apt-get install rabbitmq-server
+
+      Start the Server 
+      The server is started as a daemon by default when the RabbitMQ server package is installed. 
+      As an administrator, start and stop the server as usual for Debian using  
+      $ sudo invoke-rc.d rabbitmq-server stop/start/etc. 
+      Note: The server is set up to run as system user  rabbitmq. If you change the location of the Mnesia database or the logs, you must ensure the files are owned by this user (and also update the environment variables).
+
+      [ Browser-based UI ]
+      https://www.rabbitmq.com/management.html
+      https://stackoverflow.com/questions/29293350/cannot-login-in-rabbitmq-management-web-console
+
+      The management plugin is included in the RabbitMQ distribution. To enable it : 
+
+      $ sudo rabbitmq-plugins enable rabbitmq_management
+      $ sudo rabbitmqctl add_user jimmy723 jimmy723
+      $ sudo rabbitmqctl set_permissions -p / jimmy723 ".*" ".*" ".*"
+      $ sudo rabbitmqctl set_user_tags jimmy723 administrator
+
+      Add port 15672 to firewall of AWS
+
+      The Web UI is located at: http://server-name:15672/
+      To use the web UI you will need to authenticate as a RabbitMQ user (on a fresh installation the user "guest" is created with password "guest")
+
+      Login : http://server-name:15672    (jimmy723/jimmy723)
+
 

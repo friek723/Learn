@@ -107,7 +107,9 @@ Run server : python manage.py runserver 0.0.0.0:8000
     - https://stackoverflow.com/questions/35498583/django-celery-with-rabbitmq
       http://www.marinamele.com/2014/02/how-to-install-celery-on-django-and.html
     - http://docs.celeryproject.org/en/latest/django/index.html
-    
+    - https://www.andretw.com/2013/07/using-celery-right-now-and-more-best-practices-1.html
+    - https://www.codementor.io/ankurrathore/asynchronous-task-with-rabbitmq-celery-and-django-8904ceway
+        
 
                     
                 
