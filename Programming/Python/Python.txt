@@ -63,8 +63,8 @@ Python
                 http://stackoverflow.com/questions/4784775/ldap-query-in-python
         json : http://xahlee.info/perl-python/python_json_tutorial.html
                    import json
-                   json.dumps() returns type string
-                   json.loads() returns type dict
+                   json.dumps(dict) returns type string
+                   json.loads(string) returns type dict
         
         import name conflicts : http://stackoverflow.com/questions/1900189/how-to-access-a-standard-library-module-in-python-when-there-is-a-local-module-w
                                 http://stackoverflow.com/questions/6031584/python-importing-from-builtin-library-when-module-with-same-name-exists
