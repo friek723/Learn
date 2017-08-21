@@ -14,6 +14,8 @@
 
 - Sublime (how to change font size of left window): https://stackoverflow.com/questions/13781833/sublime-text-2-how-to-change-the-font-size-of-the-file-sidebar
 
+- Show hidden files: https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/
+
 [Install]
     - mongo-php-driver on Mac OS X : 
         - Install PEAR and PECL on Mac OS X : https://jason.pureconcepts.net/2012/10/install-pear-pecl-mac-os-x/
