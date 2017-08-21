@@ -197,9 +197,9 @@ Javascript
     - Node.js require vs. ES6 import : http://researchhubs.com/post/computing/javascript/nodejs-require-vs-es6-import-export.html
     
     - Promise, generator, async and ES6
+        ! https://developers.google.com/web/fundamentals/getting-started/primers/promises
         https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
-        http://huli.logdown.com/posts/292655-javascript-promise-generator-async-es6
-        https://developers.google.com/web/fundamentals/getting-started/primers/promises
+        http://huli.logdown.com/posts/292655-javascript-promise-generator-async-es6        
         https://developers.google.com/web/fundamentals/getting-started/primers/async-functions
         https://jigsawye.com/2016/04/18/understanding-javascript-async-await/
         https://www.toptal.com/javascript/javascript-promises
