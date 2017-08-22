@@ -177,8 +177,12 @@ Javascript
 
         const : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
         classes : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-        Template literals : 
-           https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals
+        Template literals ( use $ and `): 
+            - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals
+            - https://stackoverflow.com/questions/35835362/what-does-dollar-sign-and-curly-braces-mean-in-a-string-in-javascript
+            - https://stackoverflow.com/questions/27678052/what-is-the-usage-of-the-backtick-symbol-in-javascript
+            Ex : var foo = 'bar';
+                console.log(`Let's meet at the ${foo}`);
 
         https://ponyfoo.com/articles/es6-arrow-functions-in-depth
         https://ponyfoo.com/articles/es6-classes-in-depth

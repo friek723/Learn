@@ -52,6 +52,14 @@ Run server : python manage.py runserver 0.0.0.0:8000
         from polls.models import Question, Choice
         Question.objects.all()
 
+    - revert migration : https://stackoverflow.com/questions/32123477/django-revert-last-migration
+      (1) python manage.py showmigrations my_app : show the names of all the migrations
+                                                   0010_previous_migration
+                                                   0011_migration_to_revert
+      (2) python manage.py migrate my_app 0010_previous_migration 
+      (3) Delete migration 0011_migration_to_revert
+
+
 
 [Deploy & Server]
             https://www.digitalocean.com/community/tutorials/django-server-comparison-the-development-server-mod_wsgi-uwsgi-and-gunicorn
