@@ -28,11 +28,12 @@ SQL
            SELECT SUM(Sales) FROM Store_Information WHERE Store_Name IN (SELECT Store_Name FROM Geography WHERE Region_Name = 'West');
     - HAVING v.s. WHERE : http://www.mysql.tw/2014/06/sqlwherehaving.html
                           [Syntax] SELECT SUM(mamount) as s FROM mymoney WHERE SUBSTR(mdate,1,6)='201401' GROUP BY mperson HAVING s>200;
-                          順序 : WHERE + GROUP BY + HAVING
-                          沒有GROUP BY的時候，只使用WHERE而不使用HAVING。  使用HAVING的時候，只用在跟GROUP BY相關函數有關的條件上。
-                          HAVING只能用在aggregate (合計) 情況下 ，也就是有GROUP BY的時候，並且HAVING要過濾的條件，要跟GROUP BY的合計函數有關。
+                          - 順序 : WHERE + GROUP BY + HAVING
+                          - 沒有GROUP BY的時候，只使用WHERE而不使用HAVING。  使用HAVING的時候，只用在跟GROUP BY相關函數有關的條件上。
+                          - HAVING只能用在aggregate (合計) 情況下 ，也就是有GROUP BY的時候，並且HAVING要過濾的條件，要跟GROUP BY的合計函數有關。
                           See [note5] below
-    
+      (!The HAVING clause was added to SQL because the WHERE keyword could not be used with aggregate functions.)
+
     - LIKE : http://www.1keydata.com/tw/sql/sqllike.html
     - JOIN : !!! https://www.codeproject.com/articles/33052/visual-representation-of-sql-joins
              http://www.tutorialspoint.com/sql/sql-using-joins.htm
