@@ -28,8 +28,8 @@ package manager :
 [Design Patterns]
     - https://www.tutorialspoint.com/design_pattern/index.htm
     - https://github.com/kamranahmedse/design-patterns-for-humans
+    - https://sourcemaking.com/design_patterns
     
-
 7 Acronyms Every Developer Should Know :  http://thefullstack.xyz/dry-yagni-kiss-tdd-soc-bdfu/
 
 [Queue]  http://queues.io/
