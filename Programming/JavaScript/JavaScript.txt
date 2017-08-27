@@ -246,7 +246,7 @@ Javascript
         # !!! https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
         # http://www.ibm.com/developerworks/web/library/wa-memleak/   --> search "Closures in JavaScript"
         # http://www.w3schools.com/js/js_function_closures.asp
-        # !!! Why use? : !https://howtonode.org/why-use-closure
+        # !!! Why use? : !!!https://howtonode.org/why-use-closure
                          !https://medium.com/written-in-code/practical-uses-for-closures-c65640ae7304
                           https://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/
                           http://jibbering.com/faq/notes/closures/

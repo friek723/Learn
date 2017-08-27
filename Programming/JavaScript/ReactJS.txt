@@ -51,6 +51,10 @@ Tutorial :
     
     Why-should-objects-in-redux-be-immutable : https://stackoverflow.com/questions/34958775/why-should-objects-in-redux-be-immutable
 
+    [Design Pattern]
+        - [Command Pattern] https://medium.com/front-end-developers/the-command-pattern-c51292e22ea7
+        - [Observer Pattern] https://jobs.zalando.com/tech/blog/design-patterns-redux/?gh_src=4n3gxh1
+
 [Flux] 
     http://blog.andrewray.me/flux-for-stupid-people/
     http://huli.logdown.com/posts/276040-react-resource-consolidation
