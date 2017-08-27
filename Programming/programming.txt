@@ -1,11 +1,13 @@
 [Popularity & Frameworks]
-    - https://github.com/showcases/web-application-frameworks
-    - https://github.com/showcases/front-end-javascript-frameworks
+    - *https://github.com/kamranahmedse/developer-roadmap
+    - *https://github.com/showcases/web-application-frameworks
+    - *https://github.com/showcases/front-end-javascript-frameworks
     - https://github.com/showcases
     - https://github.com/showcases/programming-languages
     - https://github.com/showcases/css-preprocessors
     - https://github.com/showcases/nosql-databases
-    
+    - http://queues.io/
+    - http://nosql-database.org/
 
 
 Survey : http://stackoverflow.com/insights/survey
