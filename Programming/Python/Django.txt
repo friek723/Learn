@@ -117,9 +117,22 @@ Run server : python manage.py runserver 0.0.0.0:8000
     - http://docs.celeryproject.org/en/latest/django/index.html
     - https://www.andretw.com/2013/07/using-celery-right-now-and-more-best-practices-1.html
     - https://www.codementor.io/ankurrathore/asynchronous-task-with-rabbitmq-celery-and-django-8904ceway
-        
+    
+    [Issue] Celery cannot pass python bytes object to task parameter
+             
+            [Error] EncodeError: 'utf8' codec can't decode byte
+            [Solution] https://stackoverflow.com/questions/44609078/sending-bytes-in-a-string-to-redis-in-order-to-using-it-as-parameter-for-celery
 
-                    
+              # If binascii.b2a_base64() is not used and pass file_bytes directly to delay(), there's error: 'utf8' codec can't decode byte
+
+              file_bytes = binascii.b2a_base64(file_bytes)
+              task_email_attachment.delay(file_bytes)
+
+              task_email_attachment(attachment_byte){
+                  # convert back to bytes
+                  attach_file = binascii.a2b_base64(attachment_byte)
+              }
+
                 
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
