@@ -69,10 +69,11 @@ Web Technology :
           - http://stackoverflow.com/questions/35308263/storing-authentication-tokens-in-a-restful-api-without-using-http-sessions
           - !https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/
           - Angular JWT: https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/
-
+          - https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/#token-storage
 
           - JWT token : JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
           After login we get a JWT Token from server, for every subsequent request we put JWT token in Http Header  --> !!! "Authorization: Bearer TOKEN_STRING"
+          Token is Base64 encoded. 
               - https://jwt.io/introduction/
               - https://jwt.io/ : Debug/Decode token
               - http://stackoverflow.com/questions/24709944/jwt-token-in-postman-header
@@ -85,6 +86,9 @@ Web Technology :
           - Where to store the token on client side ? 
              - !!https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage
              - https://security.stackexchange.com/questions/80727/best-place-to-store-authentication-tokens-client-side
+             - https://auth0.com/docs/security/store-tokens
+             - !https://stackoverflow.com/questions/27067251/where-to-store-jwt-in-browser-how-to-protect-against-csrf
+             - Unlike cookies, local storage is sandboxed to a specific domain and its data cannot be accessed by any other domain including sub-domains.
 
 
     - OAuth & OpenID     
