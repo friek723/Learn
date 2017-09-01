@@ -168,7 +168,10 @@ Javascript
         - https://www.sitepoint.com/introduction-gulp-js/    
         - https://www.keithcirkel.co.uk/why-we-should-stop-using-grunt/
                 
-
+    [Functional Programming]
+        - ! https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0
+        - https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44
+        - http://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html
 
     [ES6] 
         let : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
@@ -190,7 +193,7 @@ Javascript
         https://ponyfoo.com/articles/es6-iterators-in-depth
         https://ponyfoo.com/articles/es6-generators-in-depth
     
-    Object.assign() and Spread operator
+    - Object.assign() and Spread operator
         - Object.assign() can be used to merge objects.
         - https://googlechrome.github.io/samples/object-assign-es6/
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
@@ -222,6 +225,7 @@ Javascript
     
     - print JS Object : http://stackoverflow.com/questions/957537/how-can-i-display-a-javascript-object
                         console.log(JSON.stringify(object));
+
 
     [Frameworks]
         - http://todomvc.com/     (Helping you select an MV* framework)
