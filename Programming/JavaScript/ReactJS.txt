@@ -49,6 +49,8 @@ Tutorial :
     !! Video : https://www.youtube.com/playlist?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_
                https://github.com/mschwarzmueller/reactjs-redux-basics
     
+    - !https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44
+
     Why-should-objects-in-redux-be-immutable : https://stackoverflow.com/questions/34958775/why-should-objects-in-redux-be-immutable
 
     [Design Pattern]
