@@ -1,0 +1,13 @@
+[Boost]
+    - Installing Boost on Ubuntu : sudo apt-get install libboost-all-dev
+      (https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
+
+    - [Compile] If you have main.cpp, either:
+              g++ main.cpp -o main -lboost_system
+           OR
+              g++ -c -o main.o main.cpp
+              g++ main.o -lboost_system
+
+      (https://stackoverflow.com/questions/9723793/undefined-reference-to-boostsystemsystem-category-when-compiling) 
+
+      
