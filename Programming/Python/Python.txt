@@ -112,7 +112,7 @@ Python
                        https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/
                        http://aiohttp.readthedocs.io/
 
-                       
+        decorators : https://www.thecodeship.com/patterns/guide-to-python-function-decorators/               
 
 
                 
