@@ -51,5 +51,14 @@
                      [mongodb]
 	                   extension="/usr/local/Cellar/php70/7.0.18_10/lib/php/extensions/no-debug-non-zts-20151012/mongodb.so"
 
-
+    - install multiple php versions: https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions
+          # Check /usr/local/etc/php to see all versions
+          # $ brew reinstall php55
+            $ brew unlink php55
+            $ brew reinstall php56
+            $ brew unlink php56
+            $ brew reinstall php70
+            $ brew unlink php70
+            $ brew reinstall php71
+            (must reinstall each PHP version with reinstall command rather than install if you have previously installed PHP through Brew)
 
