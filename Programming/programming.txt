@@ -2,6 +2,7 @@
     - *https://github.com/kamranahmedse/developer-roadmap
     - *https://github.com/showcases/web-application-frameworks
     - *https://github.com/showcases/front-end-javascript-frameworks
+    - *https://bestof.js.org/projects
     - https://github.com/showcases
     - https://github.com/showcases/programming-languages
     - https://github.com/showcases/css-preprocessors
