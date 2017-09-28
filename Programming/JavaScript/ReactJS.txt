@@ -67,8 +67,8 @@ Tutorial :
        
 
 [starter kit] - order by popularity
-    !!!!! [Official React Starter Kit] https://github.com/facebookincubator/create-react-app
-                                       Doc : https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
+    [Official React Starter Kit] https://github.com/facebookincubator/create-react-app
+            Document : https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
                                        
             Supported by Official React : https://facebook.github.io/react/docs/installation.html
                                           https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html
@@ -83,11 +83,16 @@ Tutorial :
                     
             For native : https://github.com/react-community/create-react-native-app/
 
-    !!!  https://github.com/kriasoft/react-starter-kit
-    !!   https://github.com/davezuko/react-redux-starter-kit
-    !    https://github.com/coryhouse/react-slingshot
-    ! http://andrewhfarmer.com/starter-project/
+    - https://www.reactboilerplate.com/
+    - https://zeit.co/blog/next
+    - https://reactstarter.com/
+
+    - https://github.com/kriasoft/react-starter-kit
+    - https://github.com/davezuko/react-redux-starter-kit
+    - https://github.com/coryhouse/react-slingshot
+    - http://andrewhfarmer.com/starter-project/
        (Find your starter)
+
 
 
 

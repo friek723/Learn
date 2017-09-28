@@ -9,6 +9,8 @@
     - http://queues.io/
     - http://nosql-database.org/
 
+[News]
+    https://risingstars2016.js.org/
 
 Survey : http://stackoverflow.com/insights/survey
 
