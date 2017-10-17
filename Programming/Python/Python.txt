@@ -114,8 +114,25 @@ Python
 
         decorators : https://www.thecodeship.com/patterns/guide-to-python-function-decorators/               
 
+        Lambda, filter, reduce and map : https://www.python-course.eu/lambda.php
 
-                
+        lists, tuples, dictionaries, strings, sets and frozensets : thomas-cokelaer.info/tutorials/python/data_structures.html
+            Lists, strings and tuples are ordered sequences of objects. Unlike strings that contain only characters, list and tuples can contain any type of objects. Lists and tuples are like arrays. Tuples like strings are immutables. Lists are mutables so they can be extended or reduced at will. Sets are mutable unordered sequence of unique elements whereas frozensets are immutable sets.
+                Lists are enclosed in brackets:
+                    l = [1, 2, "a"]
+                Tuples are enclosed in parentheses:
+                    t = (1, 2, "a")
+                Dictionaries are built with curly brackets:
+                    d = {"a":1, "b":2}
+
+        [TEST]        
+            [Unit Test]
+                [flexmock]
+                    https://flexmock.readthedocs.io/en/latest/
+                    https://pypi.python.org/pypi/flexmock
+                    https://has207.github.io/flexmock/user-guide.html
+                    
+
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
