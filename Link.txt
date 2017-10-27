@@ -514,6 +514,9 @@ GIT
                              
     - Remove uncommitted & untracked files on pull : http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull
          	git reset --hard HEAD  --> revert uncommitted changes
+          OR 
+          git reset --hard origin/master   (Discard all uncommitted & unpushed changes)
+                                           (Throw away all my staged and unstaged changes, forget everything on my current local branch and make it exactly the same as origin/master.)
 					git clean -f -d    --> remove untracked files
 					git pull           --> update latest version from server
     
@@ -585,6 +588,9 @@ GIT
 				
 				- remote url : "git remote show origin" or "git remote -v"  (http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
 				
+        - [Change remote path]
+              git remote set-url origin https://friek723@xxx/xxx/xxx
+
 				- Branch
 				     show current branch : git branch
 				     show all local and remote branches : git branch -a
