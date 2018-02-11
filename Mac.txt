@@ -1,4 +1,4 @@
-- test
+
 - PATH 
     Add shell path to Mac OSx : https://coolestguidesontheplanet.com/add-shell-path-osx/
                                 Ex : echo 'export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"' >> ~/.bash_profile
