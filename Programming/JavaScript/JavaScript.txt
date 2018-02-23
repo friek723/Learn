@@ -193,13 +193,31 @@ Javascript
         https://ponyfoo.com/articles/es6-iterators-in-depth
         https://ponyfoo.com/articles/es6-generators-in-depth
     
-    - Object.assign() and Spread operator
+    - Object.assign() and Spread operator (mutation)
         - Object.assign() can be used to merge objects.
         - https://googlechrome.github.io/samples/object-assign-es6/
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
         - Spread operator vs Object.assign
           !! https://stackoverflow.com/questions/38462000/difference-between-object-assign-and-object-spread
              https://stackoverflow.com/questions/32925460/spread-operator-vs-object-assign
+        - ! https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important
+            
+            [Data change with mutation]
+                var player = {score: 1, name: 'Jeff'};
+                player.score = 2;
+                // Now player is {score: 2, name: 'Jeff'}
+            
+            [Data change without mutation]
+                var player = {score: 1, name: 'Jeff'};
+                var newPlayer = Object.assign({}, player, {score: 2});
+                // Now player is unchanged, but newPlayer is {score: 2, name: 'Jeff'}
+                // Or if you are using object spread syntax proposal, you can write:
+                // var newPlayer = {...player, score: 2};
+
+            - Easier Undo/Redo and Time Travel
+            - The biggest benefit of immutability in React comes when you build simple pure components. 
+              Since immutable data can more easily determine if changes have been made, it also helps to determine when a component requires being re-rendered.
+              To learn more about shouldComponentUpdate() and how you can build pure components take a look at Optimizing Performance.
 
     - Node.js require vs. ES6 import : http://researchhubs.com/post/computing/javascript/nodejs-require-vs-es6-import-export.html
     
