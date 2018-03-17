@@ -91,6 +91,8 @@
       - http://fideloper.com/laravel-raw-queries
 
 
+- [React] https://appdividend.com/2017/08/31/laravel-5-5-reactjs-tutorial/
+
 
 - Scaffold & CRUD Generator (sort by popularity): 
     - https://github.com/InfyOmLabs/laravel-generator
