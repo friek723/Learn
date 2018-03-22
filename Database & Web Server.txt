@@ -1,3 +1,13 @@
+[Microservices]
+    - (1) http://microservices.io/
+    - (2) http://microservices.io/patterns/monolithic.html
+    - (3) http://microservices.io/patterns/microservices.html
+    compare (2) and (3)  
+    - An architecture that structures the application as a set of loosely coupled, collaborating services.  Services communicate using either synchronous protocols such as HTTP/REST 
+      or asynchronous protocols such as AMQP. Services can be developed and deployed independently of one another. Each service has its own database in order to be decoupled from other services.
+
+
+
 IaaS vs. PaaS vs. SaaS : http://www.hostingadvice.com/how-to/iaas-vs-paas-vs-saas/
 
 [SQL vs NoSQL]
