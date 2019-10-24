@@ -124,7 +124,7 @@ Web Technology :
  
     - Sessions & Cookies
         ! http://www.tangowithdjango.com/book/chapters/cookie.html
-        http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
+        !!! http://stackoverflow.com/questions/359434/differences-between-cookies-and-sessions
    
         Where should you store your shopping cart? 
         ("Session" or "Cookie" or "Web Storage" or "Database") 
